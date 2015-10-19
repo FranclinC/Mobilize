@@ -14,6 +14,7 @@
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
 		49CE03751BD56216000F76D7 /* MobilizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03741BD56216000F76D7 /* MobilizeTests.swift */; };
 		49CE03801BD56216000F76D7 /* MobilizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */; };
+		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilizeUITests.swift; sourceTree = "<group>"; };
 		49CE03811BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		49CE03531BD56216000F76D7 = {
 			isa = PBXGroup;
 			children = (
+				49CE038D1BD56400000F76D7 /* README.md */,
 				49CE035E1BD56216000F76D7 /* Mobilize */,
 				49CE03731BD56216000F76D7 /* MobilizeTests */,
 				49CE037E1BD56216000F76D7 /* MobilizeUITests */,
@@ -231,6 +234,7 @@
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
+				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
