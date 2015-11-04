@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499C97F11BEA918200DAC95C /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D61BEA918200DAC95C /* AlphaAnimation.swift */; };
+		499C97F21BEA918200DAC95C /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D71BEA918200DAC95C /* Animatable.swift */; };
+		499C97F31BEA918200DAC95C /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */; };
+		499C97F41BEA918200DAC95C /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D91BEA918200DAC95C /* Animation.swift */; };
+		499C97F51BEA918200DAC95C /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DA1BEA918200DAC95C /* Animator.swift */; };
+		499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */; };
+		499C97F71BEA918200DAC95C /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */; };
+		499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */; };
+		499C97F91BEA918200DAC95C /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */; };
+		499C97FA1BEA918200DAC95C /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DF1BEA918200DAC95C /* CubicBezier.swift */; };
+		499C97FB1BEA918200DAC95C /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E01BEA918200DAC95C /* EasingFunction.swift */; };
+		499C97FC1BEA918200DAC95C /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E11BEA918200DAC95C /* Filmstrip.swift */; };
+		499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E21BEA918200DAC95C /* HideAnimation.swift */; };
+		499C97FE1BEA918200DAC95C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 499C97E31BEA918200DAC95C /* Info.plist */; };
+		499C97FF1BEA918200DAC95C /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E41BEA918200DAC95C /* Interpolatable.swift */; };
+		499C98001BEA918200DAC95C /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */; };
+		499C98011BEA918200DAC95C /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */; };
+		499C98021BEA918200DAC95C /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */; };
+		499C98031BEA918200DAC95C /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */; };
+		499C98041BEA918200DAC95C /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */; };
+		499C98051BEA918200DAC95C /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */; };
+		499C98061BEA918200DAC95C /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EC1BEA918200DAC95C /* RotationAnimation.swift */; };
+		499C98071BEA918200DAC95C /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */; };
+		499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */; };
+		499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */; };
+		499C980A1BEA918200DAC95C /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97F01BEA918200DAC95C /* UIView+Transform.swift */; };
 		49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE035F1BD56216000F76D7 /* AppDelegate.swift */; };
 		49CE03621BD56216000F76D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03611BD56216000F76D7 /* ViewController.swift */; };
 		49CE03651BD56216000F76D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03631BD56216000F76D7 /* Main.storyboard */; };
@@ -14,7 +40,7 @@
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
 		49CE03751BD56216000F76D7 /* MobilizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03741BD56216000F76D7 /* MobilizeTests.swift */; };
 		49CE03801BD56216000F76D7 /* MobilizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */; };
-		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; settings = {ASSET_TAGS = (); }; };
+		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +61,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		499C97D61BEA918200DAC95C /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
+		499C97D71BEA918200DAC95C /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
+		499C97D91BEA918200DAC95C /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		499C97DA1BEA918200DAC95C /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
+		499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
+		499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
+		499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		499C97DF1BEA918200DAC95C /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		499C97E01BEA918200DAC95C /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
+		499C97E11BEA918200DAC95C /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
+		499C97E21BEA918200DAC95C /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
+		499C97E31BEA918200DAC95C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		499C97E41BEA918200DAC95C /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
+		499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
+		499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
+		499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
+		499C97EB1BEA918200DAC95C /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
+		499C97EC1BEA918200DAC95C /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
+		499C97F01BEA918200DAC95C /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
 		49CE035C1BD56216000F76D7 /* Mobilize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobilize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE035F1BD56216000F76D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CE03611BD56216000F76D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +129,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499C97D51BEA918200DAC95C /* RazzleDazzle */ = {
+			isa = PBXGroup;
+			children = (
+				499C97D61BEA918200DAC95C /* AlphaAnimation.swift */,
+				499C97D71BEA918200DAC95C /* Animatable.swift */,
+				499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */,
+				499C97D91BEA918200DAC95C /* Animation.swift */,
+				499C97DA1BEA918200DAC95C /* Animator.swift */,
+				499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */,
+				499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */,
+				499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */,
+				499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */,
+				499C97DF1BEA918200DAC95C /* CubicBezier.swift */,
+				499C97E01BEA918200DAC95C /* EasingFunction.swift */,
+				499C97E11BEA918200DAC95C /* Filmstrip.swift */,
+				499C97E21BEA918200DAC95C /* HideAnimation.swift */,
+				499C97E31BEA918200DAC95C /* Info.plist */,
+				499C97E41BEA918200DAC95C /* Interpolatable.swift */,
+				499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */,
+				499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */,
+				499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */,
+				499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */,
+				499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */,
+				499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */,
+				499C97EB1BEA918200DAC95C /* RazzleDazzle.h */,
+				499C97EC1BEA918200DAC95C /* RotationAnimation.swift */,
+				499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */,
+				499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */,
+				499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */,
+				499C97F01BEA918200DAC95C /* UIView+Transform.swift */,
+			);
+			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
 		49CE03531BD56216000F76D7 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +187,7 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
+				499C97D51BEA918200DAC95C /* RazzleDazzle */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* ViewController.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
@@ -234,6 +322,7 @@
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
+				499C97FE1BEA918200DAC95C /* Info.plist in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +348,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				499C98031BEA918200DAC95C /* LayerStrokeEndAnimation.swift in Sources */,
+				499C98001BEA918200DAC95C /* LabelTextColorAnimation.swift in Sources */,
+				499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */,
+				499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */,
+				499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */,
+				499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */,
+				499C98061BEA918200DAC95C /* RotationAnimation.swift in Sources */,
+				499C97F71BEA918200DAC95C /* ConstraintConstantAnimation.swift in Sources */,
+				499C98071BEA918200DAC95C /* ScaleAnimation.swift in Sources */,
+				499C98041BEA918200DAC95C /* LayerStrokeStartAnimation.swift in Sources */,
+				499C97FA1BEA918200DAC95C /* CubicBezier.swift in Sources */,
+				499C97FF1BEA918200DAC95C /* Interpolatable.swift in Sources */,
+				499C980A1BEA918200DAC95C /* UIView+Transform.swift in Sources */,
 				49CE03621BD56216000F76D7 /* ViewController.swift in Sources */,
+				499C97F21BEA918200DAC95C /* Animatable.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
+				499C97F91BEA918200DAC95C /* CornerRadiusAnimation.swift in Sources */,
+				499C97FC1BEA918200DAC95C /* Filmstrip.swift in Sources */,
+				499C97F11BEA918200DAC95C /* AlphaAnimation.swift in Sources */,
+				499C98011BEA918200DAC95C /* LayerFillColorAnimation.swift in Sources */,
+				499C98051BEA918200DAC95C /* PathPositionAnimation.swift in Sources */,
+				499C97F41BEA918200DAC95C /* Animation.swift in Sources */,
+				499C97F51BEA918200DAC95C /* Animator.swift in Sources */,
+				499C97FB1BEA918200DAC95C /* EasingFunction.swift in Sources */,
+				499C97F31BEA918200DAC95C /* AnimatedPagingScrollViewController.swift in Sources */,
+				499C98021BEA918200DAC95C /* LayerStrokeColorAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,10 +516,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Mobilize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,10 +529,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Mobilize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -487,6 +605,7 @@
 				49CE03861BD56216000F76D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49CE03871BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +614,7 @@
 				49CE03891BD56216000F76D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49CE038A1BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +623,7 @@
 				49CE038C1BD56216000F76D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
