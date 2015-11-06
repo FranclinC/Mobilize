@@ -51,8 +51,6 @@
 		49CE03651BD56216000F76D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03631BD56216000F76D7 /* Main.storyboard */; };
 		49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03661BD56216000F76D7 /* Assets.xcassets */; };
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
-		49CE03751BD56216000F76D7 /* MobilizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03741BD56216000F76D7 /* MobilizeTests.swift */; };
-		49CE03801BD56216000F76D7 /* MobilizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */; };
 		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -122,11 +120,7 @@
 		49CE03691BD56216000F76D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49CE036B1BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE03701BD56216000F76D7 /* MobilizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49CE03741BD56216000F76D7 /* MobilizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilizeTests.swift; sourceTree = "<group>"; };
-		49CE03761BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilizeUITests.swift; sourceTree = "<group>"; };
-		49CE03811BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,8 +230,6 @@
 				49CE038D1BD56400000F76D7 /* README.md */,
 				4969F2F81BEBC5E6000B0ED7 /* Frameworks */,
 				49CE035E1BD56216000F76D7 /* Mobilize */,
-				49CE03731BD56216000F76D7 /* MobilizeTests */,
-				49CE037E1BD56216000F76D7 /* MobilizeUITests */,
 				49CE035D1BD56216000F76D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -263,24 +255,6 @@
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 			);
 			path = Mobilize;
-			sourceTree = "<group>";
-		};
-		49CE03731BD56216000F76D7 /* MobilizeTests */ = {
-			isa = PBXGroup;
-			children = (
-				49CE03741BD56216000F76D7 /* MobilizeTests.swift */,
-				49CE03761BD56216000F76D7 /* Info.plist */,
-			);
-			path = MobilizeTests;
-			sourceTree = "<group>";
-		};
-		49CE037E1BD56216000F76D7 /* MobilizeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				49CE037F1BD56216000F76D7 /* MobilizeUITests.swift */,
-				49CE03811BD56216000F76D7 /* Info.plist */,
-			);
-			path = MobilizeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CE03751BD56216000F76D7 /* MobilizeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +431,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CE03801BD56216000F76D7 /* MobilizeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
