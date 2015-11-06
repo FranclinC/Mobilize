@@ -13,12 +13,22 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var keys: NSDictionary?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.setApplicationId("Ind4ALgVPaHk9NDFkRMgZWYm4q1ngr7ouD2387GT", clientKey: "dOIxXW8MYQY37X7PhCqtktaEhvsF5Nyu1HjnB8Qj")
+        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
+        }
+        if let _ = keys {
+            let applicationId = keys?["parseApplicationId"] as? String
+            let clientKey = keys?["parseClientKey"] as? String
+            
+            // Initialize Parse.
+            Parse.setApplicationId(applicationId!, clientKey: clientKey!)
+        }
+
         if application.applicationState != UIApplicationState.Background {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
             let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")

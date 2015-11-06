@@ -45,6 +45,7 @@
 		499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */; };
 		499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */; };
 		499C980A1BEA918200DAC95C /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97F01BEA918200DAC95C /* UIView+Transform.swift */; };
+		49B2972D1BEC24C600492550 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B2972C1BEC24C600492550 /* keys.plist */; };
 		49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE035F1BD56216000F76D7 /* AppDelegate.swift */; };
 		49CE03621BD56216000F76D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03611BD56216000F76D7 /* ViewController.swift */; };
 		49CE03651BD56216000F76D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03631BD56216000F76D7 /* Main.storyboard */; };
@@ -112,6 +113,7 @@
 		499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
 		499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
 		499C97F01BEA918200DAC95C /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
+		49B2972C1BEC24C600492550 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		49CE035C1BD56216000F76D7 /* Mobilize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobilize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE035F1BD56216000F76D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CE03611BD56216000F76D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,16 @@
 			path = RazzleDazzle;
 			sourceTree = "<group>";
 		};
+		49B2972B1BEC244500492550 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49CE03661BD56216000F76D7 /* Assets.xcassets */,
+				49B2972C1BEC24C600492550 /* keys.plist */,
+				49CE036B1BD56216000F76D7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		49CE03531BD56216000F76D7 = {
 			isa = PBXGroup;
 			children = (
@@ -243,13 +255,12 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
+				49B2972B1BEC244500492550 /* Supporting Files */,
 				499C97D51BEA918200DAC95C /* RazzleDazzle */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* ViewController.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
-				49CE03661BD56216000F76D7 /* Assets.xcassets */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
-				49CE036B1BD56216000F76D7 /* Info.plist */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 			files = (
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
+				49B2972D1BEC24C600492550 /* keys.plist in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
 				499C97FE1BEA918200DAC95C /* Info.plist in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
