@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925F5601BF27C7D00481D98 /* LoginViewController.swift */; };
 		4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */; };
 		4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */; };
 		4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4925F5601BF27C7D00481D98 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -256,6 +258,7 @@
 				49B2972F1BED26F600492550 /* IntroViewController.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
+				4925F5601BF27C7D00481D98 /* LoginViewController.swift */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */,
 				499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */,
 				499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */,
+				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
 				499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */,
 				499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */,
 				499C98061BEA918200DAC95C /* RotationAnimation.swift in Sources */,
