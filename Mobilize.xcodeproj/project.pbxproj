@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925F5601BF27C7D00481D98 /* LoginViewController.swift */; };
+		493AF3861BF3E129004BADE4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3831BF3E129004BADE4 /* Login.swift */; };
+		493AF3871BF3E129004BADE4 /* NewProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3841BF3E129004BADE4 /* NewProposal.swift */; };
+		493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3851BF3E129004BADE4 /* Propostas.swift */; };
 		4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */; };
 		4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */; };
 		4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */; };
@@ -25,9 +28,6 @@
 		498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1321BF3CA36002882E1 /* CustomCell.xib */; };
 		498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */; };
 		498AA1461BF3CC16002882E1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13F1BF3CC16002882E1 /* CustomCell.swift */; };
-		498AA1471BF3CC16002882E1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1401BF3CC16002882E1 /* Login.swift */; };
-		498AA1481BF3CC16002882E1 /* NewProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1411BF3CC16002882E1 /* NewProposal.swift */; };
-		498AA1491BF3CC16002882E1 /* Propostas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1421BF3CC16002882E1 /* Propostas.swift */; };
 		498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1431BF3CC16002882E1 /* ThemesCategory.swift */; };
 		498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */; };
 		498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */; };
@@ -79,6 +79,9 @@
 
 /* Begin PBXFileReference section */
 		4925F5601BF27C7D00481D98 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		493AF3831BF3E129004BADE4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		493AF3841BF3E129004BADE4 /* NewProposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProposal.swift; sourceTree = "<group>"; };
+		493AF3851BF3E129004BADE4 /* Propostas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propostas.swift; sourceTree = "<group>"; };
 		4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -98,9 +101,6 @@
 		498AA1321BF3CA36002882E1 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.xib"; sourceTree = "<group>"; };
 		498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCellTableViewCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCellTableViewCell.swift"; sourceTree = "<group>"; };
 		498AA13F1BF3CC16002882E1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.swift"; sourceTree = "<group>"; };
-		498AA1401BF3CC16002882E1 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/Login.swift"; sourceTree = "<group>"; };
-		498AA1411BF3CC16002882E1 /* NewProposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewProposal.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/NewProposal.swift"; sourceTree = "<group>"; };
-		498AA1421BF3CC16002882E1 /* Propostas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Propostas.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/Propostas.swift"; sourceTree = "<group>"; };
 		498AA1431BF3CC16002882E1 /* ThemesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemesCategory.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/ThemesCategory.swift"; sourceTree = "<group>"; };
 		498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
@@ -321,10 +321,10 @@
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* MainViewController.swift */,
 				49CF58B61BF2CDF6000B0059 /* Constants.swift */,
-				498AA1401BF3CC16002882E1 /* Login.swift */,
-				498AA1411BF3CC16002882E1 /* NewProposal.swift */,
-				498AA1421BF3CC16002882E1 /* Propostas.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
+				493AF3831BF3E129004BADE4 /* Login.swift */,
+				493AF3841BF3E129004BADE4 /* NewProposal.swift */,
+				493AF3851BF3E129004BADE4 /* Propostas.swift */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
@@ -441,6 +441,7 @@
 				49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */,
 				498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */,
 				49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */,
+				493AF3861BF3E129004BADE4 /* Login.swift in Sources */,
 				498AA1F11BF3D3CF002882E1 /* RotationAnimation.swift in Sources */,
 				498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
@@ -451,17 +452,16 @@
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
 				498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */,
 				498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				493AF3871BF3E129004BADE4 /* NewProposal.swift in Sources */,
 				498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */,
 				49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */,
 				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
 				498AA1F01BF3D3CF002882E1 /* PathPositionAnimation.swift in Sources */,
+				493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */,
 				498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */,
 				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
-				498AA1471BF3CC16002882E1 /* Login.swift in Sources */,
-				498AA1491BF3CC16002882E1 /* Propostas.swift in Sources */,
 				498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */,
-				498AA1481BF3CC16002882E1 /* NewProposal.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
