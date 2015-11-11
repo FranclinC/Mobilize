@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 IFTTT. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 private class Keyframe<T: Interpolatable where T.ValueType == T> {

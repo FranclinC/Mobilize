@@ -22,10 +22,42 @@
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
 		49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */; };
 		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
+		49A7CF131BF2E39B00BCA090 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */; };
+		49A7CF141BF2E39B00BCA090 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF91BF2E39B00BCA090 /* Animatable.swift */; };
+		49A7CF151BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */; };
+		49A7CF161BF2E39B00BCA090 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFB1BF2E39B00BCA090 /* Animation.swift */; };
+		49A7CF171BF2E39B00BCA090 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFC1BF2E39B00BCA090 /* Animator.swift */; };
+		49A7CF181BF2E39B00BCA090 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */; };
+		49A7CF191BF2E39B00BCA090 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */; };
+		49A7CF1A1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */; };
+		49A7CF1B1BF2E39B00BCA090 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */; };
+		49A7CF1C1BF2E39B00BCA090 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */; };
+		49A7CF1D1BF2E39B00BCA090 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */; };
+		49A7CF1E1BF2E39B00BCA090 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */; };
+		49A7CF1F1BF2E39B00BCA090 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */; };
+		49A7CF201BF2E39B00BCA090 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A7CF051BF2E39B00BCA090 /* Info.plist */; };
+		49A7CF211BF2E39B00BCA090 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */; };
+		49A7CF221BF2E39B00BCA090 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */; };
+		49A7CF231BF2E39B00BCA090 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */; };
+		49A7CF241BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */; };
+		49A7CF251BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */; };
+		49A7CF261BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */; };
+		49A7CF271BF2E39B00BCA090 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */; };
+		49A7CF281BF2E39B00BCA090 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */; };
+		49A7CF291BF2E39B00BCA090 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */; };
+		49A7CF2A1BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */; };
+		49A7CF2B1BF2E39B00BCA090 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */; };
+		49A7CF2C1BF2E39B00BCA090 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */; };
+		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
+		49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */; };
+		49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF331BF3B38900BCA090 /* UserNotification.swift */; };
+		49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */; };
+		49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */; };
+		49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */; };
 		49B2972D1BEC24C600492550 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B2972C1BEC24C600492550 /* keys.plist */; };
 		49B297301BED26F600492550 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2972F1BED26F600492550 /* IntroViewController.swift */; };
 		49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE035F1BD56216000F76D7 /* AppDelegate.swift */; };
-		49CE03621BD56216000F76D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03611BD56216000F76D7 /* ViewController.swift */; };
+		49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE03611BD56216000F76D7 /* MainViewController.swift */; };
 		49CE03651BD56216000F76D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03631BD56216000F76D7 /* Main.storyboard */; };
 		49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03661BD56216000F76D7 /* Assets.xcassets */; };
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
@@ -49,11 +81,44 @@
 		4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
+		49A7CEF91BF2E39B00BCA090 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
+		49A7CEFB1BF2E39B00BCA090 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		49A7CEFC1BF2E39B00BCA090 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
+		49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
+		49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
+		49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
+		49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
+		49A7CF051BF2E39B00BCA090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
+		49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
+		49A7CF0D1BF2E39B00BCA090 /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
+		49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
+		49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
+		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposesViewController.swift; sourceTree = "<group>"; };
+		49A7CF331BF3B38900BCA090 /* UserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
+		49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		49B2972C1BEC24C600492550 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		49B2972F1BED26F600492550 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		49CE035C1BD56216000F76D7 /* Mobilize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobilize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE035F1BD56216000F76D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49CE03611BD56216000F76D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49CE03611BD56216000F76D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		49CE03641BD56216000F76D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49CE03661BD56216000F76D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49CE03691BD56216000F76D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */,
 				4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */,
 				4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */,
 				4969F3161BEBC6DF000B0ED7 /* SystemConfiguration.framework in Frameworks */,
@@ -89,9 +155,10 @@
 		4969F2F81BEBC5E6000B0ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
+				49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
-				49A7CEF61BF2E2E500BCA090 /* RazzleDazzle */,
+				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
+				49A7CEF71BF2E39B00BCA090 /* RazzleDazzle */,
 				49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
 				4969F3131BEBC6D5000B0ED7 /* StoreKit.framework */,
@@ -107,11 +174,53 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		49A7CEF61BF2E2E500BCA090 /* RazzleDazzle */ = {
+		49A7CEF71BF2E39B00BCA090 /* RazzleDazzle */ = {
+			isa = PBXGroup;
+			children = (
+				49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */,
+				49A7CEF91BF2E39B00BCA090 /* Animatable.swift */,
+				49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */,
+				49A7CEFB1BF2E39B00BCA090 /* Animation.swift */,
+				49A7CEFC1BF2E39B00BCA090 /* Animator.swift */,
+				49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */,
+				49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */,
+				49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */,
+				49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */,
+				49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */,
+				49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */,
+				49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */,
+				49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */,
+				49A7CF051BF2E39B00BCA090 /* Info.plist */,
+				49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */,
+				49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */,
+				49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */,
+				49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */,
+				49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */,
+				49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */,
+				49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */,
+				49A7CF0D1BF2E39B00BCA090 /* RazzleDazzle.h */,
+				49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */,
+				49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */,
+				49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */,
+				49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */,
+				49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */,
+			);
+			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
+		49A7CF2F1BF3AFC200BCA090 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = RazzleDazzle;
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		49A7CF321BF3B37600BCA090 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				49A7CF331BF3B38900BCA090 /* UserNotification.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
@@ -146,12 +255,15 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
-				49CF58B41BF28964000B0059 /* Controller */,
+				49A7CF321BF3B37600BCA090 /* Notifications */,
 				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
+				49CF58B41BF28964000B0059 /* Controller */,
+				49A7CF2F1BF3AFC200BCA090 /* Utils */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
-				49CE03631BD56216000F76D7 /* Main.storyboard */,
+				49CE03611BD56216000F76D7 /* MainViewController.swift */,
 				49CF58B61BF2CDF6000B0059 /* Constants.swift */,
+				49CE03631BD56216000F76D7 /* Main.storyboard */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
@@ -159,9 +271,12 @@
 		49CF58B41BF28964000B0059 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				49CE03611BD56216000F76D7 /* ViewController.swift */,
 				49B2972F1BED26F600492550 /* IntroViewController.swift */,
 				4925F5601BF27C7D00481D98 /* LoginViewController.swift */,
+				49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */,
+				49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */,
+				49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */,
+				49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,6 +349,7 @@
 			files = (
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
+				49A7CF201BF2E39B00BCA090 /* Info.plist in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 				49B2972D1BEC24C600492550 /* keys.plist in Resources */,
@@ -247,11 +363,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A7CF1B1BF2E39B00BCA090 /* CornerRadiusAnimation.swift in Sources */,
+				49A7CF1F1BF2E39B00BCA090 /* HideAnimation.swift in Sources */,
 				49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */,
+				49A7CF141BF2E39B00BCA090 /* Animatable.swift in Sources */,
+				49A7CF251BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift in Sources */,
+				49A7CF1C1BF2E39B00BCA090 /* CubicBezier.swift in Sources */,
+				49A7CF2A1BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				49A7CF281BF2E39B00BCA090 /* RotationAnimation.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
+				49A7CF221BF2E39B00BCA090 /* LabelTextColorAnimation.swift in Sources */,
+				49A7CF231BF2E39B00BCA090 /* LayerFillColorAnimation.swift in Sources */,
+				49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */,
+				49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
-				49CE03621BD56216000F76D7 /* ViewController.swift in Sources */,
+				49A7CF241BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift in Sources */,
+				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
+				49A7CF151BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift in Sources */,
+				49A7CF211BF2E39B00BCA090 /* Interpolatable.swift in Sources */,
+				49A7CF291BF2E39B00BCA090 /* ScaleAnimation.swift in Sources */,
+				49A7CF271BF2E39B00BCA090 /* PathPositionAnimation.swift in Sources */,
+				49A7CF1E1BF2E39B00BCA090 /* Filmstrip.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
+				49A7CF1D1BF2E39B00BCA090 /* EasingFunction.swift in Sources */,
+				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
+				49A7CF191BF2E39B00BCA090 /* ConstraintConstantAnimation.swift in Sources */,
+				49A7CF131BF2E39B00BCA090 /* AlphaAnimation.swift in Sources */,
+				49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */,
+				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
+				49A7CF181BF2E39B00BCA090 /* BackgroundColorAnimation.swift in Sources */,
+				49A7CF2B1BF2E39B00BCA090 /* TranslationAnimation.swift in Sources */,
+				49A7CF261BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift in Sources */,
+				49A7CF161BF2E39B00BCA090 /* Animation.swift in Sources */,
+				49A7CF2C1BF2E39B00BCA090 /* UIView+Transform.swift in Sources */,
+				49A7CF171BF2E39B00BCA090 /* Animator.swift in Sources */,
+				49A7CF1A1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

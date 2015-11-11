@@ -9,6 +9,7 @@
 // Ported to Swift from Robert Böhnke's RBBAnimation, original available here:
 // <https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBCubicBezier.m>
 
+import UIKit
 import Foundation
 
 public func CubicBezier(x1: CGFloat, _ y1: CGFloat, _ x2: CGFloat, _ y2: CGFloat) -> EasingFunction {

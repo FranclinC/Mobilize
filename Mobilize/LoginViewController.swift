@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Foundation
 
-class LoginViewController: ViewController {
+class LoginViewController: UIViewController {
     private let wave = UIImageView(image: UIImage(named: "Wave"))
     
     override func viewDidLoad() {
