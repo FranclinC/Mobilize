@@ -20,34 +20,43 @@
 		4969F3161BEBC6DF000B0ED7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */; };
 		4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3171BEBC6E7000B0ED7 /* libz.tbd */; };
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
+		498AA1341BF3CA36002882E1 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1311BF3CA36002882E1 /* CategoryCell.xib */; };
+		498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1321BF3CA36002882E1 /* CustomCell.xib */; };
+		498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */; };
+		498AA1461BF3CC16002882E1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13F1BF3CC16002882E1 /* CustomCell.swift */; };
+		498AA1471BF3CC16002882E1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1401BF3CC16002882E1 /* Login.swift */; };
+		498AA1481BF3CC16002882E1 /* NewProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1411BF3CC16002882E1 /* NewProposal.swift */; };
+		498AA1491BF3CC16002882E1 /* Propostas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1421BF3CC16002882E1 /* Propostas.swift */; };
+		498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1431BF3CC16002882E1 /* ThemesCategory.swift */; };
+		498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */; };
+		498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */; };
+		498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BE1BF3D3CF002882E1 /* Animatable.swift */; };
+		498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BF1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift */; };
+		498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C01BF3D3CF002882E1 /* Animation.swift */; };
+		498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C11BF3D3CF002882E1 /* Animator.swift */; };
+		498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C21BF3D3CF002882E1 /* BackgroundColorAnimation.swift */; };
+		498AA1E21BF3D3CF002882E1 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C31BF3D3CF002882E1 /* ConstraintConstantAnimation.swift */; };
+		498AA1E31BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C41BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift */; };
+		498AA1E41BF3D3CF002882E1 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C51BF3D3CF002882E1 /* CornerRadiusAnimation.swift */; };
+		498AA1E51BF3D3CF002882E1 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C61BF3D3CF002882E1 /* CubicBezier.swift */; };
+		498AA1E61BF3D3CF002882E1 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C71BF3D3CF002882E1 /* EasingFunction.swift */; };
+		498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C81BF3D3CF002882E1 /* Filmstrip.swift */; };
+		498AA1E81BF3D3CF002882E1 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1C91BF3D3CF002882E1 /* HideAnimation.swift */; };
+		498AA1E91BF3D3CF002882E1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1CA1BF3D3CF002882E1 /* Info.plist */; };
+		498AA1EA1BF3D3CF002882E1 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1CB1BF3D3CF002882E1 /* Interpolatable.swift */; };
+		498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1CC1BF3D3CF002882E1 /* LabelTextColorAnimation.swift */; };
+		498AA1EC1BF3D3CF002882E1 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1CD1BF3D3CF002882E1 /* LayerFillColorAnimation.swift */; };
+		498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1CE1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift */; };
+		498AA1EE1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1CF1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift */; };
+		498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D01BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift */; };
+		498AA1F01BF3D3CF002882E1 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D11BF3D3CF002882E1 /* PathPositionAnimation.swift */; };
+		498AA1F11BF3D3CF002882E1 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D31BF3D3CF002882E1 /* RotationAnimation.swift */; };
+		498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D41BF3D3CF002882E1 /* ScaleAnimation.swift */; };
+		498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */; };
+		498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */; };
+		498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */; };
 		49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */; };
 		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
-		49A7CF131BF2E39B00BCA090 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */; };
-		49A7CF141BF2E39B00BCA090 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF91BF2E39B00BCA090 /* Animatable.swift */; };
-		49A7CF151BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */; };
-		49A7CF161BF2E39B00BCA090 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFB1BF2E39B00BCA090 /* Animation.swift */; };
-		49A7CF171BF2E39B00BCA090 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFC1BF2E39B00BCA090 /* Animator.swift */; };
-		49A7CF181BF2E39B00BCA090 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */; };
-		49A7CF191BF2E39B00BCA090 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */; };
-		49A7CF1A1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */; };
-		49A7CF1B1BF2E39B00BCA090 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */; };
-		49A7CF1C1BF2E39B00BCA090 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */; };
-		49A7CF1D1BF2E39B00BCA090 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */; };
-		49A7CF1E1BF2E39B00BCA090 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */; };
-		49A7CF1F1BF2E39B00BCA090 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */; };
-		49A7CF201BF2E39B00BCA090 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A7CF051BF2E39B00BCA090 /* Info.plist */; };
-		49A7CF211BF2E39B00BCA090 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */; };
-		49A7CF221BF2E39B00BCA090 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */; };
-		49A7CF231BF2E39B00BCA090 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */; };
-		49A7CF241BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */; };
-		49A7CF251BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */; };
-		49A7CF261BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */; };
-		49A7CF271BF2E39B00BCA090 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */; };
-		49A7CF281BF2E39B00BCA090 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */; };
-		49A7CF291BF2E39B00BCA090 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */; };
-		49A7CF2A1BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */; };
-		49A7CF2B1BF2E39B00BCA090 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */; };
-		49A7CF2C1BF2E39B00BCA090 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */; };
 		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
 		49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */; };
 		49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF331BF3B38900BCA090 /* UserNotification.swift */; };
@@ -79,35 +88,44 @@
 		4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4969F3171BEBC6E7000B0ED7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		498AA1311BF3CA36002882E1 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCell.xib"; sourceTree = "<group>"; };
+		498AA1321BF3CA36002882E1 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.xib"; sourceTree = "<group>"; };
+		498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCellTableViewCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCellTableViewCell.swift"; sourceTree = "<group>"; };
+		498AA13F1BF3CC16002882E1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.swift"; sourceTree = "<group>"; };
+		498AA1401BF3CC16002882E1 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/Login.swift"; sourceTree = "<group>"; };
+		498AA1411BF3CC16002882E1 /* NewProposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewProposal.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/NewProposal.swift"; sourceTree = "<group>"; };
+		498AA1421BF3CC16002882E1 /* Propostas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Propostas.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/Propostas.swift"; sourceTree = "<group>"; };
+		498AA1431BF3CC16002882E1 /* ThemesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemesCategory.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/ThemesCategory.swift"; sourceTree = "<group>"; };
+		498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
+		498AA1BE1BF3D3CF002882E1 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		498AA1BF1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
+		498AA1C01BF3D3CF002882E1 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		498AA1C11BF3D3CF002882E1 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		498AA1C21BF3D3CF002882E1 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
+		498AA1C31BF3D3CF002882E1 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
+		498AA1C41BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
+		498AA1C51BF3D3CF002882E1 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		498AA1C61BF3D3CF002882E1 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		498AA1C71BF3D3CF002882E1 /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
+		498AA1C81BF3D3CF002882E1 /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
+		498AA1C91BF3D3CF002882E1 /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
+		498AA1CA1BF3D3CF002882E1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498AA1CB1BF3D3CF002882E1 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		498AA1CC1BF3D3CF002882E1 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
+		498AA1CD1BF3D3CF002882E1 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		498AA1CE1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
+		498AA1CF1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
+		498AA1D01BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		498AA1D11BF3D3CF002882E1 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
+		498AA1D21BF3D3CF002882E1 /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
+		498AA1D31BF3D3CF002882E1 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		498AA1D41BF3D3CF002882E1 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
+		498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
 		49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
-		49A7CEF91BF2E39B00BCA090 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
-		49A7CEFB1BF2E39B00BCA090 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		49A7CEFC1BF2E39B00BCA090 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
-		49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
-		49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
-		49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
-		49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
-		49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
-		49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
-		49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
-		49A7CF051BF2E39B00BCA090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
-		49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
-		49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
-		49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
-		49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
-		49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
-		49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
-		49A7CF0D1BF2E39B00BCA090 /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
-		49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
-		49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
-		49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
-		49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
-		49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
 		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposesViewController.swift; sourceTree = "<group>"; };
 		49A7CF331BF3B38900BCA090 /* UserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
@@ -142,6 +160,7 @@
 				4969F30E1BEBC6BA000B0ED7 /* CoreLocation.framework in Frameworks */,
 				4969F30C1BEBC6AB000B0ED7 /* CoreGraphics.framework in Frameworks */,
 				4969F30A1BEBC6A1000B0ED7 /* CFNetwork.framework in Frameworks */,
+				498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */,
 				4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */,
 				4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */,
 				4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */,
@@ -158,7 +177,7 @@
 				49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
-				49A7CEF71BF2E39B00BCA090 /* RazzleDazzle */,
+				498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */,
 				49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
 				4969F3131BEBC6D5000B0ED7 /* StoreKit.framework */,
@@ -174,43 +193,62 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		49A7CEF71BF2E39B00BCA090 /* RazzleDazzle */ = {
+		498AA1371BF3CB9A002882E1 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				49A7CEF81BF2E39B00BCA090 /* AlphaAnimation.swift */,
-				49A7CEF91BF2E39B00BCA090 /* Animatable.swift */,
-				49A7CEFA1BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift */,
-				49A7CEFB1BF2E39B00BCA090 /* Animation.swift */,
-				49A7CEFC1BF2E39B00BCA090 /* Animator.swift */,
-				49A7CEFD1BF2E39B00BCA090 /* BackgroundColorAnimation.swift */,
-				49A7CEFE1BF2E39B00BCA090 /* ConstraintConstantAnimation.swift */,
-				49A7CEFF1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift */,
-				49A7CF001BF2E39B00BCA090 /* CornerRadiusAnimation.swift */,
-				49A7CF011BF2E39B00BCA090 /* CubicBezier.swift */,
-				49A7CF021BF2E39B00BCA090 /* EasingFunction.swift */,
-				49A7CF031BF2E39B00BCA090 /* Filmstrip.swift */,
-				49A7CF041BF2E39B00BCA090 /* HideAnimation.swift */,
-				49A7CF051BF2E39B00BCA090 /* Info.plist */,
-				49A7CF061BF2E39B00BCA090 /* Interpolatable.swift */,
-				49A7CF071BF2E39B00BCA090 /* LabelTextColorAnimation.swift */,
-				49A7CF081BF2E39B00BCA090 /* LayerFillColorAnimation.swift */,
-				49A7CF091BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift */,
-				49A7CF0A1BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift */,
-				49A7CF0B1BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift */,
-				49A7CF0C1BF2E39B00BCA090 /* PathPositionAnimation.swift */,
-				49A7CF0D1BF2E39B00BCA090 /* RazzleDazzle.h */,
-				49A7CF0E1BF2E39B00BCA090 /* RotationAnimation.swift */,
-				49A7CF0F1BF2E39B00BCA090 /* ScaleAnimation.swift */,
-				49A7CF101BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift */,
-				49A7CF111BF2E39B00BCA090 /* TranslationAnimation.swift */,
-				49A7CF121BF2E39B00BCA090 /* UIView+Transform.swift */,
+				498AA1F81BF3D4DC002882E1 /* SWReveal */,
+				498AA1BC1BF3D3CF002882E1 /* RazzleDazzle */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		498AA1BC1BF3D3CF002882E1 /* RazzleDazzle */ = {
+			isa = PBXGroup;
+			children = (
+				498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */,
+				498AA1BE1BF3D3CF002882E1 /* Animatable.swift */,
+				498AA1BF1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift */,
+				498AA1C01BF3D3CF002882E1 /* Animation.swift */,
+				498AA1C11BF3D3CF002882E1 /* Animator.swift */,
+				498AA1C21BF3D3CF002882E1 /* BackgroundColorAnimation.swift */,
+				498AA1C31BF3D3CF002882E1 /* ConstraintConstantAnimation.swift */,
+				498AA1C41BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift */,
+				498AA1C51BF3D3CF002882E1 /* CornerRadiusAnimation.swift */,
+				498AA1C61BF3D3CF002882E1 /* CubicBezier.swift */,
+				498AA1C71BF3D3CF002882E1 /* EasingFunction.swift */,
+				498AA1C81BF3D3CF002882E1 /* Filmstrip.swift */,
+				498AA1C91BF3D3CF002882E1 /* HideAnimation.swift */,
+				498AA1CA1BF3D3CF002882E1 /* Info.plist */,
+				498AA1CB1BF3D3CF002882E1 /* Interpolatable.swift */,
+				498AA1CC1BF3D3CF002882E1 /* LabelTextColorAnimation.swift */,
+				498AA1CD1BF3D3CF002882E1 /* LayerFillColorAnimation.swift */,
+				498AA1CE1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift */,
+				498AA1CF1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift */,
+				498AA1D01BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift */,
+				498AA1D11BF3D3CF002882E1 /* PathPositionAnimation.swift */,
+				498AA1D21BF3D3CF002882E1 /* RazzleDazzle.h */,
+				498AA1D31BF3D3CF002882E1 /* RotationAnimation.swift */,
+				498AA1D41BF3D3CF002882E1 /* ScaleAnimation.swift */,
+				498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */,
+				498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */,
+				498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */,
 			);
 			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
+		498AA1F81BF3D4DC002882E1 /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SWReveal;
 			sourceTree = "<group>";
 		};
 		49A7CF2F1BF3AFC200BCA090 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				498AA1431BF3CC16002882E1 /* ThemesCategory.swift */,
+				498AA13F1BF3CC16002882E1 /* CustomCell.swift */,
+				498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -226,6 +264,8 @@
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				498AA1311BF3CA36002882E1 /* CategoryCell.xib */,
+				498AA1321BF3CA36002882E1 /* CustomCell.xib */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 				49CE03661BD56216000F76D7 /* Assets.xcassets */,
 				49B2972C1BEC24C600492550 /* keys.plist */,
@@ -255,6 +295,7 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
+				498AA1371BF3CB9A002882E1 /* Vendors */,
 				49A7CF321BF3B37600BCA090 /* Notifications */,
 				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
@@ -263,6 +304,9 @@
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* MainViewController.swift */,
 				49CF58B61BF2CDF6000B0059 /* Constants.swift */,
+				498AA1401BF3CC16002882E1 /* Login.swift */,
+				498AA1411BF3CC16002882E1 /* NewProposal.swift */,
+				498AA1421BF3CC16002882E1 /* Propostas.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
 			);
 			path = Mobilize;
@@ -347,9 +391,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498AA1E91BF3D3CF002882E1 /* Info.plist in Resources */,
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
+				498AA1341BF3CA36002882E1 /* CategoryCell.xib in Resources */,
+				498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
-				49A7CF201BF2E39B00BCA090 /* Info.plist in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 				49B2972D1BEC24C600492550 /* keys.plist in Resources */,
@@ -363,41 +409,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A7CF1B1BF2E39B00BCA090 /* CornerRadiusAnimation.swift in Sources */,
-				49A7CF1F1BF2E39B00BCA090 /* HideAnimation.swift in Sources */,
+				498AA1E61BF3D3CF002882E1 /* EasingFunction.swift in Sources */,
+				498AA1E51BF3D3CF002882E1 /* CubicBezier.swift in Sources */,
+				498AA1E81BF3D3CF002882E1 /* HideAnimation.swift in Sources */,
+				498AA1461BF3CC16002882E1 /* CustomCell.swift in Sources */,
+				498AA1E21BF3D3CF002882E1 /* ConstraintConstantAnimation.swift in Sources */,
+				498AA1EE1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift in Sources */,
+				498AA1EA1BF3D3CF002882E1 /* Interpolatable.swift in Sources */,
+				498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */,
+				498AA1EC1BF3D3CF002882E1 /* LayerFillColorAnimation.swift in Sources */,
 				49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */,
-				49A7CF141BF2E39B00BCA090 /* Animatable.swift in Sources */,
-				49A7CF251BF2E39B00BCA090 /* LayerStrokeEndAnimation.swift in Sources */,
-				49A7CF1C1BF2E39B00BCA090 /* CubicBezier.swift in Sources */,
-				49A7CF2A1BF2E39B00BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */,
-				49A7CF281BF2E39B00BCA090 /* RotationAnimation.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
-				49A7CF221BF2E39B00BCA090 /* LabelTextColorAnimation.swift in Sources */,
-				49A7CF231BF2E39B00BCA090 /* LayerFillColorAnimation.swift in Sources */,
+				498AA1E31BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift in Sources */,
 				49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */,
+				498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */,
 				49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */,
+				498AA1F11BF3D3CF002882E1 /* RotationAnimation.swift in Sources */,
+				498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
-				49A7CF241BF2E39B00BCA090 /* LayerStrokeColorAnimation.swift in Sources */,
 				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
-				49A7CF151BF2E39B00BCA090 /* AnimatedPagingScrollViewController.swift in Sources */,
-				49A7CF211BF2E39B00BCA090 /* Interpolatable.swift in Sources */,
-				49A7CF291BF2E39B00BCA090 /* ScaleAnimation.swift in Sources */,
-				49A7CF271BF2E39B00BCA090 /* PathPositionAnimation.swift in Sources */,
-				49A7CF1E1BF2E39B00BCA090 /* Filmstrip.swift in Sources */,
+				498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */,
+				498AA1E41BF3D3CF002882E1 /* CornerRadiusAnimation.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
-				49A7CF1D1BF2E39B00BCA090 /* EasingFunction.swift in Sources */,
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
-				49A7CF191BF2E39B00BCA090 /* ConstraintConstantAnimation.swift in Sources */,
-				49A7CF131BF2E39B00BCA090 /* AlphaAnimation.swift in Sources */,
+				498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */,
+				498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */,
 				49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */,
 				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
-				49A7CF181BF2E39B00BCA090 /* BackgroundColorAnimation.swift in Sources */,
-				49A7CF2B1BF2E39B00BCA090 /* TranslationAnimation.swift in Sources */,
-				49A7CF261BF2E39B00BCA090 /* LayerStrokeStartAnimation.swift in Sources */,
-				49A7CF161BF2E39B00BCA090 /* Animation.swift in Sources */,
-				49A7CF2C1BF2E39B00BCA090 /* UIView+Transform.swift in Sources */,
-				49A7CF171BF2E39B00BCA090 /* Animator.swift in Sources */,
-				49A7CF1A1BF2E39B00BCA090 /* ConstraintMultiplierAnimation.swift in Sources */,
+				498AA1F01BF3D3CF002882E1 /* PathPositionAnimation.swift in Sources */,
+				498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */,
+				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
+				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
+				498AA1471BF3CC16002882E1 /* Login.swift in Sources */,
+				498AA1491BF3CC16002882E1 /* Propostas.swift in Sources */,
+				498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */,
+				498AA1481BF3CC16002882E1 /* NewProposal.swift in Sources */,
+				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
+				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
+				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
+				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,
+				498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,6 +575,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "114bf583-2777-42c7-824c-3978c6e152a1";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobilize/Mobilize-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -530,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,6 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "114bf583-2777-42c7-824c-3978c6e152a1";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mobilize/Mobilize-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
