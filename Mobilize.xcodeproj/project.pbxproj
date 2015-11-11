@@ -20,6 +20,7 @@
 		4969F3161BEBC6DF000B0ED7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */; };
 		4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3171BEBC6E7000B0ED7 /* libz.tbd */; };
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
+		49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */; };
 		498AA1341BF3CA36002882E1 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1311BF3CA36002882E1 /* CategoryCell.xib */; };
 		498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1321BF3CA36002882E1 /* CustomCell.xib */; };
 		498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */; };
@@ -55,6 +56,8 @@
 		498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */; };
 		498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */; };
 		498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */; };
+		49A4E8121BF3DAC00059D441 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */; };
+		49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */; };
 		49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */; };
 		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
 		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
@@ -88,6 +91,9 @@
 		4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4969F3171BEBC6E7000B0ED7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		49873EAD1BF3DBEF004E4424 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mobilize-Bridging-Header.h"; path = "Mobilize/Mobilize-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		49873EAE1BF3DBEF004E4424 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Mobilize/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
+		49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Mobilize/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		498AA1311BF3CA36002882E1 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCell.xib"; sourceTree = "<group>"; };
 		498AA1321BF3CA36002882E1 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.xib"; sourceTree = "<group>"; };
 		498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCellTableViewCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCellTableViewCell.swift"; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 		498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
 		498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
 		498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
+		49A4E80C1BF3D8DB0059D441 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mobilize-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
@@ -164,6 +173,8 @@
 				4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */,
 				4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */,
 				4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */,
+				49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				49A4E8121BF3DAC00059D441 /* FBSDKLoginKit.framework in Frameworks */,
 				49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +188,8 @@
 				49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
+				49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */,
+				49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */,
 				498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */,
 				49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
@@ -196,7 +209,7 @@
 		498AA1371BF3CB9A002882E1 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				498AA1F81BF3D4DC002882E1 /* SWReveal */,
+				49A4E8071BF3D5920059D441 /* SWReveal */,
 				498AA1BC1BF3D3CF002882E1 /* RazzleDazzle */,
 			);
 			name = Vendors;
@@ -236,9 +249,12 @@
 			path = RazzleDazzle;
 			sourceTree = "<group>";
 		};
-		498AA1F81BF3D4DC002882E1 /* SWReveal */ = {
+		49A4E8071BF3D5920059D441 /* SWReveal */ = {
 			isa = PBXGroup;
 			children = (
+				49873EAD1BF3DBEF004E4424 /* Mobilize-Bridging-Header.h */,
+				49873EAE1BF3DBEF004E4424 /* SWRevealViewController.h */,
+				49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */,
 			);
 			path = SWReveal;
 			sourceTree = "<group>";
@@ -277,6 +293,7 @@
 		49CE03531BD56216000F76D7 = {
 			isa = PBXGroup;
 			children = (
+				49A4E80C1BF3D8DB0059D441 /* Mobilize-Bridging-Header.h */,
 				49CE038D1BD56400000F76D7 /* README.md */,
 				4969F2F81BEBC5E6000B0ED7 /* Frameworks */,
 				49CE035E1BD56216000F76D7 /* Mobilize */,
@@ -450,6 +467,7 @@
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
 				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,
 				498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */,
+				49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
