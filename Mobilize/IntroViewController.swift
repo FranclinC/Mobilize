@@ -38,7 +38,7 @@ class IntroViewController: AnimatedPagingScrollViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.init(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
+        self.view.backgroundColor = MOBILIZE_BACKGROUND
         prefersStatusBarHidden()
         configureViews()
         configureAnimations()
@@ -79,15 +79,15 @@ class IntroViewController: AnimatedPagingScrollViewController {
     private func configureScrollView() {
         // Let's change the background color of the scroll view from dark gray to light gray to blue
         let backgroundColorAnimation = BackgroundColorAnimation(view: scrollView)
-        backgroundColorAnimation[4] = UIColor.init(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
+        backgroundColorAnimation[4] = MOBILIZE_BACKGROUND
         backgroundColorAnimation[4.5] = UIColor.init(red: 150/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0)
         backgroundColorAnimation[4.99] = UIColor.init(red: 200/255.0, green: 200/255.0, blue: 200/255.0, alpha: 1.0)
-        backgroundColorAnimation[5] = UIColor.init(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
+        backgroundColorAnimation[5] = UIColor.whiteColor()
         
-        backgroundColorAnimation[5] = UIColor.init(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
+        backgroundColorAnimation[5] = UIColor.whiteColor()
         backgroundColorAnimation[5.5] = UIColor.init(red: 200/255.0, green: 200/255.0, blue: 200/255.0, alpha: 1.0)
         backgroundColorAnimation[5.99] = UIColor.init(red: 150/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0)
-        backgroundColorAnimation[6] = UIColor.init(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
+        backgroundColorAnimation[6] = MOBILIZE_BACKGROUND
         
         animator.addAnimation(backgroundColorAnimation)
     }

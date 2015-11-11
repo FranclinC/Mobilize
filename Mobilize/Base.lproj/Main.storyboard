@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sBl-KK-PBw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sl5-tw-1yy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-1960" y="505"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="hU0-zX-FcU">
             <objects>
-                <viewController id="sl5-tw-1yy" sceneMemberID="viewController">
+                <viewController id="sl5-tw-1yy" customClass="LoginViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YvV-pK-Txg"/>
                         <viewControllerLayoutGuide type="bottom" id="q78-5L-pBK"/>
@@ -96,9 +96,39 @@
                     <view key="view" contentMode="scaleToFill" id="E2y-jY-TWH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-q1-RBt">
+                                <rect key="frame" x="0.0" y="355" width="600" height="245"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzL-kf-9Wd">
+                                <rect key="frame" x="277" y="264" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qG7-dY-8PX">
+                                <rect key="frame" x="216" y="226" width="169" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4k-Zz-HZ3">
+                                <rect key="frame" x="216" y="188" width="169" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyL-zE-c6r">
+                                <rect key="frame" x="216" y="20" width="169" height="127"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="v5P-Cy-gCH" kind="show" identifier="LoginToHome" id="h1g-43-axP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fut-h0-ZAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,8 +146,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Qgc-FZ-J4y" kind="relationship" relationship="viewControllers" id="8PM-xq-1xq"/>
-                        <segue destination="Pcf-yc-H6g" kind="relationship" relationship="viewControllers" id="TyP-w9-4OT"/>
                         <segue destination="NUx-cz-UeT" kind="relationship" relationship="viewControllers" id="JwV-ji-U8H"/>
+                        <segue destination="Pcf-yc-H6g" kind="relationship" relationship="viewControllers" id="TyP-w9-4OT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3LS-Wl-e4D" userLabel="First Responder" sceneMemberID="firstResponder"/>

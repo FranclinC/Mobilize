@@ -54,6 +54,7 @@
 		49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03661BD56216000F76D7 /* Assets.xcassets */; };
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
 		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
+		49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF58B61BF2CDF6000B0059 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		49CE03701BD56216000F76D7 /* MobilizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		49CF58B61BF2CDF6000B0059 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
+				499C97D51BEA918200DAC95C /* RazzleDazzle */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
 				4969F3131BEBC6D5000B0ED7 /* StoreKit.framework */,
 				4969F3111BEBC6CB000B0ED7 /* Security.framework */,
@@ -215,12 +218,14 @@
 				499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */,
 				499C97F01BEA918200DAC95C /* UIView+Transform.swift */,
 			);
-			path = RazzleDazzle;
+			name = RazzleDazzle;
+			path = ../Mobilize/RazzleDazzle;
 			sourceTree = "<group>";
 		};
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 				49CE03661BD56216000F76D7 /* Assets.xcassets */,
 				49B2972C1BEC24C600492550 /* keys.plist */,
 				49CE036B1BD56216000F76D7 /* Info.plist */,
@@ -251,16 +256,31 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
+				49CF58B41BF28964000B0059 /* Controller */,
+				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
-				499C97D51BEA918200DAC95C /* RazzleDazzle */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
-				49CE03611BD56216000F76D7 /* ViewController.swift */,
-				49B2972F1BED26F600492550 /* IntroViewController.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
-				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
-				4925F5601BF27C7D00481D98 /* LoginViewController.swift */,
+				49CF58B61BF2CDF6000B0059 /* Constants.swift */,
 			);
 			path = Mobilize;
+			sourceTree = "<group>";
+		};
+		49CF58B41BF28964000B0059 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49CE03611BD56216000F76D7 /* ViewController.swift */,
+				49B2972F1BED26F600492550 /* IntroViewController.swift */,
+				4925F5601BF27C7D00481D98 /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		49CF58B51BF2CDAD000B0059 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +421,7 @@
 				499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */,
 				499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */,
 				499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */,
+				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
 				499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */,
 				499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */,
