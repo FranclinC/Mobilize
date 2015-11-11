@@ -17,8 +17,5 @@ DerivedData
 *.ipa
 *.xcuserstate
 
-*.certSigningRequest
-*.cer
-*.p12
-*provision
-*.plist
+Mobilize/keys.plist
+Cloud/
