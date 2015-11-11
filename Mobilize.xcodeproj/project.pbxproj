@@ -20,32 +20,34 @@
 		4969F3161BEBC6DF000B0ED7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */; };
 		4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3171BEBC6E7000B0ED7 /* libz.tbd */; };
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
-		499C97F11BEA918200DAC95C /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D61BEA918200DAC95C /* AlphaAnimation.swift */; };
-		499C97F21BEA918200DAC95C /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D71BEA918200DAC95C /* Animatable.swift */; };
-		499C97F31BEA918200DAC95C /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */; };
-		499C97F41BEA918200DAC95C /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97D91BEA918200DAC95C /* Animation.swift */; };
-		499C97F51BEA918200DAC95C /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DA1BEA918200DAC95C /* Animator.swift */; };
-		499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */; };
-		499C97F71BEA918200DAC95C /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */; };
-		499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */; };
-		499C97F91BEA918200DAC95C /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */; };
-		499C97FA1BEA918200DAC95C /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97DF1BEA918200DAC95C /* CubicBezier.swift */; };
-		499C97FB1BEA918200DAC95C /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E01BEA918200DAC95C /* EasingFunction.swift */; };
-		499C97FC1BEA918200DAC95C /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E11BEA918200DAC95C /* Filmstrip.swift */; };
-		499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E21BEA918200DAC95C /* HideAnimation.swift */; };
-		499C97FE1BEA918200DAC95C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 499C97E31BEA918200DAC95C /* Info.plist */; };
-		499C97FF1BEA918200DAC95C /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E41BEA918200DAC95C /* Interpolatable.swift */; };
-		499C98001BEA918200DAC95C /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */; };
-		499C98011BEA918200DAC95C /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */; };
-		499C98021BEA918200DAC95C /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */; };
-		499C98031BEA918200DAC95C /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */; };
-		499C98041BEA918200DAC95C /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */; };
-		499C98051BEA918200DAC95C /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */; };
-		499C98061BEA918200DAC95C /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EC1BEA918200DAC95C /* RotationAnimation.swift */; };
-		499C98071BEA918200DAC95C /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */; };
-		499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */; };
-		499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */; };
-		499C980A1BEA918200DAC95C /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C97F01BEA918200DAC95C /* UIView+Transform.swift */; };
+		49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */; };
+		49A7CEDA1BF2E02900BCA090 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEBF1BF2E02900BCA090 /* AlphaAnimation.swift */; };
+		49A7CEDB1BF2E02900BCA090 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC01BF2E02900BCA090 /* Animatable.swift */; };
+		49A7CEDC1BF2E02900BCA090 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC11BF2E02900BCA090 /* AnimatedPagingScrollViewController.swift */; };
+		49A7CEDD1BF2E02900BCA090 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC21BF2E02900BCA090 /* Animation.swift */; };
+		49A7CEDE1BF2E02900BCA090 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC31BF2E02900BCA090 /* Animator.swift */; };
+		49A7CEDF1BF2E02900BCA090 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC41BF2E02900BCA090 /* BackgroundColorAnimation.swift */; };
+		49A7CEE01BF2E02900BCA090 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC51BF2E02900BCA090 /* ConstraintConstantAnimation.swift */; };
+		49A7CEE11BF2E02900BCA090 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC61BF2E02900BCA090 /* ConstraintMultiplierAnimation.swift */; };
+		49A7CEE21BF2E02900BCA090 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC71BF2E02900BCA090 /* CornerRadiusAnimation.swift */; };
+		49A7CEE31BF2E02900BCA090 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC81BF2E02900BCA090 /* CubicBezier.swift */; };
+		49A7CEE41BF2E02900BCA090 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEC91BF2E02900BCA090 /* EasingFunction.swift */; };
+		49A7CEE51BF2E02900BCA090 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CECA1BF2E02900BCA090 /* Filmstrip.swift */; };
+		49A7CEE61BF2E02900BCA090 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CECB1BF2E02900BCA090 /* HideAnimation.swift */; };
+		49A7CEE71BF2E02900BCA090 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A7CECC1BF2E02900BCA090 /* Info.plist */; };
+		49A7CEE81BF2E02900BCA090 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CECD1BF2E02900BCA090 /* Interpolatable.swift */; };
+		49A7CEE91BF2E02900BCA090 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CECE1BF2E02900BCA090 /* LabelTextColorAnimation.swift */; };
+		49A7CEEA1BF2E02900BCA090 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CECF1BF2E02900BCA090 /* LayerFillColorAnimation.swift */; };
+		49A7CEEB1BF2E02900BCA090 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED01BF2E02900BCA090 /* LayerStrokeColorAnimation.swift */; };
+		49A7CEEC1BF2E02900BCA090 /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED11BF2E02900BCA090 /* LayerStrokeEndAnimation.swift */; };
+		49A7CEED1BF2E02900BCA090 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED21BF2E02900BCA090 /* LayerStrokeStartAnimation.swift */; };
+		49A7CEEE1BF2E02900BCA090 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED31BF2E02900BCA090 /* PathPositionAnimation.swift */; };
+		49A7CEEF1BF2E02900BCA090 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED51BF2E02900BCA090 /* RotationAnimation.swift */; };
+		49A7CEF01BF2E02900BCA090 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED61BF2E02900BCA090 /* ScaleAnimation.swift */; };
+		49A7CEF11BF2E02900BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED71BF2E02900BCA090 /* ScrollViewPageConstraintAnimation.swift */; };
+		49A7CEF21BF2E02900BCA090 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED81BF2E02900BCA090 /* TranslationAnimation.swift */; };
+		49A7CEF31BF2E02900BCA090 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CED91BF2E02900BCA090 /* UIView+Transform.swift */; };
+		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
 		49B2972D1BEC24C600492550 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49B2972C1BEC24C600492550 /* keys.plist */; };
 		49B297301BED26F600492550 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2972F1BED26F600492550 /* IntroViewController.swift */; };
 		49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE035F1BD56216000F76D7 /* AppDelegate.swift */; };
@@ -56,23 +58,6 @@
 		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
 		49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF58B61BF2CDF6000B0059 /* Constants.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		49CE03711BD56216000F76D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49CE03541BD56216000F76D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49CE035B1BD56216000F76D7;
-			remoteInfo = Mobilize;
-		};
-		49CE037C1BD56216000F76D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49CE03541BD56216000F76D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49CE035B1BD56216000F76D7;
-			remoteInfo = Mobilize;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4925F5601BF27C7D00481D98 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -88,33 +73,35 @@
 		4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4969F3171BEBC6E7000B0ED7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		499C97D61BEA918200DAC95C /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
-		499C97D71BEA918200DAC95C /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
-		499C97D91BEA918200DAC95C /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		499C97DA1BEA918200DAC95C /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
-		499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
-		499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
-		499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
-		499C97DF1BEA918200DAC95C /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
-		499C97E01BEA918200DAC95C /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
-		499C97E11BEA918200DAC95C /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
-		499C97E21BEA918200DAC95C /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
-		499C97E31BEA918200DAC95C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		499C97E41BEA918200DAC95C /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
-		499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
-		499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
-		499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
-		499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
-		499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
-		499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
-		499C97EB1BEA918200DAC95C /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
-		499C97EC1BEA918200DAC95C /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
-		499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
-		499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
-		499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
-		499C97F01BEA918200DAC95C /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
+		49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		49A7CEBF1BF2E02900BCA090 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
+		49A7CEC01BF2E02900BCA090 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		49A7CEC11BF2E02900BCA090 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
+		49A7CEC21BF2E02900BCA090 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		49A7CEC31BF2E02900BCA090 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		49A7CEC41BF2E02900BCA090 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CEC51BF2E02900BCA090 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
+		49A7CEC61BF2E02900BCA090 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierAnimation.swift; sourceTree = "<group>"; };
+		49A7CEC71BF2E02900BCA090 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
+		49A7CEC81BF2E02900BCA090 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		49A7CEC91BF2E02900BCA090 /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
+		49A7CECA1BF2E02900BCA090 /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filmstrip.swift; sourceTree = "<group>"; };
+		49A7CECB1BF2E02900BCA090 /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
+		49A7CECC1BF2E02900BCA090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49A7CECD1BF2E02900BCA090 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		49A7CECE1BF2E02900BCA090 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTextColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CECF1BF2E02900BCA090 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CED01BF2E02900BCA090 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeColorAnimation.swift; sourceTree = "<group>"; };
+		49A7CED11BF2E02900BCA090 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeEndAnimation.swift; sourceTree = "<group>"; };
+		49A7CED21BF2E02900BCA090 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerStrokeStartAnimation.swift; sourceTree = "<group>"; };
+		49A7CED31BF2E02900BCA090 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
+		49A7CED41BF2E02900BCA090 /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RazzleDazzle.h; sourceTree = "<group>"; };
+		49A7CED51BF2E02900BCA090 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		49A7CED61BF2E02900BCA090 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		49A7CED71BF2E02900BCA090 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewPageConstraintAnimation.swift; sourceTree = "<group>"; };
+		49A7CED81BF2E02900BCA090 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
+		49A7CED91BF2E02900BCA090 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
+		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49B2972C1BEC24C600492550 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		49B2972F1BED26F600492550 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		49CE035C1BD56216000F76D7 /* Mobilize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobilize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,8 +111,6 @@
 		49CE03661BD56216000F76D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49CE03691BD56216000F76D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49CE036B1BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49CE03701BD56216000F76D7 /* MobilizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		49CF58B61BF2CDF6000B0059 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,20 +132,7 @@
 				4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */,
 				4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */,
 				4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE036D1BD56216000F76D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE03781BD56216000F76D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				49A7CEA11BF2DE5C00BCA090 /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +144,8 @@
 			children = (
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
-				499C97D51BEA918200DAC95C /* RazzleDazzle */,
+				49A7CEBE1BF2E02900BCA090 /* RazzleDazzle */,
+				49A7CEA01BF2DE5C00BCA090 /* ParseCrashReporting.framework */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
 				4969F3131BEBC6D5000B0ED7 /* StoreKit.framework */,
 				4969F3111BEBC6CB000B0ED7 /* Security.framework */,
@@ -187,39 +160,38 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		499C97D51BEA918200DAC95C /* RazzleDazzle */ = {
+		49A7CEBE1BF2E02900BCA090 /* RazzleDazzle */ = {
 			isa = PBXGroup;
 			children = (
-				499C97D61BEA918200DAC95C /* AlphaAnimation.swift */,
-				499C97D71BEA918200DAC95C /* Animatable.swift */,
-				499C97D81BEA918200DAC95C /* AnimatedPagingScrollViewController.swift */,
-				499C97D91BEA918200DAC95C /* Animation.swift */,
-				499C97DA1BEA918200DAC95C /* Animator.swift */,
-				499C97DB1BEA918200DAC95C /* BackgroundColorAnimation.swift */,
-				499C97DC1BEA918200DAC95C /* ConstraintConstantAnimation.swift */,
-				499C97DD1BEA918200DAC95C /* ConstraintMultiplierAnimation.swift */,
-				499C97DE1BEA918200DAC95C /* CornerRadiusAnimation.swift */,
-				499C97DF1BEA918200DAC95C /* CubicBezier.swift */,
-				499C97E01BEA918200DAC95C /* EasingFunction.swift */,
-				499C97E11BEA918200DAC95C /* Filmstrip.swift */,
-				499C97E21BEA918200DAC95C /* HideAnimation.swift */,
-				499C97E31BEA918200DAC95C /* Info.plist */,
-				499C97E41BEA918200DAC95C /* Interpolatable.swift */,
-				499C97E51BEA918200DAC95C /* LabelTextColorAnimation.swift */,
-				499C97E61BEA918200DAC95C /* LayerFillColorAnimation.swift */,
-				499C97E71BEA918200DAC95C /* LayerStrokeColorAnimation.swift */,
-				499C97E81BEA918200DAC95C /* LayerStrokeEndAnimation.swift */,
-				499C97E91BEA918200DAC95C /* LayerStrokeStartAnimation.swift */,
-				499C97EA1BEA918200DAC95C /* PathPositionAnimation.swift */,
-				499C97EB1BEA918200DAC95C /* RazzleDazzle.h */,
-				499C97EC1BEA918200DAC95C /* RotationAnimation.swift */,
-				499C97ED1BEA918200DAC95C /* ScaleAnimation.swift */,
-				499C97EE1BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift */,
-				499C97EF1BEA918200DAC95C /* TranslationAnimation.swift */,
-				499C97F01BEA918200DAC95C /* UIView+Transform.swift */,
+				49A7CEBF1BF2E02900BCA090 /* AlphaAnimation.swift */,
+				49A7CEC01BF2E02900BCA090 /* Animatable.swift */,
+				49A7CEC11BF2E02900BCA090 /* AnimatedPagingScrollViewController.swift */,
+				49A7CEC21BF2E02900BCA090 /* Animation.swift */,
+				49A7CEC31BF2E02900BCA090 /* Animator.swift */,
+				49A7CEC41BF2E02900BCA090 /* BackgroundColorAnimation.swift */,
+				49A7CEC51BF2E02900BCA090 /* ConstraintConstantAnimation.swift */,
+				49A7CEC61BF2E02900BCA090 /* ConstraintMultiplierAnimation.swift */,
+				49A7CEC71BF2E02900BCA090 /* CornerRadiusAnimation.swift */,
+				49A7CEC81BF2E02900BCA090 /* CubicBezier.swift */,
+				49A7CEC91BF2E02900BCA090 /* EasingFunction.swift */,
+				49A7CECA1BF2E02900BCA090 /* Filmstrip.swift */,
+				49A7CECB1BF2E02900BCA090 /* HideAnimation.swift */,
+				49A7CECC1BF2E02900BCA090 /* Info.plist */,
+				49A7CECD1BF2E02900BCA090 /* Interpolatable.swift */,
+				49A7CECE1BF2E02900BCA090 /* LabelTextColorAnimation.swift */,
+				49A7CECF1BF2E02900BCA090 /* LayerFillColorAnimation.swift */,
+				49A7CED01BF2E02900BCA090 /* LayerStrokeColorAnimation.swift */,
+				49A7CED11BF2E02900BCA090 /* LayerStrokeEndAnimation.swift */,
+				49A7CED21BF2E02900BCA090 /* LayerStrokeStartAnimation.swift */,
+				49A7CED31BF2E02900BCA090 /* PathPositionAnimation.swift */,
+				49A7CED41BF2E02900BCA090 /* RazzleDazzle.h */,
+				49A7CED51BF2E02900BCA090 /* RotationAnimation.swift */,
+				49A7CED61BF2E02900BCA090 /* ScaleAnimation.swift */,
+				49A7CED71BF2E02900BCA090 /* ScrollViewPageConstraintAnimation.swift */,
+				49A7CED81BF2E02900BCA090 /* TranslationAnimation.swift */,
+				49A7CED91BF2E02900BCA090 /* UIView+Transform.swift */,
 			);
-			name = RazzleDazzle;
-			path = ../Mobilize/RazzleDazzle;
+			path = RazzleDazzle;
 			sourceTree = "<group>";
 		};
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
@@ -247,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				49CE035C1BD56216000F76D7 /* Mobilize.app */,
-				49CE03701BD56216000F76D7 /* MobilizeTests.xctest */,
-				49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +249,7 @@
 		49CF58B51BF2CDAD000B0059 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49A7CEF41BF2E1C800BCA090 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -303,61 +274,18 @@
 			productReference = 49CE035C1BD56216000F76D7 /* Mobilize.app */;
 			productType = "com.apple.product-type.application";
 		};
-		49CE036F1BD56216000F76D7 /* MobilizeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49CE03871BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeTests" */;
-			buildPhases = (
-				49CE036C1BD56216000F76D7 /* Sources */,
-				49CE036D1BD56216000F76D7 /* Frameworks */,
-				49CE036E1BD56216000F76D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49CE03721BD56216000F76D7 /* PBXTargetDependency */,
-			);
-			name = MobilizeTests;
-			productName = MobilizeTests;
-			productReference = 49CE03701BD56216000F76D7 /* MobilizeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		49CE037A1BD56216000F76D7 /* MobilizeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49CE038A1BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeUITests" */;
-			buildPhases = (
-				49CE03771BD56216000F76D7 /* Sources */,
-				49CE03781BD56216000F76D7 /* Frameworks */,
-				49CE03791BD56216000F76D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49CE037D1BD56216000F76D7 /* PBXTargetDependency */,
-			);
-			name = MobilizeUITests;
-			productName = MobilizeUITests;
-			productReference = 49CE037B1BD56216000F76D7 /* MobilizeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		49CE03541BD56216000F76D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Miguel Araújo";
 				TargetAttributes = {
 					49CE035B1BD56216000F76D7 = {
 						CreatedOnToolsVersion = 7.0.1;
-					};
-					49CE036F1BD56216000F76D7 = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = 49CE035B1BD56216000F76D7;
-					};
-					49CE037A1BD56216000F76D7 = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = 49CE035B1BD56216000F76D7;
 					};
 				};
 			};
@@ -375,8 +303,6 @@
 			projectRoot = "";
 			targets = (
 				49CE035B1BD56216000F76D7 /* Mobilize */,
-				49CE036F1BD56216000F76D7 /* MobilizeTests */,
-				49CE037A1BD56216000F76D7 /* MobilizeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,24 +314,10 @@
 			files = (
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
-				49B2972D1BEC24C600492550 /* keys.plist in Resources */,
+				49A7CEE71BF2E02900BCA090 /* Info.plist in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
-				499C97FE1BEA918200DAC95C /* Info.plist in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE036E1BD56216000F76D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE03791BD56216000F76D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				49B2972D1BEC24C600492550 /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,67 +328,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499C98031BEA918200DAC95C /* LayerStrokeEndAnimation.swift in Sources */,
-				499C98001BEA918200DAC95C /* LabelTextColorAnimation.swift in Sources */,
-				499C98091BEA918200DAC95C /* TranslationAnimation.swift in Sources */,
-				499C98081BEA918200DAC95C /* ScrollViewPageConstraintAnimation.swift in Sources */,
-				499C97F81BEA918200DAC95C /* ConstraintMultiplierAnimation.swift in Sources */,
+				49A7CEEF1BF2E02900BCA090 /* RotationAnimation.swift in Sources */,
+				49A7CEE31BF2E02900BCA090 /* CubicBezier.swift in Sources */,
+				49A7CEDE1BF2E02900BCA090 /* Animator.swift in Sources */,
+				49A7CEEB1BF2E02900BCA090 /* LayerStrokeColorAnimation.swift in Sources */,
+				49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */,
+				49A7CEE61BF2E02900BCA090 /* HideAnimation.swift in Sources */,
+				49A7CEE81BF2E02900BCA090 /* Interpolatable.swift in Sources */,
+				49A7CEE51BF2E02900BCA090 /* Filmstrip.swift in Sources */,
+				49A7CEE21BF2E02900BCA090 /* CornerRadiusAnimation.swift in Sources */,
+				49A7CEE01BF2E02900BCA090 /* ConstraintConstantAnimation.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
-				499C97F61BEA918200DAC95C /* BackgroundColorAnimation.swift in Sources */,
-				499C97FD1BEA918200DAC95C /* HideAnimation.swift in Sources */,
-				499C98061BEA918200DAC95C /* RotationAnimation.swift in Sources */,
-				499C97F71BEA918200DAC95C /* ConstraintConstantAnimation.swift in Sources */,
-				499C98071BEA918200DAC95C /* ScaleAnimation.swift in Sources */,
-				499C98041BEA918200DAC95C /* LayerStrokeStartAnimation.swift in Sources */,
-				499C97FA1BEA918200DAC95C /* CubicBezier.swift in Sources */,
-				499C97FF1BEA918200DAC95C /* Interpolatable.swift in Sources */,
-				499C980A1BEA918200DAC95C /* UIView+Transform.swift in Sources */,
+				49A7CEEE1BF2E02900BCA090 /* PathPositionAnimation.swift in Sources */,
+				49A7CEDC1BF2E02900BCA090 /* AnimatedPagingScrollViewController.swift in Sources */,
 				49CE03621BD56216000F76D7 /* ViewController.swift in Sources */,
-				499C97F21BEA918200DAC95C /* Animatable.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
-				499C97F91BEA918200DAC95C /* CornerRadiusAnimation.swift in Sources */,
-				499C97FC1BEA918200DAC95C /* Filmstrip.swift in Sources */,
-				499C97F11BEA918200DAC95C /* AlphaAnimation.swift in Sources */,
-				499C98011BEA918200DAC95C /* LayerFillColorAnimation.swift in Sources */,
-				499C98051BEA918200DAC95C /* PathPositionAnimation.swift in Sources */,
-				499C97F41BEA918200DAC95C /* Animation.swift in Sources */,
+				49A7CEE91BF2E02900BCA090 /* LabelTextColorAnimation.swift in Sources */,
+				49A7CEEA1BF2E02900BCA090 /* LayerFillColorAnimation.swift in Sources */,
+				49A7CEDB1BF2E02900BCA090 /* Animatable.swift in Sources */,
+				49A7CEF11BF2E02900BCA090 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				49A7CEF31BF2E02900BCA090 /* UIView+Transform.swift in Sources */,
+				49A7CEE11BF2E02900BCA090 /* ConstraintMultiplierAnimation.swift in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
-				499C97F51BEA918200DAC95C /* Animator.swift in Sources */,
-				499C97FB1BEA918200DAC95C /* EasingFunction.swift in Sources */,
-				499C97F31BEA918200DAC95C /* AnimatedPagingScrollViewController.swift in Sources */,
-				499C98021BEA918200DAC95C /* LayerStrokeColorAnimation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE036C1BD56216000F76D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49CE03771BD56216000F76D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				49A7CEE41BF2E02900BCA090 /* EasingFunction.swift in Sources */,
+				49A7CEDF1BF2E02900BCA090 /* BackgroundColorAnimation.swift in Sources */,
+				49A7CEF01BF2E02900BCA090 /* ScaleAnimation.swift in Sources */,
+				49A7CEDD1BF2E02900BCA090 /* Animation.swift in Sources */,
+				49A7CEED1BF2E02900BCA090 /* LayerStrokeStartAnimation.swift in Sources */,
+				49A7CEDA1BF2E02900BCA090 /* AlphaAnimation.swift in Sources */,
+				49A7CEF21BF2E02900BCA090 /* TranslationAnimation.swift in Sources */,
+				49A7CEEC1BF2E02900BCA090 /* LayerStrokeEndAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		49CE03721BD56216000F76D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49CE035B1BD56216000F76D7 /* Mobilize */;
-			targetProxy = 49CE03711BD56216000F76D7 /* PBXContainerItemProxy */;
-		};
-		49CE037D1BD56216000F76D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49CE035B1BD56216000F76D7 /* Mobilize */;
-			targetProxy = 49CE037C1BD56216000F76D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49CE03631BD56216000F76D7 /* Main.storyboard */ = {
@@ -534,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -573,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,54 +505,6 @@
 			};
 			name = Release;
 		};
-		49CE03881BD56216000F76D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MobilizeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.MobilizeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobilize.app/Mobilize";
-			};
-			name = Debug;
-		};
-		49CE03891BD56216000F76D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MobilizeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.MobilizeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobilize.app/Mobilize";
-			};
-			name = Release;
-		};
-		49CE038B1BD56216000F76D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MobilizeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.MobilizeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Mobilize;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		49CE038C1BD56216000F76D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MobilizeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.MobilizeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Mobilize;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -684,24 +522,6 @@
 			buildConfigurations = (
 				49CE03851BD56216000F76D7 /* Debug */,
 				49CE03861BD56216000F76D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49CE03871BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49CE03881BD56216000F76D7 /* Debug */,
-				49CE03891BD56216000F76D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49CE038A1BD56216000F76D7 /* Build configuration list for PBXNativeTarget "MobilizeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49CE038B1BD56216000F76D7 /* Debug */,
-				49CE038C1BD56216000F76D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
