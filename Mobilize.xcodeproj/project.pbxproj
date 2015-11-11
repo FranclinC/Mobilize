@@ -11,6 +11,11 @@
 		493AF3861BF3E129004BADE4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3831BF3E129004BADE4 /* Login.swift */; };
 		493AF3871BF3E129004BADE4 /* NewProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3841BF3E129004BADE4 /* NewProposal.swift */; };
 		493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3851BF3E129004BADE4 /* Propostas.swift */; };
+		493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */; };
+		493AF38D1BF3E20E004BADE4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF38A1BF3E20E004BADE4 /* CustomCell.swift */; };
+		493AF38E1BF3E20E004BADE4 /* ThemesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF38B1BF3E20E004BADE4 /* ThemesCategory.swift */; };
+		493AF3911BF3E248004BADE4 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493AF38F1BF3E248004BADE4 /* CategoryCell.xib */; };
+		493AF3921BF3E248004BADE4 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493AF3901BF3E248004BADE4 /* CustomCell.xib */; };
 		4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */; };
 		4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */; };
 		4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */; };
@@ -24,11 +29,6 @@
 		4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3171BEBC6E7000B0ED7 /* libz.tbd */; };
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
 		49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */; };
-		498AA1341BF3CA36002882E1 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1311BF3CA36002882E1 /* CategoryCell.xib */; };
-		498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498AA1321BF3CA36002882E1 /* CustomCell.xib */; };
-		498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */; };
-		498AA1461BF3CC16002882E1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA13F1BF3CC16002882E1 /* CustomCell.swift */; };
-		498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1431BF3CC16002882E1 /* ThemesCategory.swift */; };
 		498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */; };
 		498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */; };
 		498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BE1BF3D3CF002882E1 /* Animatable.swift */; };
@@ -82,6 +82,11 @@
 		493AF3831BF3E129004BADE4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		493AF3841BF3E129004BADE4 /* NewProposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProposal.swift; sourceTree = "<group>"; };
 		493AF3851BF3E129004BADE4 /* Propostas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propostas.swift; sourceTree = "<group>"; };
+		493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		493AF38A1BF3E20E004BADE4 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		493AF38B1BF3E20E004BADE4 /* ThemesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemesCategory.swift; sourceTree = "<group>"; };
+		493AF38F1BF3E248004BADE4 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		493AF3901BF3E248004BADE4 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		4969F2F91BEBC5E6000B0ED7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		4969F2FA1BEBC5E6000B0ED7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4969F3071BEBC699000B0ED7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -97,11 +102,6 @@
 		49873EAD1BF3DBEF004E4424 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mobilize-Bridging-Header.h"; path = "Mobilize/Mobilize-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		49873EAE1BF3DBEF004E4424 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Mobilize/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Mobilize/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
-		498AA1311BF3CA36002882E1 /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCell.xib"; sourceTree = "<group>"; };
-		498AA1321BF3CA36002882E1 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCell.xib; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.xib"; sourceTree = "<group>"; };
-		498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCellTableViewCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CategoryCellTableViewCell.swift"; sourceTree = "<group>"; };
-		498AA13F1BF3CC16002882E1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/CustomCell.swift"; sourceTree = "<group>"; };
-		498AA1431BF3CC16002882E1 /* ThemesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemesCategory.swift; path = "../../../Downloads/Mobilize-fcmo/Mobilize/ThemesCategory.swift"; sourceTree = "<group>"; };
 		498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
 		498AA1BE1BF3D3CF002882E1 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
@@ -262,9 +262,9 @@
 		49A7CF2F1BF3AFC200BCA090 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				498AA1431BF3CC16002882E1 /* ThemesCategory.swift */,
-				498AA13F1BF3CC16002882E1 /* CustomCell.swift */,
-				498AA13E1BF3CC16002882E1 /* CategoryCellTableViewCell.swift */,
+				493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */,
+				493AF38A1BF3E20E004BADE4 /* CustomCell.swift */,
+				493AF38B1BF3E20E004BADE4 /* ThemesCategory.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -280,8 +280,8 @@
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				498AA1311BF3CA36002882E1 /* CategoryCell.xib */,
-				498AA1321BF3CA36002882E1 /* CustomCell.xib */,
+				493AF38F1BF3E248004BADE4 /* CategoryCell.xib */,
+				493AF3901BF3E248004BADE4 /* CustomCell.xib */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 				49CE03661BD56216000F76D7 /* Assets.xcassets */,
 				49B2972C1BEC24C600492550 /* keys.plist */,
@@ -409,9 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				498AA1E91BF3D3CF002882E1 /* Info.plist in Resources */,
+				493AF3911BF3E248004BADE4 /* CategoryCell.xib in Resources */,
+				493AF3921BF3E248004BADE4 /* CustomCell.xib in Resources */,
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
-				498AA1341BF3CA36002882E1 /* CategoryCell.xib in Resources */,
-				498AA1351BF3CA36002882E1 /* CustomCell.xib in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
@@ -429,7 +429,6 @@
 				498AA1E61BF3D3CF002882E1 /* EasingFunction.swift in Sources */,
 				498AA1E51BF3D3CF002882E1 /* CubicBezier.swift in Sources */,
 				498AA1E81BF3D3CF002882E1 /* HideAnimation.swift in Sources */,
-				498AA1461BF3CC16002882E1 /* CustomCell.swift in Sources */,
 				498AA1E21BF3D3CF002882E1 /* ConstraintConstantAnimation.swift in Sources */,
 				498AA1EE1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift in Sources */,
 				498AA1EA1BF3D3CF002882E1 /* Interpolatable.swift in Sources */,
@@ -452,22 +451,23 @@
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
 				498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */,
 				498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				493AF38E1BF3E20E004BADE4 /* ThemesCategory.swift in Sources */,
 				493AF3871BF3E129004BADE4 /* NewProposal.swift in Sources */,
-				498AA14A1BF3CC16002882E1 /* ThemesCategory.swift in Sources */,
 				49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */,
 				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
 				498AA1F01BF3D3CF002882E1 /* PathPositionAnimation.swift in Sources */,
+				493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */,
 				493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */,
 				498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */,
 				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
-				498AA1451BF3CC16002882E1 /* CategoryCellTableViewCell.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
 				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,
 				498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */,
 				49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */,
+				493AF38D1BF3E20E004BADE4 /* CustomCell.swift in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
