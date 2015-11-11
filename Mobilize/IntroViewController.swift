@@ -42,7 +42,7 @@ class IntroViewController: AnimatedPagingScrollViewController {
         prefersStatusBarHidden()
         configureViews()
         configureAnimations()
-        self.performSegueWithIdentifier("GoToInitial", sender: self)
+        // self.performSegueWithIdentifier("GoToInitial", sender: self)
     }
     
     private func configureViews() {

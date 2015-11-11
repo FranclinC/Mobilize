@@ -9,9 +9,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    private let wave = UIImageView(image: UIImage(named: "Wave"))
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.view.backgroundColor = MOBILIZE_BACKGROUND
+        backgroundImage.image = UIImage(named: "wave")
     }
 }
