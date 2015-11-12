@@ -129,7 +129,11 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         cell.textProposal.text = self.proposals[indexPath.row]["ShortProposal"] as? String
-        //cell.nameUser.text = self.proposals[indexPath.row][""]
+        
+        //Remember to set the size of the label
+        cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
+        cell.againstVoteCount.text = self.proposals[indexPath.row]["DownVote"] as? String
+        //cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
         return cell
     }
 

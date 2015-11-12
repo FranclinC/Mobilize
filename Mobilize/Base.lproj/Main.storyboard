@@ -179,7 +179,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="temas" id="fYO-BV-Ufy"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5oJ-vJ-7Wj">
-                            <rect key="frame" x="473" y="7" width="67" height="30"/>
+                            <rect key="frame" x="61" y="7" width="479" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="" image="mobibaby1"/>
@@ -454,15 +454,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cultura1" width="436" height="651"/>
-        <image name="educacao1" width="436" height="651"/>
+        <image name="cultura1" width="62" height="63"/>
+        <image name="educacao1" width="62" height="63"/>
         <image name="mobi1" width="436" height="651"/>
-        <image name="mobibaby1" width="436" height="651"/>
-        <image name="mobijunior1" width="436" height="651"/>
-        <image name="mobilidade1" width="436" height="651"/>
-        <image name="saude1" width="436" height="651"/>
-        <image name="seguranca1" width="436" height="651"/>
-        <image name="temas" width="436" height="651"/>
+        <image name="mobibaby1" width="23" height="15"/>
+        <image name="mobijunior1" width="26" height="17"/>
+        <image name="mobilidade1" width="62" height="63"/>
+        <image name="saude1" width="62" height="63"/>
+        <image name="seguranca1" width="62" height="63"/>
+        <image name="temas" width="24" height="24"/>
         <image name="wave" width="436" height="651"/>
     </resources>
 </document>
