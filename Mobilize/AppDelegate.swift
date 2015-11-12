@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 import ParseCrashReporting
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,18 +22,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Enable Crash Reporting
-        ParseCrashReporting.enable()
+//        ParseCrashReporting.enable()
+        
+        //Facebook
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
             keys = NSDictionary(contentsOfFile: path)
+            print(keys)
         }
-        if let _ = keys {
-            let applicationId = keys?["parseApplicationId"] as? String
-            let clientKey = keys?["parseClientKey"] as? String
-            
-            // Initialize Parse.
-            Parse.setApplicationId(applicationId!, clientKey: clientKey!)
-        }
+        Parse.enableLocalDatastore()
+//        if let _ = keys {
+//            
+//            let applicationId = keys?["parseApplicationId"] as? String
+//            let clientKey = keys?["parseClientKey"] as? String
+//            
+//            // Initialize Parse.
+//            Parse.setApplicationId(applicationId!, clientKey: clientKey!)
+//        }
+        //This is just for a test with parse
+        
+
+        // Initialize Parse.
+        Parse.setApplicationId("Ind4ALgVPaHk9NDFkRMgZWYm4q1ngr7ouD2387GT", clientKey: "dOIxXW8MYQY37X7PhCqtktaEhvsF5Nyu1HjnB8Qj")
+        // [Optional] Track statistics around application opens.
+
+        
+        
+        //end of the test, remember to delete it
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
         if application.applicationState != UIApplicationState.Background {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
@@ -75,6 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        //Facebook app Activate
+        FBSDKAppEvents.activateApp()
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -100,6 +123,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        //Facebook connection
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 }
 
