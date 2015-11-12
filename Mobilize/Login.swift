@@ -15,9 +15,13 @@ class Login: UIViewController {
 
     @IBOutlet var loginButton: UIButton!
     
+    @IBOutlet var backgroundImage: UIImageView!
     var permissionsArray = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = MOBILIZE_BACKGROUND
+        backgroundImage.image = UIImage(named: "wave")
         
     }
     
@@ -136,7 +140,7 @@ class Login: UIViewController {
                     if(profilePictureData != nil)
                     {
                         let profileFileObject = PFFile(data:profilePictureData!)
-                        myUser.setObject(profileFileObject, forKey: "profile_picture")
+                        myUser.setObject(profileFileObject!, forKey: "profile_picture")
                     }
                     
                     
