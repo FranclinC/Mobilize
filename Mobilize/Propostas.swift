@@ -28,7 +28,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         if category == "" { //In case there is not a value yet, When the app just start
             self.loadProposals("BabyMob") //This is the parameter search, i must add a new parameter for the category
         }else{
@@ -144,7 +144,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 print("Got the objects")
-                //Now i get the arry of objects
+                //Now i get the array of objects
+                print(objects)
                 for object in objects! {
                     self.proposals.append(object)
                     print(self.proposals[0]["ShortProposal"])
@@ -158,6 +159,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
         }
     }
+    
+
     
     
     
