@@ -14,6 +14,8 @@ class ThemesCategory: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         self.tableView.registerNib(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "categoryCell")
 
 
@@ -61,7 +63,21 @@ class ThemesCategory: UITableViewController {
     
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Franclin")
+        
+        //This is to come back to the previous view controller
+        let revealController = self.revealViewController()
+        var frontController : UIViewController? = nil
+        var previousView : Propostas = Propostas()
+        
+        
+        //Need to find a way to pass a value without performing a segue. Maybe Singleton??
+        frontController = Propostas()
+        revealController.revealToggleAnimated(true)
+        
+        //This is not implemented yet
+        //revealController.pushFrontViewController(frontController, animated: false)
+        
+        
         
     }
 
@@ -72,7 +88,7 @@ class ThemesCategory: UITableViewController {
         let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         
         //here i need the value of the parameter for the search
-        destVc.category = categories[indexPath.row] //Get the value
+        destVc.category = categories[indexPath.row] //Get the value of the category
 
     }
     

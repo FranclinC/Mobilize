@@ -184,7 +184,7 @@
                             <segments>
                                 <segment title="" image="mobibaby1"/>
                                 <segment title="" image="mobijunior1"/>
-                                <segment title="" image="mobi1"/>
+                                <segment title="" image="mobi1-1"/>
                             </segments>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dgw-UN-arC">
@@ -202,6 +202,7 @@
                         <outlet property="segmentedControl" destination="5oJ-vJ-7Wj" id="weM-Dc-VQI"/>
                         <outlet property="tableView" destination="CcS-sh-V4s" id="R13-Sn-55U"/>
                         <outlet property="themesButton" destination="fYO-BV-Ufy" id="Ybt-Gd-Zvm"/>
+                        <segue destination="gfs-FI-MhW" kind="show" identifier="proposalDetailed" id="jCe-Gk-Sl4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ6-ob-WuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -348,6 +349,49 @@
             </objects>
             <point key="canvasLocation" x="20" y="489"/>
         </scene>
+        <!--Proposta-->
+        <scene sceneID="NRM-Fh-hu5">
+            <objects>
+                <viewController id="gfs-FI-MhW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9KC-pw-Vah"/>
+                        <viewControllerLayoutGuide type="bottom" id="2KG-Rh-oKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gZm-6Y-iGs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oam-ui-shu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seK-fc-td7">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bvP-Vw-Lpt"/>
+                                    <barButtonItem style="plain" id="wgV-D0-Yda">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="3yo-OJ-RMH">
+                                            <rect key="frame" x="68" y="7" width="463" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i6J-jo-au6"/>
+                                    <barButtonItem title="Item" id="K1V-xJ-ZWk"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Proposta" id="aqC-bq-Xwb">
+                        <barButtonItem key="rightBarButtonItem" image="NotificationOn" id="M2H-kc-Inz"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGV-Ot-qRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="489"/>
+        </scene>
         <!--Notificações-->
         <scene sceneID="3UZ-iQ-egV">
             <objects>
@@ -454,9 +498,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NotificationOn" width="23" height="27"/>
         <image name="cultura1" width="62" height="63"/>
         <image name="educacao1" width="62" height="63"/>
-        <image name="mobi1" width="436" height="651"/>
+        <image name="mobi1-1" width="26" height="24"/>
         <image name="mobibaby1" width="23" height="15"/>
         <image name="mobijunior1" width="26" height="17"/>
         <image name="mobilidade1" width="62" height="63"/>

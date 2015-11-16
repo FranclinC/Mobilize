@@ -16,23 +16,29 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var proposals: [PFObject] = [PFObject]()
    
     @IBOutlet var segmentedControl: UISegmentedControl!
-
     
     @IBOutlet var themesButton: UIBarButtonItem!
     @IBOutlet var newProposal: UIBarButtonItem!
 
 
     var category : String = ""
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
+        print("Teste de valor: \(category)")
         // Do any additional setup after loading the view.
 
         if category == "" { //In case there is not a value yet, When the app just start
             self.loadProposals("BabyMob") //This is the parameter search, i must add a new parameter for the category
+            print("Entrei na primeira categoria")
         }else{
             self.loadProposals("BabyMob")
+            print("Entrei na segunda categoria")
         }
         
         
@@ -51,14 +57,23 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        var tabBar = self.tabBarController //Instead of passing each value, just pass the tab bar, it will have the values there. That does not work, i already tried
+        
         self.tabBarController?.navigationItem.titleView = segmentedControl //This is to put the segment control in the navbar
         self.tabBarController?.navigationItem.leftBarButtonItem = themesButton
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
         super.viewWillAppear(true)
         //self.navigationItem.setHidesBackButton(true, animated: false)
-        
+        //Putting the reference of the items in the singleton
+        //SharedValues.sharedInstance.setThemesButton(self.themesButton)
+        //SharedValues.sharedInstance.setSegmentedControl(self.segmentedControl)
+        //SharedValues.sharedInstance.setNewProposal(self.newProposal)
+        //SharedValues.sharedInstance.setTabBar(tabBar!)
+        //SharedValues.sharedInstance.settableView(self.tableView)
+
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,6 +92,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCellWithIdentifier("proposalCell", forIndexPath: indexPath) as! CustomCell
         print("Just a test")
         //Getting the user Object
@@ -135,6 +151,12 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.againstVoteCount.text = self.proposals[indexPath.row]["DownVote"] as? String
         //cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
         return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("proposalDetailed", sender: self)
+        
     }
 
     func loadProposals(maturation: String){
