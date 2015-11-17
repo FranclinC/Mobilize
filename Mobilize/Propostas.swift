@@ -57,21 +57,23 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         var tabBar = self.tabBarController //Instead of passing each value, just pass the tab bar, it will have the values there. That does not work, i already tried
         
         self.tabBarController?.navigationItem.titleView = segmentedControl //This is to put the segment control in the navbar
         self.tabBarController?.navigationItem.leftBarButtonItem = themesButton
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
-        super.viewWillAppear(true)
-        //self.navigationItem.setHidesBackButton(true, animated: false)
-        //Putting the reference of the items in the singleton
-        //SharedValues.sharedInstance.setThemesButton(self.themesButton)
-        //SharedValues.sharedInstance.setSegmentedControl(self.segmentedControl)
-        //SharedValues.sharedInstance.setNewProposal(self.newProposal)
-        //SharedValues.sharedInstance.setTabBar(tabBar!)
-        //SharedValues.sharedInstance.settableView(self.tableView)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+
 
         
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
 

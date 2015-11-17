@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="159" id="tdS-0v-ggf">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="159" id="tdS-0v-ggf" customClass="CommentCell" customModule="Mobilize" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdS-0v-ggf" id="gFg-Yy-H7C">
@@ -86,6 +86,14 @@
                     <constraint firstAttribute="bottomMargin" secondItem="RK8-Fb-yOG" secondAttribute="bottom" constant="-3.5" id="jWF-kr-E2e"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentText" destination="id4-vK-0eZ" id="Jsf-CD-rcK"/>
+                <outlet property="commentTime" destination="agc-HP-vVT" id="p0r-C9-xMA"/>
+                <outlet property="starCount" destination="RK8-Fb-yOG" id="cWT-fr-hXm"/>
+                <outlet property="starImage" destination="XPv-FL-c44" id="CBw-EA-8El"/>
+                <outlet property="userName" destination="xe9-dk-3g9" id="vsB-Ex-Gg1"/>
+                <outlet property="userPic" destination="Jt1-hS-Vt2" id="ehW-Ce-gbT"/>
+            </connections>
             <point key="canvasLocation" x="218" y="-77.5"/>
         </tableViewCell>
     </objects>

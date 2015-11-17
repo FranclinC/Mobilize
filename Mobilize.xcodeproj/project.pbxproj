@@ -76,6 +76,11 @@
 		65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E2D1BFA1DCD00350721 /* ProposalCell.xib */; };
 		65112E321BFA371E00350721 /* CommentCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E311BFA371E00350721 /* CommentCountCell.xib */; };
 		65112E341BFA382D00350721 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E331BFA382D00350721 /* CommentCell.xib */; };
+		65112E361BFAC58900350721 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E351BFAC58900350721 /* NotificationCell.xib */; };
+		65112E381BFB865600350721 /* ProposalDetailedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E371BFB865600350721 /* ProposalDetailedCell.swift */; };
+		65112E3A1BFB87E000350721 /* CommentsCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E391BFB87E000350721 /* CommentsCountCell.swift */; };
+		65112E3C1BFB886700350721 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E3B1BFB886700350721 /* CommentCell.swift */; };
+		65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E3D1BFB891000350721 /* NotificationCell.swift */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
 /* End PBXBuildFile section */
@@ -156,6 +161,11 @@
 		65112E2D1BFA1DCD00350721 /* ProposalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProposalCell.xib; sourceTree = "<group>"; };
 		65112E311BFA371E00350721 /* CommentCountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCountCell.xib; sourceTree = "<group>"; };
 		65112E331BFA382D00350721 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		65112E351BFAC58900350721 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		65112E371BFB865600350721 /* ProposalDetailedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailedCell.swift; sourceTree = "<group>"; };
+		65112E391BFB87E000350721 /* CommentsCountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsCountCell.swift; sourceTree = "<group>"; };
+		65112E3B1BFB886700350721 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		65112E3D1BFB891000350721 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,6 +278,10 @@
 			children = (
 				493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */,
 				493AF38A1BF3E20E004BADE4 /* CustomCell.swift */,
+				65112E371BFB865600350721 /* ProposalDetailedCell.swift */,
+				65112E391BFB87E000350721 /* CommentsCountCell.swift */,
+				65112E3B1BFB886700350721 /* CommentCell.swift */,
+				65112E3D1BFB891000350721 /* NotificationCell.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 				65112E2D1BFA1DCD00350721 /* ProposalCell.xib */,
 				65112E311BFA371E00350721 /* CommentCountCell.xib */,
 				65112E331BFA382D00350721 /* CommentCell.xib */,
+				65112E351BFAC58900350721 /* NotificationCell.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -424,6 +439,7 @@
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
 				49CE03651BD56216000F76D7 /* Main.storyboard in Resources */,
+				65112E361BFAC58900350721 /* NotificationCell.xib in Resources */,
 				65112E341BFA382D00350721 /* CommentCell.xib in Resources */,
 				65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
@@ -439,8 +455,10 @@
 			files = (
 				498AA1E61BF3D3CF002882E1 /* EasingFunction.swift in Sources */,
 				498AA1E51BF3D3CF002882E1 /* CubicBezier.swift in Sources */,
+				65112E381BFB865600350721 /* ProposalDetailedCell.swift in Sources */,
 				498AA1E81BF3D3CF002882E1 /* HideAnimation.swift in Sources */,
 				498AA1E21BF3D3CF002882E1 /* ConstraintConstantAnimation.swift in Sources */,
+				65112E3A1BFB87E000350721 /* CommentsCountCell.swift in Sources */,
 				498AA1EE1BF3D3CF002882E1 /* LayerStrokeEndAnimation.swift in Sources */,
 				498AA1EA1BF3D3CF002882E1 /* Interpolatable.swift in Sources */,
 				498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */,
@@ -468,12 +486,14 @@
 				49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */,
 				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
 				498AA1F01BF3D3CF002882E1 /* PathPositionAnimation.swift in Sources */,
+				65112E3C1BFB886700350721 /* CommentCell.swift in Sources */,
 				493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */,
 				493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */,
 				498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */,
 				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
+				65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
 				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCountCell" id="lWj-eg-qsF">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCountCell" id="lWj-eg-qsF" customClass="CommentsCountCell" customModule="Mobilize" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lWj-eg-qsF" id="J9A-O9-WP3">
@@ -51,6 +51,11 @@
                     <constraint firstAttribute="bottomMargin" secondItem="HR8-0D-VmN" secondAttribute="bottom" constant="-1.5" id="xiP-Hd-5T5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="comment" destination="Weu-PT-vre" id="niE-mb-HPI"/>
+                <outlet property="commentCount" destination="C0b-Tf-rBO" id="A2u-hy-2mf"/>
+                <outlet property="imageComment" destination="HR8-0D-VmN" id="Z1F-xY-uGp"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

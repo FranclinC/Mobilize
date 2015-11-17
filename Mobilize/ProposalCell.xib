@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="proposalCellDetailed" rowHeight="219" id="6kK-Xb-vR0">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="proposalCellDetailed" rowHeight="219" id="6kK-Xb-vR0" customClass="ProposalDetailedCell" customModule="Mobilize" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="391" height="219"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6kK-Xb-vR0" id="lGY-hb-9cz">
@@ -213,7 +213,23 @@
                     <constraint firstAttribute="trailing" secondItem="X7H-hE-mCA" secondAttribute="trailing" constant="197" id="pBY-ru-cSE"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.46462459389999999" green="1" blue="0.4422500701" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="agree" destination="Mk8-Lu-6VG" id="b2p-ws-Hg9"/>
+                <outlet property="agreeCount" destination="N1N-HG-ptm" id="L5b-b1-Ygw"/>
+                <outlet property="category1" destination="9ss-cg-2Nf" id="hIx-z7-Vbj"/>
+                <outlet property="category2" destination="TFK-dg-T1X" id="3f7-qd-Rwx"/>
+                <outlet property="dateTime" destination="uS3-q3-PVY" id="apY-GE-zIq"/>
+                <outlet property="disagree" destination="YkU-Mb-VhR" id="jUG-gg-mfc"/>
+                <outlet property="disagreeCount" destination="eKA-lJ-D94" id="gH4-O0-20e"/>
+                <outlet property="imageAgree" destination="3vo-FT-oHH" id="F07-cI-PZx"/>
+                <outlet property="imageDisagree" destination="oxg-IS-wur" id="5tv-mN-f4w"/>
+                <outlet property="proposalText" destination="mg5-pW-SmO" id="4Rh-sz-ep6"/>
+                <outlet property="proposedBy" destination="Z7E-dp-IFl" id="Bq2-MC-AdJ"/>
+                <outlet property="userName" destination="ys6-Nl-D2w" id="eXI-7o-Mvo"/>
+                <outlet property="userPic" destination="ehb-lZ-4oE" id="CCy-eS-pVV"/>
+                <outlet property="viewAgree" destination="GXg-RM-8Te" id="FZ4-f0-N6b"/>
+                <outlet property="viewDisagree" destination="luN-3w-Mmc" id="iSx-Kk-aYT"/>
+            </connections>
             <point key="canvasLocation" x="253.5" y="-31.5"/>
         </tableViewCell>
     </objects>

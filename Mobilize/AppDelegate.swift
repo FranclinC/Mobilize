@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        //This is for the use of SWRevealViewController
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("propostas") as! Propostas
+        //This is the end of the part SWRevealViewController
+        
         // Enable Crash Reporting
 //        ParseCrashReporting.enable()
         

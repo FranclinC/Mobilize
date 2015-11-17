@@ -66,22 +66,16 @@ class ThemesCategory: UITableViewController {
         
         //This is to come back to the previous view controller
         let revealController = self.revealViewController()
-        var frontController : UIViewController? = nil
-        var previousView : Propostas = Propostas()
-        
-        
-        //Need to find a way to pass a value without performing a segue. Maybe Singleton??
-        frontController = Propostas()
+       
+        //Here i should update the singleton, and make the singleton delegate
+
         revealController.revealToggleAnimated(true)
-        
-        //This is not implemented yet
-        //revealController.pushFrontViewController(frontController, animated: false)
         
         
         
     }
 
-
+    //I won't use this prepare for segue so far
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destVc = segue.destinationViewController as! Propostas
         

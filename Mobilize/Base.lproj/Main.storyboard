@@ -395,7 +395,7 @@
         <!--Notificações-->
         <scene sceneID="3UZ-iQ-egV">
             <objects>
-                <viewController id="RJm-y2-GaU" sceneMemberID="viewController">
+                <viewController id="RJm-y2-GaU" customClass="NotificationsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vW1-b3-glj"/>
                         <viewControllerLayoutGuide type="bottom" id="ISA-B8-CwH"/>
@@ -403,10 +403,29 @@
                     <view key="view" contentMode="scaleToFill" id="9gJ-AP-SqL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xP3-Ng-rBj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RJm-y2-GaU" id="e2z-f1-0OD"/>
+                                    <outlet property="delegate" destination="RJm-y2-GaU" id="NKz-33-ole"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ISA-B8-CwH" firstAttribute="top" secondItem="xP3-Ng-rBj" secondAttribute="bottom" id="5xy-cd-X4n"/>
+                            <constraint firstItem="xP3-Ng-rBj" firstAttribute="leading" secondItem="9gJ-AP-SqL" secondAttribute="leadingMargin" constant="-20" id="Skq-hD-wH0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xP3-Ng-rBj" secondAttribute="trailing" constant="-20" id="T1M-ke-iAz"/>
+                            <constraint firstItem="xP3-Ng-rBj" firstAttribute="top" secondItem="9gJ-AP-SqL" secondAttribute="topMargin" id="yfn-jF-g8m"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notificações" id="Hjg-mx-rqr"/>
+                    <connections>
+                        <outlet property="tableView" destination="xP3-Ng-rBj" id="FzF-Vz-NMt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-fV-H4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
