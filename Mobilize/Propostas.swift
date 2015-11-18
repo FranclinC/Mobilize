@@ -21,59 +21,39 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     @IBOutlet var newProposal: UIBarButtonItem!
 
 
-    var category : String = ""
+    //var category : String = ""
     var maturation : String?
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         SharedValues.filter = self
         maturation = "BabyMob"
-        //print("Teste de valor: \(category)")
-        // Do any additional setup after loading the view.
 
-        if category == "" { //In case there is not a value yet, When the app just start
-            self.loadProposals("BabyMob", filter: "All") //This is the parameter search, i must add a new parameter for the category
-            print("Entrei na primeira categoria")
-        }else{
-            self.loadProposals("BabyMob", filter: "All")
-            print("Entrei na segunda categoria")
-        }
+        //Load data from parse
+        self.loadProposals("BabyMob", filter: "All")
         
-        
-        
-
-        //self.loadProposals("BabyMob")
+        //register nib
         self.tableView.registerNib(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "proposalCell")
-        
         
         themesButton.target = self.revealViewController()
         themesButton.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        
         self.tabBarController?.navigationItem.titleView = segmentedControl //This is to put the segment control in the navbar
         self.tabBarController?.navigationItem.leftBarButtonItem = themesButton
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
-        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        print("Carpina")
-
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(true)
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //self.navigationController?.setNavigationBarHidden(true, animated: true) //Check with the designer if it will dissapear or just change its content, like title
     }
     
 
@@ -84,11 +64,10 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1 //It can be more than one section, one per categoy??
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(proposals.count)
         return proposals.count
     }
     
@@ -115,11 +94,16 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         cell.nameUser.text = fullName
 
         
-        //Need to change that
+        //Need to change that, it is with a bug
         //Category of the proposal: 1: Education, 2: Health, 3: Culture, 4: Transport, 5: Safety
-        let categories = self.proposals[indexPath.row]["Category"]
-        print("What is the category now? \(categories[1])")
-        if (categories[1] as! String) == "Education" {
+        
+        cell.category2.image = nil
+
+        //New style of changing the cell
+        var categories =  self.proposals[indexPath.row]["Category"] //Get the categories of the row
+        
+        //get the first flag, which is position 1, the 0 one is All
+        if (categories[1] as! String) == "Education"{
             cell.category1.image = UIImage(named: "flag_educacao")
         }else if (categories[1] as! String) == "Health" {
             cell.category1.image = UIImage(named: "flag_saude")
@@ -127,23 +111,28 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             cell.category1.image = UIImage(named: "flag_cultura")
         }else if (categories[1] as! String) == "Safety" {
             cell.category1.image = UIImage(named: "flag_seguranca")
-        }else{
+        }else if (categories[1] as! String) == "Transport" {
             cell.category1.image = UIImage(named: "flag_mobilidade")
         }
         
         
-        if ((categories[2] as! String) == "Education") && (categories.count >= 2) {
-            cell.category2.image = UIImage(named: "flag_educacao")
-        }else if ((categories[2] as! String) == "Health") && (categories.count >= 2) {
-            cell.category2.image = UIImage(named: "flag_saude")
-        }else if ((categories[2] as! String) == "Culture") && (categories.count >= 2) {
-            cell.category2.image = UIImage(named: "flag_cultura")
-        }else if ((categories[2] as! String) == "Safety") && (categories.count >= 2) {
-            cell.category2.image = UIImage(named: "flag_seguranca")
-        }else{
-            cell.category2.image = UIImage(named: "flag_mobilidade")
+        //The second flag may exist
+        if categories.count == 3 {
+            if (categories[2] as! String) == "Education"{
+                cell.category2.image = UIImage(named: "flag_educacao")
+            }else if (categories[2] as! String) == "Health" {
+                cell.category2.image = UIImage(named: "flag_saude")
+            }else if (categories[2] as! String) == "Culture" {
+                cell.category2.image = UIImage(named: "flag_cultura")
+            }else if (categories[2] as! String) == "Safety" {
+                cell.category2.image = UIImage(named: "flag_seguranca")
+            }else if (categories[2] as! String) == "Transport" {
+                cell.category2.image = UIImage(named: "flag_mobilidade")
+            }
         }
-
+        
+        
+        
         
         
         
@@ -191,9 +180,6 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         }
     }
     
-
-    
-    
     
     @IBAction func makeProposal(sender: AnyObject) {
         self.performSegueWithIdentifier("makeProposal", sender: nil)
@@ -231,43 +217,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     }
     
     func changeFilter(category: String) {
-        //this must reload the tableView
-        print(category)
-        //self.proposals.removeAll()
         self.loadProposals(self.maturation!, filter: category)
-        //self.justTest(category)
-        
-        
         
     }
-
-    
-//    func justTest(category: String){
-//        let query = PFQuery(className:"Proposal")
-//        
-//        query.includeKey("User")
-//        //This is to get only the ones that are on stage one of maturation
-//        query.whereKey("Category", equalTo: category)
-//        
-//        
-//        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-//            if error == nil {
-//                print("Got the objects")
-//                //Now i get the array of objects
-//                print(objects)
-//                for object in objects! {
-//                    self.proposals.append(object)
-//                    print(self.proposals[0]["ShortProposal"])
-//                }
-//            }else {
-//                print("Couldn't retrieve any object")
-//            }
-//            
-//            self.tableView.reloadData()
-//            
-//            
-//        }
-//    }
-    
 
 }
