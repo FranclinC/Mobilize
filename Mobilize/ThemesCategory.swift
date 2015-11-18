@@ -11,6 +11,7 @@ import UIKit
 class ThemesCategory: UITableViewController {
 
     var categories = [String]()
+    var categoriesEnglish = [String]() //This is just to fix a mistake I made, this can dissapear, remember to talk with the others to decide english or portuguese
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,8 @@ class ThemesCategory: UITableViewController {
 
         
         // Do any additional setup after loading the view.
-        categories = ["Todos", "Saúde", "Trânsito", "Educação", "Segurança", "Cultura"]
+        categories = ["Todos", "Saúde", "Transporte", "Educação", "Segurança", "Cultura"]
+        categoriesEnglish = ["All", "Health", "Transport", "Education", "Security", "Culture"]
         
     }
 
@@ -44,7 +46,7 @@ class ThemesCategory: UITableViewController {
         
         if categories[indexPath.row] == "Saúde"{ //Saúde
             cell.categoryImage.image = UIImage(named: "saude2")
-        }else if categories[indexPath.row] == "Trânsito" { //Transito
+        }else if categories[indexPath.row] == "Transporte" { //Transito
             cell.categoryImage.image = UIImage(named: "mobilidade2")
         }else if categories[indexPath.row] == "Educação" { //Educação
             cell.categoryImage.image = UIImage(named: "educacao2")
@@ -64,27 +66,14 @@ class ThemesCategory: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        //This is to come back to the previous view controller
         let revealController = self.revealViewController()
-       
-        //Here i should update the singleton, and make the singleton delegate
-
+        SharedValues.change(categoriesEnglish[indexPath.row])
         revealController.revealToggleAnimated(true)
         
         
         
     }
 
-    //I won't use this prepare for segue so far
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destVc = segue.destinationViewController as! Propostas
-        
-        let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-        
-        //here i need the value of the parameter for the search
-        destVc.category = categories[indexPath.row] //Get the value of the category
-
-    }
     
     
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -69,6 +69,7 @@ class Login: UIViewController {
             
             if FBSDKAccessToken.currentAccessToken() != nil {
                 //Save user details in parse
+                print("Getting data from user's facebook")
                 self.returnUserData()
                 
                 //Perform segue to navigationController
@@ -134,7 +135,7 @@ class Login: UIViewController {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                     
                     // Get Facebook profile picture
-                    var userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
+                    let userProfile = "https://graph.facebook.com/" + userId + "/picture?type=large"
                     
                     let profilePictureUrl = NSURL(string: userProfile)
                     

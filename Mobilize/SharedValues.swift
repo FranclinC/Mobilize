@@ -17,64 +17,14 @@ import Foundation
 class SharedValues {
     
     static let sharedInstance = SharedValues()
-    
-    var tableView_singleton : UITableView
-    var segmentedControl_singleton : UISegmentedControl
-    var themesButton_singleton : UIBarButtonItem
-    var newProposal_singleton : UIBarButtonItem
-    var tabBar_singleton : UITabBarController
+    static var filter : SingletonDelegate?
     
     
-    private init(){
-        
-        tableView_singleton = UITableView()
-        segmentedControl_singleton = UISegmentedControl()
-        themesButton_singleton = UIBarButtonItem()
-        newProposal_singleton = UIBarButtonItem()
-        tabBar_singleton = UITabBarController()
+    
+    static func change(category: String){
+        filter?.changeFilter(category)
     }
-    
-    //This is to set the reference for a table view
-    func settableView(tableView: UITableView){
-        tableView_singleton = tableView
-    }
-    
-    //This function is to get the reference of the table view
-    func gettableView() -> UITableView{
-        return tableView_singleton
-    }
-    
-    
-    func setSegmentedControl (segmented_control: UISegmentedControl){
-        segmentedControl_singleton = segmented_control
-    }
-    
-    func getSegmentedControl () -> UISegmentedControl{
-        return segmentedControl_singleton
-    }
-    
-    func setThemesButton (themesButton: UIBarButtonItem){
-        themesButton_singleton = themesButton
-    }
-    
-    func getThemesButton () -> UIBarButtonItem{
-        return themesButton_singleton
-    }
-    
-    func setNewProposal (newProposal: UIBarButtonItem){
-        themesButton_singleton = newProposal
-    }
-    
-    func getNewProposal () -> UIBarButtonItem{
-        return newProposal_singleton
-    }
-    
-    func setTabBar (tabBar: UITabBarController){
-        tabBar_singleton = tabBar
-    }
-    func getTabBar () -> UITabBarController{
-        return tabBar_singleton
-    }
+
     
     
 }

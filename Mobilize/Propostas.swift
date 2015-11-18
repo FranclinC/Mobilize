@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, SingletonDelegate {
 
     @IBOutlet var tableView: UITableView!
     var proposals: [PFObject] = [PFObject]()
@@ -22,28 +22,29 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
     var category : String = ""
+    var maturation : String?
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        print("Teste de valor: \(category)")
+        SharedValues.filter = self
+        maturation = "BabyMob"
+        //print("Teste de valor: \(category)")
         // Do any additional setup after loading the view.
 
         if category == "" { //In case there is not a value yet, When the app just start
-            self.loadProposals("BabyMob") //This is the parameter search, i must add a new parameter for the category
+            self.loadProposals("BabyMob", filter: "All") //This is the parameter search, i must add a new parameter for the category
             print("Entrei na primeira categoria")
         }else{
-            self.loadProposals("BabyMob")
+            self.loadProposals("BabyMob", filter: "All")
             print("Entrei na segunda categoria")
         }
         
         
         
-        
+
         //self.loadProposals("BabyMob")
         self.tableView.registerNib(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "proposalCell")
         
@@ -58,14 +59,13 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        var tabBar = self.tabBarController //Instead of passing each value, just pass the tab bar, it will have the values there. That does not work, i already tried
         
         self.tabBarController?.navigationItem.titleView = segmentedControl //This is to put the segment control in the navbar
         self.tabBarController?.navigationItem.leftBarButtonItem = themesButton
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-
+        print("Carpina")
 
         
     }
@@ -111,33 +111,34 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
         
-        let fullName : String = (user["first_name"] as? String)! + " " + (user["last_name"] as? String)!
+        let fullName : String = (user["name"] as? String)!//(user["first_name"] as? String)! + " " + (user["last_name"] as? String)!
         cell.nameUser.text = fullName
 
         
         //Need to change that
         //Category of the proposal: 1: Education, 2: Health, 3: Culture, 4: Transport, 5: Safety
         let categories = self.proposals[indexPath.row]["Category"]
-        print(categories[0])
-        if (categories[0] as! String) == "Education" {
+        print("What is the category now? \(categories[1])")
+        if (categories[1] as! String) == "Education" {
             cell.category1.image = UIImage(named: "flag_educacao")
-        }else if (categories[0] as! String) == "Health" {
+        }else if (categories[1] as! String) == "Health" {
             cell.category1.image = UIImage(named: "flag_saude")
-        }else if (categories[0] as! String) == "Culture" {
+        }else if (categories[1] as! String) == "Culture" {
             cell.category1.image = UIImage(named: "flag_cultura")
-        }else if (categories[0] as! String) == "Safety" {
+        }else if (categories[1] as! String) == "Safety" {
             cell.category1.image = UIImage(named: "flag_seguranca")
         }else{
             cell.category1.image = UIImage(named: "flag_mobilidade")
         }
         
-        if ((categories[1] as! String) == "Education") && (categories.count >= 2) {
+        
+        if ((categories[2] as! String) == "Education") && (categories.count >= 2) {
             cell.category2.image = UIImage(named: "flag_educacao")
-        }else if ((categories[1] as! String) == "Health") && (categories.count >= 2) {
+        }else if ((categories[2] as! String) == "Health") && (categories.count >= 2) {
             cell.category2.image = UIImage(named: "flag_saude")
-        }else if ((categories[1] as! String) == "Culture") && (categories.count >= 2) {
+        }else if ((categories[2] as! String) == "Culture") && (categories.count >= 2) {
             cell.category2.image = UIImage(named: "flag_cultura")
-        }else if ((categories[1] as! String) == "Safety") && (categories.count >= 2) {
+        }else if ((categories[2] as! String) == "Safety") && (categories.count >= 2) {
             cell.category2.image = UIImage(named: "flag_seguranca")
         }else{
             cell.category2.image = UIImage(named: "flag_mobilidade")
@@ -161,13 +162,15 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
 
-    func loadProposals(maturation: String){
+    func loadProposals(maturation: String, filter: String){
         
-        let query = PFQuery(className:"Proposals")
+        let query = PFQuery(className:"Proposal")
         
         query.includeKey("User")
         //This is to get only the ones that are on stage one of maturation
         query.whereKey("Maturation", equalTo: maturation)
+        query.whereKey("Category", equalTo: filter)
+        self.proposals.removeAll()
 
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
@@ -210,16 +213,61 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func maturation(sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            self.loadProposals("BabyMob")
+            self.maturation = "BabyMob"
+            print("Maturation: BabyMob")
+            self.loadProposals("BabyMob", filter: "All")
             
         case 1:
-            self.loadProposals("Mob")
+            self.maturation = "Mob"
+            print("Maturation: Mob")
+            self.loadProposals("Mob", filter: "All")
         case 2:
-            self.loadProposals("MobDick")
+            self.maturation = "MobDick"
+            print("Maturation: Modick")
+            self.loadProposals("MobDick", filter: "All")
         default:
             break
         }
     }
+    
+    func changeFilter(category: String) {
+        //this must reload the tableView
+        print(category)
+        //self.proposals.removeAll()
+        self.loadProposals(self.maturation!, filter: category)
+        //self.justTest(category)
+        
+        
+        
+    }
+
+    
+//    func justTest(category: String){
+//        let query = PFQuery(className:"Proposal")
+//        
+//        query.includeKey("User")
+//        //This is to get only the ones that are on stage one of maturation
+//        query.whereKey("Category", equalTo: category)
+//        
+//        
+//        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+//            if error == nil {
+//                print("Got the objects")
+//                //Now i get the array of objects
+//                print(objects)
+//                for object in objects! {
+//                    self.proposals.append(object)
+//                    print(self.proposals[0]["ShortProposal"])
+//                }
+//            }else {
+//                print("Couldn't retrieve any object")
+//            }
+//            
+//            self.tableView.reloadData()
+//            
+//            
+//        }
+//    }
     
 
 }

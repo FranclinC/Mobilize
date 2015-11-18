@@ -11,7 +11,7 @@
         <!--Intro View Controller-->
         <scene sceneID="llC-ON-Vqr">
             <objects>
-                <viewController id="sBl-KK-PBw" customClass="IntroViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introduction" id="sBl-KK-PBw" customClass="IntroViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gcH-9N-99O"/>
                         <viewControllerLayoutGuide type="bottom" id="yAs-V1-u5w"/>
@@ -30,7 +30,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZGA-Pw-voR">
             <objects>
-                <navigationController id="l4Z-qn-HXI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" id="l4Z-qn-HXI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ng1-52-9XE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -47,7 +47,7 @@
         <!--Login-->
         <scene sceneID="hU0-zX-FcU">
             <objects>
-                <viewController id="sl5-tw-1yy" customClass="Login" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="sl5-tw-1yy" customClass="Login" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YvV-pK-Txg"/>
                         <viewControllerLayoutGuide type="bottom" id="q78-5L-pBK"/>
@@ -126,7 +126,7 @@
         <!--Register View Controller-->
         <scene sceneID="T3g-Sn-C9f">
             <objects>
-                <viewController id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zM9-aL-wc2"/>
                         <viewControllerLayoutGuide type="bottom" id="303-dS-93W"/>
@@ -186,6 +186,9 @@
                                 <segment title="" image="mobijunior1"/>
                                 <segment title="" image="mobi1-1"/>
                             </segments>
+                            <connections>
+                                <action selector="maturation:" destination="ZSc-dY-9U4" eventType="valueChanged" id="2HU-As-DPa"/>
+                            </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="dgw-UN-arC">
                             <connections>
@@ -212,7 +215,7 @@
         <!--Proposta-->
         <scene sceneID="G0f-2o-qpK">
             <objects>
-                <viewController title="Proposta" id="GCA-Md-UTc" customClass="NewProposal" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propor" title="Proposta" id="GCA-Md-UTc" customClass="NewProposal" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fy-ya-Axa"/>
                         <viewControllerLayoutGuide type="bottom" id="oVM-Gs-vCN"/>
@@ -352,7 +355,7 @@
         <!--Proposta-->
         <scene sceneID="NRM-Fh-hu5">
             <objects>
-                <viewController id="gfs-FI-MhW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propostaDetailed" id="gfs-FI-MhW" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9KC-pw-Vah"/>
                         <viewControllerLayoutGuide type="bottom" id="2KG-Rh-oKH"/>
@@ -395,7 +398,7 @@
         <!--Notificações-->
         <scene sceneID="3UZ-iQ-egV">
             <objects>
-                <viewController id="RJm-y2-GaU" customClass="NotificationsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notification" id="RJm-y2-GaU" customClass="NotificationsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vW1-b3-glj"/>
                         <viewControllerLayoutGuide type="bottom" id="ISA-B8-CwH"/>
@@ -434,7 +437,7 @@
         <!--Configurações-->
         <scene sceneID="nag-Sn-Nq0">
             <objects>
-                <viewController id="JcR-bw-OEa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="JcR-bw-OEa" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ki-qK-EGG"/>
                         <viewControllerLayoutGuide type="bottom" id="eAG-xJ-fb3"/>
@@ -475,7 +478,7 @@
         <!--Themes Category-->
         <scene sceneID="stn-vq-437">
             <objects>
-                <tableViewController id="I2o-eh-qUV" customClass="ThemesCategory" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sideMenu" id="I2o-eh-qUV" customClass="ThemesCategory" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n2q-mT-rFP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,7 +498,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="7Mh-Lm-zHa">
             <objects>
-                <viewController id="W7s-Np-7rj" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="revealControl" id="W7s-Np-7rj" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OyB-nW-g0Q"/>
                         <viewControllerLayoutGuide type="bottom" id="aeP-JI-Nn7"/>

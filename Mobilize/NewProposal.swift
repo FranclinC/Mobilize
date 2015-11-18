@@ -185,19 +185,14 @@ class NewProposal: UIViewController {
     }
     
     func saveProposal (){
-        
+        self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
         let proposal = PFObject(className: "Proposals")
         let user = PFUser.currentUser()
         proposal["User"] = user
         proposal["ProposalText"] = proposalText.text
         proposal["Category"] = self.categoriesName
         proposal["Maturation"] = "BabyMob"
-        
-        //Remember to find a way to get the shortProposal, to be presented, without that, it will cause error opening the application
-        //let i = (self.proposalText.text.endIndex) / 2
-        
-        //let shortProposal = self.proposalText.text
-        //proposal["ShortProposal"] = shortProposal.substringToIndex(i)
+        proposal["ShortProposal"] = proposalText.text //This should not be like that
         
         proposal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
@@ -216,7 +211,7 @@ class NewProposal: UIViewController {
 
         print("Keyboard was called")
         var info = notification.userInfo!
-        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.constraintToolBarBottom.constant = keyboardFrame.size.height + 20
