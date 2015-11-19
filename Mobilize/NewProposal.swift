@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class NewProposal: UIViewController {
+class NewProposal: UIViewController, UITextViewDelegate {
 
     @IBOutlet var proposalText: UITextView!
     @IBOutlet var toolBar: UIToolbar!
@@ -30,11 +30,18 @@ class NewProposal: UIViewController {
     @IBOutlet var cultureBtn: UIButton!
     @IBOutlet var cultureButton: UIBarButtonItem!
     
+    @IBOutlet var toolBarView: UIView!
+    @IBOutlet var constraintToolBarHeight: NSLayoutConstraint!
+   
+    @IBOutlet var constraintToolBarBottom: NSLayoutConstraint!
     @IBOutlet var constraintToolBarTop: NSLayoutConstraint!
-    @IBOutlet weak var constraintToolBarBottom: NSLayoutConstraint!
-    var constraintToolBarTopInitialValue : CGFloat = CGFloat()
-    var constraintToolBarBottomInitialValue : CGFloat = CGFloat()
-
+    
+    
+    
+    var keyboardDismissSwipeGesture: UISwipeGestureRecognizer?
+    
+    var initialConstraint : CGFloat?
+    
     //This is for a quick implementation, I will try to improve it later
     var h1 = 1
     var t1 = 1
@@ -52,12 +59,19 @@ class NewProposal: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    
+        self.proposalText.delegate = self
+        self.initialConstraint = constraintToolBarHeight.constant
+
+
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "KeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     
+        //self.proposalText.delegate = self
+        
+//        let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "textEdit")
+//        self.proposalText.addGestureRecognizer(tapGesture)
         
     }
 
@@ -205,34 +219,60 @@ class NewProposal: UIViewController {
         }
     }
     
-    
-    //This is to move up the toolbar with the keyboard
     func keyboardWillShow(notification: NSNotification) {
-
-        print("Keyboard was called")
-        var info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        // do stuff with the frame...
         
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.constraintToolBarBottom.constant = keyboardFrame.size.height + 20
-        })
+        print(frame.height)
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.5, animations: {
+            self.constraintToolBarHeight.constant = frame.height + self.toolBarView.frame.height
+            self.constraintToolBarBottom.constant = frame.height
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
+        if keyboardDismissSwipeGesture == nil {
+            print("Add gesture")
+            //keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard:"))
+
+            //keyboardDismissTapGesture!.numberOfTapsRequired = 2
+            keyboardDismissSwipeGesture = UISwipeGestureRecognizer(target: self, action: "dismissKeyboard:")
+            keyboardDismissSwipeGesture?.direction = UISwipeGestureRecognizerDirection.Down
+            self.view.addGestureRecognizer(keyboardDismissSwipeGesture!)
+        }
+
+        
     }
     
-    func keyboardWillHide(notification: NSNotification){
-        print("Hide keyboard...")
-        //this will be used to place the toolbar where it belongs
+    func KeyboardWillHide(notification: NSNotification){
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.constraintToolBarHeight.constant = self.initialConstraint!
+            self.constraintToolBarBottom.constant = 0
+
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
+        if keyboardDismissSwipeGesture != nil {
+            self.view.removeGestureRecognizer(keyboardDismissSwipeGesture!)
+            keyboardDismissSwipeGesture = nil
+        }
+        
+        
     }
+
+    func dismissKeyboard(sender: AnyObject) {
+        print("eahurhoaher")
+        self.proposalText?.resignFirstResponder()
+
+    }
+    
+
+    
+    
     
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
