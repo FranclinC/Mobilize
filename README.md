@@ -1,70 +1,49 @@
-# Mobilize
+# Mobilize iOS [![Apple Store](https://db.tt/Fsb4RsR1)]()
 
-A political empowerment app that helps people to participate in local decisions.
+Um aplicativo de empoderamento político que ajuda as pessoas a participarem das decisões locais.
 
-TEMPLATE
 
-# Instagenius Android [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.sgtpeppers.instagenio)
+<img align="right" alt="Mobilize" src="https://db.tt/UEEeKJMh" style="width: 15px;">
 
-A trivia app for Android 5 (Lollipop) built by [CIn/UFPE] students [Miguel Araújo] and [Rodrigo Alves] in the 2015.1 semester for the __Programming for Android Devices__ discipline offered and lectured by [Professor Leopoldo Teixeira].
+## Sobre
 
-<img align="right" alt="Instagenius" src="https://dl.dropboxusercontent.com/u/7743293/Instagenius.png">
+Apple Store descrição:
 
-App Store description:
+> Nunca foi tão fácil fazer sua ideia cheagr ao poder legislativo.
+> Mude sua cidade para melhor com o __Mobilize__!
 
-> Instagenius is a trivia app to make you smarter!
-> On Instagenius you have fun while finding out about all kinds of things. This is the best time killer.
-> Oh, BTW, it is free too! :heart_eyes: :moneybag: :+1:
+Este aplicativo suporta as seguintes tecnologias:
 
-This app features the following technologies:
+1. Notificações;
+2. Integração com o Facebook;
+3. Parse Cloud Code
 
-1. Push notifications;
-2. Facebook authentication (with `ParseUser` cloud integration);
-3. Local SQL database operations (via SQLite);
-4. Internationalization (I18n, for short);
-5. Parse cloud database
+#### Agradecimentos
 
-###### Languages
+Este projeto se utiliza de alguns frameworks abertos para agilizar o processo
+de desenvolvimento do produto. Segue abaixo uma lista detalhada:
 
-Instagenius is available in two languages:
+1. [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle)
+2. [SWRevealViewController](https://github.com/John-Lluch/SWRevealViewController)
 
-1. English
-2. Portuguese
+#### Notas
 
-## Backend
+O projeto ainda está sendo testado localmente em Recife, nossa escolha para a
+cidade-piloto.Entretanto, o propósito final é que qualquer cidade possa implantar
+este projeto via Câmara Municipal.
+Por enquanto, estamos fechando uma versão voltada para o sistema iOS, mas
+pretendemos desenvolver uma versão web do Mobilize e outra versão para Android.
 
-Instagenius' backend infrastructure is powered by [Parse] and consists of a single data model (`Card`) which contains the app's core objects: cards of curiosities.
+### Design
+Lucas Guedes é a pessoa por trás de todo o design e logomarca no Mobilize. Você
+pode obter mais informações sobre ele na seção __Autores__.
 
-###### Push Notifications
+### Autores
 
-Push notifications when responded are handled by a custom class, called `PushNotificationsReceiver`.
+* [Franclin Cabral](https://github.com/FranclinC)
+* [Lucas Guedez](https://github.com/LucasGuedz)
+* [Miguel Araújo](https://github.com/miguelarauj1o)
 
-## Build
+## Direitos Autorais
 
-This app was developed on Android Studio, with [Gradle]. Anyone wishing to build and run this project should use that IDE as well.
-
-###### Generating Production build
-
-Go to the `MainApplication.java` file and change the `DEVELOPMENT_MODE` constant to `false`.
-
-To generate the `.apk` file to be sent to the Google Play Store, go to **Build > Generate signed APK**....
-
-Connect your device to the computer and execute the following command to run the app in production mode before submitting it to the Google Play Store:
-
-`$ adb install ~/AndroidStudioProjects/Instagenius/app/app-release.apk`
-
-## Authors
-
-* Miguel Araújo <mra2@cin.ufpe.br>
-* Rodrigo Alves <rav2@cin.ufpe.br>
-
-## Copyright
-
-&copy; 2015 Miguel Araújo & Rodrigo Alves. All Rights Reserved.
-
-[Gradle]: https://gradle.org
-[Parse]: https://parse.com
-[CIn/UFPE]: http://www2.cin.ufpe.br/site/index.php
-[Miguel Araújo]: https://github.com/miguelarauj1o
-[Rodrigo Alves]: https://github.com/rodrigoalvesvieira
-[Professor Leopoldo Teixeira]: https://github.com/leopoldomt
+&copy; 2015 Franclin Cabral, Lucas Guedes & Miguel Araújo. __Todos os direitos reservados__
