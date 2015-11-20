@@ -34,6 +34,9 @@ class CustomCell: UITableViewCell {
     @IBOutlet var comment: UIImageView! //It is good let it like that because it can change the icon programatically
     @IBOutlet var commentCount: UILabel!
     
+    var maturation : String!
+    var fullProposal : String!
+    var time : String!
     
     override func awakeFromNib() {
         super.awakeFromNib()

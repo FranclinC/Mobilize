@@ -83,6 +83,7 @@
 		65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E3D1BFB891000350721 /* NotificationCell.swift */; };
 		65112E421BFBC9B200350721 /* SingletonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E411BFBC9B200350721 /* SingletonDelegate.swift */; };
 		65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E431BFCEEA900350721 /* ProposalDetailed.swift */; };
+		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,7 @@
 		65112E3D1BFB891000350721 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		65112E411BFBC9B200350721 /* SingletonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonDelegate.swift; sourceTree = "<group>"; };
 		65112E431BFCEEA900350721 /* ProposalDetailed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailed.swift; sourceTree = "<group>"; };
+		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +313,7 @@
 				65112E311BFA371E00350721 /* CommentCountCell.xib */,
 				65112E331BFA382D00350721 /* CommentCell.xib */,
 				65112E351BFAC58900350721 /* NotificationCell.xib */,
+				65112E471BFFA3EA00350721 /* AgreeSupportView.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				65112E361BFAC58900350721 /* NotificationCell.xib in Resources */,
 				65112E341BFA382D00350721 /* CommentCell.xib in Resources */,
 				65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */,
+				65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

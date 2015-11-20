@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="width" constant="155" id="iHk-Tc-3dr"/>
                                     <constraint firstAttribute="height" constant="21" id="uLz-kx-tcO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -157,7 +157,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="v7w-fY-g5t" secondAttribute="bottom" constant="-2.5" id="Btb-vN-l1C"/>
                     <constraint firstItem="wNQ-21-Xg1" firstAttribute="top" secondItem="96L-VH-gmo" secondAttribute="topMargin" constant="-10" id="Dv3-iD-rVu"/>
@@ -171,7 +171,7 @@
                     <constraint firstItem="iO4-pf-rTQ" firstAttribute="leading" secondItem="wNQ-21-Xg1" secondAttribute="trailing" constant="1" id="lpv-es-ZDX"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.61136758207070707" green="0.61136758207070707" blue="0.61136758207070707" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="againstVote" destination="aXw-eH-WnY" id="wr9-EH-h1F"/>
                 <outlet property="againstVoteCount" destination="ES0-j2-4yD" id="d3g-r2-B30"/>

@@ -23,8 +23,9 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
 
     //var category : String = ""
     var maturation : String?
+    
 
-
+    var valueToPass : CustomCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         self.tabBarController?.navigationItem.leftBarButtonItem = themesButton
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        self.tableView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 0.9)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -132,8 +135,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         }
         
         
-        
-        
+        cell.fullProposal = self.proposals[indexPath.row]["ProposalText"] as? String
+        cell.maturation = self.proposals[indexPath.row]["Maturation"] as? String
         
         
         cell.textProposal.text = self.proposals[indexPath.row]["ShortProposal"] as? String
@@ -141,14 +144,20 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         //Remember to set the size of the label
         cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
         cell.againstVoteCount.text = self.proposals[indexPath.row]["DownVote"] as? String
-        //cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
+
+        //Before send, create the object detailed
+        cell.time = self.proposals[indexPath.row]["createdAt"] as? String
+        
         return cell
     }
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("proposalDetailed", sender: self)
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as! CustomCell
         
+        valueToPass = currentCell
+        self.performSegueWithIdentifier("proposalDetailed", sender: self)
     }
 
     func loadProposals(maturation: String, filter: String){
@@ -218,6 +227,20 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     
     func changeFilter(category: String) {
         self.loadProposals(self.maturation!, filter: category)
+        
+    }
+    
+    
+    //This sends data to the ProposalDetailed
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "proposalDetailed" {
+            
+            
+            
+            let vc = segue.destinationViewController as! ProposalDetailed
+            vc.proposal = valueToPass
+        }
         
     }
 

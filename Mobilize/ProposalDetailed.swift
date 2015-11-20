@@ -27,6 +27,9 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     var tapGesture : UITapGestureRecognizer?
     var constraintHeightToolbar : CGFloat?
     
+    var proposal : CustomCell = CustomCell()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +45,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         self.tableView.registerNib(UINib(nibName: "CommentCountCell", bundle: nil), forCellReuseIdentifier: "commentCountCell")
         self.tableView.registerNib(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "commentCell")
         
+
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,30 +55,47 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         
     }
     
-    //MARK: TableView Delegate Methods
+    //MARK: - TableView Delegate Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3 //3 sections, Proposal, comment count, comments
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("How many sections: \(section)")
         if section == 0 {
-            
+            print("Section \(section)")
             return 1 //The cell of proposal detailed
         }
         else if section == 1 {
-            
+            print("Section \(section)")
             return 1 //Cell with the count of comments
             
         } else {
-            
+            print("Comment count \(comments.count)")
             return comments.count //Cells with the real comment
         }
+        
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        print("Que celula é essa? \(indexPath.row)")
         if indexPath.section == 0 {
+            
             let cellProposal = tableView.dequeueReusableCellWithIdentifier("proposalCellDetailed", forIndexPath: indexPath) as! ProposalDetailedCell
+            
+            cellProposal.proposalText.text = self.proposal.fullProposal
+            cellProposal.userName.text = self.proposal.nameUser.text
+            cellProposal.userPic.image = self.proposal.userPicture.image
+            cellProposal.disagreeCount.text = self.proposal.againstVoteCount.text
+            cellProposal.agreeCount.text = self.proposal.upVoteCount.text
+            cellProposal.dateTime.text = self.proposal.time
+            cellProposal.category1.image = self.proposal.category1.image //It must have at least one category
+            
+            if self.proposal.category2 != nil{ //The second one is opitional
+                    cellProposal.category2.image = self.proposal.category2.image
+            }            
             
             return cellProposal
         }else if indexPath.section == 1 {

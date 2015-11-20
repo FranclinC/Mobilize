@@ -157,7 +157,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-sh-V4s">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.61136758209999997" green="0.61136758209999997" blue="0.61136758209999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZSc-dY-9U4" id="fPB-Qf-ILA"/>
                                     <outlet property="delegate" destination="ZSc-dY-9U4" id="r8X-3V-ROy"/>
@@ -173,7 +173,7 @@
                             <constraint firstItem="CcS-sh-V4s" firstAttribute="bottom" secondItem="L13-hR-2ga" secondAttribute="bottomMargin" id="se0-1E-dQc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Propostas" id="ktl-dn-ROD"/>
+                    <tabBarItem key="tabBarItem" title="Propostas" image="PurposeOff" selectedImage="PurposeOn" id="ktl-dn-ROD"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="F7N-t9-S5f">
                         <nil key="title"/>
@@ -383,7 +383,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oam-ui-shu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gfs-FI-MhW" id="s4B-ZZ-aTO"/>
+                                    <outlet property="delegate" destination="gfs-FI-MhW" id="twW-JN-Jqx"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-yS-TE9">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -471,7 +475,7 @@
                             <constraint firstItem="xP3-Ng-rBj" firstAttribute="top" secondItem="9gJ-AP-SqL" secondAttribute="topMargin" id="yfn-jF-g8m"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notificações" id="Hjg-mx-rqr"/>
+                    <tabBarItem key="tabBarItem" title="Notificações" image="NotificationOff" selectedImage="NotificationOn" id="Hjg-mx-rqr"/>
                     <connections>
                         <outlet property="tableView" destination="xP3-Ng-rBj" id="FzF-Vz-NMt"/>
                     </connections>
@@ -494,7 +498,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Configurações" id="5Yd-E6-hfz"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="ConfigurationOff" selectedImage="ConfigurationOn" id="5Yd-E6-hfz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-k6-NFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,7 +570,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ConfigurationOff" width="25" height="27"/>
+        <image name="ConfigurationOn" width="25" height="27"/>
+        <image name="NotificationOff" width="23" height="27"/>
         <image name="NotificationOn" width="23" height="27"/>
+        <image name="PurposeOff" width="20" height="27"/>
+        <image name="PurposeOn" width="20" height="27"/>
         <image name="cultura1" width="62" height="63"/>
         <image name="educacao1" width="62" height="63"/>
         <image name="mobi1-1" width="26" height="24"/>
