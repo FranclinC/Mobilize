@@ -32,6 +32,7 @@ class ProposalDetailedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.userPic.layer.cornerRadius = 6.0
         
         //self.imageAgree.image = UIImage(named: "like")
         //self.imageDisagree.image = UIImage(named: "dislike")

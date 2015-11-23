@@ -28,7 +28,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     var constraintHeightToolbar : CGFloat?
     
     var proposal : CustomCell = CustomCell()
-    var commentsCount : Int?
+    var commentsCount : Int = 0
     
     
     override func viewDidLoad() {
@@ -108,6 +108,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             print("Comment count cell")
             let cellCommentCount = tableView.dequeueReusableCellWithIdentifier("commentCountCell", forIndexPath: indexPath) as! CommentsCountCell
             cellCommentCount.commentCount.text = String(self.commentsCount)
+            print("How many comements \(self.commentsCount)")
             
             return cellCommentCount
         }else{
@@ -135,14 +136,20 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             cell.starCount.text = String(starCount)
             
             if starCount > 0 {
-                cell.starImage.image = UIImage(named: "like") //Yellow one
+                cell.starImage.image = UIImage(named: "Proposta_Fav.2") //Yellow one
             }else{
-                cell.starImage.image = UIImage(named: "like") //Grey one
+                cell.starImage.image = UIImage(named: "Proposta_Fav.1") //Grey one
             }
             cell.userName.preferredMaxLayoutWidth = CGRectGetWidth(tableView.bounds)
             cell.commentText.numberOfLines = 0
 
+            let timeStamp = self.comments[indexPath.row].createdAt
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd/mm/YY hh:mm"
+            var dateString = dateFormatter.stringFromDate(timeStamp!)
             
+            cell.commentTime.text = dateString
+
             
             return cell
         }
@@ -222,7 +229,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 
                 //Now i get the array of objects
                 print(objects)
-                self.commentsCount = objects?.count
+                self.commentsCount = (objects?.count)!
                 for object in objects! {
                     self.comments.append(object)
                 }

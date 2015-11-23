@@ -596,4 +596,5 @@
         <segue reference="PLt-7Z-JIa"/>
         <segue reference="cvd-nl-Cxa"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
 </document>

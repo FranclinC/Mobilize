@@ -22,6 +22,7 @@ class CommentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.userPic.layer.cornerRadius = 6.0
         self.commentText.translatesAutoresizingMaskIntoConstraints = false
         
 

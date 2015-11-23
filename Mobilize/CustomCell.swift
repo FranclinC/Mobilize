@@ -50,7 +50,7 @@ class CustomCell: UITableViewCell {
         self.userPicture.layer.cornerRadius = 6.0
 
         self.upVote.image = UIImage(named: "like")
-        self.againstVote.image = UIImage(named: "dislike")
+        self.againstVote.image = UIImage(named: "Proposta_Dislike.1")
         self.comment.image = UIImage(named: "comentarios")
     }
 
