@@ -26,11 +26,16 @@ class ProposalDetailedCell: UITableViewCell {
     @IBOutlet var disagree: UILabel!
     @IBOutlet var disagreeCount: UILabel!
     
+    @IBOutlet var viewVote: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        //self.imageAgree.image = UIImage(named: "like")
+        //self.imageDisagree.image = UIImage(named: "dislike")
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -38,5 +43,7 @@ class ProposalDetailedCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

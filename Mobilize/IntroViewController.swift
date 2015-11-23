@@ -25,6 +25,13 @@ class IntroViewController: AnimatedPagingScrollViewController {
     private let text1 = UIImageView(image: UIImage(named: "text1"))
     private let text2 = UIImageView(image: UIImage(named: "text2"))
     
+    
+
+    let frame : CGRect = CGRect(x: 0, y: 0, width: 30, height: 20)
+    var skipView : UIView?
+    let skipBtn : UIButton = UIButton()
+
+    
     override func numberOfPages() -> Int {
         return 7
     }
@@ -40,6 +47,8 @@ class IntroViewController: AnimatedPagingScrollViewController {
         configureViews()
         configureAnimations()
         // self.performSegueWithIdentifier("GoToInitial", sender: self)
+        
+        
     }
     
     private func configureViews() {
@@ -58,6 +67,10 @@ class IntroViewController: AnimatedPagingScrollViewController {
         contentView.addSubview(wave)
         contentView.addSubview(text1)
         contentView.addSubview(text2)
+        
+
+
+
     }
     
     private func configureAnimations() {
@@ -179,6 +192,13 @@ class IntroViewController: AnimatedPagingScrollViewController {
         keepView(text2, onPages: [6])
         let text2HideAnimation = AlphaAnimation(view: text2)
         animator.addAnimation(text2HideAnimation)
+        
+        
+        
+        
+       
     }
+    
+    
     
 }

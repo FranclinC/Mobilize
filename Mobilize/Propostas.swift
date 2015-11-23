@@ -31,7 +31,10 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         super.viewDidLoad()
         SharedValues.filter = self
         maturation = "BabyMob"
-
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 125
+        
         //Load data from parse
         self.loadProposals("BabyMob", filter: "All")
         
@@ -78,7 +81,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("proposalCell", forIndexPath: indexPath) as! CustomCell
-        print("Just a test")
+        //print("Just a test")
         //Getting the user Object
         let user : PFUser = (proposals[indexPath.row]["User"] as? PFUser)!
         
@@ -148,6 +151,16 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         //Before send, create the object detailed
         cell.time = self.proposals[indexPath.row]["createdAt"] as? String
         
+        cell.proposalId = self.proposals[indexPath.row].objectId
+
+        let timeStamp = self.proposals[indexPath.row].createdAt
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/mm/YY hh:mm"
+        var dateString = dateFormatter.stringFromDate(timeStamp!)
+        
+        cell.time = dateString
+        
+        
         return cell
     }
     
@@ -174,11 +187,11 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             if error == nil {
                 print("Got the objects")
                 //Now i get the array of objects
-                print(objects)
+
                 for object in objects! {
+                    
                     self.proposals.append(object)
-                    print(self.proposals[0]["ShortProposal"])
-                }
+                                    }
             }else {
                 print("Couldn't retrieve any object")
             }

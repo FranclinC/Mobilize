@@ -22,6 +22,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="l4Z-qn-HXI" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="PLt-7Z-JIa"/>
+                        <segue destination="I2o-eh-qUV" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="cvd-nl-Cxa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vG7-ey-NyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,9 +385,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oam-ui-shu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oam-ui-shu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="gfs-FI-MhW" id="s4B-ZZ-aTO"/>
                                     <outlet property="delegate" destination="gfs-FI-MhW" id="twW-JN-Jqx"/>
@@ -426,6 +430,7 @@
                             <constraint firstItem="ZWI-yS-TE9" firstAttribute="bottom" secondItem="gZm-6Y-iGs" secondAttribute="bottomMargin" id="OcJ-yB-UGV"/>
                             <constraint firstItem="oam-ui-shu" firstAttribute="top" secondItem="gZm-6Y-iGs" secondAttribute="topMargin" id="P08-Kg-CXl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oam-ui-shu" secondAttribute="trailing" constant="-20" id="P52-Pd-rsx"/>
+                            <constraint firstItem="2KG-Rh-oKH" firstAttribute="top" secondItem="oam-ui-shu" secondAttribute="bottom" id="alU-p9-2OM"/>
                             <constraint firstItem="oam-ui-shu" firstAttribute="leading" secondItem="gZm-6Y-iGs" secondAttribute="leadingMargin" constant="-20" id="kXQ-DI-dRh"/>
                             <constraint firstItem="ZWI-yS-TE9" firstAttribute="top" secondItem="oam-ui-shu" secondAttribute="bottom" id="oqY-52-QbR"/>
                         </constraints>
@@ -587,4 +592,8 @@
         <image name="temas" width="24" height="24"/>
         <image name="wave" width="436" height="651"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PLt-7Z-JIa"/>
+        <segue reference="cvd-nl-Cxa"/>
+    </inferredMetricsTieBreakers>
 </document>

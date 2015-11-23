@@ -14,7 +14,7 @@ class CommentCell: UITableViewCell {
     @IBOutlet var userPic: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var commentTime: UILabel!
-    @IBOutlet var commentText: UITextView!
+    @IBOutlet var commentText: UILabel!
     @IBOutlet var starImage: UIImageView! //This is because the image is one star
     @IBOutlet var starCount: UILabel! //That is how many "likes" the proposal had
     
@@ -22,6 +22,9 @@ class CommentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.commentText.translatesAutoresizingMaskIntoConstraints = false
+        
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -18,6 +18,7 @@ class CommentsCountCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imageComment.image = UIImage(named: "comentarios")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
