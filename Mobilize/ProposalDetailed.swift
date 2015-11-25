@@ -247,23 +247,27 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     
     @IBAction func saveComment(sender: AnyObject) {
         //self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
-        var comment = PFObject(className: "Comment")
-        print("Teste")
+        let comment = PFObject(className: "Comment")
         let user = PFUser.currentUser()
         print("proposal id franclin: \(user)")
         comment["UserWhoComment"] = user
         comment["text"] = self.commentTextField.text
-        comment["Proposal"] = self.proposal.proposalId
+        var objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
+        
+        
+        comment["Proposal"] = objProposal
+        comment["stars"] = 0
         comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 //Reload the tableview
                 
                // self.comments.append(comment)
-                
+                self.loadComments()
                 //self.tableView.reloadSections(2, withRowAnimation: UITableViewRowAnimation.Automatic)
-                
+                print("deu certo")
             }else{
                 //report the error
+                print("deu erro")
             }
         }
         
