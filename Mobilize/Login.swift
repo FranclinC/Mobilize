@@ -19,7 +19,7 @@ class Login: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var emailUser: UITextField!
     @IBOutlet var passwordUser: UITextField!
-    var permissionsArray = ["email", "public_profile", "user_about_me", "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
+    var permissionsArray = ["email", "public_profile", "user_about_me"]//, "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
