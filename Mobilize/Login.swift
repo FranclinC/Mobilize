@@ -19,7 +19,7 @@ class Login: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var emailUser: UITextField!
     @IBOutlet var passwordUser: UITextField!
-    var permissionsArray = ["public_profile", "email"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
+    var permissionsArray = ["email", "public_profile", "user_about_me", "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -134,6 +134,9 @@ class Login: UIViewController {
                 {
                     myUser.setObject(userLastName!, forKey: "last_name")
                 }
+                
+                let completeName = userFirstName! + " " + userLastName!
+                myUser.setObject(completeName, forKey: "name")
                 
                 // Save email address
                 if(userEmail != nil)

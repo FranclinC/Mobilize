@@ -105,14 +105,14 @@
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
-		65C0B2DD1C04F50B0010ABED /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */; };
-		65C0B2DE1C04F50B0010ABED /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */; };
 		65C0B2E01C0541510010ABED /* SettingsPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2DF1C0541510010ABED /* SettingsPicture.xib */; };
 		65C0B2E21C0543860010ABED /* SettingsGroup1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E11C0543860010ABED /* SettingsGroup1.xib */; };
 		65C0B2E41C0545120010ABED /* SettingsGroup2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E31C0545120010ABED /* SettingsGroup2.xib */; };
 		65C0B2E61C054E550010ABED /* SettingsPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E51C054E550010ABED /* SettingsPicture.swift */; };
 		65C0B2E81C054E690010ABED /* SettingsGroup1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E71C054E690010ABED /* SettingsGroup1.swift */; };
 		65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */; };
+		65C0B2ED1C0600B50010ABED /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2EB1C0600B50010ABED /* FBSDKCoreKit.framework */; };
+		65C0B2EE1C0600B50010ABED /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2EC1C0600B50010ABED /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,14 +220,14 @@
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
-		65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		65C0B2DF1C0541510010ABED /* SettingsPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPicture.xib; sourceTree = "<group>"; };
 		65C0B2E11C0543860010ABED /* SettingsGroup1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup1.xib; sourceTree = "<group>"; };
 		65C0B2E31C0545120010ABED /* SettingsGroup2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup2.xib; sourceTree = "<group>"; };
 		65C0B2E51C054E550010ABED /* SettingsPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPicture.swift; sourceTree = "<group>"; };
 		65C0B2E71C054E690010ABED /* SettingsGroup1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroup1.swift; sourceTree = "<group>"; };
 		65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroup2.swift; sourceTree = "<group>"; };
+		65C0B2EB1C0600B50010ABED /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		65C0B2EC1C0600B50010ABED /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,11 +245,11 @@
 				4969F30E1BEBC6BA000B0ED7 /* CoreLocation.framework in Frameworks */,
 				4969F30C1BEBC6AB000B0ED7 /* CoreGraphics.framework in Frameworks */,
 				4969F30A1BEBC6A1000B0ED7 /* CFNetwork.framework in Frameworks */,
-				65C0B2DD1C04F50B0010ABED /* FBSDKCoreKit.framework in Frameworks */,
+				65C0B2ED1C0600B50010ABED /* FBSDKCoreKit.framework in Frameworks */,
 				4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */,
 				4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */,
 				4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */,
-				65C0B2DE1C04F50B0010ABED /* FBSDKLoginKit.framework in Frameworks */,
+				65C0B2EE1C0600B50010ABED /* FBSDKLoginKit.framework in Frameworks */,
 				49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,8 +288,8 @@
 		4969F2F81BEBC5E6000B0ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */,
-				65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */,
+				65C0B2EB1C0600B50010ABED /* FBSDKCoreKit.framework */,
+				65C0B2EC1C0600B50010ABED /* FBSDKLoginKit.framework */,
 				49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,

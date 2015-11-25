@@ -116,7 +116,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="kpB-Qz-czR" id="8fc-4T-h5n"/>
                         <outlet property="emailUser" destination="vxJ-2s-y59" id="uDF-1Y-Oer"/>
-                        <outlet property="loginButton" destination="w9I-rX-d43" id="Gp3-9R-K7Z"/>
+                        <outlet property="loginButton" destination="w9I-rX-d43" id="0IQ-tF-vkD"/>
                         <outlet property="logoMobi" destination="KKx-Ar-987" id="Ff5-i6-UmS"/>
                         <outlet property="passwordUser" destination="4VK-jY-SJW" id="Swh-sW-Yk0"/>
                         <segue destination="mPc-At-YJP" kind="show" id="VVC-6i-VTp"/>

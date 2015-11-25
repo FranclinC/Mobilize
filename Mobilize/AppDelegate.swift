@@ -22,19 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        
         // Enable Crash Reporting
 //        ParseCrashReporting.enable()
         
         
-        //Facebook
-        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         
-        
-        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
-            keys = NSDictionary(contentsOfFile: path)
-            print(keys)
-        }
+//        
+//        
+//        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
+//            keys = NSDictionary(contentsOfFile: path)
+//            print(keys)
+//        }
         Parse.enableLocalDatastore()
 //        if let _ = keys {
 //            
@@ -55,6 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //end of the test, remember to delete it
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        //Facebook
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
 
         if application.applicationState != UIApplicationState.Background {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
@@ -133,7 +136,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Facebook connection
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-
     }
     
     

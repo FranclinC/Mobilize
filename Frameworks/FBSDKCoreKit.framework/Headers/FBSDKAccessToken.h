@@ -98,9 +98,6 @@ FBSDK_EXTERN NSString *const FBSDKAccessTokenChangeNewKey;
  */
 @property (readonly, copy, nonatomic) NSString *userID;
 
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)new NS_UNAVAILABLE;
-
 /*!
  @abstract Initializes a new instance.
  @param tokenString the opaque token string.
