@@ -29,10 +29,11 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     
     var proposal : CustomCell = CustomCell()
     var commentsCount : Int = 0
-    
+    var proposalID : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.commentTextField.delegate = self
         self.constraintHeightToolbar = self.toolBarHeightConstraint.constant
@@ -57,7 +58,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        
+        //self.proposalID = self.proposal.proposalId!
         
     }
     
@@ -90,8 +91,9 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         if indexPath.section == 0 {
             
             let cellProposal = tableView.dequeueReusableCellWithIdentifier("proposalCellDetailed", forIndexPath: indexPath) as! ProposalDetailedCell
-            
+            self.proposalID = self.proposal.proposalId!
             cellProposal.proposalText.text = self.proposal.fullProposal
+            print("Proposta id decio: \(self.proposalID!)")
             cellProposal.userName.text = self.proposal.nameUser.text
             cellProposal.userPic.image = self.proposal.userPicture.image
             //cellProposal.disagreeCount.text = self.proposal.againstVoteCount.text
@@ -101,7 +103,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             
             if self.proposal.category2 != nil{ //The second one is opitional
                     cellProposal.category2.image = self.proposal.category2.image
-            }            
+            }
+            
             
             return cellProposal
         }else if indexPath.section == 1 {
@@ -242,6 +245,29 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     
+    @IBAction func saveComment(sender: AnyObject) {
+        //self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
+        var comment = PFObject(className: "Comment")
+        print("Teste")
+        let user = PFUser.currentUser()
+        print("proposal id franclin: \(user)")
+        comment["UserWhoComment"] = user
+        comment["text"] = self.commentTextField.text
+        comment["Proposal"] = self.proposal.proposalId
+        comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if success {
+                //Reload the tableview
+                
+               // self.comments.append(comment)
+                
+                //self.tableView.reloadSections(2, withRowAnimation: UITableViewRowAnimation.Automatic)
+                
+            }else{
+                //report the error
+            }
+        }
+        
+    }
     
     
 }

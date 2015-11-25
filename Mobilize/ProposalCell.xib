@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-ap-6KC">
-                        <rect key="frame" x="16" y="12" width="359" height="150.5"/>
+                        <rect key="frame" x="16" y="12" width="210" height="150.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proposta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg5-pW-SmO">
-                                <rect key="frame" x="8" y="56" width="343" height="61.5"/>
+                                <rect key="frame" x="8" y="56" width="194" height="61.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proposto por" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7E-dp-IFl">
-                                <rect key="frame" x="56" y="8" width="225" height="21"/>
+                                <rect key="frame" x="56" y="8" width="76" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="owC-1r-KRS"/>
                                 </constraints>
@@ -35,7 +36,7 @@
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Politico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ys6-Nl-D2w">
-                                <rect key="frame" x="56" y="25" width="295" height="21"/>
+                                <rect key="frame" x="56" y="25" width="146" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="y6p-eJ-YiJ"/>
                                 </constraints>
@@ -80,40 +81,86 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ss-cg-2Nf">
-                        <rect key="frame" x="332" y="4" width="30" height="30"/>
+                        <rect key="frame" x="183" y="4" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="JUK-8a-2KQ"/>
                             <constraint firstAttribute="height" constant="30" id="Zsr-uR-R2b"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TFK-dg-T1X">
-                        <rect key="frame" x="301" y="4" width="30" height="30"/>
+                        <rect key="frame" x="152" y="4" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="47p-ae-VJr"/>
                             <constraint firstAttribute="height" constant="30" id="U6c-XD-FcW"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjm-1w-a8R">
-                        <rect key="frame" x="16" y="168" width="359" height="50.5"/>
+                        <rect key="frame" x="16" y="168" width="210" height="50.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KY-ch-m0L" userLabel="Agree Button">
-                                <rect key="frame" x="0.0" y="0.0" width="68" height="50.5"/>
-                                <state key="normal" title="Concordo"/>
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="50.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Concordo">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vku-IP-GQ2" userLabel="Disagree Button">
-                                <rect key="frame" x="235" y="0.0" width="124" height="50.5"/>
-                                <state key="normal" title="Discordo"/>
+                                <rect key="frame" x="106" y="0.0" width="104" height="50.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Discordo">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5B-KW-vx3" userLabel="AgreeCount">
+                                <rect key="frame" x="80" y="15" width="17.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G78-YO-Mob" userLabel="DisagreeCount">
+                                <rect key="frame" x="184" y="15" width="17.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Proposta_Like.1" translatesAutoresizingMaskIntoConstraints="NO" id="hWh-wm-e0f">
+                                <rect key="frame" x="8" y="12" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="YVT-dp-Ywb"/>
+                                    <constraint firstAttribute="height" constant="25" id="r97-1u-EBs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Proposta_Dislike.1" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-2D-AXj">
+                                <rect key="frame" x="114" y="12" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Fo4-of-2a6"/>
+                                    <constraint firstAttribute="height" constant="25" id="hU5-r8-tSp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="e5B-KW-vx3" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="61s-Tl-fQR"/>
                             <constraint firstItem="5KY-ch-m0L" firstAttribute="leading" secondItem="mjm-1w-a8R" secondAttribute="leading" id="AVA-np-JvU"/>
                             <constraint firstAttribute="bottom" secondItem="Vku-IP-GQ2" secondAttribute="bottom" id="Cgk-Mn-Qwf"/>
+                            <constraint firstItem="Vku-IP-GQ2" firstAttribute="leading" secondItem="e5B-KW-vx3" secondAttribute="trailing" constant="8" id="Dad-yf-mw3"/>
                             <constraint firstItem="5KY-ch-m0L" firstAttribute="top" secondItem="mjm-1w-a8R" secondAttribute="top" id="NRR-1z-FNS"/>
                             <constraint firstAttribute="bottom" secondItem="5KY-ch-m0L" secondAttribute="bottom" id="Nyo-pm-eue"/>
+                            <constraint firstItem="hWh-wm-e0f" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="PI9-oL-XWr"/>
                             <constraint firstItem="Vku-IP-GQ2" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="QSn-HL-c9l"/>
                             <constraint firstAttribute="trailing" secondItem="Vku-IP-GQ2" secondAttribute="trailing" id="QXX-xm-FGo"/>
+                            <constraint firstAttribute="height" constant="50.5" id="Qyz-dQ-jyv"/>
                             <constraint firstItem="Vku-IP-GQ2" firstAttribute="top" secondItem="mjm-1w-a8R" secondAttribute="top" id="WgX-ln-gAa"/>
+                            <constraint firstItem="hWh-wm-e0f" firstAttribute="leading" secondItem="mjm-1w-a8R" secondAttribute="leading" constant="8" id="eZL-3b-ma0"/>
+                            <constraint firstAttribute="trailing" secondItem="G78-YO-Mob" secondAttribute="trailing" constant="8" id="fu6-8u-2uz"/>
                             <constraint firstItem="5KY-ch-m0L" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="jIp-fJ-ube"/>
+                            <constraint firstItem="Vku-IP-GQ2" firstAttribute="width" secondItem="mjm-1w-a8R" secondAttribute="width" multiplier="0.5" constant="-1" id="jpH-hm-AK2"/>
+                            <constraint firstItem="G78-YO-Mob" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="sm1-1C-ASD"/>
+                            <constraint firstItem="RHL-2D-AXj" firstAttribute="centerY" secondItem="mjm-1w-a8R" secondAttribute="centerY" id="uIl-dK-NVY"/>
+                            <constraint firstItem="5KY-ch-m0L" firstAttribute="width" secondItem="mjm-1w-a8R" secondAttribute="width" multiplier="0.5" constant="-1" id="vP6-C8-loq"/>
+                            <constraint firstItem="RHL-2D-AXj" firstAttribute="leading" secondItem="Vku-IP-GQ2" secondAttribute="leading" constant="8" id="xZJ-zK-SZi"/>
+                            <constraint firstItem="hWh-wm-e0f" firstAttribute="leading" secondItem="mjm-1w-a8R" secondAttribute="leading" constant="8" id="y3t-RJ-RrW"/>
                             <constraint firstItem="Vku-IP-GQ2" firstAttribute="centerX" secondItem="mjm-1w-a8R" secondAttribute="leading" constant="297" id="z6h-b6-JKY"/>
                         </constraints>
                     </view>
@@ -135,15 +182,26 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="agreeButton" destination="5KY-ch-m0L" id="7eK-c8-Kc9"/>
+                <outlet property="agreeCount" destination="e5B-KW-vx3" id="Cb6-b1-4TJ"/>
                 <outlet property="category1" destination="9ss-cg-2Nf" id="hIx-z7-Vbj"/>
                 <outlet property="category2" destination="TFK-dg-T1X" id="3f7-qd-Rwx"/>
                 <outlet property="dateTime" destination="uS3-q3-PVY" id="apY-GE-zIq"/>
+                <outlet property="disagreeButton" destination="Vku-IP-GQ2" id="iW6-tW-OuL"/>
+                <outlet property="disagreeCount" destination="G78-YO-Mob" id="1v8-tt-yO0"/>
+                <outlet property="imageAgree" destination="hWh-wm-e0f" id="Cd4-eS-Au8"/>
+                <outlet property="imageDisagree" destination="RHL-2D-AXj" id="Xzz-60-ane"/>
                 <outlet property="proposalText" destination="mg5-pW-SmO" id="4Rh-sz-ep6"/>
                 <outlet property="proposedBy" destination="Z7E-dp-IFl" id="Bq2-MC-AdJ"/>
                 <outlet property="userName" destination="ys6-Nl-D2w" id="eXI-7o-Mvo"/>
                 <outlet property="userPic" destination="ehb-lZ-4oE" id="CCy-eS-pVV"/>
+                <outlet property="viewVote" destination="mjm-1w-a8R" id="xxB-js-grI"/>
             </connections>
             <point key="canvasLocation" x="253.5" y="-27.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Proposta_Dislike.1" width="55" height="55"/>
+        <image name="Proposta_Like.1" width="55" height="55"/>
+    </resources>
 </document>

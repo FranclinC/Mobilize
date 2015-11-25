@@ -200,7 +200,7 @@ class NewProposal: UIViewController, UITextViewDelegate {
     
     func saveProposal (){
         self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
-        let proposal = PFObject(className: "Proposals")
+        let proposal = PFObject(className: "Proposal")
         let user = PFUser.currentUser()
         proposal["User"] = user
         proposal["ProposalText"] = proposalText.text

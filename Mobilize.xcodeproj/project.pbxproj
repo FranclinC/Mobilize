@@ -50,7 +50,6 @@
 		4969F3181BEBC6E7000B0ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3171BEBC6E7000B0ED7 /* libz.tbd */; };
 		4969F31A1BEBC6EF000B0ED7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */; };
 		49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */; };
-		498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */; };
 		498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */; };
 		498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BE1BF3D3CF002882E1 /* Animatable.swift */; };
 		498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1BF1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift */; };
@@ -77,7 +76,6 @@
 		498AA1F31BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D51BF3D3CF002882E1 /* ScrollViewPageConstraintAnimation.swift */; };
 		498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */; };
 		498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */; };
-		49A4E8121BF3DAC00059D441 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */; };
 		49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */; };
 		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
 		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
@@ -107,6 +105,14 @@
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
+		65C0B2DD1C04F50B0010ABED /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */; };
+		65C0B2DE1C04F50B0010ABED /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */; };
+		65C0B2E01C0541510010ABED /* SettingsPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2DF1C0541510010ABED /* SettingsPicture.xib */; };
+		65C0B2E21C0543860010ABED /* SettingsGroup1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E11C0543860010ABED /* SettingsGroup1.xib */; };
+		65C0B2E41C0545120010ABED /* SettingsGroup2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E31C0545120010ABED /* SettingsGroup2.xib */; };
+		65C0B2E61C054E550010ABED /* SettingsPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E51C054E550010ABED /* SettingsPicture.swift */; };
+		65C0B2E81C054E690010ABED /* SettingsGroup1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E71C054E690010ABED /* SettingsGroup1.swift */; };
+		65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,7 +161,6 @@
 		49873EAD1BF3DBEF004E4424 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mobilize-Bridging-Header.h"; path = "Mobilize/Mobilize-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		49873EAE1BF3DBEF004E4424 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Mobilize/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Mobilize/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
-		498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		498AA1BD1BF3D3CF002882E1 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaAnimation.swift; sourceTree = "<group>"; };
 		498AA1BE1BF3D3CF002882E1 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		498AA1BF1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPagingScrollViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +189,6 @@
 		498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationAnimation.swift; sourceTree = "<group>"; };
 		498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
 		49A4E80C1BF3D8DB0059D441 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mobilize-Bridging-Header.h"; sourceTree = "<group>"; };
-		49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
@@ -216,6 +220,14 @@
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
+		65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		65C0B2DF1C0541510010ABED /* SettingsPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPicture.xib; sourceTree = "<group>"; };
+		65C0B2E11C0543860010ABED /* SettingsGroup1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup1.xib; sourceTree = "<group>"; };
+		65C0B2E31C0545120010ABED /* SettingsGroup2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup2.xib; sourceTree = "<group>"; };
+		65C0B2E51C054E550010ABED /* SettingsPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPicture.swift; sourceTree = "<group>"; };
+		65C0B2E71C054E690010ABED /* SettingsGroup1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroup1.swift; sourceTree = "<group>"; };
+		65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGroup2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,12 +245,12 @@
 				4969F30E1BEBC6BA000B0ED7 /* CoreLocation.framework in Frameworks */,
 				4969F30C1BEBC6AB000B0ED7 /* CoreGraphics.framework in Frameworks */,
 				4969F30A1BEBC6A1000B0ED7 /* CFNetwork.framework in Frameworks */,
-				498AA14F1BF3D261002882E1 /* FBSDKCoreKit.framework in Frameworks */,
+				65C0B2DD1C04F50B0010ABED /* FBSDKCoreKit.framework in Frameworks */,
 				4969F3081BEBC699000B0ED7 /* AudioToolbox.framework in Frameworks */,
 				4969F3011BEBC5E7000B0ED7 /* Parse.framework in Frameworks */,
 				4969F3001BEBC5E6000B0ED7 /* Bolts.framework in Frameworks */,
+				65C0B2DE1C04F50B0010ABED /* FBSDKLoginKit.framework in Frameworks */,
 				49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				49A4E8121BF3DAC00059D441 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +288,12 @@
 		4969F2F81BEBC5E6000B0ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65C0B2DB1C04F50B0010ABED /* FBSDKCoreKit.framework */,
+				65C0B2DC1C04F50B0010ABED /* FBSDKLoginKit.framework */,
 				49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */,
 				4969F3171BEBC6E7000B0ED7 /* libz.tbd */,
 				4969F3191BEBC6EF000B0ED7 /* libsqlite3.tbd */,
 				49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */,
-				49A4E8111BF3DAC00059D441 /* FBSDKLoginKit.framework */,
-				498AA14E1BF3D261002882E1 /* FBSDKCoreKit.framework */,
 				4969F3151BEBC6DF000B0ED7 /* SystemConfiguration.framework */,
 				4969F3131BEBC6D5000B0ED7 /* StoreKit.framework */,
 				4969F3111BEBC6CB000B0ED7 /* Security.framework */,
@@ -358,6 +370,9 @@
 				65112E391BFB87E000350721 /* CommentsCountCell.swift */,
 				65112E3B1BFB886700350721 /* CommentCell.swift */,
 				65112E3D1BFB891000350721 /* NotificationCell.swift */,
+				65C0B2E51C054E550010ABED /* SettingsPicture.swift */,
+				65C0B2E71C054E690010ABED /* SettingsGroup1.swift */,
+				65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -385,6 +400,9 @@
 				42224B1F1C03B00A0051255C /* Proposta */,
 				65112E351BFAC58900350721 /* NotificationCell.xib */,
 				65112E471BFFA3EA00350721 /* AgreeSupportView.xib */,
+				65C0B2DF1C0541510010ABED /* SettingsPicture.xib */,
+				65C0B2E11C0543860010ABED /* SettingsGroup1.xib */,
+				65C0B2E31C0545120010ABED /* SettingsGroup2.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -485,6 +503,7 @@
 				TargetAttributes = {
 					49CE035B1BD56216000F76D7 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = X359A743C5;
 					};
 				};
 			};
@@ -513,6 +532,7 @@
 			files = (
 				42224B231C03B10E0051255C /* comment_58.png in Resources */,
 				42224B191C03B0020051255C /* like_55.2.png in Resources */,
+				65C0B2E21C0543860010ABED /* SettingsGroup1.xib in Resources */,
 				42224B1D1C03B0020051255C /* like_220.2.png in Resources */,
 				42224B251C03B10E0051255C /* comment_232.png in Resources */,
 				65798E9F1BF3E331007A3E51 /* keys.plist in Resources */,
@@ -541,8 +561,10 @@
 				42224B1A1C03B0020051255C /* like_55.png in Resources */,
 				42224B121C03B0020051255C /* dislike_220.png in Resources */,
 				42224B171C03B0020051255C /* fav_124.2.png in Resources */,
+				65C0B2E41C0545120010ABED /* SettingsGroup2.xib in Resources */,
 				65112E341BFA382D00350721 /* CommentCell.xib in Resources */,
 				65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */,
+				65C0B2E01C0541510010ABED /* SettingsPicture.xib in Resources */,
 				65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */,
 				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 			);
@@ -581,6 +603,7 @@
 				65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */,
 				498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */,
 				498AA1E41BF3D3CF002882E1 /* CornerRadiusAnimation.swift in Sources */,
+				65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
 				498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */,
@@ -598,12 +621,14 @@
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
 				65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */,
+				65C0B2E61C054E550010ABED /* SettingsPicture.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
 				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,
 				498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */,
 				49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */,
 				493AF38D1BF3E20E004BADE4 /* CustomCell.swift in Sources */,
+				65C0B2E81C054E690010ABED /* SettingsGroup1.swift in Sources */,
 				49B297301BED26F600492550 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,7 +743,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -728,7 +754,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "114bf583-2777-42c7-824c-3978c6e152a1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobilize/Mobilize-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -740,7 +766,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -750,7 +777,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "114bf583-2777-42c7-824c-3978c6e152a1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Mobilize/Mobilize-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

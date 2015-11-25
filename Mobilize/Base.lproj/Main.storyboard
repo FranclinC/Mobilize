@@ -120,7 +120,7 @@
                         <outlet property="logoMobi" destination="KKx-Ar-987" id="Ff5-i6-UmS"/>
                         <outlet property="passwordUser" destination="4VK-jY-SJW" id="Swh-sW-Yk0"/>
                         <segue destination="mPc-At-YJP" kind="show" id="VVC-6i-VTp"/>
-                        <segue destination="b5d-Kp-g07" kind="show" id="C4L-u1-t4V"/>
+                        <segue destination="b5d-Kp-g07" kind="show" identifier="mainPage" id="C4L-u1-t4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fut-h0-ZAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,6 +408,7 @@
                                         </constraints>
                                         <state key="normal" title="Comentar"/>
                                         <connections>
+                                            <action selector="saveComment:" destination="gfs-FI-MhW" eventType="touchUpInside" id="9K9-85-QOY"/>
                                             <action selector="sendComment:" destination="gfs-FI-MhW" eventType="touchUpInside" id="lyd-Op-qwW"/>
                                         </connections>
                                     </button>
@@ -492,7 +493,7 @@
         <!--Configurações-->
         <scene sceneID="nag-Sn-Nq0">
             <objects>
-                <viewController storyboardIdentifier="settings" id="JcR-bw-OEa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="JcR-bw-OEa" customClass="SettingsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ki-qK-EGG"/>
                         <viewControllerLayoutGuide type="bottom" id="eAG-xJ-fb3"/>
@@ -500,11 +501,31 @@
                     <view key="view" contentMode="scaleToFill" id="cL3-KC-0kB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-oM-8wx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JcR-bw-OEa" id="stL-iX-5hq"/>
+                                    <outlet property="delegate" destination="JcR-bw-OEa" id="czg-WR-OIm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kWJ-oM-8wx" firstAttribute="top" secondItem="cL3-KC-0kB" secondAttribute="topMargin" id="0TN-NC-Tj1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kWJ-oM-8wx" secondAttribute="trailing" constant="-20" id="dHF-0Y-fJZ"/>
+                            <constraint firstItem="eAG-xJ-fb3" firstAttribute="top" secondItem="kWJ-oM-8wx" secondAttribute="bottom" id="eZ9-7d-asa"/>
+                            <constraint firstItem="kWJ-oM-8wx" firstAttribute="leading" secondItem="cL3-KC-0kB" secondAttribute="leadingMargin" constant="-20" id="hEx-nC-9aQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configurações" image="ConfigurationOff" selectedImage="ConfigurationOn" id="5Yd-E6-hfz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="kWJ-oM-8wx" id="Pwh-Uv-a5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-k6-NFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -596,5 +617,5 @@
         <segue reference="PLt-7Z-JIa"/>
         <segue reference="cvd-nl-Cxa"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
 </document>

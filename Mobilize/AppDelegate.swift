@@ -25,8 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable Crash Reporting
 //        ParseCrashReporting.enable()
         
+        
         //Facebook
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
+        
         
         if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
             keys = NSDictionary(contentsOfFile: path)
@@ -43,9 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         //This is just for a test with parse
         
-
         // Initialize Parse.
         Parse.setApplicationId("Ind4ALgVPaHk9NDFkRMgZWYm4q1ngr7ouD2387GT", clientKey: "dOIxXW8MYQY37X7PhCqtktaEhvsF5Nyu1HjnB8Qj")
+        
         // [Optional] Track statistics around application opens.
 
         
@@ -128,7 +131,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         //Facebook connection
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+
     }
+    
+    
+
+    
 }
 

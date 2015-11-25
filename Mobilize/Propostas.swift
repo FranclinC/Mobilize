@@ -150,9 +150,9 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
 
         //Before send, create the object detailed
         cell.time = self.proposals[indexPath.row]["createdAt"] as? String
-        
-        cell.proposalId = self.proposals[indexPath.row].objectId
-
+        //var propId = self.proposals[indexPath.row].objectId
+        cell.proposalId = self.proposals[indexPath.row].objectId! as String
+        print("proposal id: \(cell.proposalId)")
         let timeStamp = self.proposals[indexPath.row].createdAt
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/mm/YY hh:mm"
@@ -253,6 +253,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             
             let vc = segue.destinationViewController as! ProposalDetailed
             vc.proposal = valueToPass
+            vc.proposalID = valueToPass.proposalId!
         }
         
     }

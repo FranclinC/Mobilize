@@ -19,7 +19,7 @@ class Login: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var emailUser: UITextField!
     @IBOutlet var passwordUser: UITextField!
-    var permissionsArray = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
+    var permissionsArray = ["public_profile", "email"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +49,18 @@ class Login: UIViewController {
     
     
     @IBAction func signInButtonTapped(sender: AnyObject) {
-        
+
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissionsArray) { (user: PFUser?, error: NSError?) -> Void in
+            
+            if let user = user {
+                if user.isNew {
+                    print("User signed up and logged in through Facebook!")
+                } else {
+                    print("User logged in through Facebook!")
+                }
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
+            }
             
             
             if error != nil {

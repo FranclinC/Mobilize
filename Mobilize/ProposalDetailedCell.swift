@@ -17,26 +17,44 @@ class ProposalDetailedCell: UITableViewCell {
     @IBOutlet var dateTime: UILabel!
     @IBOutlet var category1: UIImageView!
     @IBOutlet var category2: UIImageView!
-    @IBOutlet var viewAgree: UIView!
-    @IBOutlet var viewDisagree: UIView!
+    //@IBOutlet var viewAgree: UIView!
+    //@IBOutlet var viewDisagree: UIView!
     @IBOutlet var imageAgree: UIImageView!
-    @IBOutlet var agree: UILabel!
+    //@IBOutlet var agree: UILabel!
     @IBOutlet var agreeCount: UILabel!
     @IBOutlet var imageDisagree: UIImageView!
-    @IBOutlet var disagree: UILabel!
+    //@IBOutlet var disagree: UILabel!
     @IBOutlet var disagreeCount: UILabel!
     
     @IBOutlet var viewVote: UIView!
     
+    @IBOutlet var agreeButton: UIButton!
+    
+    @IBOutlet var disagreeButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.userPic.layer.cornerRadius = 6.0
         
-        //self.imageAgree.image = UIImage(named: "like")
-        //self.imageDisagree.image = UIImage(named: "dislike")
+        self.selectionStyle = UITableViewCellSelectionStyle.None
+
+//        let rectShape = CAShapeLayer()
+//        rectShape.bounds = self.agreeButton.frame
+//        rectShape.position = self.agreeButton.center
+//        rectShape.path = UIBezierPath(roundedRect: self.agreeButton.bounds, byRoundingCorners: UIRectCorner.BottomLeft, cornerRadii: CGSize(width: self.agreeButton.frame.width, height: self.agreeButton.frame.height)).CGPath
+//        self.agreeButton.layer.mask = rectShape
         
+        
+        
+//        let rectShape = CAShapeLayer()
+//        rectShape.bounds = self.viewVote.frame
+//        rectShape.position = self.viewVote.center
+//        rectShape.path = UIBezierPath(roundedRect: self.viewVote.bounds, byRoundingCorners: .BottomLeft, cornerRadii: CGSize(width: 20, height: 20)).CGPath
+//        
+//        //self.viewVote.layer.backgroundColor = UIColor.greenColor().CGColor
+//        //Here I'm masking the textView's layer with rectShape layer
+//        self.viewVote.layer.mask = rectShape
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

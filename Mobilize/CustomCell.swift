@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class CustomCell: UITableViewCell {
 
 
@@ -38,7 +39,7 @@ class CustomCell: UITableViewCell {
     var maturation : String!
     var fullProposal : String!
     var time : String!
-    var proposalId : String?
+    var proposalId : String!
     
     
     

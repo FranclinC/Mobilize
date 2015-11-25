@@ -14,11 +14,18 @@ class CommentsCountCell: UITableViewCell {
     @IBOutlet var commentCount: UILabel!
     @IBOutlet var comment: UILabel!
     
+    @IBOutlet var viewCount: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.selectionStyle = UITableViewCellSelectionStyle.None
+        
         imageComment.image = UIImage(named: "Proposta_Comment")
+        
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: UIRectCorner.TopLeft.union(.TopRight), cornerRadii: CGSizeMake(10, 10)).CGPath
+//        self.viewCount.layer.mask = maskLayer
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

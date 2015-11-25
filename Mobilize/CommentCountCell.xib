@@ -70,6 +70,7 @@
                 <outlet property="comment" destination="Weu-PT-vre" id="niE-mb-HPI"/>
                 <outlet property="commentCount" destination="C0b-Tf-rBO" id="A2u-hy-2mf"/>
                 <outlet property="imageComment" destination="HR8-0D-VmN" id="Z1F-xY-uGp"/>
+                <outlet property="viewCount" destination="oit-Zb-s7J" id="7tV-3E-4SA"/>
             </connections>
         </tableViewCell>
     </objects>

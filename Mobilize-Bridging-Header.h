@@ -12,6 +12,6 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 #endif /* Mobilize_Bridging_Header_h */
