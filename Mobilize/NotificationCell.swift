@@ -20,6 +20,8 @@ class NotificationCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.userPic.layer.cornerRadius = 6.0
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
