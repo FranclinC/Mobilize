@@ -35,24 +35,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-O1-tc4">
-                                <rect key="frame" x="550" y="11" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="T0r-n1-gIK"/>
-                                    <constraint firstAttribute="height" constant="21" id="qhd-bf-aOV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="go3-Re-y3u" firstAttribute="top" secondItem="kja-oS-QYd" secondAttribute="top" constant="7" id="8R4-6I-Ncj"/>
                             <constraint firstItem="go3-Re-y3u" firstAttribute="leading" secondItem="kja-oS-QYd" secondAttribute="leading" constant="8" id="DEW-r8-vlJ"/>
                             <constraint firstItem="S9I-Qs-qFX" firstAttribute="leading" secondItem="go3-Re-y3u" secondAttribute="trailing" constant="8" id="Mv7-Ma-yDH"/>
-                            <constraint firstAttribute="trailing" secondItem="3Yd-O1-tc4" secondAttribute="trailing" constant="8" id="YC9-w6-vAI"/>
-                            <constraint firstItem="3Yd-O1-tc4" firstAttribute="top" secondItem="kja-oS-QYd" secondAttribute="top" constant="11" id="a7i-DT-54R"/>
                             <constraint firstItem="S9I-Qs-qFX" firstAttribute="top" secondItem="kja-oS-QYd" secondAttribute="top" constant="11" id="eti-K8-jvD"/>
                         </constraints>
                     </view>
@@ -65,7 +53,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="arrow" destination="3Yd-O1-tc4" id="w27-e0-9NI"/>
                 <outlet property="imageIcon" destination="go3-Re-y3u" id="VYE-eG-33p"/>
                 <outlet property="labelCell" destination="S9I-Qs-qFX" id="bVO-zM-fxV"/>
             </connections>

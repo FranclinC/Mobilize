@@ -26,9 +26,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYX-zj-OSm">
-                                <rect key="frame" x="203" y="114" width="200" height="21"/>
+                                <rect key="frame" x="153" y="114" width="300" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="HC9-VZ-Oud"/>
+                                    <constraint firstAttribute="width" constant="300" id="HC9-VZ-Oud"/>
                                     <constraint firstAttribute="height" constant="21" id="nhB-OA-vCc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -36,9 +36,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4L-m5-KFJ">
-                                <rect key="frame" x="253.5" y="135" width="100" height="21"/>
+                                <rect key="frame" x="153.5" y="135" width="300" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="2ag-la-3EV"/>
+                                    <constraint firstAttribute="width" constant="300" id="2ag-la-3EV"/>
                                     <constraint firstAttribute="height" constant="21" id="cw5-1W-8Bc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>

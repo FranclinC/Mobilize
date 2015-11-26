@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -22,6 +23,20 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.registerNib(UINib(nibName: "SettingsPicture", bundle: nil), forCellReuseIdentifier: "settingsPicture")
         self.tableView.registerNib(UINib(nibName: "SettingsGroup1", bundle: nil), forCellReuseIdentifier: "settingsGroup1")
         self.tableView.registerNib(UINib(nibName: "SettingsGroup2", bundle: nil), forCellReuseIdentifier: "settingsGroup2")
+        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.navigationItem.leftBarButtonItem = nil
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
+        self.tabBarController?.navigationItem.hidesBackButton = true
+        self.tabBarController?.navigationItem.titleView = nil
+
+        self.tabBarController?.navigationItem.title = "Configurações"
+        self.tabBarController?.navigationItem.titleView?.tintColor = UIColor(colorLiteralRed: 70/255, green: 97/255, blue: 157/255, alpha: 1)
+
         
     }
     
@@ -43,7 +58,34 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cellUser = tableView.dequeueReusableCellWithIdentifier("settingsPicture", forIndexPath: indexPath) as! SettingsPicture
-            cellUser.userPicture.image = UIImage(named: "perfil")
+            let user = PFUser.currentUser()
+            
+            if user!["profile_picture"] == nil {
+                cellUser.userPicture.image = UIImage(named: "perfil")
+            }else {
+                
+                let userImageFile = user!["profile_picture"] as! PFFile
+                userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            let image = UIImage(data:imageData)
+                            cellUser.userPicture.image = image
+                        }
+                    }
+                }
+
+            }
+            
+            cellUser.userName.text = user!["name"] as? String
+
+            let timeStamp = user?.createdAt
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MMM/YY"//"dd/mm/YY hh:mm"
+            var dateString = dateFormatter.stringFromDate(timeStamp!)
+            
+            cellUser.contributionLabel.text = "Contribui desde " + dateString
+            
+            
             
             return cellUser
         }else if indexPath.section == 1 {
@@ -72,6 +114,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 cellGroup2.imageIcon.image = UIImage(named: "comentarios")
                 cellGroup2.labelCell.text = "Ajustes da Conta"
             }
+            cellGroup2.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
             
             return cellGroup2
         }

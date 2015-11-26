@@ -257,9 +257,14 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         
         comment["Proposal"] = objProposal
         comment["stars"] = 0
+        print(comment["UserWhoComment"])
+        print(comment["text"])
+        print(comment["Proposal"])
+
         comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 //Reload the tableview
+                self.commentTextField.text = ""
                 
                // self.comments.append(comment)
                 self.loadComments()
