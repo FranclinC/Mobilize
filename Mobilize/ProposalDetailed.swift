@@ -171,7 +171,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     //MARK:  Comment Functions
     @IBAction func sendComment(sender: UIButton) {
         
-        
+        self.commentTextField.text = ""
         self.commentTextField.endEditing(true)
     }
     
@@ -264,11 +264,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 //Reload the tableview
-                self.commentTextField.text = ""
-                
-               // self.comments.append(comment)
                 self.loadComments()
-                //self.tableView.reloadSections(2, withRowAnimation: UITableViewRowAnimation.Automatic)
                 print("deu certo")
             }else{
                 //report the error

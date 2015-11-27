@@ -105,6 +105,9 @@
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
+		65AEF02A1C08CF680065E186 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AEF0291C08CF680065E186 /* AccountCell.xib */; };
+		65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AEF02B1C08D12C0065E186 /* AccountCell.swift */; };
+		65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AEF02D1C08D2B40065E186 /* AccountViewController.swift */; };
 		65C0B2E01C0541510010ABED /* SettingsPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2DF1C0541510010ABED /* SettingsPicture.xib */; };
 		65C0B2E21C0543860010ABED /* SettingsGroup1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E11C0543860010ABED /* SettingsGroup1.xib */; };
 		65C0B2E41C0545120010ABED /* SettingsGroup2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C0B2E31C0545120010ABED /* SettingsGroup2.xib */; };
@@ -220,6 +223,9 @@
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
+		65AEF0291C08CF680065E186 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
+		65AEF02B1C08D12C0065E186 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		65AEF02D1C08D2B40065E186 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		65C0B2DF1C0541510010ABED /* SettingsPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPicture.xib; sourceTree = "<group>"; };
 		65C0B2E11C0543860010ABED /* SettingsGroup1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup1.xib; sourceTree = "<group>"; };
 		65C0B2E31C0545120010ABED /* SettingsGroup2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsGroup2.xib; sourceTree = "<group>"; };
@@ -373,6 +379,7 @@
 				65C0B2E51C054E550010ABED /* SettingsPicture.swift */,
 				65C0B2E71C054E690010ABED /* SettingsGroup1.swift */,
 				65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */,
+				65AEF02B1C08D12C0065E186 /* AccountCell.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -403,6 +410,7 @@
 				65C0B2DF1C0541510010ABED /* SettingsPicture.xib */,
 				65C0B2E11C0543860010ABED /* SettingsGroup1.xib */,
 				65C0B2E31C0545120010ABED /* SettingsGroup2.xib */,
+				65AEF0291C08CF680065E186 /* AccountCell.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */,
 				49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */,
 				49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */,
+				65AEF02D1C08D2B40065E186 /* AccountViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -531,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42224B231C03B10E0051255C /* comment_58.png in Resources */,
+				65AEF02A1C08CF680065E186 /* AccountCell.xib in Resources */,
 				42224B191C03B0020051255C /* like_55.2.png in Resources */,
 				65C0B2E21C0543860010ABED /* SettingsGroup1.xib in Resources */,
 				42224B1D1C03B0020051255C /* like_220.2.png in Resources */,
@@ -588,6 +598,7 @@
 				498AA1EA1BF3D3CF002882E1 /* Interpolatable.swift in Sources */,
 				498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */,
 				498AA1EC1BF3D3CF002882E1 /* LayerFillColorAnimation.swift in Sources */,
+				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
 				49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
 				498AA1E31BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift in Sources */,
@@ -597,6 +608,7 @@
 				493AF3861BF3E129004BADE4 /* Login.swift in Sources */,
 				498AA1F11BF3D3CF002882E1 /* RotationAnimation.swift in Sources */,
 				65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */,
+				65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */,
 				498AA1DC1BF3D3CF002882E1 /* AlphaAnimation.swift in Sources */,
 				4925F5611BF27C7D00481D98 /* LoginViewController.swift in Sources */,
 				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
