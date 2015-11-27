@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="672" y="-625"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="3sA-l5-CGC">
             <objects>
-                <viewController id="M0J-xo-UX3" sceneMemberID="viewController">
+                <viewController id="M0J-xo-UX3" customClass="AccountViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jaU-SQ-mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="sv2-fA-dzr"/>
@@ -514,6 +514,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MkE-Zy-lGw" id="cbE-Ll-pCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgv-hI-Pd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

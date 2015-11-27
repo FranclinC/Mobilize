@@ -117,6 +117,7 @@
 		65C0B2ED1C0600B50010ABED /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2EB1C0600B50010ABED /* FBSDKCoreKit.framework */; };
 		65C0B2EE1C0600B50010ABED /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C0B2EC1C0600B50010ABED /* FBSDKLoginKit.framework */; };
 		65CA6DCE1C08D93A00E67941 /* AccountLogOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CA6DCD1C08D93A00E67941 /* AccountLogOut.xib */; };
+		65CA6DD01C08DA8A00E67941 /* AccountLogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CA6DCF1C08DA8A00E67941 /* AccountLogOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +237,7 @@
 		65C0B2EB1C0600B50010ABED /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		65C0B2EC1C0600B50010ABED /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		65CA6DCD1C08D93A00E67941 /* AccountLogOut.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountLogOut.xib; sourceTree = "<group>"; };
+		65CA6DCF1C08DA8A00E67941 /* AccountLogOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountLogOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 				65C0B2E71C054E690010ABED /* SettingsGroup1.swift */,
 				65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */,
 				65AEF02B1C08D12C0065E186 /* AccountCell.swift */,
+				65CA6DCF1C08DA8A00E67941 /* AccountLogOut.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,
+				65CA6DD01C08DA8A00E67941 /* AccountLogOut.swift in Sources */,
 				65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */,
 				65C0B2E61C054E550010ABED /* SettingsPicture.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
