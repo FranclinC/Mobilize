@@ -16,22 +16,16 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        
         tableView.delegate = self
         //register nib
         self.tableView.registerNib(UINib(nibName: "AccountCell", bundle: nil), forCellReuseIdentifier: "accountCell")
-        //register nib
-        
     }
     
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        
-        
-        var doneButton : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "saveConfiguration")
+        let doneButton : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "saveConfiguration")
         self.navigationItem.rightBarButtonItem = doneButton
     }
 
@@ -42,7 +36,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,10 +44,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             return 1
         }else if section == 1 {
             return 1
-        }else if section == 2 {
-            return 2
         }else {
-            return 1
+            return 2
         }
     }
     
