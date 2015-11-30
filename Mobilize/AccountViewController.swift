@@ -143,8 +143,13 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         let cellNewPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![2]) as? AccountCell
         let cellConfirm : AccountCell? = self.tableView.cellForRowAtIndexPath(array![3]) as? AccountCell
         
-        if cellNome != "" {
+        
+        var didChange = false
+        
+        if cellNome?.textCell.text != "" {
             user.setValue(cellNome?.textCell.text, forKey: "name")
+            print("Mudei essa porra")
+            didChange = true
         }
         
         //If the user is logged with facebook he or she can not change the password on the app
@@ -152,6 +157,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             if cellCurrentPassword != "" {
                 if cellNewPassword?.textCell.text == cellConfirm?.textCell.text {
                     self.user.setValue(cellNewPassword?.textCell.text, forKey: "password")
+                    didChange = true
                 }else{
                     //Show alert
                     let alertError = UIAlertController(title: "Erro", message: "Confirmar senha não confere com nova senha", preferredStyle: UIAlertControllerStyle.Alert)
@@ -163,8 +169,11 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }//the else is if he or she is logged with facebook
         
-        //This is to save the changes in the user
-        self.user.saveEventually()
+        if didChange {
+            //This is to save the changes in the user
+            self.user.saveEventually()
+        }
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     
