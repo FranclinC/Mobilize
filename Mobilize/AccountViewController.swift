@@ -23,7 +23,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         //register nib
         self.tableView.registerNib(UINib(nibName: "AccountCell", bundle: nil), forCellReuseIdentifier: "accountCell")
         //register nib
-        self.tableView.registerNib(UINib(nibName: "AccountLogOut", bundle: nil), forCellReuseIdentifier: "accountLogOut")
         
     }
     
