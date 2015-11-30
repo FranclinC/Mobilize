@@ -106,7 +106,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         cell.category2.image = nil
 
         //New style of changing the cell
-        var categories =  self.proposals[indexPath.row]["Category"] //Get the categories of the row
+        let categories =  self.proposals[indexPath.row]["Category"] //Get the categories of the row
         
         //get the first flag, which is position 1, the 0 one is All
         if (categories[1] as! String) == "Education"{
@@ -156,7 +156,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         let timeStamp = self.proposals[indexPath.row].createdAt
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/mm/YY hh:mm"
-        var dateString = dateFormatter.stringFromDate(timeStamp!)
+        let dateString = dateFormatter.stringFromDate(timeStamp!)
         
         cell.time = dateString
         

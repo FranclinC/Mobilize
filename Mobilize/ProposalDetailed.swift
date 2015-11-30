@@ -149,7 +149,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             let timeStamp = self.comments[indexPath.row].createdAt
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "dd/mm/YY hh:mm"
-            var dateString = dateFormatter.stringFromDate(timeStamp!)
+            let dateString = dateFormatter.stringFromDate(timeStamp!)
             
             cell.commentTime.text = dateString
 
@@ -252,7 +252,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         print("proposal id franclin: \(user)")
         comment["UserWhoComment"] = user
         comment["text"] = self.commentTextField.text
-        var objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
+        let objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
         
         
         comment["Proposal"] = objProposal

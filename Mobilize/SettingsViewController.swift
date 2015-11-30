@@ -81,7 +81,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             let timeStamp = user?.createdAt
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "MMM/YY"//"dd/mm/YY hh:mm"
-            var dateString = dateFormatter.stringFromDate(timeStamp!)
+            let dateString = dateFormatter.stringFromDate(timeStamp!)
             
             cellUser.contributionLabel.text = "Contribui desde " + dateString
             
