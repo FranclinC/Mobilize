@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class AccountLogOut: UITableViewCell {
 
@@ -15,6 +16,8 @@ class AccountLogOut: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.logOutButton = UIButton()
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -23,9 +26,10 @@ class AccountLogOut: UITableViewCell {
         // Configure the view for the selected state
     }
 
-
     @IBAction func logOut(sender: AnyObject) {
-        
+        print("To saindo dessa porra")
+        PFUser.logOut()
         
     }
+
 }

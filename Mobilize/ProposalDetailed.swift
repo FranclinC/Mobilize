@@ -117,11 +117,12 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         }else{
             print("Let's get the comments")
             let cell = tableView.dequeueReusableCellWithIdentifier("commentCell", forIndexPath: indexPath) as! CommentCell
-            
+            print("Get the user")
             let user : PFUser = (comments[indexPath.row]["UserWhoComment"] as? PFUser)!
-            
+            print("Got the user")
             //Downloading user photo in background
             let userImageFile = user["profile_picture"] as! PFFile
+            print("Download Image")
             userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     if let imageData = imageData {
@@ -264,6 +265,19 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 //Reload the tableview
+                
+                //Cloud code function call
+                PFCloud.callFunctionInBackground("hello", withParameters: nil) { results, error in
+                    if error != nil {
+                        // Your error handling here
+                        print("Deu erro no cloud code")
+                    } else {
+                        // Deal with your results (votes in your case) here.
+                        print("Deu certo o cloud code")
+                    }
+                }
+                
+                
                 self.loadComments()
                 print("deu certo")
             }else{

@@ -18,16 +18,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-si-tNm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-ck-AET">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                <color key="textColor" red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-ck-AET">
+                                <rect key="frame" x="4" y="0.0" width="596" height="43.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W3X-ck-AET" firstAttribute="leading" secondItem="5dq-si-tNm" secondAttribute="leading" id="78I-Kd-P7w"/>
+                            <constraint firstItem="W3X-ck-AET" firstAttribute="leading" secondItem="5dq-si-tNm" secondAttribute="leading" constant="4" id="78I-Kd-P7w"/>
                             <constraint firstAttribute="trailing" secondItem="W3X-ck-AET" secondAttribute="trailing" id="7Ot-cD-2JC"/>
                             <constraint firstItem="W3X-ck-AET" firstAttribute="top" secondItem="5dq-si-tNm" secondAttribute="top" id="E4F-m7-Ge8"/>
                             <constraint firstAttribute="bottom" secondItem="W3X-ck-AET" secondAttribute="bottom" id="Vhz-kf-ebK"/>

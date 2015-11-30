@@ -7,21 +7,33 @@
 //
 
 import UIKit
+import Parse
 
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        tableView.delegate = self
         //register nib
         self.tableView.registerNib(UINib(nibName: "AccountCell", bundle: nil), forCellReuseIdentifier: "accountCell")
         //register nib
         self.tableView.registerNib(UINib(nibName: "AccountLogOut", bundle: nil), forCellReuseIdentifier: "accountLogOut")
         
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
+        var doneButton : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "saveConfiguration")
+        self.navigationItem.rightBarButtonItem = doneButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,22 +59,52 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //this could be better but I am too lazy to do it now
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! ProposalDetailedCell
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
+            cell.textCell.placeholder = "Nome do Perfil"
+            
             return cell
-        }else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! ProposalDetailedCell
-            return cell
-        }else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! ProposalDetailedCell
+        }else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
+            cell.textCell.placeholder = "Senha atual"
+            
             return cell
         }else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("accountLogOut", forIndexPath: indexPath) as! ProposalDetailedCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
+            cell.textCell.placeholder = "Nova Senha"
+            
             return cell
         }
+        
     }
     
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return CGFloat.min
+        }else if section == 2 {
+            return CGFloat.min
+        }else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 1 {
+            return "Senha".capitalizedString
+        }else{
+            return ""
+        }
+    }
+    
+    func saveConfiguration (){
+        print("Done button")
+    }
+    
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("logOut", sender: nil)
+    }
     
 }

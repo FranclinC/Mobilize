@@ -22,28 +22,24 @@
                                 <rect key="frame" x="273" y="7" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <action selector="logOut:" destination="JNP-gX-0Dh" eventType="touchUpInside" id="FhU-fK-TDP"/>
+                                    <action selector="logOut:" destination="JNP-gX-0Dh" eventType="touchUpInside" id="4nj-Nf-c9p"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hD7-ZE-oVH" firstAttribute="centerX" secondItem="23i-Ra-H6u" secondAttribute="centerX" id="SzC-Ci-yEu"/>
-                            <constraint firstItem="hD7-ZE-oVH" firstAttribute="centerY" secondItem="23i-Ra-H6u" secondAttribute="centerY" id="d9p-nl-Fwe"/>
+                            <constraint firstItem="hD7-ZE-oVH" firstAttribute="centerY" secondItem="23i-Ra-H6u" secondAttribute="centerY" id="1bZ-ea-cWr"/>
+                            <constraint firstItem="hD7-ZE-oVH" firstAttribute="centerX" secondItem="23i-Ra-H6u" secondAttribute="centerX" id="anW-B2-tiq"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="23i-Ra-H6u" secondAttribute="bottom" constant="-8" id="1R1-zY-EdD"/>
-                    <constraint firstItem="23i-Ra-H6u" firstAttribute="leading" secondItem="Her-Vt-DkG" secondAttribute="leadingMargin" constant="-8" id="KRf-eM-reu"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="23i-Ra-H6u" secondAttribute="trailing" constant="-8" id="SiL-fm-htf"/>
-                    <constraint firstItem="23i-Ra-H6u" firstAttribute="top" secondItem="Her-Vt-DkG" secondAttribute="topMargin" constant="-8" id="orQ-28-iPg"/>
+                    <constraint firstItem="23i-Ra-H6u" firstAttribute="leading" secondItem="Her-Vt-DkG" secondAttribute="leadingMargin" constant="-8" id="EQs-x1-1H3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="23i-Ra-H6u" secondAttribute="trailing" constant="-8" id="bDK-ct-tlb"/>
+                    <constraint firstItem="23i-Ra-H6u" firstAttribute="top" secondItem="Her-Vt-DkG" secondAttribute="topMargin" constant="-8" id="lEb-Gn-Abb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="23i-Ra-H6u" secondAttribute="bottom" constant="-8" id="qbL-NB-KLF"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="logOut" destination="hD7-ZE-oVH" id="xEf-Vj-Kam"/>
-                <outlet property="logOutButton" destination="hD7-ZE-oVH" id="h5y-1s-k5o"/>
-            </connections>
             <point key="canvasLocation" x="183" y="-104"/>
         </tableViewCell>
     </objects>
