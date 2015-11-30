@@ -26,9 +26,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9I-Qs-qFX">
-                                <rect key="frame" x="46" y="11" width="60" height="21"/>
+                                <rect key="frame" x="46" y="11" width="200" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="IrG-aZ-RhU"/>
+                                    <constraint firstAttribute="width" constant="200" id="IrG-aZ-RhU"/>
                                     <constraint firstAttribute="height" constant="21" id="M0P-kj-Yjh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountCell" id="w1v-Bh-6xI" customClass="AccountCell" customModule="Mobilize" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1v-Bh-6xI" id="hGx-SK-beW">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-si-tNm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3X-ck-AET">
+                                <rect key="frame" x="4" y="0.0" width="596" height="43.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="W3X-ck-AET" firstAttribute="leading" secondItem="5dq-si-tNm" secondAttribute="leading" constant="4" id="78I-Kd-P7w"/>
+                            <constraint firstAttribute="trailing" secondItem="W3X-ck-AET" secondAttribute="trailing" id="7Ot-cD-2JC"/>
+                            <constraint firstItem="W3X-ck-AET" firstAttribute="top" secondItem="5dq-si-tNm" secondAttribute="top" id="E4F-m7-Ge8"/>
+                            <constraint firstAttribute="bottom" secondItem="W3X-ck-AET" secondAttribute="bottom" id="Vhz-kf-ebK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="5dq-si-tNm" secondAttribute="trailing" constant="-8" id="407-JR-fLl"/>
+                    <constraint firstItem="5dq-si-tNm" firstAttribute="leading" secondItem="hGx-SK-beW" secondAttribute="leadingMargin" constant="-8" id="GmV-3C-CnI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5dq-si-tNm" secondAttribute="bottom" constant="-8" id="QeG-Yn-cgR"/>
+                    <constraint firstItem="5dq-si-tNm" firstAttribute="top" secondItem="hGx-SK-beW" secondAttribute="topMargin" constant="-8" id="VtV-Jr-QL4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textCell" destination="W3X-ck-AET" id="ub1-q4-gi9"/>
+            </connections>
+            <point key="canvasLocation" x="183" y="-104"/>
+        </tableViewCell>
+    </objects>
+</document>

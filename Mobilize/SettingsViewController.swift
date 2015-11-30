@@ -124,6 +124,21 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         return UITableViewAutomaticDimension
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Account settings")
+        print(indexPath.row)
+        if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                print("Segue 1")
+                self.performSegueWithIdentifier("notifications", sender: nil)
+            }else if indexPath.row == 1 {
+                print("Segue 2")
+                self.performSegueWithIdentifier("account", sender: nil)
+            }
+        }
+        
+    }
 
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
