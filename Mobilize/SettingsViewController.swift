@@ -92,14 +92,14 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             let cellGroup1 = tableView.dequeueReusableCellWithIdentifier("settingsGroup1", forIndexPath: indexPath) as! SettingsGroup1
             
             if indexPath.row == 0 {
-                cellGroup1.imageIcon.image = UIImage(named: "PurposeOff")
+                cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
                 cellGroup1.labelCell.text = "Propostas"
                 
             }else if indexPath.row == 1 {
-                cellGroup1.imageIcon.image = UIImage(named: "mobi2-1")
+                cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
                 cellGroup1.labelCell.text = "Mobi"
             }else {
-                cellGroup1.imageIcon.image = UIImage(named: "comentarios")
+                cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
                 cellGroup1.labelCell.text = "Comentários"
             }
             
@@ -108,10 +108,10 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2", forIndexPath: indexPath) as! SettingsGroup2
             
             if indexPath.row == 0 {
-                cellGroup2.imageIcon.image = UIImage(named: "comentarios")
+                cellGroup2.imageIcon.image = UIImage(named: "Config_Notification")
                 cellGroup2.labelCell.text = "Notificações"
             }else {
-                cellGroup2.imageIcon.image = UIImage(named: "comentarios")
+                cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
                 cellGroup2.labelCell.text = "Ajustes da Conta"
             }
             cellGroup2.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator

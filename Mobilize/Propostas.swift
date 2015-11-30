@@ -145,8 +145,19 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         cell.textProposal.text = self.proposals[indexPath.row]["ShortProposal"] as? String
         
         //Remember to set the size of the label
-        cell.upVoteCount.text = self.proposals[indexPath.row]["UpVote"] as? String
-        cell.againstVoteCount.text = self.proposals[indexPath.row]["DownVote"] as? String
+        print("This is just a test \(self.proposals[indexPath.row]["UpVote"])")
+        //cell.upVoteCount.text = String(self.proposals[indexPath.row]["UpVote"])
+        //cell.againstVoteCount.text = String(self.proposals[indexPath.row]["DownVote"])
+        
+        var upVote = self.proposals[indexPath.row]["UpVote"]
+        var downVote = self.proposals[indexPath.row]["DownVote"]
+        
+        //This part is for the in favour and against proposal
+//        if upVote == 1000 {
+//            
+//        }
+        
+        
 
         //Before send, create the object detailed
         cell.time = self.proposals[indexPath.row]["createdAt"] as? String
@@ -159,6 +170,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         let dateString = dateFormatter.stringFromDate(timeStamp!)
         
         cell.time = dateString
+        
+        
         
         
         return cell

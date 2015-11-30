@@ -207,6 +207,8 @@ class NewProposal: UIViewController, UITextViewDelegate {
         proposal["Category"] = self.categoriesName
         proposal["Maturation"] = "BabyMob"
         proposal["ShortProposal"] = proposalText.text //This should not be like that
+        proposal["UpVote"] = 0
+        proposal["DownVote"] = 0
         
         proposal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {

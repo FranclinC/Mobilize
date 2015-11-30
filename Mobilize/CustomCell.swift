@@ -50,9 +50,9 @@ class CustomCell: UITableViewCell {
         self.cellView.layer.cornerRadius = 6.0
         self.userPicture.layer.cornerRadius = 6.0
 
-        self.upVote.image = UIImage(named: "like")
-        self.againstVote.image = UIImage(named: "Proposta_Dislike.1")
-        self.comment.image = UIImage(named: "comentarios")
+        self.upVote.image = UIImage(named: "Feed_Like")
+        self.againstVote.image = UIImage(named: "Feed_Dislike")
+        self.comment.image = UIImage(named: "Feed_Comment")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
