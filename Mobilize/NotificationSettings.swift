@@ -64,21 +64,14 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 2 {
             return "Mostrar ou ocultar as notificações em banner enquanto você não estiver utilizando o aplicativo."
         }
         return ""
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return CGFloat.min
-        }else if section == 2 {
-            return CGFloat.min
-        }else {
-            return 0
-        }
-    }
+        
+
 
 }

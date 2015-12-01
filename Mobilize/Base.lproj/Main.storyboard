@@ -564,9 +564,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-2m-2hz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-2m-2hz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aF0-Yd-c9W" id="cxz-4S-o15"/>
                                     <outlet property="delegate" destination="aF0-Yd-c9W" id="bkC-wE-fXN"/>
@@ -574,6 +574,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mMx-2m-2hz" firstAttribute="top" secondItem="vui-4z-3ko" secondAttribute="topMargin" id="dtf-lv-42Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mMx-2m-2hz" secondAttribute="trailing" constant="-20" id="iPa-Vy-sN3"/>
+                            <constraint firstItem="mMx-2m-2hz" firstAttribute="leading" secondItem="vui-4z-3ko" secondAttribute="leadingMargin" constant="-20" id="p4o-0j-SPu"/>
+                            <constraint firstItem="ayY-qd-xr1" firstAttribute="top" secondItem="mMx-2m-2hz" secondAttribute="bottom" id="sKa-zV-7Nt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="mMx-2m-2hz" id="s9m-Zj-pVm"/>

@@ -21,8 +21,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oY-IK-Lsn">
                                 <rect key="frame" x="16" y="11" width="200" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="15v-J9-D8m"/>
-                                    <constraint firstAttribute="height" constant="21" id="FgM-fZ-OoZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="i6P-9J-NNm"/>
+                                    <constraint firstAttribute="height" constant="21" id="pST-MT-5Os"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,25 +31,25 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4w-lq-R8X">
                                 <rect key="frame" x="535" y="6.5" width="51" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="7dg-40-7Ko"/>
-                                    <constraint firstAttribute="width" constant="49" id="eJK-fT-YcA"/>
+                                    <constraint firstAttribute="width" constant="49" id="Z9T-Ac-7cw"/>
+                                    <constraint firstAttribute="height" constant="31" id="lR8-mJ-uJ2"/>
                                 </constraints>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k4w-lq-R8X" firstAttribute="centerY" secondItem="JiX-li-ulW" secondAttribute="centerY" id="59N-Cx-CaQ"/>
-                            <constraint firstItem="6oY-IK-Lsn" firstAttribute="centerY" secondItem="JiX-li-ulW" secondAttribute="centerY" id="L38-aR-gso"/>
-                            <constraint firstItem="6oY-IK-Lsn" firstAttribute="leading" secondItem="JiX-li-ulW" secondAttribute="leading" constant="16" id="M4C-j5-8ev"/>
-                            <constraint firstAttribute="trailing" secondItem="k4w-lq-R8X" secondAttribute="trailing" constant="16" id="vom-dl-VpX"/>
+                            <constraint firstAttribute="trailing" secondItem="k4w-lq-R8X" secondAttribute="trailing" constant="16" id="04F-sS-qsv"/>
+                            <constraint firstItem="6oY-IK-Lsn" firstAttribute="top" secondItem="JiX-li-ulW" secondAttribute="top" constant="11" id="3If-Jf-fVw"/>
+                            <constraint firstItem="6oY-IK-Lsn" firstAttribute="leading" secondItem="JiX-li-ulW" secondAttribute="leading" constant="16" id="MNt-bS-lra"/>
+                            <constraint firstItem="k4w-lq-R8X" firstAttribute="top" secondItem="JiX-li-ulW" secondAttribute="top" constant="6.5" id="mx0-T2-Iry"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="JiX-li-ulW" secondAttribute="trailing" constant="-8" id="5gf-ga-GjL"/>
-                    <constraint firstItem="JiX-li-ulW" firstAttribute="top" secondItem="wZx-E3-HGM" secondAttribute="topMargin" constant="-8" id="ZUS-Ec-BcG"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="JiX-li-ulW" secondAttribute="bottom" constant="-8" id="a1n-R6-e00"/>
-                    <constraint firstItem="JiX-li-ulW" firstAttribute="leading" secondItem="wZx-E3-HGM" secondAttribute="leadingMargin" constant="-8" id="cc0-6B-pWX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JiX-li-ulW" secondAttribute="bottom" constant="-8" id="Gch-oe-hUA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JiX-li-ulW" secondAttribute="trailing" constant="-8" id="QcV-tE-Lna"/>
+                    <constraint firstItem="JiX-li-ulW" firstAttribute="leading" secondItem="wZx-E3-HGM" secondAttribute="leadingMargin" constant="-8" id="QhP-yK-JTP"/>
+                    <constraint firstItem="JiX-li-ulW" firstAttribute="top" secondItem="wZx-E3-HGM" secondAttribute="topMargin" constant="-8" id="uSf-fV-81f"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
