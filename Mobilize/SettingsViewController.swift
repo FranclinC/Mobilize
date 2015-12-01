@@ -131,7 +131,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if indexPath.section == 2 {
             if indexPath.row == 0 {
                 print("Segue 1")
-                self.performSegueWithIdentifier("notifications", sender: nil)
+                self.performSegueWithIdentifier("notificationSettings", sender: nil)
             }else if indexPath.row == 1 {
                 print("Segue 2")
                 self.performSegueWithIdentifier("account", sender: nil)

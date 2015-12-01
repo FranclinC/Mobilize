@@ -552,6 +552,37 @@
             </objects>
             <point key="canvasLocation" x="20" y="-1721"/>
         </scene>
+        <!--Notification-->
+        <scene sceneID="745-Ir-Y1i">
+            <objects>
+                <viewController title="Notification" id="aF0-Yd-c9W" customClass="NotificationSettings" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F1P-fl-R2g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ayY-qd-xr1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vui-4z-3ko">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMx-2m-2hz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aF0-Yd-c9W" id="cxz-4S-o15"/>
+                                    <outlet property="delegate" destination="aF0-Yd-c9W" id="bkC-wE-fXN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mMx-2m-2hz" id="s9m-Zj-pVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qo-D0-cpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="-1721"/>
+        </scene>
         <!--Configurações-->
         <scene sceneID="nag-Sn-Nq0">
             <objects>
@@ -588,6 +619,7 @@
                     <connections>
                         <outlet property="tableView" destination="kWJ-oM-8wx" id="Pwh-Uv-a5i"/>
                         <segue destination="M0J-xo-UX3" kind="show" identifier="account" id="I0S-M7-uR9"/>
+                        <segue destination="aF0-Yd-c9W" kind="show" identifier="notificationSettings" id="2So-Wq-yxd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-k6-NFx" userLabel="First Responder" sceneMemberID="firstResponder"/>

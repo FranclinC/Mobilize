@@ -103,6 +103,9 @@
 		65112E421BFBC9B200350721 /* SingletonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E411BFBC9B200350721 /* SingletonDelegate.swift */; };
 		65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E431BFCEEA900350721 /* ProposalDetailed.swift */; };
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
+		652C139B1C0E03B70003FD92 /* NotificationSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C139A1C0E03B70003FD92 /* NotificationSetting.xib */; };
+		652C139D1C0E04D80003FD92 /* NotificationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C139C1C0E04D80003FD92 /* NotificationSetting.swift */; };
+		652C139F1C0E057A0003FD92 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C139E1C0E057A0003FD92 /* NotificationSettings.swift */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
 		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
 		65AEF02A1C08CF680065E186 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AEF0291C08CF680065E186 /* AccountCell.xib */; };
@@ -221,6 +224,9 @@
 		65112E411BFBC9B200350721 /* SingletonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonDelegate.swift; sourceTree = "<group>"; };
 		65112E431BFCEEA900350721 /* ProposalDetailed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailed.swift; sourceTree = "<group>"; };
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
+		652C139A1C0E03B70003FD92 /* NotificationSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationSetting.xib; sourceTree = "<group>"; };
+		652C139C1C0E04D80003FD92 /* NotificationSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSetting.swift; sourceTree = "<group>"; };
+		652C139E1C0E057A0003FD92 /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
 		65AEF0291C08CF680065E186 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
@@ -380,6 +386,7 @@
 				65C0B2E71C054E690010ABED /* SettingsGroup1.swift */,
 				65C0B2E91C054E7B0010ABED /* SettingsGroup2.swift */,
 				65AEF02B1C08D12C0065E186 /* AccountCell.swift */,
+				652C139C1C0E04D80003FD92 /* NotificationSetting.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -411,6 +418,7 @@
 				65C0B2E11C0543860010ABED /* SettingsGroup1.xib */,
 				65C0B2E31C0545120010ABED /* SettingsGroup2.xib */,
 				65AEF0291C08CF680065E186 /* AccountCell.xib */,
+				652C139A1C0E03B70003FD92 /* NotificationSetting.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -468,6 +476,7 @@
 				49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */,
 				49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */,
 				65AEF02D1C08D2B40065E186 /* AccountViewController.swift */,
+				652C139E1C0E057A0003FD92 /* NotificationSettings.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -561,6 +570,7 @@
 				42224B1B1C03B0020051255C /* like_110.2.png in Resources */,
 				42224B181C03B0020051255C /* fav_124.png in Resources */,
 				493AF3921BF3E248004BADE4 /* CustomCell.xib in Resources */,
+				652C139B1C0E03B70003FD92 /* NotificationSetting.xib in Resources */,
 				42224B0D1C03B0020051255C /* dislike_55.2.png in Resources */,
 				49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */,
 				49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */,
@@ -616,6 +626,7 @@
 				498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */,
 				498AA1E41BF3D3CF002882E1 /* CornerRadiusAnimation.swift in Sources */,
 				65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */,
+				652C139F1C0E057A0003FD92 /* NotificationSettings.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
 				498AA1E71BF3D3CF002882E1 /* Filmstrip.swift in Sources */,
@@ -636,6 +647,7 @@
 				65C0B2E61C054E550010ABED /* SettingsPicture.swift in Sources */,
 				498AA1DF1BF3D3CF002882E1 /* Animation.swift in Sources */,
 				498AA1EF1BF3D3CF002882E1 /* LayerStrokeStartAnimation.swift in Sources */,
+				652C139D1C0E04D80003FD92 /* NotificationSetting.swift in Sources */,
 				498AA1E01BF3D3CF002882E1 /* Animator.swift in Sources */,
 				498AA1F21BF3D3CF002882E1 /* ScaleAnimation.swift in Sources */,
 				49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */,
