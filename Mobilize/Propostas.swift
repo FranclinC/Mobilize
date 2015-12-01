@@ -115,7 +115,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             cell.category1.image = UIImage(named: "flag_saude")
         }else if (categories[1] as! String) == "Culture" {
             cell.category1.image = UIImage(named: "flag_cultura")
-        }else if (categories[1] as! String) == "Safety" {
+        }else if (categories[1] as! String) == "Security" {
             cell.category1.image = UIImage(named: "flag_seguranca")
         }else if (categories[1] as! String) == "Transport" {
             cell.category1.image = UIImage(named: "flag_mobilidade")
@@ -130,7 +130,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
                 cell.category2.image = UIImage(named: "flag_saude")
             }else if (categories[2] as! String) == "Culture" {
                 cell.category2.image = UIImage(named: "flag_cultura")
-            }else if (categories[2] as! String) == "Safety" {
+            }else if (categories[2] as! String) == "Security" {
                 cell.category2.image = UIImage(named: "flag_seguranca")
             }else if (categories[2] as! String) == "Transport" {
                 cell.category2.image = UIImage(named: "flag_mobilidade")
@@ -268,7 +268,41 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             vc.proposal = valueToPass
             vc.proposalID = valueToPass.proposalId!
         }
-        
     }
+    
+    
+//    func abreviateNumber (num: Int, dec: Int) -> String{
+//        
+//        var abbrevNum : String
+//        var number : Float = Float(num)
+//        
+//        var abbrev = ["K", "M", "B"]
+//        
+//        for (var i = abbrev.count - 1; i >= 0; i--) {
+//            var size : Int = Int(pow(Double(10), Double((i+1)*3))) //wtf
+//            
+//            if (Float(size) <= number) {
+//                number = round((number*Float(dec))/Float(size))/Float(dec)
+//                
+//                var numberString = floatToString(number)
+//                
+//                abbrevNum = numberString + "" + abbrev[i]
+//                
+//                print("Just for a test \(abbrevNum)")
+//            }
+//        }
+//        
+//        return abbrevNum
+//    }
+//    
+//    func floatToString(val: Float) -> String {
+//        var ret : String = String(val) + "1f"
+//        unichar c = 
+//        
+//        while (c ==) {
+//            
+//        }
+//    }
+    
 
 }
