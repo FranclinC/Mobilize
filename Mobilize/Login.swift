@@ -38,6 +38,12 @@ class Login: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        if ((PFUser.currentUser()) != nil) {
+            let vc : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("mainPage")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+        
+        
         if (FBSDKAccessToken.currentAccessToken() != nil){
             
             //User is already logged in, perform segue for the next view controller
@@ -79,6 +85,13 @@ class Login: UIViewController {
                             print("USer details: \(user)")
                             if (user!["emailVerified"] as! Bool) == true {
                                 dispatch_async(dispatch_get_main_queue()){
+                                    
+                                    //Login successfully and currentUser
+                                    
+                                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+                                    NSUserDefaults.standardUserDefaults().synchronize()
+                                    
+                                    
                                     self.performSegueWithIdentifier("mainPage", sender: self)
                                 }
                             }else {

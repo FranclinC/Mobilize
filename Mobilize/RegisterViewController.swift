@@ -11,6 +11,7 @@ import Parse
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet var user_username: UITextField!
     @IBOutlet var userName: UITextField!
     @IBOutlet var userEmail: UITextField!
     @IBOutlet var userPassword: UITextField!
@@ -26,12 +27,12 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func SignUp(sender: AnyObject) {
-        
+        let user_username = self.user_username.text
         let nameUser = self.userName.text
         let emailUser = self.userEmail.text
         let password = self.userPassword.text
         
-        if ((nameUser?.isEmpty)! || (emailUser?.isEmpty)! || (password?.isEmpty)!) {
+        if ((nameUser?.isEmpty)! || (user_username?.isEmpty)! || (emailUser?.isEmpty)! || (password?.isEmpty)!) {
             
             var alert = UIAlertController(title: "Alerta!", message: "Todos os campos devem ser preenchidos", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
@@ -43,7 +44,7 @@ class RegisterViewController: UIViewController {
         }else {
             
             let newUser : PFUser = PFUser()
-            newUser.username = nameUser
+            newUser.username = user_username
             newUser.email = emailUser
             newUser.password = password
             
@@ -60,6 +61,12 @@ class RegisterViewController: UIViewController {
             newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
                     //Go back to login page, the user must agree in the confirmation link sent to his email
+                    var alert = UIAlertController(title: "Alerta!", message: "Enviamos um email para você, confirme antes de prosseguir!", preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                    alert.addAction(okAction)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
                     self.navigationController?.popViewControllerAnimated(true)
                 }else {
                     var userMessage = error?.localizedDescription
@@ -70,10 +77,7 @@ class RegisterViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
             })
-            
-            
-            
-            
+ 
         }
         
         

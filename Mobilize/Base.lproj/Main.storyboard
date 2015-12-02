@@ -161,27 +161,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbr-9b-rTx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbr-9b-rTx">
                                 <rect key="frame" x="20" y="112" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZZR-kN-VIW"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAX-8E-gzB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAX-8E-gzB">
                                 <rect key="frame" x="20" y="150" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BUZ-1Y-0Jd"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-4P-wUY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-4P-wUY">
                                 <rect key="frame" x="20" y="188" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vtT-wg-IAR"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -192,26 +183,21 @@
                                     <action selector="SignUp:" destination="mPc-At-YJP" eventType="touchUpInside" id="h9Y-c8-G1p"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KM1-K2-r6b">
+                                <rect key="frame" x="20" y="74" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fAX-8E-gzB" firstAttribute="trailing" secondItem="nvB-KA-DFD" secondAttribute="trailingMargin" id="9XP-sQ-v0F"/>
-                            <constraint firstItem="SX3-4P-wUY" firstAttribute="trailing" secondItem="nvB-KA-DFD" secondAttribute="trailingMargin" id="9j0-S2-gs2"/>
-                            <constraint firstItem="SX3-4P-wUY" firstAttribute="leading" secondItem="nvB-KA-DFD" secondAttribute="leadingMargin" id="CK4-RZ-lhp"/>
-                            <constraint firstItem="cbr-9b-rTx" firstAttribute="top" secondItem="zM9-aL-wc2" secondAttribute="bottom" constant="92" id="JJ1-ui-ocl"/>
-                            <constraint firstItem="SX3-4P-wUY" firstAttribute="top" secondItem="fAX-8E-gzB" secondAttribute="bottom" constant="8" id="Nkt-fV-QyR"/>
-                            <constraint firstItem="fAX-8E-gzB" firstAttribute="top" secondItem="cbr-9b-rTx" secondAttribute="bottom" constant="8" id="QXk-gX-3F5"/>
-                            <constraint firstItem="cbr-9b-rTx" firstAttribute="trailing" secondItem="nvB-KA-DFD" secondAttribute="trailingMargin" id="Xqz-9C-GTY"/>
-                            <constraint firstItem="fAX-8E-gzB" firstAttribute="leading" secondItem="nvB-KA-DFD" secondAttribute="leadingMargin" id="tSl-gM-UPg"/>
-                            <constraint firstItem="cbr-9b-rTx" firstAttribute="leading" secondItem="nvB-KA-DFD" secondAttribute="leadingMargin" id="utF-El-9xS"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="signUpButton" destination="NZq-FL-TgU" id="csh-lP-Crx"/>
                         <outlet property="userEmail" destination="fAX-8E-gzB" id="G6R-iT-xDb"/>
                         <outlet property="userName" destination="cbr-9b-rTx" id="2Bb-zA-NXD"/>
                         <outlet property="userPassword" destination="SX3-4P-wUY" id="lOT-D4-UxS"/>
+                        <outlet property="user_username" destination="KM1-K2-r6b" id="KHn-w2-IN1"/>
                         <segue destination="b5d-Kp-g07" kind="show" identifier="signedUp" id="2br-EA-3pG"/>
                     </connections>
                 </viewController>
@@ -789,7 +775,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9CY-ao-IVr"/>
-        <segue reference="C4L-u1-t4V"/>
+        <segue reference="2br-EA-3pG"/>
         <segue reference="cvd-nl-Cxa"/>
         <segue reference="PLt-7Z-JIa"/>
     </inferredMetricsTieBreakers>
