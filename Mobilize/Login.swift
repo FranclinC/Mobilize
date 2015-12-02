@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import ParseFacebookUtilsV4
+import Parse
 
 class Login: UIViewController {
 
@@ -19,6 +20,10 @@ class Login: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var emailUser: UITextField!
     @IBOutlet var passwordUser: UITextField!
+    
+    @IBOutlet var logarButton: UIButton!
+    
+    
     var permissionsArray = ["email", "public_profile", "user_about_me"]//, "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +51,22 @@ class Login: UIViewController {
         
     }
     
+    
+    @IBAction func logar(sender: AnyObject) {
+        
+        
+        var username = self.emailUser.text
+        var password = self.passwordUser.text
+        
+        if (username!.utf16.count < 4 || password!.utf16.count < 5) {
+            var alert = UIAlertView(title: "Inválido", message: "Usúario deve ter mais que 4 caracteres e Senha mais que 5 caracteres.", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }else {
+            
+            
+        }
+        
+    }
     
     
     @IBAction func signInButtonTapped(sender: AnyObject) {

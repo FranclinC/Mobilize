@@ -13,6 +13,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var tableView: UITableView!
     
+    var countComment : NSNumber?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -152,6 +154,32 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    
+//    func loadUserStats (){
+//        let user = PFUser.currentUser()
+//        
+//        let proposal = PFQuery(className: "Proposal")
+//        proposal.includeKey("User")
+//        proposal.whereKey("User", equalTo: user!)
+//        //proposal.findObjectsInBackgroundWithTarget(targert, selector: <#T##Selector#>)
+//        
+//        
+//        
+//        
+//        
+//        
+//        let comment = PFQuery(className: "Comment")
+//        comment.includeKey("UserWhoComment")
+//        comment.whereKey("UserWhoComment", equalTo: user!)
+//        self.countComment = comment.countObjects(nil)
+//        
+//
+//        
+//        
+//        
+//        
+//        
+//    }
     
 
 }
