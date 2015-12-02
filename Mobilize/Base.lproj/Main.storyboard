@@ -99,6 +99,16 @@
                                     <action selector="logar:" destination="sl5-tw-1yy" eventType="touchUpInside" id="iam-jd-pOf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAb-tA-fce">
+                                <rect key="frame" x="189" y="562" width="222" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A96-x5-emQ"/>
+                                </constraints>
+                                <state key="normal" title="Não é cadastrado? Cadastre-se!"/>
+                                <connections>
+                                    <action selector="register:" destination="sl5-tw-1yy" eventType="touchUpInside" id="t6Y-ma-Tva"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,13 +119,16 @@
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="trailing" secondItem="4VK-jY-SJW" secondAttribute="trailing" id="9xt-XC-74V"/>
                             <constraint firstItem="KKx-Ar-987" firstAttribute="leading" secondItem="E2y-jY-TWH" secondAttribute="leadingMargin" constant="160" id="JKs-K9-Wqw"/>
                             <constraint firstItem="kpB-Qz-czR" firstAttribute="top" secondItem="4VK-jY-SJW" secondAttribute="bottom" constant="23" id="Lqd-pV-18b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IAb-tA-fce" secondAttribute="trailing" constant="169" id="MNA-L6-TGH"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="top" secondItem="vxJ-2s-y59" secondAttribute="bottom" constant="14" id="Rvu-W2-6nH"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="leading" secondItem="vxJ-2s-y59" secondAttribute="leading" id="W2k-O6-VcW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KKx-Ar-987" secondAttribute="trailing" constant="160" id="Yj0-4g-yPc"/>
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="centerX" secondItem="KKx-Ar-987" secondAttribute="centerX" id="apI-Cw-osi"/>
                             <constraint firstItem="KKx-Ar-987" firstAttribute="top" secondItem="YvV-pK-Txg" secondAttribute="bottom" constant="22" id="fNx-m4-4dE"/>
                             <constraint firstItem="kpB-Qz-czR" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="ft2-B3-Dsk"/>
+                            <constraint firstItem="IAb-tA-fce" firstAttribute="leading" secondItem="E2y-jY-TWH" secondAttribute="leadingMargin" constant="169" id="ghk-WX-GAV"/>
                             <constraint firstItem="kpB-Qz-czR" firstAttribute="top" secondItem="E2y-jY-TWH" secondAttribute="centerY" constant="50" id="mtJ-QW-fC8"/>
+                            <constraint firstItem="q78-5L-pBK" firstAttribute="top" secondItem="IAb-tA-fce" secondAttribute="bottom" constant="8" id="vH0-Cl-GBc"/>
                             <constraint firstItem="kpB-Qz-czR" firstAttribute="width" secondItem="E2y-jY-TWH" secondAttribute="height" multiplier="29:25" id="vrp-B3-DQW"/>
                         </constraints>
                     </view>
@@ -127,7 +140,8 @@
                         <outlet property="loginButton" destination="w9I-rX-d43" id="0IQ-tF-vkD"/>
                         <outlet property="logoMobi" destination="KKx-Ar-987" id="Ff5-i6-UmS"/>
                         <outlet property="passwordUser" destination="4VK-jY-SJW" id="Swh-sW-Yk0"/>
-                        <segue destination="mPc-At-YJP" kind="show" id="VVC-6i-VTp"/>
+                        <outlet property="registerUser" destination="IAb-tA-fce" id="S4L-UF-ykc"/>
+                        <segue destination="mPc-At-YJP" kind="show" identifier="signUp" id="VVC-6i-VTp"/>
                         <segue destination="b5d-Kp-g07" kind="show" identifier="mainPage" id="C4L-u1-t4V"/>
                     </connections>
                 </viewController>
@@ -776,8 +790,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="2br-EA-3pG"/>
         <segue reference="9CY-ao-IVr"/>
-        <segue reference="cvd-nl-Cxa"/>
         <segue reference="PLt-7Z-JIa"/>
+        <segue reference="cvd-nl-Cxa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
 </document>

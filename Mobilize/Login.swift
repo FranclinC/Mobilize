@@ -23,6 +23,7 @@ class Login: UIViewController {
     
     @IBOutlet var logarButton: UIButton!
     
+    @IBOutlet var registerUser: UIButton!
     
     var permissionsArray = ["email", "public_profile", "user_about_me"]//, "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
@@ -199,6 +200,10 @@ class Login: UIViewController {
         
     }
     
+    @IBAction func register(sender: AnyObject) {
+        self.performSegueWithIdentifier("signUp", sender: self)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

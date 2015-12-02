@@ -20,6 +20,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.userPassword.secureTextEntry = true
     }
     
     
@@ -53,10 +55,12 @@ class RegisterViewController: UIViewController {
             newUser.setObject(userImage, forKey: "profile_picture")
             newUser.setObject(nameUser!, forKey: "first_name")
             newUser.setObject(nameUser!, forKey: "last_name")
+            newUser.setObject(nameUser!, forKey: "name")
             
             newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
-                    self.performSegueWithIdentifier("signedUp", sender: self)
+                    //Go back to login page, the user must agree in the confirmation link sent to his email
+                    self.navigationController?.popViewControllerAnimated(true)
                 }else {
                     var userMessage = error?.localizedDescription
                     var alert = UIAlertController(title: "Alerta!", message: userMessage, preferredStyle: .Alert)
@@ -66,6 +70,8 @@ class RegisterViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
             })
+            
+            
             
             
         }
