@@ -29,6 +29,8 @@ class Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.passwordUser.secureTextEntry = true
+        
         self.view.backgroundColor = MOBILIZE_BACKGROUND
         backgroundImage.image = UIImage(named: "wave")
         
@@ -55,20 +57,68 @@ class Login: UIViewController {
     
     @IBAction func logar(sender: AnyObject) {
         
-        
-        var username = self.emailUser.text
-        var password = self.passwordUser.text
+        let username = self.emailUser.text
+        let password = self.passwordUser.text
         
         if (username!.utf16.count < 4 || password!.utf16.count < 5) {
             var alert = UIAlertView(title: "Inválido", message: "Usúario deve ter mais que 4 caracteres e Senha mais que 5 caracteres.", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         }else {
-            
-            
+            let query : PFQuery = PFUser.query()!
+            query.whereKey("email", equalTo: username!)
+            query.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, erro: NSError?) -> Void in
+                
+                if objects?.count > 0 {
+                    
+                    var object = objects![0]
+                    var userNameEmail = object["username"]
+                    
+                    PFUser.logInWithUsernameInBackground(userNameEmail as! String, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
+                        
+                        if user != nil {
+                            print("USer details: \(user)")
+                            if (user!["emailVerified"] as! Bool) == true {
+                                dispatch_async(dispatch_get_main_queue()){
+                                    self.performSegueWithIdentifier("mainPage", sender: self)
+                                }
+                            }else {
+                                let alertController = UIAlertController(title: "Email address verification", message: "Enviamos um email para você que contém um link para verificação, por favor confirme o registro antes de continuar", preferredStyle: UIAlertControllerStyle.Alert)
+                                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { alertController in self.loginButtonDidLogOut()})
+                                )
+                                
+                                self.presentViewController(alertController, animated: true, completion: nil)
+                            }
+                        }
+                    })
+                    
+                }else {
+                    //This must be modularized later, now i don't have time
+                    PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
+                        
+                        if user != nil {
+                            print("USer details: \(user)")
+                            if (user!["emailVerified"] as! Bool) == true {
+                                dispatch_async(dispatch_get_main_queue()){
+                                    self.performSegueWithIdentifier("mainPage", sender: self)
+                                }
+                            }else {
+                                let alertController = UIAlertController(title: "Email address verification", message: "Enviamos um email para você que contém um link para verificação, por favor confirme o registro antes de continuar", preferredStyle: UIAlertControllerStyle.Alert)
+                                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { alertController in self.loginButtonDidLogOut()})
+                                )
+                                
+                                self.presentViewController(alertController, animated: true, completion: nil)
+                                self.passwordUser.text = ""
+                                self.emailUser.text = ""
+                            }
+                        }
+                    })
+                }
+            })
         }
-        
     }
     
+    
+
     
     @IBAction func signInButtonTapped(sender: AnyObject) {
 
@@ -111,8 +161,13 @@ class Login: UIViewController {
     }
     
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut() {
         print("User Logged Out")
+        PFUser.logOut()
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewControllerWithIdentifier("login") as! Login
+//        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     

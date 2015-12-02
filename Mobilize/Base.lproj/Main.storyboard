@@ -788,10 +788,10 @@
         <image name="wave" width="436" height="651"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2br-EA-3pG"/>
         <segue reference="9CY-ao-IVr"/>
-        <segue reference="PLt-7Z-JIa"/>
+        <segue reference="C4L-u1-t4V"/>
         <segue reference="cvd-nl-Cxa"/>
+        <segue reference="PLt-7Z-JIa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
 </document>
