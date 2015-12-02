@@ -105,6 +105,12 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                     cellProposal.category2.image = self.proposal.category2.image
             }
             
+            cellProposal.agreeButton.tag = indexPath.row
+            cellProposal.agreeButton.addTarget(self, action: Selector("agree:"), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            cellProposal.disagreeButton.tag = indexPath.row
+            cellProposal.disagreeButton.addTarget(self, action: Selector("disagree:"), forControlEvents: .TouchUpInside)
+            
             
             return cellProposal
         }else if indexPath.section == 1 {
@@ -287,6 +293,39 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         }
         
     }
+    
+    //Functions of the buttons of the proposal, agree and disagree
+    func agree(sender: UIButton){
+        if sender.tag == 0 {
+            print("Peguei o botão")
+            var array = self.tableView.indexPathsForVisibleRows
+            
+            let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+            
+            //Must be the green color
+            cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
+            cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
+            cell?.agreeCount.textColor = UIColor.whiteColor()
+            cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+            cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+            
+            //remember to change the color of the disagree button
+//            cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
+//            cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.1")
+//            cell?.disagreeCount.textColor = UIColor.whiteColor()
+//            cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+//            cell?.disagreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+            
+            
+        }
+    }
+    
+    func disagree(sender: UIButton){
+        if sender.tag == 0 {
+            print("Discordo")
+        }
+    }
+    
     
     
 }
