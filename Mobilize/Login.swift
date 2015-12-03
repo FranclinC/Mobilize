@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import ParseFacebookUtilsV4
 import Parse
 
-class Login: UIViewController {
+class Login: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var loginButton: UIButton!
     
@@ -25,9 +25,19 @@ class Login: UIViewController {
     
     @IBOutlet var registerUser: UIButton!
     
+    
+    
     var permissionsArray = ["email", "public_profile", "user_about_me"]//, "user_relationships", "user_birthday"]//, "user_about_me", "user_relationships", "user_birthday", "user_location"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tapGesture)
+        
+        self.emailUser.delegate = self
+        self.passwordUser.delegate = self
+        self.passwordUser.returnKeyType = UIReturnKeyType.Go
+        
         
         self.passwordUser.secureTextEntry = true
         
@@ -61,7 +71,14 @@ class Login: UIViewController {
     }
     
     
-    @IBAction func logar(sender: AnyObject) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.passwordUser.resignFirstResponder()
+        self.logar()
+        return true
+    }
+    
+    func logar(){
+    //@IBAction func logar(sender: AnyObject) {
         
         let username = self.emailUser.text
         let password = self.passwordUser.text
@@ -274,6 +291,14 @@ class Login: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+
+    
+    func dismissKeyboard() {
+        
+        self.view.endEditing(true)
+        
     }
     
     

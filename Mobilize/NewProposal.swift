@@ -37,6 +37,7 @@ class NewProposal: UIViewController, UITextViewDelegate {
     @IBOutlet var constraintToolBarTop: NSLayoutConstraint!
     
     
+    @IBOutlet var backButtonNavigator: UINavigationItem!
     
     var keyboardDismissSwipeGesture: UISwipeGestureRecognizer?
     
@@ -82,11 +83,11 @@ class NewProposal: UIViewController, UITextViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
+        print("Propor")
+        //self.navigationController?.navigationItem.backBarButtonItem?.title = ""
+        self.tabBarController?.navigationItem.backBarButtonItem?.title = ""
 
-        
-        //save the initial value of the constraint
-        
 
     }
     

@@ -91,6 +91,7 @@
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
 		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
 		49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF58B61BF2CDF6000B0059 /* Constants.swift */; };
+		6507FDA51C10C61E00BBD759 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA41C10C61E00BBD759 /* NavigationController.swift */; };
 		65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E2D1BFA1DCD00350721 /* ProposalCell.xib */; };
 		65112E321BFA371E00350721 /* CommentCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E311BFA371E00350721 /* CommentCountCell.xib */; };
 		65112E341BFA382D00350721 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E331BFA382D00350721 /* CommentCell.xib */; };
@@ -212,6 +213,7 @@
 		49CE036B1BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		49CF58B61BF2CDF6000B0059 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6507FDA41C10C61E00BBD759 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		65112E2D1BFA1DCD00350721 /* ProposalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProposalCell.xib; sourceTree = "<group>"; };
 		65112E311BFA371E00350721 /* CommentCountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCountCell.xib; sourceTree = "<group>"; };
 		65112E331BFA382D00350721 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				65AEF02D1C08D2B40065E186 /* AccountViewController.swift */,
 				652C139E1C0E057A0003FD92 /* NotificationSettings.swift */,
 				652C13A11C0E35220003FD92 /* SignUpViewController.swift */,
+				6507FDA41C10C61E00BBD759 /* NavigationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */,
 				493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */,
 				498AA1E11BF3D3CF002882E1 /* BackgroundColorAnimation.swift in Sources */,
+				6507FDA51C10C61E00BBD759 /* NavigationController.swift in Sources */,
 				498AA1ED1BF3D3CF002882E1 /* LayerStrokeColorAnimation.swift in Sources */,
 				498AA1DE1BF3D3CF002882E1 /* AnimatedPagingScrollViewController.swift in Sources */,
 				498AA1EB1BF3D3CF002882E1 /* LabelTextColorAnimation.swift in Sources */,

@@ -31,6 +31,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     var commentsCount : Int = 0
     var proposalID : String!
     
+    var agreeClicked : Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

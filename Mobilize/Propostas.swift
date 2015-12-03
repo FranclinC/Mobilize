@@ -54,6 +54,9 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         self.tabBarController?.navigationItem.rightBarButtonItem = newProposal
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
+        
+        
+        
         self.tableView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 0.9)
         
         
