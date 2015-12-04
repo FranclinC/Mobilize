@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="-1554" y="-625"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Sign Up-->
         <scene sceneID="T3g-Sn-C9f">
             <objects>
-                <viewController storyboardIdentifier="register" id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" title="Sign Up" id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zM9-aL-wc2"/>
                         <viewControllerLayoutGuide type="bottom" id="303-dS-93W"/>

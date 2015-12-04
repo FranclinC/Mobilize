@@ -59,6 +59,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         //self.view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 0.9)
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
 
     }
     

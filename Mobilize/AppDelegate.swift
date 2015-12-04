@@ -11,6 +11,7 @@ import Parse
 import ParseCrashReporting
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -109,6 +110,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        //Saves changes in the application's managed object context before the application terminates.
+        //self.saveContext()
     }
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
@@ -140,6 +144,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 
+    
+    
+    
     
 }
 
