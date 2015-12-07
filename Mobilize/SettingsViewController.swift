@@ -15,8 +15,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var countComment : NSNumber?
     
+    var myCommentsCount : Int32?
+    var myProposals : Int?
+    var myMobProposals: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadUserStats()
         
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -96,13 +101,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             if indexPath.row == 0 {
                 cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
                 cellGroup1.labelCell.text = "Propostas"
+                cellGroup1.cellCount.text = String(self.myProposals)
                 
             }else if indexPath.row == 1 {
                 cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
                 cellGroup1.labelCell.text = "Mobi"
+                cellGroup1.cellCount.text = String(self.myMobProposals)
             }else {
                 cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
                 cellGroup1.labelCell.text = "Comentários"
+                cellGroup1.cellCount.text = String(self.myCommentsCount)
             }
             
             return cellGroup1
@@ -155,31 +163,48 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-//    func loadUserStats (){
-//        let user = PFUser.currentUser()
-//        
-//        let proposal = PFQuery(className: "Proposal")
-//        proposal.includeKey("User")
-//        proposal.whereKey("User", equalTo: user!)
-//        //proposal.findObjectsInBackgroundWithTarget(targert, selector: <#T##Selector#>)
-//        
-//        
-//        
-//        
-//        
-//        
-//        let comment = PFQuery(className: "Comment")
-//        comment.includeKey("UserWhoComment")
-//        comment.whereKey("UserWhoComment", equalTo: user!)
-//        self.countComment = comment.countObjects(nil)
-//        
-//
-//        
-//        
-//        
-//        
-//        
-//    }
+    func loadUserStats (){
+        let user = PFUser.currentUser()
+        
+        //This is to count the coments of the user
+        let query = PFQuery(className: "Comment")
+        query.whereKey("UserWhoComment", equalTo: user!)
+        var error: NSError?
+        
+        
+        
+        query.countObjectsInBackgroundWithBlock { (count: Int32, error: NSError?) -> Void in
+            if error == nil {
+                self.myCommentsCount = count
+                print("Olha ai quantos tenho\(count)")
+            }
+        }
+        
+        //Find the proposals the user created
+        let query2 = PFQuery(className: "Proposal")
+        query2.whereKey("User", equalTo: user!)
+        query2.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            self.myProposals = objects?.count
+            
+            //This could be better but I am in a hurry
+            for object in objects! {
+                if (object["Maturation"] as! String) == "MobDick"{
+                    self.myMobProposals = self.myMobProposals! + 1 //Add one
+                }
+            }
+            
+            
+        }
+        
+        
+        
+
+        
+        
+        
+        
+        
+    }
     
 
 }

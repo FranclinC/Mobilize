@@ -153,8 +153,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         
         //Remember to set the size of the label
         print("This is just a test \(self.proposals[indexPath.row]["UpVote"])")
-        //cell.upVoteCount.text = String(self.proposals[indexPath.row]["UpVote"])
-        //cell.againstVoteCount.text = String(self.proposals[indexPath.row]["DownVote"])
+        cell.upVoteCount.text = String(self.proposals[indexPath.row]["UpVote"])
+        cell.againstVoteCount.text = String(self.proposals[indexPath.row]["DownVote"])
         
         var upVote = self.proposals[indexPath.row]["UpVote"]
         var downVote = self.proposals[indexPath.row]["DownVote"]
@@ -190,6 +190,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as! CustomCell
         
         valueToPass = currentCell
+        self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
         self.performSegueWithIdentifier("proposalDetailed", sender: self)
     }
 

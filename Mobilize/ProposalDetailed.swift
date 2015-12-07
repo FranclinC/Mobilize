@@ -11,7 +11,7 @@ import Parse
 
 class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
-    
+    //these flags are used to control the button
     
     
 
@@ -32,6 +32,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     var proposalID : String!
     
     var agreeClicked : Bool?
+    
+    var proposalAgreement : ProposalAgreement?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,8 +100,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             print("Proposta id decio: \(self.proposalID!)")
             cellProposal.userName.text = self.proposal.nameUser.text
             cellProposal.userPic.image = self.proposal.userPicture.image
-            //cellProposal.disagreeCount.text = self.proposal.againstVoteCount.text
-            //cellProposal.agreeCount.text = self.proposal.upVoteCount.text
+            cellProposal.disagreeCount.text = self.proposal.againstVoteCount.text
+            cellProposal.agreeCount.text = self.proposal.upVoteCount.text
             cellProposal.dateTime.text = self.proposal.time
             cellProposal.category1.image = self.proposal.category1.image //It must have at least one category
             
@@ -304,6 +306,19 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             
             let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
             
+            let user : PFUser = PFUser.currentUser()!
+            print(user.objectId!)
+            print(self.proposalID)
+            
+            let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+            
+            if ((flags?[0].agreeFlag) != nil) {
+                print("ta verdadeiro")
+            }else {
+                print("é falso")
+                //activate the flag that can change the button
+            }
+            
             //Must be the green color
             cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
             cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
@@ -325,6 +340,32 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     func disagree(sender: UIButton){
         if sender.tag == 0 {
             print("Discordo")
+            
+            var array = self.tableView.indexPathsForVisibleRows
+            
+            let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+            
+            let user : PFUser = PFUser.currentUser()!
+            print(user.objectId!)
+            print(self.proposalID)
+            
+            let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+            
+            if ((flags?[0].agreeFlag) != nil) {
+                print("ta verdadeiro")
+            }else {
+                print("é falso")
+                //activate the flag that can change the button
+            }
+            
+            //Must be the green color
+            cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
+            cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
+            cell?.disagreeCount.textColor = UIColor.whiteColor()
+            cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+            cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
+            
+            //r: 196, G: 67, B: 58, a: 1
         }
     }
     

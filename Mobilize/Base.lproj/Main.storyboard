@@ -257,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-sh-V4s">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -272,7 +272,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CcS-sh-V4s" secondAttribute="trailing" constant="-20" id="HE5-HE-Vgc"/>
                             <constraint firstItem="CcS-sh-V4s" firstAttribute="leading" secondItem="L13-hR-2ga" secondAttribute="leadingMargin" constant="-20" id="LhC-7W-Yy0"/>
                             <constraint firstItem="CcS-sh-V4s" firstAttribute="top" secondItem="L13-hR-2ga" secondAttribute="topMargin" id="Q5s-9g-TIZ"/>
-                            <constraint firstItem="CcS-sh-V4s" firstAttribute="bottom" secondItem="L13-hR-2ga" secondAttribute="bottomMargin" id="se0-1E-dQc"/>
+                            <constraint firstItem="UhF-Tt-Dal" firstAttribute="top" secondItem="CcS-sh-V4s" secondAttribute="bottom" id="l99-pw-6c0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Propostas" image="PurposeOff" selectedImage="PurposeOn" id="ktl-dn-ROD"/>
@@ -419,7 +419,7 @@
                                     <constraint firstAttribute="trailing" secondItem="4yO-7c-HH8" secondAttribute="trailing" id="fvW-zH-2OB"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-PJ-F2O">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-PJ-F2O">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
