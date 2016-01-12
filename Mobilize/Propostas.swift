@@ -156,8 +156,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
         cell.upVoteCount.text = String(self.proposals[indexPath.row]["UpVote"])
         cell.againstVoteCount.text = String(self.proposals[indexPath.row]["DownVote"])
         
-        var upVote = self.proposals[indexPath.row]["UpVote"]
-        var downVote = self.proposals[indexPath.row]["DownVote"]
+        //var upVote = self.proposals[indexPath.row]["UpVote"]
+        //var downVote = self.proposals[indexPath.row]["DownVote"]
         
         //This part is for the in favour and against proposal
 //        if upVote == 1000 {
