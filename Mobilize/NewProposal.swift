@@ -195,8 +195,17 @@ class NewProposal: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func save(sender: AnyObject) {
-        print("Saving data....")
-        self.saveProposal()
+        
+        
+        //Check if there is a category
+        if (self.categoriesName.count == 0){
+            let alert = UIAlertController(title: "Alerta!", message: "Você deve adcionar uma categoria para poder prôpor!", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }else{
+            print("Saving data....")
+            self.saveProposal()
+        }
     }
     
     func saveProposal (){
