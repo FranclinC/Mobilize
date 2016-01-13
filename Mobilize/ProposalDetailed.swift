@@ -131,18 +131,26 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             let user : PFUser = (comments[indexPath.row]["UserWhoComment"] as? PFUser)!
             print("Got the user")
             //Downloading user photo in background
-            let userImageFile = user["profile_picture"] as! PFFile
-            print("Download Image")
-            userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
-                        let image = UIImage(data:imageData)
-                        cell.userPic.image = image
+            
+            print("Pegando fotos")
+
+            
+            user.fetchIfNeededInBackgroundWithBlock({ (object: PFObject? , error: NSError?) -> Void in
+                let userImageFile = user["profile_picture"] as! PFFile
+                print("Download Image, franclin testando")
+                userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            let image = UIImage(data:imageData)
+                            cell.userPic.image = image
+                        }
                     }
                 }
-            }
+                
+                cell.userName.text = (user["name"] as? String)
+            })
             
-            cell.userName.text = (user["name"] as? String)
+
             cell.commentText.text = (self.comments[indexPath.row]["text"] as? String)
             cell.commentTime.text = (self.comments[indexPath.row]["createdAt"] as? String)
             
