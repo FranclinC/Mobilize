@@ -64,6 +64,10 @@ class NewProposal: UIViewController, UITextViewDelegate {
         self.initialConstraint = constraintToolBarHeight.constant
 
 
+        proposalText.text = "Digite aqui a sua proposta"
+        proposalText.textColor = UIColor.lightGrayColor()
+        
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "KeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
@@ -281,7 +285,20 @@ class NewProposal: UIViewController, UITextViewDelegate {
     
 
     
+    //MARK - Placeholder
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.textColor == UIColor.lightGrayColor() {
+            textView.text = nil
+            textView.textColor = UIColor.blackColor()
+        }
+    }
     
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Digite aqui a sua proposta"
+            textView.textColor = UIColor.lightGrayColor()
+        }
+    }
     
     
 
