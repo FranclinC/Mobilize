@@ -84,7 +84,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         if ((nameUser?.isEmpty)! || (user_username?.isEmpty)! || (emailUser?.isEmpty)! || (password?.isEmpty)!) {
             
-            var alert = UIAlertController(title: "Alerta!", message: "Todos os campos devem ser preenchidos", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Alerta!", message: "Todos os campos devem ser preenchidos", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
             alert.addAction(okAction)
             
@@ -98,7 +98,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             newUser.email = emailUser
             newUser.password = password
             
-            var profileImage : UIImage = UIImage(named: "perfil")!
+            let profileImage : UIImage = UIImage(named: "perfil")!
             let image = UIImageJPEGRepresentation(profileImage, 1)
             
             let userImage : PFFile = PFFile(data: image!)!
@@ -111,7 +111,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
                     //Go back to login page, the user must agree in the confirmation link sent to his email
-                    var alert = UIAlertController(title: "Alerta!", message: "Enviamos um email para você, confirme antes de prosseguir!", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Alerta!", message: "Enviamos um email para você, confirme antes de prosseguir!", preferredStyle: .Alert)
                     let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                     alert.addAction(okAction)
                     
@@ -119,8 +119,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     
                     self.navigationController?.popViewControllerAnimated(true)
                 }else {
-                    var userMessage = error?.localizedDescription
-                    var alert = UIAlertController(title: "Alerta!", message: userMessage, preferredStyle: .Alert)
+                    let userMessage = error?.localizedDescription
+                    let alert = UIAlertController(title: "Alerta!", message: userMessage, preferredStyle: .Alert)
                     let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                     alert.addAction(okAction)
                     
