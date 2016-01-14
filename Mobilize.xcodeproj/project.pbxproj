@@ -76,10 +76,8 @@
 		498AA1F41BF3D3CF002882E1 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D61BF3D3CF002882E1 /* TranslationAnimation.swift */; };
 		498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */; };
 		49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */; };
-		49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CEF41BF2E1C800BCA090 /* User.swift */; };
 		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
 		49A7CF311BF3B36900BCA090 /* PurposesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */; };
-		49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF331BF3B38900BCA090 /* UserNotification.swift */; };
 		49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */; };
 		49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */; };
 		49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */; };
@@ -202,10 +200,8 @@
 		498AA1D71BF3D3CF002882E1 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Transform.swift"; sourceTree = "<group>"; };
 		49A4E80C1BF3D8DB0059D441 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mobilize-Bridging-Header.h"; sourceTree = "<group>"; };
 		49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		49A7CEF41BF2E1C800BCA090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		49A7CF301BF3B36900BCA090 /* PurposesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurposesViewController.swift; sourceTree = "<group>"; };
-		49A7CF331BF3B38900BCA090 /* UserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 		49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -403,14 +399,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		49A7CF321BF3B37600BCA090 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				49A7CF331BF3B38900BCA090 /* UserNotification.swift */,
-			);
-			name = Notifications;
-			sourceTree = "<group>";
-		};
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,7 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				498AA1371BF3CB9A002882E1 /* Vendors */,
-				49A7CF321BF3B37600BCA090 /* Notifications */,
 				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
 				49CF58B41BF28964000B0059 /* Controller */,
@@ -498,7 +485,6 @@
 		49CF58B51BF2CDAD000B0059 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				49A7CEF41BF2E1C800BCA090 /* User.swift */,
 				6507FDA61C10CB2100BBD759 /* DataBase.xcdatamodeld */,
 				6507FDA91C10CFEF00BBD759 /* DataParameters.swift */,
 				6507FDBF1C10E36400BBD759 /* MyLikes+CoreDataProperties.swift */,
@@ -640,10 +626,8 @@
 				498AA1DD1BF3D3CF002882E1 /* Animatable.swift in Sources */,
 				498AA1EC1BF3D3CF002882E1 /* LayerFillColorAnimation.swift in Sources */,
 				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
-				49A7CEF51BF2E1C800BCA090 /* User.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
 				498AA1E31BF3D3CF002882E1 /* ConstraintMultiplierAnimation.swift in Sources */,
-				49A7CF341BF3B38900BCA090 /* UserNotification.swift in Sources */,
 				652C13A21C0E35220003FD92 /* SignUpViewController.swift in Sources */,
 				498AA1F51BF3D3CF002882E1 /* UIView+Transform.swift in Sources */,
 				49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */,
