@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import CoreData
 
 class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
@@ -35,8 +36,17 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     
     var proposalAgreement : ProposalAgreement?
     
+    
+    //MARK: - CoreData
+    // create an instance of our managedObjectContext
+    let moc = DataParameters().managedObjectContext
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
         self.commentTextField.delegate = self
@@ -93,6 +103,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         
         print("Que celula é essa? \(indexPath.row)")
         if indexPath.section == 0 {
+            self.fetch()
+            
             
             let cellProposal = tableView.dequeueReusableCellWithIdentifier("proposalCellDetailed", forIndexPath: indexPath) as! ProposalDetailedCell
             self.proposalID = self.proposal.proposalId!
@@ -308,6 +320,11 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     
     //Functions of the buttons of the proposal, agree and disagree
     func agree(sender: UIButton){
+        
+        
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
+        
+        
         if sender.tag == 0 {
             print("Peguei o botão")
             var array = self.tableView.indexPathsForVisibleRows
@@ -333,6 +350,20 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             cell?.agreeCount.textColor = UIColor.whiteColor()
             cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+            
+            //MARK: - Adding to CoreData
+            entity.setValue(true, forKey: "agreeFlag")
+            entity.setValue(false, forKey: "disagreeFlag")
+            entity.setValue(proposalID, forKey: "proposal")
+            entity.setValue(PFUser.currentUser()?.objectId, forKey: "user")
+            
+            //Save our entire entity
+            do {
+                try moc.save()
+            }catch {
+                fatalError("Failure to save context: \(error)")
+            }
+            
             
             //remember to change the color of the disagree button
 //            cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
@@ -377,6 +408,24 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
+    
+    //MARK: - Fetch functions
+    func fetch(){
+        let moc = DataParameters().managedObjectContext
+        let proposalFlag = NSFetchRequest(entityName: "ProposalAgreement")
+        let predicate = NSPredicate(format: "proposal == %@ AND user == %@", proposalID, PFUser.currentUser()!.objectId!)
+        proposalFlag.predicate = predicate
+        
+        do {
+            let fetchedFlags = try moc.executeFetchRequest(proposalFlag) as! [ProposalAgreement]
+            //print("Valor da flag: \(fetchedFlags.first!.agreeFlag)")
+            //I do not need fetch the ones I didnt vote
+            
+            
+        } catch {
+            fatalError("Failure to fetch context: \(error)")
+        }
+    }
     
     
 }
