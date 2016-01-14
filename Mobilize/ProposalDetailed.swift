@@ -10,11 +10,6 @@ import UIKit
 import Parse
 
 class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
-
-    //these flags are used to control the button
-    
-    
-
     @IBOutlet var commentTextField: UITextField!
     @IBOutlet var tableView: UITableView!
    
@@ -30,45 +25,32 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     var proposal : CustomCell = CustomCell()
     var commentsCount : Int = 0
     var proposalID : String!
-    
     var agreeClicked : Bool?
-    
     var proposalAgreement : ProposalAgreement?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.commentTextField.delegate = self
         self.constraintHeightToolbar = self.toolBarHeightConstraint.constant
-        
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "KeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-
-        //load the array with comments
         print("Load array with data")
         self.loadComments()
-        
-        //Register nibs
         self.tableView.registerNib(UINib(nibName: "ProposalCell", bundle: nil), forCellReuseIdentifier: "proposalCellDetailed")
         self.tableView.registerNib(UINib(nibName: "CommentCountCell", bundle: nil), forCellReuseIdentifier: "commentCountCell")
         self.tableView.registerNib(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "commentCell")
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        //self.proposalID = self.proposal.proposalId!
-        
     }
     
     //MARK: - TableView Delegate Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3 //3 sections, Proposal, comment count, comments
+        return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,20 +62,15 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         else if section == 1 {
             print("Section \(section)")
             return 1 //Cell with the count of comments
-            
         } else {
             print("Comment count \(comments.count)")
             return comments.count //Cells with the real comment
         }
-        
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         print("Que celula é essa? \(indexPath.row)")
         if indexPath.section == 0 {
-            
             let cellProposal = tableView.dequeueReusableCellWithIdentifier("proposalCellDetailed", forIndexPath: indexPath) as! ProposalDetailedCell
             self.proposalID = self.proposal.proposalId!
             cellProposal.proposalText.text = self.proposal.fullProposal
@@ -111,10 +88,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             
             cellProposal.agreeButton.tag = indexPath.row
             cellProposal.agreeButton.addTarget(self, action: Selector("agree:"), forControlEvents: UIControlEvents.TouchUpInside)
-            
             cellProposal.disagreeButton.tag = indexPath.row
             cellProposal.disagreeButton.addTarget(self, action: Selector("disagree:"), forControlEvents: .TouchUpInside)
-            
             
             return cellProposal
         }else if indexPath.section == 1 {
@@ -130,10 +105,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             print("Get the user")
             let user : PFUser = (comments[indexPath.row]["UserWhoComment"] as? PFUser)!
             print("Got the user")
-            //Downloading user photo in background
-            
             print("Pegando fotos")
-
             
             user.fetchIfNeededInBackgroundWithBlock({ (object: PFObject? , error: NSError?) -> Void in
                 let userImageFile = user["profile_picture"] as! PFFile
@@ -169,34 +141,21 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "dd/mm/YY hh:mm"
             let dateString = dateFormatter.stringFromDate(timeStamp!)
-            
             cell.commentTime.text = dateString
 
-            
             return cell
         }
-        
-        
     }
-    
-    
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 
-    
-        
-    //MARK:  Comment Functions
     @IBAction func sendComment(sender: UIButton) {
-        
         self.commentTextField.text = ""
         self.commentTextField.endEditing(true)
     }
     
-    
-    
-    //MARK: Keyboard delegate and methods
     func keyboardWillShow(notification: NSNotification) {
         let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
 
@@ -220,7 +179,6 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
             self.toolBarHeightConstraint.constant = self.constraintHeightToolbar!
             self.view.layoutIfNeeded()
             }, completion: nil)
-        
         if tapGesture != nil {
             self.tableView.removeGestureRecognizer(tapGesture!)
             tapGesture = nil
@@ -230,9 +188,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     func dismissKeyboard(sender: AnyObject) {
         self.commentTextField.resignFirstResponder()
     }
-    
-    
-    //MARK: - Retrieve Data from Parse
+
     func loadComments (){
         let query = PFQuery(className:"Comment")
         
@@ -248,8 +204,6 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         print("Go get the comments")
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
-                
-                //Now i get the array of objects
                 print(objects)
                 self.commentsCount = (objects?.count)!
                 for object in objects! {
@@ -263,16 +217,13 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    
     @IBAction func saveComment(sender: AnyObject) {
-        //self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
         let comment = PFObject(className: "Comment")
         let user = PFUser.currentUser()
         print("proposal id franclin: \(user)")
         comment["UserWhoComment"] = user
         comment["text"] = self.commentTextField.text
         let objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
-        
         
         comment["Proposal"] = objProposal
         comment["stars"] = 0
@@ -282,31 +233,22 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
 
         comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
-                //Reload the tableview
-                
-                //Cloud code function call
                 PFCloud.callFunctionInBackground("hello", withParameters: nil) { results, error in
                     if error != nil {
-                        // Your error handling here
                         print("Deu erro no cloud code")
                     } else {
-                        // Deal with your results (votes in your case) here.
                         print("Deu certo o cloud code")
                     }
                 }
                 
-                
                 self.loadComments()
                 print("deu certo")
             }else{
-                //report the error
                 print("deu erro")
             }
         }
-        
     }
     
-    //Functions of the buttons of the proposal, agree and disagree
     func agree(sender: UIButton){
         if sender.tag == 0 {
             print("Peguei o botão")
@@ -327,21 +269,11 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 //activate the flag that can change the button
             }
             
-            //Must be the green color
             cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
             cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
             cell?.agreeCount.textColor = UIColor.whiteColor()
             cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
-            
-            //remember to change the color of the disagree button
-//            cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
-//            cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.1")
-//            cell?.disagreeCount.textColor = UIColor.whiteColor()
-//            cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-//            cell?.disagreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
-            
-            
         }
     }
     
@@ -366,17 +298,11 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 //activate the flag that can change the button
             }
             
-            //Must be the green color
             cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
             cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
             cell?.disagreeCount.textColor = UIColor.whiteColor()
             cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
-            
-            //r: 196, G: 67, B: 58, a: 1
         }
     }
-    
-    
-    
 }

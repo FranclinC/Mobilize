@@ -10,97 +10,63 @@ import UIKit
 import Parse
 
 class NewProposal: UIViewController, UITextViewDelegate {
-
     @IBOutlet var proposalText: UITextView!
+    
     @IBOutlet var toolBar: UIToolbar!
-    @IBOutlet var heathButton: UIBarButtonItem!
     
-    @IBOutlet var transportButton: UIBarButtonItem!
-    
-    @IBOutlet var healthBtn: UIButton!
-
-    @IBOutlet var transportBtn: UIButton!
     @IBOutlet var educationButton: UIBarButtonItem!
-    
-
-    @IBOutlet var educationBtn: UIButton!
+    @IBOutlet var heathButton: UIBarButtonItem!
+    @IBOutlet var transportButton: UIBarButtonItem!
     @IBOutlet var securityButton: UIBarButtonItem!
-    @IBOutlet var securityBtn: UIButton!
-    
-    @IBOutlet var cultureBtn: UIButton!
     @IBOutlet var cultureButton: UIBarButtonItem!
     
-    @IBOutlet var toolBarView: UIView!
-    @IBOutlet var constraintToolBarHeight: NSLayoutConstraint!
-   
-    @IBOutlet var constraintToolBarBottom: NSLayoutConstraint!
-    @IBOutlet var constraintToolBarTop: NSLayoutConstraint!
+    @IBOutlet var healthBtn: UIButton!
+    @IBOutlet var transportBtn: UIButton!
+    @IBOutlet var educationBtn: UIButton!
+    @IBOutlet var securityBtn: UIButton!
+    @IBOutlet var cultureBtn: UIButton!
     
+    @IBOutlet var toolBarView: UIView!
     
     @IBOutlet var backButtonNavigator: UINavigationItem!
     
-    var keyboardDismissSwipeGesture: UISwipeGestureRecognizer?
+    @IBOutlet var constraintToolBarHeight: NSLayoutConstraint!
+    @IBOutlet var constraintToolBarBottom: NSLayoutConstraint!
+    @IBOutlet var constraintToolBarTop: NSLayoutConstraint!
     
+    var keyboardDismissSwipeGesture: UISwipeGestureRecognizer?
     var initialConstraint : CGFloat?
     
-    //This is for a quick implementation, I will try to improve it later
     var h1 = 1
     var t1 = 1
     var e1 = 1
     var s1 = 1
     var c1 = 1
     
-    //this is to count
     var categories = 0
-    
     var categoriesName = [String]()
     
+    // ----------> refactoring
+    var arr = [Bool](count: 5, repeatedValue: false) // change name to categories later
+    var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.proposalText.delegate = self
         self.initialConstraint = constraintToolBarHeight.constant
-
-
         proposalText.text = "Digite aqui a sua proposta"
         proposalText.textColor = UIColor.lightGrayColor()
-        
-        
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "KeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        
-    
-        //self.proposalText.delegate = self
-        
-//        let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "textEdit")
-//        self.proposalText.addGestureRecognizer(tapGesture)
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print("Propor")
-        //self.navigationController?.navigationItem.backBarButtonItem?.title = ""
         self.tabBarController?.navigationItem.backBarButtonItem?.title = ""
-
-
     }
     
-    
-
-    
     @IBAction func healthCategory(sender: AnyObject) {
-        print("Health")
-        
+        print("health")
         if h1 == 1 && categories < 2{
             h1 = 0
             categories++
@@ -116,8 +82,6 @@ class NewProposal: UIViewController, UITextViewDelegate {
             let image = UIImage(named: "saude1")
             self.healthBtn.setImage(image, forState: UIControlState.Normal)
         }
-        
-        
     }
     
     @IBAction func transportCategory(sender: AnyObject) {
@@ -178,7 +142,6 @@ class NewProposal: UIViewController, UITextViewDelegate {
         }
     }
     
-    
     @IBAction func cultureCategory(sender: AnyObject) {
         print("Culture")
         if c1 == 1 && categories < 2{
@@ -199,9 +162,6 @@ class NewProposal: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func save(sender: AnyObject) {
-        
-        
-        //Check if there is a category
         if (self.categoriesName.count == 0){
             let alert = UIAlertController(title: "Alerta!", message: "Você deve adcionar uma categoria para poder prôpor!", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -226,19 +186,14 @@ class NewProposal: UIViewController, UITextViewDelegate {
         
         proposal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
-                //Perform segue or pop
                 self.navigationController?.popViewControllerAnimated(true)
-                
             }else{
-                //report the error
             }
         }
     }
     
     func keyboardWillShow(notification: NSNotification) {
         let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        // do stuff with the frame...
-        
         print(frame.height)
         self.view.layoutIfNeeded()
         UIView.animateWithDuration(0.5, animations: {
@@ -249,15 +204,10 @@ class NewProposal: UIViewController, UITextViewDelegate {
         
         if keyboardDismissSwipeGesture == nil {
             print("Add gesture")
-            //keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard:"))
-
-            //keyboardDismissTapGesture!.numberOfTapsRequired = 2
             keyboardDismissSwipeGesture = UISwipeGestureRecognizer(target: self, action: "dismissKeyboard:")
             keyboardDismissSwipeGesture?.direction = UISwipeGestureRecognizerDirection.Down
             self.view.addGestureRecognizer(keyboardDismissSwipeGesture!)
         }
-
-        
     }
     
     func KeyboardWillHide(notification: NSNotification){
@@ -265,7 +215,6 @@ class NewProposal: UIViewController, UITextViewDelegate {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.constraintToolBarHeight.constant = self.initialConstraint!
             self.constraintToolBarBottom.constant = 0
-
             self.view.layoutIfNeeded()
             }, completion: nil)
         
@@ -273,17 +222,11 @@ class NewProposal: UIViewController, UITextViewDelegate {
             self.view.removeGestureRecognizer(keyboardDismissSwipeGesture!)
             keyboardDismissSwipeGesture = nil
         }
-        
-        
     }
 
     func dismissKeyboard(sender: AnyObject) {
-        print("eahurhoaher")
         self.proposalText?.resignFirstResponder()
-
     }
-    
-
     
     //MARK - Placeholder
     func textViewDidBeginEditing(textView: UITextView) {
@@ -299,9 +242,4 @@ class NewProposal: UIViewController, UITextViewDelegate {
             textView.textColor = UIColor.lightGrayColor()
         }
     }
-    
-    
-
-
-
 }

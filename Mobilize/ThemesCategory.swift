@@ -11,43 +11,27 @@ import UIKit
 class ThemesCategory: UITableViewController {
 
     var categories = [String]()
-    var categoriesEnglish = [String]() //This is just to fix a mistake I made, this can dissapear, remember to talk with the others to decide english or portuguese
+    var categoriesEnglish = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         self.tableView.registerNib(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "categoryCell")
-
-
-        
-        // Do any additional setup after loading the view.
         categories = ["Todos", "Saúde", "Transporte", "Educação", "Segurança", "Cultura"]
         categoriesEnglish = ["All", "Health", "Transport", "Education", "Security", "Culture"]
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.revealViewController().frontViewController.revealViewController().tapGestureRecognizer()
         self.revealViewController().frontViewController.view.userInteractionEnabled = false
     }
     
-    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
         self.revealViewController().frontViewController.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.revealViewController().frontViewController.view.userInteractionEnabled = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -75,27 +59,12 @@ class ThemesCategory: UITableViewController {
         }
         
         cell.categoryName.text = categories[indexPath.row]
-        
         return cell
     }
     
-
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         let revealController = self.revealViewController()
         SharedValues.change(categoriesEnglish[indexPath.row])
         revealController.revealToggleAnimated(true)
-        
-        
-        
     }
-
-    
-    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//        
-//        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//    }
-    
 }

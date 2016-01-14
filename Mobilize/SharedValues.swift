@@ -10,8 +10,6 @@
 //but due to the amount of code to control the contraints and the time we do have to
 //finish this project, thi is the solution
 
-
-
 import Foundation
 
 class SharedValues {
@@ -19,12 +17,11 @@ class SharedValues {
     static let sharedInstance = SharedValues()
     static var filter : SingletonDelegate?
     
-    
-    
     static func change(category: String){
         filter?.changeFilter(category)
     }
+}
 
-    
-    
+protocol SingletonDelegate {
+    func changeFilter(category: String)
 }
