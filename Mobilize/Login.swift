@@ -84,7 +84,7 @@ class Login: UIViewController, UITextFieldDelegate {
         let password = self.passwordUser.text
         
         if (username!.utf16.count < 4 || password!.utf16.count < 5) {
-            var alert = UIAlertView(title: "Inválido", message: "Usúario deve ter mais que 4 caracteres e Senha mais que 5 caracteres.", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Inválido", message: "Usúario deve ter mais que 4 caracteres e Senha mais que 5 caracteres.", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         }else {
             let query : PFQuery = PFUser.query()!
@@ -93,8 +93,8 @@ class Login: UIViewController, UITextFieldDelegate {
                 
                 if objects?.count > 0 {
                     
-                    var object = objects![0]
-                    var userNameEmail = object["username"]
+                    let object = objects![0]
+                    let userNameEmail = object["username"]
                     
                     PFUser.logInWithUsernameInBackground(userNameEmail as! String, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
                         
