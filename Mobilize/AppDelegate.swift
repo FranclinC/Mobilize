@@ -20,50 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var keys: NSDictionary?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-
-        
-        // Enable Crash Reporting
-//        ParseCrashReporting.enable()
-        
-        
-        
-        
-//        
-//        
-//        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
-//            keys = NSDictionary(contentsOfFile: path)
-//            print(keys)
-//        }
         Parse.enableLocalDatastore()
-//        if let _ = keys {
-//            
-//            let applicationId = keys?["parseApplicationId"] as? String
-//            let clientKey = keys?["parseClientKey"] as? String
-//            
-//            // Initialize Parse.
-//            Parse.setApplicationId(applicationId!, clientKey: clientKey!)
-//        }
-        //This is just for a test with parse
-        
-        // Initialize Parse.
         Parse.setApplicationId("Ind4ALgVPaHk9NDFkRMgZWYm4q1ngr7ouD2387GT", clientKey: "dOIxXW8MYQY37X7PhCqtktaEhvsF5Nyu1HjnB8Qj")
-        
-        // [Optional] Track statistics around application opens.
-
-        
-        
-        //end of the test, remember to delete it
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
-        //Facebook
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
 
         if application.applicationState != UIApplicationState.Background {
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
             let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
             var pushPayload = false
+            
             if let options = launchOptions {
                 pushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil
             }
@@ -79,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotifications()
         } else {
             let types = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-            // check this later!
             application.registerUserNotificationSettings(types)
         }
         
@@ -102,8 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
-        //Facebook app Activate
         FBSDKAppEvents.activateApp()
         
     }
@@ -141,12 +104,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
-    
-    
-
-    
-    
-    
-    
 }
-

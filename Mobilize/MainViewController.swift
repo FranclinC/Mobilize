@@ -26,8 +26,6 @@ class MainViewController: UITabBarController {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.translucent = false
         self.tabBarCustom.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
-        //self.tabBarController?.tabBar.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
     }
     
 }
-
