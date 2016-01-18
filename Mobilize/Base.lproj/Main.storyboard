@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-No-DKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1554" y="132"/>
+            <point key="canvasLocation" x="-1554" y="262"/>
         </scene>
         <!--Projetos-->
         <scene sceneID="VvU-xU-c0t">
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ6-ob-WuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-242"/>
+            <point key="canvasLocation" x="212" y="-218"/>
         </scene>
         <!--Proposta-->
         <scene sceneID="G0f-2o-qpK">
@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbT-oy-rEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="489"/>
+            <point key="canvasLocation" x="-184" y="729"/>
         </scene>
         <!--Proposta-->
         <scene sceneID="NRM-Fh-hu5">
@@ -510,45 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGV-Ot-qRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="489"/>
-        </scene>
-        <!--Notificações-->
-        <scene sceneID="3UZ-iQ-egV">
-            <objects>
-                <viewController storyboardIdentifier="notification" id="RJm-y2-GaU" customClass="NotificationsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vW1-b3-glj"/>
-                        <viewControllerLayoutGuide type="bottom" id="ISA-B8-CwH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9gJ-AP-SqL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xP3-Ng-rBj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="RJm-y2-GaU" id="e2z-f1-0OD"/>
-                                    <outlet property="delegate" destination="RJm-y2-GaU" id="NKz-33-ole"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ISA-B8-CwH" firstAttribute="top" secondItem="xP3-Ng-rBj" secondAttribute="bottom" id="5xy-cd-X4n"/>
-                            <constraint firstItem="xP3-Ng-rBj" firstAttribute="leading" secondItem="9gJ-AP-SqL" secondAttribute="leadingMargin" constant="-20" id="Skq-hD-wH0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xP3-Ng-rBj" secondAttribute="trailing" constant="-20" id="T1M-ke-iAz"/>
-                            <constraint firstItem="xP3-Ng-rBj" firstAttribute="top" secondItem="9gJ-AP-SqL" secondAttribute="topMargin" id="yfn-jF-g8m"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Notificações" image="NotificationOff" selectedImage="NotificationOn" id="Hjg-mx-rqr"/>
-                    <connections>
-                        <outlet property="tableView" destination="xP3-Ng-rBj" id="FzF-Vz-NMt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-fV-H4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="672" y="-625"/>
+            <point key="canvasLocation" x="608" y="729"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="3sA-l5-CGC">
@@ -610,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgv-hI-Pd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-1721"/>
+            <point key="canvasLocation" x="212" y="-1895"/>
         </scene>
         <!--Notification-->
         <scene sceneID="745-Ir-Y1i">
@@ -647,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qo-D0-cpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="-1721"/>
+            <point key="canvasLocation" x="1130" y="-1038"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="nag-Sn-Nq0">
@@ -689,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ie-k6-NFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-990"/>
+            <point key="canvasLocation" x="212" y="-1038"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="aKn-ZB-eH1">
@@ -704,13 +666,12 @@
                         <outlet property="tabBar" destination="0Mu-VF-H2A" id="r87-AE-Jnq"/>
                         <outlet property="tabBarCustom" destination="0Mu-VF-H2A" id="1Aw-Ah-ih8"/>
                         <segue destination="ZSc-dY-9U4" kind="relationship" relationship="viewControllers" id="C4U-Vv-JZL"/>
-                        <segue destination="RJm-y2-GaU" kind="relationship" relationship="viewControllers" id="IYx-2X-kYx"/>
                         <segue destination="JcR-bw-OEa" kind="relationship" relationship="viewControllers" id="i9V-qF-UDu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9s-N0-ccX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="-625"/>
+            <point key="canvasLocation" x="-650" y="-625"/>
         </scene>
         <!--Themes Category-->
         <scene sceneID="stn-vq-437">
@@ -729,7 +690,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLx-Sx-jGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3148" y="916"/>
+            <point key="canvasLocation" x="-3168" y="262"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="7Mh-Lm-zHa">
@@ -751,13 +712,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ua-Q6-IXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3148" y="146"/>
+            <point key="canvasLocation" x="-3168" y="-625"/>
         </scene>
     </scenes>
     <resources>
         <image name="ConfigurationOff" width="25" height="27"/>
         <image name="ConfigurationOn" width="25" height="27"/>
-        <image name="NotificationOff" width="23" height="27"/>
         <image name="NotificationOn" width="23" height="27"/>
         <image name="PurposeOff" width="20" height="27"/>
         <image name="PurposeOn" width="20" height="27"/>
@@ -776,8 +736,8 @@
         <image name="wave_login" width="398" height="102"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9CY-ao-IVr"/>
         <segue reference="2br-EA-3pG"/>
-        <segue reference="TMZ-jK-CMQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
 </document>

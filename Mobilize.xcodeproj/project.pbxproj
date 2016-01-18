@@ -51,7 +51,6 @@
 		49873EB01BF3DBEF004E4424 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49873EAF1BF3DBEF004E4424 /* SWRevealViewController.m */; };
 		49A4E8141BF3DAD40059D441 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */; };
 		49A7CF2E1BF2E3D700BCA090 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */; };
-		49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */; };
 		49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */; };
 		49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */; };
 		49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE035F1BD56216000F76D7 /* AppDelegate.swift */; };
@@ -144,7 +143,6 @@
 		49A4E80C1BF3D8DB0059D441 /* Mobilize-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mobilize-Bridging-Header.h"; sourceTree = "<group>"; };
 		49A4E8131BF3DAD40059D441 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		49A7CF2D1BF2E3D700BCA090 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		49CE035C1BD56216000F76D7 /* Mobilize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobilize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				4925F5601BF27C7D00481D98 /* LoginViewController.swift */,
-				49A7CF351BF3B39C00BCA090 /* NotificationsViewController.swift */,
 				49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */,
 				49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */,
 				65AEF02D1C08D2B40065E186 /* AccountViewController.swift */,
@@ -517,7 +514,6 @@
 				65112E3A1BFB87E000350721 /* CommentsCountCell.swift in Sources */,
 				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
 				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
-				49A7CF361BF3B39C00BCA090 /* NotificationsViewController.swift in Sources */,
 				493AF3861BF3E129004BADE4 /* Login.swift in Sources */,
 				6507FDC31C10E36400BBD759 /* MyLikes+CoreDataProperties.swift in Sources */,
 				65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */,

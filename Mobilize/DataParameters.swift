@@ -13,7 +13,7 @@ class DataParameters: NSObject {
     
     var managedObjectContext: NSManagedObjectContext
     
-    override  init() {
+    override init() {
         // This resource is the same name as your xcdatamodeld contained in your project.
         guard let modelURL = NSBundle.mainBundle().URLForResource("DataBase", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
@@ -37,7 +37,5 @@ class DataParameters: NSObject {
         } catch {
             fatalError("Error migrating store: \(error)")
         }
-        
     }
-    
 }

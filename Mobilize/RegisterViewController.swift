@@ -21,12 +21,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-        
-        
         
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tapGesture)
@@ -35,13 +31,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.userPassword.returnKeyType = UIReturnKeyType.Send
     }
     
-    
     func keyboardWillShow (notification: NSNotification){
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y -= keyboardSize.height
         }
     }
-    
     
     func keyboardWillHide (notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
@@ -51,16 +45,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //This change the navigation bar color
-        //self.navigationController?.navigationBar.barTintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 0.0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.translucent = false
-        //self.view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 0.9)
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
-
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -83,13 +71,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let password = self.userPassword.text
         
         if ((nameUser?.isEmpty)! || (user_username?.isEmpty)! || (emailUser?.isEmpty)! || (password?.isEmpty)!) {
-            
             let alert = UIAlertController(title: "Alerta!", message: "Todos os campos devem ser preenchidos", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
             alert.addAction(okAction)
-            
             self.presentViewController(alert, animated: true, completion: nil)
-            
             return
         }else {
             
@@ -127,19 +112,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
             })
- 
         }
-        
-        
-        
-        
     }
     
     func dismissKeyboard() {
-        
         self.view.endEditing(true)
-        
     }
-    
-    
 }

@@ -13,7 +13,6 @@ import ParseFacebookUtilsV4
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
-    
     @IBOutlet var logOutButton: UIButton!
     
     var user : PFUser!
@@ -24,18 +23,13 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     var newPassword : String?
     var confirmPassword : String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.user = PFUser.currentUser()
         isLinkedWithFacebook = PFFacebookUtils.isLinkedWithUser(user)
-        
         tableView.delegate = self
-        //register nib
         self.tableView.registerNib(UINib(nibName: "AccountCell", bundle: nil), forCellReuseIdentifier: "accountCell")
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -48,15 +42,12 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }else if section == 1 {
+        if section == 0 || section == 1{
             return 1
         }else {
             return 2
@@ -64,11 +55,9 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
             cell.textCell.placeholder = self.user["name"] as? String
-            
             return cell
         }else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
@@ -77,7 +66,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             if self.isLinkedWithFacebook {
                 cell.textCell.userInteractionEnabled = false
             }
-            
             return cell
         }else {
             if indexPath.row == 0 {
@@ -88,7 +76,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                 if self.isLinkedWithFacebook {
                     cell.textCell.userInteractionEnabled = false
                 }
-                
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("accountCell", forIndexPath: indexPath) as! AccountCell
@@ -100,17 +87,11 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                 
                 return cell
             }
-            
         }
-        
     }
     
-    
-    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return CGFloat.min
-        }else if section == 2 {
+        if section == 0  || section == 2 {
             return CGFloat.min
         }else {
             return 0
@@ -134,16 +115,14 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         return ""
     }
     
-    func saveConfiguration (){
-        print("Done button")
+    func saveConfiguration() {
         var array = self.tableView.indexPathsForVisibleRows
-        
+
         let cellNome : AccountCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? AccountCell
         let cellCurrentPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![1]) as? AccountCell
         let cellNewPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![2]) as? AccountCell
         let cellConfirm : AccountCell? = self.tableView.cellForRowAtIndexPath(array![3]) as? AccountCell
-        
-        
+
         var didChange = false
         
         if cellNome?.textCell.text != "" {
@@ -152,7 +131,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             didChange = true
         }
         
-        //If the user is logged with facebook he or she can not change the password on the app
         if !self.isLinkedWithFacebook {
             if cellCurrentPassword != "" {
                 if cellNewPassword?.textCell.text == cellConfirm?.textCell.text {
@@ -167,10 +145,9 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.presentViewController(alertError, animated: true, completion: nil)
                 }
             }
-        }//the else is if he or she is logged with facebook
+        }
         
         if didChange {
-            //This is to save the changes in the user
             self.user.saveEventually()
         }
         
@@ -181,5 +158,4 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         PFUser.logOut()
         self.performSegueWithIdentifier("logOut", sender: nil)
     }
-    
 }

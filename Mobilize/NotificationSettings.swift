@@ -13,31 +13,20 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         self.tableView.delegate = self
-        
-        //register nib
         self.tableView.registerNib(UINib(nibName: "NotificationSetting", bundle: nil), forCellReuseIdentifier: "notificationSetting")
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }else if section == 1 {
+        if section == 0 || section == 1{
             return 1
         }else {
             return 2
@@ -70,8 +59,4 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
         }
         return ""
     }
-    
-        
-
-
 }
