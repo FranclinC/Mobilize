@@ -733,7 +733,7 @@
         <image name="saude1" width="62" height="63"/>
         <image name="seguranca1" width="62" height="63"/>
         <image name="temas" width="24" height="24"/>
-        <image name="wave_login" width="398" height="102"/>
+        <image name="wave_login" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9CY-ao-IVr"/>

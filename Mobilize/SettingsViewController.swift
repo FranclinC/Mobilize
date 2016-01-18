@@ -80,24 +80,25 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             let dateString = dateFormatter.stringFromDate(timeStamp!)
             cellUser.contributionLabel.text = "Contribui desde " + dateString
             return cellUser
-        }else if indexPath.section == 1 {
-            let cellGroup1 = tableView.dequeueReusableCellWithIdentifier("settingsGroup1", forIndexPath: indexPath) as! SettingsGroup1
-            
-            if indexPath.row == 0 {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
-                cellGroup1.labelCell.text = "Propostas"
-                cellGroup1.cellCount.text = String(self.myProposals)
-            }else if indexPath.row == 1 {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
-                cellGroup1.labelCell.text = "Mobi"
-                cellGroup1.cellCount.text = String(self.myMobProposals)
-            }else {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
-                cellGroup1.labelCell.text = "Comentários"
-                cellGroup1.cellCount.text = String(self.myCommentsCount)
-            }
-            
-            return cellGroup1
+//        }else if indexPath.section == 1 {
+//            let cellGroup1 = tableView.dequeueReusableCellWithIdentifier("settingsGroup1", forIndexPath: indexPath) as! SettingsGroup1
+//            
+//            if indexPath.row == 0 {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
+//                cellGroup1.labelCell.text = "Propostas"
+//                cellGroup1.cellCount.text = String(self.myProposals)
+//                
+//            }else if indexPath.row == 1 {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
+//                cellGroup1.labelCell.text = "Mobi"
+//                cellGroup1.cellCount.text = String(self.myMobProposals)
+//            }else {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
+//                cellGroup1.labelCell.text = "Comentários"
+//                cellGroup1.cellCount.text = String(self.myCommentsCount)
+//            }
+//            
+//            return cellGroup1
         }else {
             let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2", forIndexPath: indexPath) as! SettingsGroup2
             
