@@ -48,17 +48,17 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 2 // Should be 3, app store change
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-        }else if section == 1{
-            return 3
-        }else{
-            return 2
-        }
+        }else{ //if section == 1{
+            return 2 //should be 3
+        }//else{
+           // return 2
+        //}
     }
     
     
@@ -95,25 +95,25 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             
             
             return cellUser
-        }else if indexPath.section == 1 {
-            let cellGroup1 = tableView.dequeueReusableCellWithIdentifier("settingsGroup1", forIndexPath: indexPath) as! SettingsGroup1
-            
-            if indexPath.row == 0 {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
-                cellGroup1.labelCell.text = "Propostas"
-                cellGroup1.cellCount.text = String(self.myProposals)
-                
-            }else if indexPath.row == 1 {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
-                cellGroup1.labelCell.text = "Mobi"
-                cellGroup1.cellCount.text = String(self.myMobProposals)
-            }else {
-                cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
-                cellGroup1.labelCell.text = "Comentários"
-                cellGroup1.cellCount.text = String(self.myCommentsCount)
-            }
-            
-            return cellGroup1
+//        }else if indexPath.section == 1 {
+//            let cellGroup1 = tableView.dequeueReusableCellWithIdentifier("settingsGroup1", forIndexPath: indexPath) as! SettingsGroup1
+//            
+//            if indexPath.row == 0 {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Prop")
+//                cellGroup1.labelCell.text = "Propostas"
+//                cellGroup1.cellCount.text = String(self.myProposals)
+//                
+//            }else if indexPath.row == 1 {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Mobi")
+//                cellGroup1.labelCell.text = "Mobi"
+//                cellGroup1.cellCount.text = String(self.myMobProposals)
+//            }else {
+//                cellGroup1.imageIcon.image = UIImage(named: "Config_Comment")
+//                cellGroup1.labelCell.text = "Comentários"
+//                cellGroup1.cellCount.text = String(self.myCommentsCount)
+//            }
+//            
+//            return cellGroup1
         }else {
             let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2", forIndexPath: indexPath) as! SettingsGroup2
             
@@ -138,7 +138,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("Account settings")
         print(indexPath.row)
-        if indexPath.section == 2 {
+        if indexPath.section == 1 { //section should be 2, but small change to send to appstore
             if indexPath.row == 0 {
                 print("Segue 1")
                 self.performSegueWithIdentifier("notificationSettings", sender: nil)
