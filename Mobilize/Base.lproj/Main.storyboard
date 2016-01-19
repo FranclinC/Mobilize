@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-2356" y="-625"/>
         </scene>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="hU0-zX-FcU">
             <objects>
-                <viewController storyboardIdentifier="login" id="sl5-tw-1yy" customClass="Login" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="sl5-tw-1yy" customClass="LoginViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YvV-pK-Txg"/>
                         <viewControllerLayoutGuide type="bottom" id="q78-5L-pBK"/>
@@ -736,8 +736,8 @@
         <image name="wave_login" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="C4L-u1-t4V"/>
         <segue reference="9CY-ao-IVr"/>
-        <segue reference="2br-EA-3pG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
 </document>
