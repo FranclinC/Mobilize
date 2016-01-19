@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = MOBILIZE_BACKGROUND
+        self.view.backgroundColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
         backgroundImage.image = UIImage(named: "wave")
     }
 }

@@ -9,23 +9,20 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
-    @IBOutlet var tabBarCustom: UITabBar!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationBar.translucent = false
-        self.tabBarCustom.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
-    }
-    
+  @IBOutlet var tabBarCustom: UITabBar!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(true)
+    self.navigationItem.hidesBackButton = true
+    self.navigationController?.navigationBar.translucent = false
+    self.tabBarCustom.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
+  }
 }

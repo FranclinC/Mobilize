@@ -13,9 +13,9 @@ import Foundation
 import CoreData
 
 extension MyLikes {
-
-    @NSManaged var user: String?
-    @NSManaged var comment: String?
-    @NSManaged var flag: Bool
-
+  
+  @NSManaged var user: String?
+  @NSManaged var comment: String?
+  @NSManaged var flag: Bool
+  
 }

@@ -59,7 +59,6 @@
 		49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03661BD56216000F76D7 /* Assets.xcassets */; };
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
 		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
-		49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF58B61BF2CDF6000B0059 /* Constants.swift */; };
 		6507FDA51C10C61E00BBD759 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA41C10C61E00BBD759 /* NavigationController.swift */; };
 		6507FDA81C10CB2100BBD759 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA61C10CB2100BBD759 /* DataBase.xcdatamodeld */; };
 		6507FDAA1C10CFEF00BBD759 /* DataParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA91C10CFEF00BBD759 /* DataParameters.swift */; };
@@ -153,7 +152,6 @@
 		49CE03691BD56216000F76D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49CE036B1BD56216000F76D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CE038D1BD56400000F76D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		49CF58B61BF2CDF6000B0059 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6507FDA41C10C61E00BBD759 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		6507FDA71C10CB2100BBD759 /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
 		6507FDA91C10CFEF00BBD759 /* DataParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParameters.swift; sourceTree = "<group>"; };
@@ -265,14 +263,6 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		498AA1371BF3CB9A002882E1 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				49A4E8071BF3D5920059D441 /* SWReveal */,
-			);
-			name = Vendors;
-			sourceTree = "<group>";
-		};
 		49A4E8071BF3D5920059D441 /* SWReveal */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +276,7 @@
 		49A7CF2F1BF3AFC200BCA090 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				49A4E8071BF3D5920059D441 /* SWReveal */,
 				652C13A31C0F668E0003FD92 /* NotificationSetting.swift */,
 				493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */,
 				493AF38A1BF3E20E004BADE4 /* CustomCell.swift */,
@@ -347,14 +338,12 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
-				498AA1371BF3CB9A002882E1 /* Vendors */,
 				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
 				49CF58B41BF28964000B0059 /* Controller */,
 				49A7CF2F1BF3AFC200BCA090 /* Utils */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* MainViewController.swift */,
-				49CF58B61BF2CDF6000B0059 /* Constants.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
 				493AF3831BF3E129004BADE4 /* Login.swift */,
 				493AF3841BF3E129004BADE4 /* NewProposal.swift */,
@@ -424,7 +413,7 @@
 				TargetAttributes = {
 					49CE035B1BD56216000F76D7 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = X359A743C5;
+						DevelopmentTeam = 8Q398C765X;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -513,7 +502,6 @@
 				6507FDC51C10E36400BBD759 /* ProposalAgreement+CoreDataProperties.swift in Sources */,
 				65112E3A1BFB87E000350721 /* CommentsCountCell.swift in Sources */,
 				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
-				49CF58B71BF2CDF6000B0059 /* Constants.swift in Sources */,
 				493AF3861BF3E129004BADE4 /* Login.swift in Sources */,
 				6507FDC31C10E36400BBD759 /* MyLikes+CoreDataProperties.swift in Sources */,
 				65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */,
@@ -660,7 +648,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Mobilize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,7 +671,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Mobilize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Mobilize;
 				PRODUCT_NAME = "$(TARGET_NAME)";

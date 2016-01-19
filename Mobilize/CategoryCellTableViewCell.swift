@@ -11,9 +11,7 @@ import UIKit
 class CategoryCellTableViewCell: UITableViewCell {
 
     @IBOutlet var categoryImage: UIImageView!
-    
     @IBOutlet var categoryName: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +20,5 @@ class CategoryCellTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
