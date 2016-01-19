@@ -27,6 +27,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
 
     var valueToPass : CustomCell!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SharedValues.filter = self
@@ -277,6 +279,8 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
             vc.proposalID = valueToPass.proposalId!
         }
     }
+    
+        
     
     
 //    func abreviateNumber (num: Int, dec: Int) -> String{
