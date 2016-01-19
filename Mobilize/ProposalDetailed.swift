@@ -9,24 +9,21 @@
 import UIKit
 import Parse
 
-class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ProposalDetailed: UIViewController {
   @IBOutlet var commentTextField: UITextField!
   @IBOutlet var tableView: UITableView!
-  
   @IBOutlet var toolBar: UIView!
   @IBOutlet var toolBarHeightConstraint: NSLayoutConstraint!
-  
   @IBOutlet var commentButton: UIButton!
   
-  var comments : [PFObject] = [PFObject]()
-  var tapGesture : UITapGestureRecognizer?
-  var constraintHeightToolbar : CGFloat?
-  
-  var proposal : CustomCell = CustomCell()
-  var commentsCount : Int = 0
-  var proposalID : String!
-  var agreeClicked : Bool?
-  var proposalAgreement : ProposalAgreement?
+  var comments: [PFObject] = [PFObject]()
+  var tapGesture: UITapGestureRecognizer?
+  var constraintHeightToolbar: CGFloat?
+  var proposal: CustomCell = CustomCell()
+  var commentsCount: Int = 0
+  var proposalID: String!
+  var agreeClicked: Bool?
+  var proposalAgreement: ProposalAgreement?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,7 +45,164 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     super.viewWillAppear(true)
   }
   
-  //MARK: - TableView Delegate Methods
+  @IBAction func sendComment(sender: UIButton) {
+    self.commentTextField.text = ""
+    self.commentTextField.endEditing(true)
+  }
+  
+  func keyboardWillShow(notification: NSNotification) {
+    let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    
+    print(frame.height)
+    self.view.layoutIfNeeded()
+    UIView.animateWithDuration(0.5, animations: {
+      self.toolBarHeightConstraint.constant = frame.height + self.toolBar.frame.height
+      self.view.layoutIfNeeded()
+      }, completion: nil)
+    
+    if tapGesture == nil {
+      print("Add gesture")
+      tapGesture = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
+      self.tableView.addGestureRecognizer(tapGesture!)
+    }
+  }
+  
+  func KeyboardWillHide(notification: NSNotification){
+    self.view.layoutIfNeeded()
+    UIView.animateWithDuration(0.5, animations: { () -> Void in
+      self.toolBarHeightConstraint.constant = self.constraintHeightToolbar!
+      self.view.layoutIfNeeded()
+      }, completion: nil)
+    if tapGesture != nil {
+      self.tableView.removeGestureRecognizer(tapGesture!)
+      tapGesture = nil
+    }
+  }
+  
+  func dismissKeyboard(sender: AnyObject) {
+    self.commentTextField.resignFirstResponder()
+  }
+  
+  func loadComments() {
+    let query = PFQuery(className:"Comment")
+    
+    let innerQuery = PFQuery(className: "Proposal")
+    innerQuery.whereKey("objectId", equalTo: self.proposal.proposalId!)
+    
+    query.includeKey("User")
+    query.includeKey("Proposal")
+    //This is to get only the ones that are on stage one of maturation
+    print("proposta \(self.proposal.proposalId!)")
+    query.whereKey("Proposal", matchesQuery: innerQuery)
+    self.comments.removeAll()
+    print("Go get the comments")
+    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+      if error == nil {
+        print(objects)
+        self.commentsCount = (objects?.count)!
+        for object in objects! {
+          self.comments.append(object)
+        }
+      }else {
+        print("Couldn't retrieve any comment")
+      }
+      
+      self.tableView.reloadData()
+    }
+  }
+  
+  @IBAction func saveComment(sender: AnyObject) {
+    let comment = PFObject(className: "Comment")
+    let user = PFUser.currentUser()
+    print("proposal id franclin: \(user)")
+    comment["UserWhoComment"] = user
+    comment["text"] = self.commentTextField.text
+    let objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
+    
+    comment["Proposal"] = objProposal
+    comment["stars"] = 0
+    print(comment["UserWhoComment"])
+    print(comment["text"])
+    print(comment["Proposal"])
+    
+    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+      if success {
+        PFCloud.callFunctionInBackground("hello", withParameters: nil) { results, error in
+          if error != nil {
+            print("Deu erro no cloud code")
+          } else {
+            print("Deu certo o cloud code")
+          }
+        }
+        
+        self.loadComments()
+        print("deu certo")
+      }else{
+        print("deu erro")
+      }
+    }
+  }
+  
+  func agree(sender: UIButton) {
+    if sender.tag == 0 {
+      print("Peguei o botão")
+      var array = self.tableView.indexPathsForVisibleRows
+      
+      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+      
+      let user : PFUser = PFUser.currentUser()!
+      print(user.objectId!)
+      print(self.proposalID)
+      
+      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+      
+      if ((flags?[0].agreeFlag) != nil) {
+        print("ta verdadeiro")
+      }else {
+        print("é falso")
+        //activate the flag that can change the button
+      }
+      
+      cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
+      cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
+      cell?.agreeCount.textColor = UIColor.whiteColor()
+      cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+      cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+    }
+  }
+  
+  func disagree(sender: UIButton){
+    if sender.tag == 0 {
+      print("Discordo")
+      
+      var array = self.tableView.indexPathsForVisibleRows
+      
+      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+      
+      let user : PFUser = PFUser.currentUser()!
+      print(user.objectId!)
+      print(self.proposalID)
+      
+      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+      
+      if ((flags?[0].agreeFlag) != nil) {
+        print("ta verdadeiro")
+      }else {
+        print("é falso")
+        //activate the flag that can change the button
+      }
+      
+      cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
+      cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
+      cell?.disagreeCount.textColor = UIColor.whiteColor()
+      cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+      cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
+    }
+  }
+}
+
+// MARK - UITableViewDataSource
+extension ProposalDetailed: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 3
   }
@@ -146,163 +300,16 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
       return cell
     }
   }
-  
+}
+
+// MARK - UITableViewDelegate
+extension ProposalDetailed: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return UITableViewAutomaticDimension
   }
+}
+
+// MARK - UITextFieldDelegate
+extension ProposalDetailed: UITextFieldDelegate {
   
-  @IBAction func sendComment(sender: UIButton) {
-    self.commentTextField.text = ""
-    self.commentTextField.endEditing(true)
-  }
-  
-  func keyboardWillShow(notification: NSNotification) {
-    let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-    
-    print(frame.height)
-    self.view.layoutIfNeeded()
-    UIView.animateWithDuration(0.5, animations: {
-      self.toolBarHeightConstraint.constant = frame.height + self.toolBar.frame.height
-      self.view.layoutIfNeeded()
-      }, completion: nil)
-    
-    if tapGesture == nil {
-      print("Add gesture")
-      tapGesture = UITapGestureRecognizer(target: self, action: "dismissKeyboard:")
-      self.tableView.addGestureRecognizer(tapGesture!)
-    }
-  }
-  
-  func KeyboardWillHide(notification: NSNotification){
-    self.view.layoutIfNeeded()
-    UIView.animateWithDuration(0.5, animations: { () -> Void in
-      self.toolBarHeightConstraint.constant = self.constraintHeightToolbar!
-      self.view.layoutIfNeeded()
-      }, completion: nil)
-    if tapGesture != nil {
-      self.tableView.removeGestureRecognizer(tapGesture!)
-      tapGesture = nil
-    }
-  }
-  
-  func dismissKeyboard(sender: AnyObject) {
-    self.commentTextField.resignFirstResponder()
-  }
-  
-  func loadComments (){
-    let query = PFQuery(className:"Comment")
-    
-    let innerQuery = PFQuery(className: "Proposal")
-    innerQuery.whereKey("objectId", equalTo: self.proposal.proposalId!)
-    
-    query.includeKey("User")
-    query.includeKey("Proposal")
-    //This is to get only the ones that are on stage one of maturation
-    print("proposta \(self.proposal.proposalId!)")
-    query.whereKey("Proposal", matchesQuery: innerQuery)
-    self.comments.removeAll()
-    print("Go get the comments")
-    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-      if error == nil {
-        print(objects)
-        self.commentsCount = (objects?.count)!
-        for object in objects! {
-          self.comments.append(object)
-        }
-      }else {
-        print("Couldn't retrieve any comment")
-      }
-      
-      self.tableView.reloadData()
-    }
-  }
-  
-  @IBAction func saveComment(sender: AnyObject) {
-    let comment = PFObject(className: "Comment")
-    let user = PFUser.currentUser()
-    print("proposal id franclin: \(user)")
-    comment["UserWhoComment"] = user
-    comment["text"] = self.commentTextField.text
-    let objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
-    
-    comment["Proposal"] = objProposal
-    comment["stars"] = 0
-    print(comment["UserWhoComment"])
-    print(comment["text"])
-    print(comment["Proposal"])
-    
-    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-      if success {
-        PFCloud.callFunctionInBackground("hello", withParameters: nil) { results, error in
-          if error != nil {
-            print("Deu erro no cloud code")
-          } else {
-            print("Deu certo o cloud code")
-          }
-        }
-        
-        self.loadComments()
-        print("deu certo")
-      }else{
-        print("deu erro")
-      }
-    }
-  }
-  
-  func agree(sender: UIButton){
-    if sender.tag == 0 {
-      print("Peguei o botão")
-      var array = self.tableView.indexPathsForVisibleRows
-      
-      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
-      
-      let user : PFUser = PFUser.currentUser()!
-      print(user.objectId!)
-      print(self.proposalID)
-      
-      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
-      
-      if ((flags?[0].agreeFlag) != nil) {
-        print("ta verdadeiro")
-      }else {
-        print("é falso")
-        //activate the flag that can change the button
-      }
-      
-      cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
-      cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
-      cell?.agreeCount.textColor = UIColor.whiteColor()
-      cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-      cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
-    }
-  }
-  
-  func disagree(sender: UIButton){
-    if sender.tag == 0 {
-      print("Discordo")
-      
-      var array = self.tableView.indexPathsForVisibleRows
-      
-      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
-      
-      let user : PFUser = PFUser.currentUser()!
-      print(user.objectId!)
-      print(self.proposalID)
-      
-      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
-      
-      if ((flags?[0].agreeFlag) != nil) {
-        print("ta verdadeiro")
-      }else {
-        print("é falso")
-        //activate the flag that can change the button
-      }
-      
-      cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
-      cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
-      cell?.disagreeCount.textColor = UIColor.whiteColor()
-      cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-      cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
-    }
-  }
 }

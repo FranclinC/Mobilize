@@ -9,8 +9,7 @@
 import UIKit
 import Parse
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+class SettingsViewController: UIViewController {
   @IBOutlet var tableView: UITableView!
   var countComment : NSNumber?
   var myCommentsCount : Int32?
@@ -22,9 +21,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     self.loadUserStats()
     self.tableView.estimatedRowHeight = 44
     self.tableView.rowHeight = UITableViewAutomaticDimension
-    self.tableView.registerNib(UINib(nibName: "SettingsPicture", bundle: nil), forCellReuseIdentifier: "settingsPicture")
-    self.tableView.registerNib(UINib(nibName: "SettingsGroup1", bundle: nil), forCellReuseIdentifier: "settingsGroup1")
-    self.tableView.registerNib(UINib(nibName: "SettingsGroup2", bundle: nil), forCellReuseIdentifier: "settingsGroup2")
+    
+    self.tableView.registerNib(UINib(nibName: "SettingsPicture",
+      bundle: nil), forCellReuseIdentifier: "settingsPicture")
+    self.tableView.registerNib(UINib(nibName: "SettingsGroup1",
+      bundle: nil), forCellReuseIdentifier: "settingsGroup1")
+    self.tableView.registerNib(UINib(nibName: "SettingsGroup2",
+      bundle: nil), forCellReuseIdentifier: "settingsGroup2")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -33,28 +36,52 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     self.tabBarController?.navigationItem.rightBarButtonItem = nil
     self.tabBarController?.navigationItem.hidesBackButton = true
     self.tabBarController?.navigationItem.titleView = nil
-    
     self.tabBarController?.navigationItem.title = "Configurações"
-    self.tabBarController?.navigationItem.titleView?.tintColor = UIColor(colorLiteralRed: 70/255, green: 97/255, blue: 157/255, alpha: 1)
+    self.tabBarController?.navigationItem.titleView?.tintColor =
+      UIColor(colorLiteralRed: 70/255, green: 97/255, blue: 157/255, alpha: 1)
   }
   
+  func loadUserStats() {
+    let user = PFUser.currentUser()
+    let query = PFQuery(className: "Comment")
+    query.whereKey("UserWhoComment", equalTo: user!)
+    
+    query.countObjectsInBackgroundWithBlock { (count: Int32,
+      error: NSError?) -> Void in
+      if error == nil {
+        self.myCommentsCount = count
+        print("Olha ai quantos tenho\(count)")
+      }
+    }
+    
+    //Find the proposals the user created
+    let query2 = PFQuery(className: "Proposal")
+    query2.whereKey("User", equalTo: user!)
+    query2.findObjectsInBackgroundWithBlock { (objects: [PFObject]?,
+      error: NSError?) -> Void in
+      self.myProposals = objects?.count
+      
+      //This could be better but I am in a hurry
+      for object in objects! {
+        if (object["Maturation"] as! String) == "MobDick"{
+          self.myMobProposals = self.myMobProposals! + 1 //Add one
+        }
+      }
+    }
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension SettingsViewController: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 2 // Should be 3, app store change
+    return 2
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if section == 0 {
-      return 1
-    }else{ //if section == 1{
-      return 2 //should be 3
-    }//else{
-    // return 2
-    //}
-  }
-  
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
-      let cellUser = tableView.dequeueReusableCellWithIdentifier("settingsPicture", forIndexPath: indexPath) as! SettingsPicture
+      let cellUser = tableView.dequeueReusableCellWithIdentifier("settingsPicture",
+        forIndexPath: indexPath) as! SettingsPicture
       let user = PFUser.currentUser()
       
       if user!["profile_picture"] == nil {
@@ -62,7 +89,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
       }else {
         
         let userImageFile = user!["profile_picture"] as! PFFile
-        userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+        userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?,
+          error: NSError?) -> Void in
           if error == nil {
             if let imageData = imageData {
               let image = UIImage(data:imageData)
@@ -81,7 +109,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
       cellUser.contributionLabel.text = "Contribui desde " + dateString
       return cellUser
     }else {
-      let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2", forIndexPath: indexPath) as! SettingsGroup2
+      let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2",
+        forIndexPath: indexPath) as! SettingsGroup2
       
       if indexPath.row == 0 {
         cellGroup2.imageIcon.image = UIImage(named: "Config_Notification")
@@ -95,6 +124,18 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
   }
   
+  func tableView(tableView: UITableView,
+    numberOfRowsInSection section: Int) -> Int {
+    if section == 0 {
+      return 1
+    }else{
+      return 2
+    }
+  }
+}
+
+// MARK: - UITableViewDelegate
+extension SettingsViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return UITableViewAutomaticDimension
   }
@@ -119,33 +160,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
       return CGFloat.min
     }else {
       return 10
-    }
-  }
-  
-  func loadUserStats (){
-    let user = PFUser.currentUser()
-    let query = PFQuery(className: "Comment")
-    query.whereKey("UserWhoComment", equalTo: user!)
-    
-    query.countObjectsInBackgroundWithBlock { (count: Int32, error: NSError?) -> Void in
-      if error == nil {
-        self.myCommentsCount = count
-        print("Olha ai quantos tenho\(count)")
-      }
-    }
-    
-    //Find the proposals the user created
-    let query2 = PFQuery(className: "Proposal")
-    query2.whereKey("User", equalTo: user!)
-    query2.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-      self.myProposals = objects?.count
-      
-      //This could be better but I am in a hurry
-      for object in objects! {
-        if (object["Maturation"] as! String) == "MobDick"{
-          self.myMobProposals = self.myMobProposals! + 1 //Add one
-        }
-      }
     }
   }
 }

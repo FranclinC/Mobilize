@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-No-DKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1554" y="262"/>
+            <point key="canvasLocation" x="-1554" y="118"/>
         </scene>
         <!--Projetos-->
         <scene sceneID="VvU-xU-c0t">
@@ -574,10 +574,10 @@
             </objects>
             <point key="canvasLocation" x="212" y="-1895"/>
         </scene>
-        <!--Notification-->
+        <!--Notificações-->
         <scene sceneID="745-Ir-Y1i">
             <objects>
-                <viewController title="Notification" id="aF0-Yd-c9W" customClass="NotificationSettings" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notificações" id="aF0-Yd-c9W" customClass="NotificationsViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1P-fl-R2g"/>
                         <viewControllerLayoutGuide type="bottom" id="ayY-qd-xr1"/>
@@ -736,7 +736,7 @@
         <image name="wave_login" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C4L-u1-t4V"/>
+        <segue reference="2br-EA-3pG"/>
         <segue reference="9CY-ao-IVr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>

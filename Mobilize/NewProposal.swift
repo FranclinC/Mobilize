@@ -9,46 +9,34 @@
 import UIKit
 import Parse
 
-class NewProposal: UIViewController, UITextViewDelegate {
+class NewProposal: UIViewController {
   @IBOutlet var proposalText: UITextView!
-  
   @IBOutlet var toolBar: UIToolbar!
-  
   @IBOutlet var educationButton: UIBarButtonItem!
   @IBOutlet var heathButton: UIBarButtonItem!
   @IBOutlet var transportButton: UIBarButtonItem!
   @IBOutlet var securityButton: UIBarButtonItem!
   @IBOutlet var cultureButton: UIBarButtonItem!
-  
   @IBOutlet var healthBtn: UIButton!
   @IBOutlet var transportBtn: UIButton!
   @IBOutlet var educationBtn: UIButton!
   @IBOutlet var securityBtn: UIButton!
   @IBOutlet var cultureBtn: UIButton!
-  
   @IBOutlet var toolBarView: UIView!
-  
   @IBOutlet var backButtonNavigator: UINavigationItem!
-  
   @IBOutlet var constraintToolBarHeight: NSLayoutConstraint!
   @IBOutlet var constraintToolBarBottom: NSLayoutConstraint!
   @IBOutlet var constraintToolBarTop: NSLayoutConstraint!
   
   var keyboardDismissSwipeGesture: UISwipeGestureRecognizer?
   var initialConstraint : CGFloat?
-  
   var h1 = 1
   var t1 = 1
   var e1 = 1
   var s1 = 1
   var c1 = 1
-  
   var categories = 0
   var categoriesName = [String]()
-  
-  // ----------> refactoring
-  var arr = [Bool](count: 5, repeatedValue: false) // change name to categories later
-  var counter: Int = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -172,7 +160,7 @@ class NewProposal: UIViewController, UITextViewDelegate {
     }
   }
   
-  func saveProposal (){
+  func saveProposal() {
     self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
     let proposal = PFObject(className: "Proposal")
     let user = PFUser.currentUser()
@@ -227,8 +215,10 @@ class NewProposal: UIViewController, UITextViewDelegate {
   func dismissKeyboard(sender: AnyObject) {
     self.proposalText?.resignFirstResponder()
   }
-  
-  //MARK - Placeholder
+}
+
+// MARK - UITextViewDelegate
+extension NewProposal: UITextViewDelegate {
   func textViewDidBeginEditing(textView: UITextView) {
     if textView.textColor == UIColor.lightGrayColor() {
       textView.text = nil

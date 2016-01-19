@@ -8,15 +8,13 @@
 
 import UIKit
 
-class NavigationController: UINavigationController, UINavigationControllerDelegate {
-  
+class NavigationController: UINavigationController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController?.navigationItem.backBarButtonItem?.title = ""
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+}
+
+// MARK: - UINavigationControllerDelegate
+extension NavigationController: UINavigationControllerDelegate {
 }

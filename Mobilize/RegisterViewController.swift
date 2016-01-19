@@ -9,22 +9,26 @@
 import UIKit
 import Parse
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
-  
+class RegisterViewController: UIViewController {
   @IBOutlet var user_username: UITextField!
   @IBOutlet var userName: UITextField!
   @IBOutlet var userEmail: UITextField!
   @IBOutlet var userPassword: UITextField!
-  
   @IBOutlet var signUpButton: UIButton!
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
     
-    let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    NSNotificationCenter.defaultCenter().addObserver(self,
+      selector: Selector("keyboardWillShow:"),
+      name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self,
+      selector: Selector("keyboardWillHide:"),
+      name: UIKeyboardWillHideNotification, object: nil)
+    
+    let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+      action: "dismissKeyboard")
+    
     view.addGestureRecognizer(tapGesture)
     self.userPassword.delegate = self
     self.userPassword.secureTextEntry = true
@@ -55,12 +59,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     super.viewWillDisappear(animated)
     self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
     self.navigationController?.navigationBar.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
-  }
-  
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
-    self.userPassword.resignFirstResponder()
-    self.SignUp(self)
-    return true
   }
   
   @IBAction func SignUp(sender: AnyObject) {
@@ -117,5 +115,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
   
   func dismissKeyboard() {
     self.view.endEditing(true)
+  }
+}
+
+// MARK: - UITextFieldDelegate
+extension RegisterViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    self.userPassword.resignFirstResponder()
+    self.SignUp(self)
+    return true
   }
 }

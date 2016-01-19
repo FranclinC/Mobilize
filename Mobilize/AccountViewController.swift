@@ -10,14 +10,12 @@ import UIKit
 import Parse
 import ParseFacebookUtilsV4
 
-class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+class AccountViewController: UIViewController {
   @IBOutlet var tableView: UITableView!
   @IBOutlet var logOutButton: UIButton!
   
   var user : PFUser!
   var isLinkedWithFacebook : Bool = Bool()
-  
   var userName : String?
   var currentPassword : String?
   var newPassword : String?
@@ -37,11 +35,54 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     self.navigationItem.rightBarButtonItem = doneButton
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func saveConfiguration() {
+    var array = self.tableView.indexPathsForVisibleRows
+    
+    let cellNome : AccountCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? AccountCell
+    let cellCurrentPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![1]) as? AccountCell
+    let cellNewPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![2]) as? AccountCell
+    let cellConfirm : AccountCell? = self.tableView.cellForRowAtIndexPath(array![3]) as? AccountCell
+    
+    var didChange = false
+    
+    if cellNome?.textCell.text != "" {
+      user.setValue(cellNome?.textCell.text, forKey: "name")
+      print("Mudei essa porra")
+      didChange = true
+    }
+    
+    if !self.isLinkedWithFacebook {
+      if cellCurrentPassword != "" {
+        if cellNewPassword?.textCell.text == cellConfirm?.textCell.text {
+          self.user.setValue(cellNewPassword?.textCell.text, forKey: "password")
+          didChange = true
+        }else{
+          //Show alert
+          let alertError = UIAlertController(title: "Erro", message: "Confirmar senha não confere com nova senha", preferredStyle: UIAlertControllerStyle.Alert)
+          let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+          
+          alertError.addAction(okAction)
+          self.presentViewController(alertError, animated: true, completion: nil)
+        }
+      }
+    }
+    
+    if didChange {
+      self.user.saveEventually()
+    }
+    
+    self.navigationController?.popViewControllerAnimated(true)
   }
   
+  @IBAction func logOut(sender: AnyObject) {
+    PFUser.logOut()
+    self.performSegueWithIdentifier("logOut", sender: nil)
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension AccountViewController: UITableViewDataSource {
+  // table view data source methods
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 3
   }
@@ -90,14 +131,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
   }
   
-  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    if section == 0  || section == 2 {
-      return CGFloat.min
-    }else {
-      return 0
-    }
-  }
-  
   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     if section == 1 {
       return "Senha".capitalizedString
@@ -114,48 +147,15 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     return ""
   }
-  
-  func saveConfiguration() {
-    var array = self.tableView.indexPathsForVisibleRows
-    
-    let cellNome : AccountCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? AccountCell
-    let cellCurrentPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![1]) as? AccountCell
-    let cellNewPassword : AccountCell? = self.tableView.cellForRowAtIndexPath(array![2]) as? AccountCell
-    let cellConfirm : AccountCell? = self.tableView.cellForRowAtIndexPath(array![3]) as? AccountCell
-    
-    var didChange = false
-    
-    if cellNome?.textCell.text != "" {
-      user.setValue(cellNome?.textCell.text, forKey: "name")
-      print("Mudei essa porra")
-      didChange = true
+}
+
+// MARK: - UITableViewDelegate
+extension AccountViewController: UITableViewDelegate {
+  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    if section == 0  || section == 2 {
+      return CGFloat.min
+    }else {
+      return 0
     }
-    
-    if !self.isLinkedWithFacebook {
-      if cellCurrentPassword != "" {
-        if cellNewPassword?.textCell.text == cellConfirm?.textCell.text {
-          self.user.setValue(cellNewPassword?.textCell.text, forKey: "password")
-          didChange = true
-        }else{
-          //Show alert
-          let alertError = UIAlertController(title: "Erro", message: "Confirmar senha não confere com nova senha", preferredStyle: UIAlertControllerStyle.Alert)
-          let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
-          
-          alertError.addAction(okAction)
-          self.presentViewController(alertError, animated: true, completion: nil)
-        }
-      }
-    }
-    
-    if didChange {
-      self.user.saveEventually()
-    }
-    
-    self.navigationController?.popViewControllerAnimated(true)
-  }
-  
-  @IBAction func logOut(sender: AnyObject) {
-    PFUser.logOut()
-    self.performSegueWithIdentifier("logOut", sender: nil)
   }
 }

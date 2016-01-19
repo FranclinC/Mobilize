@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 class DataParameters: NSObject {
-  
   var managedObjectContext: NSManagedObjectContext
   
   override init() {

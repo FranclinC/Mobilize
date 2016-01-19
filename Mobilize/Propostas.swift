@@ -10,12 +10,9 @@ import UIKit
 import Parse
 
 
-class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, SingletonDelegate {
-  
+class Propostas: UIViewController {
   @IBOutlet var tableView: UITableView!
-  
   @IBOutlet var segmentedControl: UISegmentedControl!
-  
   @IBOutlet var themesButton: UIBarButtonItem!
   @IBOutlet var newProposal: UIBarButtonItem!
   
@@ -52,6 +49,69 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     super.viewWillDisappear(true)
   }
   
+  func loadProposals(maturation: String, filter: String) {
+    let query = PFQuery(className:"Proposal")
+    
+    query.includeKey("User")
+    query.whereKey("Maturation", equalTo: maturation)
+    query.whereKey("Category", equalTo: filter)
+    self.proposals.removeAll()
+    
+    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+      if error == nil {
+        print("Got the objects")
+        for object in objects! {
+          self.proposals.append(object)
+        }
+      } else {
+        print("Couldn't retrieve any object")
+      }
+      
+      self.tableView.reloadData()
+    }
+  }
+  
+  @IBAction func makeProposal(sender: AnyObject) {
+    self.performSegueWithIdentifier("makeProposal", sender: nil)
+  }
+  
+  @IBAction func maturation(sender: UISegmentedControl) {
+    switch segmentedControl.selectedSegmentIndex {
+    case 0:
+      self.maturation = "BabyMob"
+      print("Maturation: BabyMob")
+      self.loadProposals("BabyMob", filter: "All")
+      
+    case 1:
+      self.maturation = "Mob"
+      print("Maturation: Mob")
+      self.loadProposals("Mob", filter: "All")
+    case 2:
+      self.maturation = "MobDick"
+      print("Maturation: Modick")
+      self.loadProposals("MobDick", filter: "All")
+    default:
+      break
+    }
+  }
+  
+  func changeFilter(category: String) {
+    self.loadProposals(self.maturation!, filter: category)
+    
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if segue.identifier == "proposalDetailed" {
+      let vc = segue.destinationViewController as! ProposalDetailed
+      vc.proposal = valueToPass
+      vc.proposalID = valueToPass.proposalId!
+    }
+  }
+}
+
+// MARK - UITableViewDataSource
+extension Propostas: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
@@ -133,7 +193,10 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     
     return cell
   }
-  
+}
+
+// MARK - UITableViewDelegate
+extension Propostas: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let indexPath = tableView.indexPathForSelectedRow
     let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as! CustomCell
@@ -141,64 +204,9 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
     self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
     self.performSegueWithIdentifier("proposalDetailed", sender: self)
   }
+}
+
+// MARK - SingletonDelegate
+extension Propostas: SingletonDelegate {
   
-  func loadProposals(maturation: String, filter: String) {
-    let query = PFQuery(className:"Proposal")
-    
-    query.includeKey("User")
-    query.whereKey("Maturation", equalTo: maturation)
-    query.whereKey("Category", equalTo: filter)
-    self.proposals.removeAll()
-    
-    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-      if error == nil {
-        print("Got the objects")
-        for object in objects! {
-          self.proposals.append(object)
-        }
-      } else {
-        print("Couldn't retrieve any object")
-      }
-      
-      self.tableView.reloadData()
-    }
-  }
-  
-  @IBAction func makeProposal(sender: AnyObject) {
-    self.performSegueWithIdentifier("makeProposal", sender: nil)
-  }
-  
-  @IBAction func maturation(sender: UISegmentedControl) {
-    switch segmentedControl.selectedSegmentIndex {
-    case 0:
-      self.maturation = "BabyMob"
-      print("Maturation: BabyMob")
-      self.loadProposals("BabyMob", filter: "All")
-      
-    case 1:
-      self.maturation = "Mob"
-      print("Maturation: Mob")
-      self.loadProposals("Mob", filter: "All")
-    case 2:
-      self.maturation = "MobDick"
-      print("Maturation: Modick")
-      self.loadProposals("MobDick", filter: "All")
-    default:
-      break
-    }
-  }
-  
-  func changeFilter(category: String) {
-    self.loadProposals(self.maturation!, filter: category)
-    
-  }
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-    if segue.identifier == "proposalDetailed" {
-      let vc = segue.destinationViewController as! ProposalDetailed
-      vc.proposal = valueToPass
-      vc.proposalID = valueToPass.proposalId!
-    }
-  }
 }

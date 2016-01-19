@@ -9,16 +9,14 @@
 import UIKit
 
 class CategoryCellTableViewCell: UITableViewCell {
-
-    @IBOutlet var categoryImage: UIImageView!
-    @IBOutlet var categoryName: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+  @IBOutlet var categoryImage: UIImageView!
+  @IBOutlet var categoryName: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
 }

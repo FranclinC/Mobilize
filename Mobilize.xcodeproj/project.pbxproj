@@ -76,10 +76,9 @@
 		65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E431BFCEEA900350721 /* ProposalDetailed.swift */; };
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		652C139B1C0E03B70003FD92 /* NotificationSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C139A1C0E03B70003FD92 /* NotificationSetting.xib */; };
-		652C139F1C0E057A0003FD92 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C139E1C0E057A0003FD92 /* NotificationSettings.swift */; };
+		652C139F1C0E057A0003FD92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */; };
 		652C13A41C0F668E0003FD92 /* NotificationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C13A31C0F668E0003FD92 /* NotificationSetting.swift */; };
 		65798E9F1BF3E331007A3E51 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65798E9E1BF3E331007A3E51 /* keys.plist */; };
-		65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65798EAA1BF66CAE007A3E51 /* SharedValues.swift */; };
 		65AEF02A1C08CF680065E186 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AEF0291C08CF680065E186 /* AccountCell.xib */; };
 		65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AEF02B1C08D12C0065E186 /* AccountCell.swift */; };
 		65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AEF02D1C08D2B40065E186 /* AccountViewController.swift */; };
@@ -168,10 +167,9 @@
 		65112E431BFCEEA900350721 /* ProposalDetailed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailed.swift; sourceTree = "<group>"; };
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		652C139A1C0E03B70003FD92 /* NotificationSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationSetting.xib; sourceTree = "<group>"; };
-		652C139E1C0E057A0003FD92 /* NotificationSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
+		652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		652C13A31C0F668E0003FD92 /* NotificationSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSetting.swift; sourceTree = "<group>"; };
 		65798E9E1BF3E331007A3E51 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
-		65798EAA1BF66CAE007A3E51 /* SharedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedValues.swift; sourceTree = "<group>"; };
 		65AEF0291C08CF680065E186 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		65AEF02B1C08D12C0065E186 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		65AEF02D1C08D2B40065E186 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -346,7 +344,6 @@
 				493AF3841BF3E129004BADE4 /* NewProposal.swift */,
 				493AF3851BF3E129004BADE4 /* Propostas.swift */,
 				493AF38B1BF3E20E004BADE4 /* ThemesCategory.swift */,
-				65798EAA1BF66CAE007A3E51 /* SharedValues.swift */,
 				65112E431BFCEEA900350721 /* ProposalDetailed.swift */,
 			);
 			path = Mobilize;
@@ -359,7 +356,7 @@
 				493AF3831BF3E129004BADE4 /* LoginViewController.swift */,
 				49A7CF391BF3B89F00BCA090 /* RegisterViewController.swift */,
 				65AEF02D1C08D2B40065E186 /* AccountViewController.swift */,
-				652C139E1C0E057A0003FD92 /* NotificationSettings.swift */,
+				652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */,
 				6507FDA41C10C61E00BBD759 /* NavigationController.swift */,
 			);
 			name = Controller;
@@ -501,12 +498,11 @@
 				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
 				493AF3861BF3E129004BADE4 /* LoginViewController.swift in Sources */,
 				6507FDC31C10E36400BBD759 /* MyLikes+CoreDataProperties.swift in Sources */,
-				65798EAB1BF66CAE007A3E51 /* SharedValues.swift in Sources */,
 				65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */,
 				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
 				65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */,
 				65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */,
-				652C139F1C0E057A0003FD92 /* NotificationSettings.swift in Sources */,
+				652C139F1C0E057A0003FD92 /* NotificationsViewController.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
 				49A7CF381BF3B3AC00BCA090 /* SettingsViewController.swift in Sources */,
 				6507FDAA1C10CFEF00BBD759 /* DataParameters.swift in Sources */,

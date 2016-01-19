@@ -9,20 +9,15 @@
 import UIKit
 
 class SettingsGroup2: UITableViewCell {
-
-    @IBOutlet var imageIcon: UIImageView!
-    @IBOutlet var labelCell: UILabel!
-    @IBOutlet var arrow: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  @IBOutlet var imageIcon: UIImageView!
+  @IBOutlet var labelCell: UILabel!
+  @IBOutlet var arrow: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
 }

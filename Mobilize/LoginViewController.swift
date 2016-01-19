@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import ParseFacebookUtilsV4
 import Parse
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
   @IBOutlet var logoMobi: UIImageView!
   @IBOutlet var backgroundImage: UIImageView!
   
@@ -55,12 +55,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
   
   override func viewWillDisappear(animated: Bool) {
     self.navigationController?.setNavigationBarHidden(false, animated: false)
-  }
-  
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
-    self.passwordUser.resignFirstResponder()
-    self.logar()
-    return true
   }
   
   func logar(){
@@ -217,11 +211,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     self.performSegueWithIdentifier("signUp", sender: self)
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
   func dismissKeyboard() {
     self.view.endEditing(true)
+  }
+}
+
+// MARK: - UIScrollViewDelegate
+extension LoginViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    self.passwordUser.resignFirstResponder()
+    self.logar()
+    return true
   }
 }

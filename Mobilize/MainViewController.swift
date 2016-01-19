@@ -11,14 +11,6 @@ import UIKit
 class MainViewController: UITabBarController {
   @IBOutlet var tabBarCustom: UITabBar!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)
     self.navigationItem.hidesBackButton = true

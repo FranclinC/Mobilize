@@ -9,24 +9,17 @@
 import UIKit
 
 class SettingsPicture: UITableViewCell {
-
-    
-    @IBOutlet var userPicture: UIImageView!
-    @IBOutlet var userName: UILabel!
-    @IBOutlet var contributionLabel: UILabel!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        self.userPicture.layer.cornerRadius = 6.0
-        self.userPicture.image = UIImage(named: "perfil")
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  @IBOutlet var userPicture: UIImageView!
+  @IBOutlet var userName: UILabel!
+  @IBOutlet var contributionLabel: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    self.userPicture.layer.cornerRadius = 6.0
+    self.userPicture.image = UIImage(named: "perfil")
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
 }

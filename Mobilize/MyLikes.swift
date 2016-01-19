@@ -11,7 +11,4 @@ import CoreData
 
 @objc(MyLikes)
 class MyLikes: NSManagedObject {
-  
-  // Insert code here to add functionality to your managed object subclass
-  
 }

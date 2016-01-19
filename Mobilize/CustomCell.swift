@@ -8,32 +8,20 @@
 
 import UIKit
 
-
-
 class CustomCell: UITableViewCell {
-
-
     @IBOutlet var cellView: UIView!
     @IBOutlet var userPicture: UIImageView!
-
-    
-    @IBOutlet var proposalBy: UILabel! //Thinking that it might change in other languages
+    @IBOutlet var proposalBy: UILabel!
     @IBOutlet var nameUser: UILabel!
-    
     @IBOutlet var category1: UIImageView!
     @IBOutlet var category2: UIImageView!
     @IBOutlet var category3: UIImageView!
-    
     @IBOutlet var textProposal: UILabel!
-    
-    @IBOutlet var upVote: UIImageView! //It is good let it like that because it can change the icon programatically
+    @IBOutlet var upVote: UIImageView!
     @IBOutlet var upVoteCount: UILabel!
-    
-    @IBOutlet var againstVote: UIImageView! //It is good let it like that because it can change the icon programatically. I couldn't find a better name
+    @IBOutlet var againstVote: UIImageView!
     @IBOutlet var againstVoteCount: UILabel!
-    
-    
-    @IBOutlet var comment: UIImageView! //It is good let it like that because it can change the icon programatically
+    @IBOutlet var comment: UIImageView!
     @IBOutlet var commentCount: UILabel!
     
     var maturation : String!
@@ -41,15 +29,10 @@ class CustomCell: UITableViewCell {
     var time : String!
     var proposalId : String!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        //self.layer.cornerRadius = 5.0
         self.cellView.layer.cornerRadius = 6.0
         self.userPicture.layer.cornerRadius = 6.0
-
         self.upVote.image = UIImage(named: "Feed_Like")
         self.againstVote.image = UIImage(named: "Feed_Dislike")
         self.comment.image = UIImage(named: "Feed_Comment")
@@ -57,8 +40,5 @@ class CustomCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

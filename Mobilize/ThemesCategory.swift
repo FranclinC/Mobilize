@@ -68,3 +68,16 @@ class ThemesCategory: UITableViewController {
     revealController.revealToggleAnimated(true)
   }
 }
+
+class SharedValues {
+  static let sharedInstance = SharedValues()
+  static var filter : SingletonDelegate?
+  
+  static func change(category: String){
+    filter?.changeFilter(category)
+  }
+}
+
+protocol SingletonDelegate {
+  func changeFilter(category: String)
+}

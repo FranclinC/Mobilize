@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotificationsViewController: UIViewController {
   
   @IBOutlet var tableView: UITableView!
   override func viewDidLoad() {
@@ -16,11 +16,10 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
     self.tableView.delegate = self
     self.tableView.registerNib(UINib(nibName: "NotificationSetting", bundle: nil), forCellReuseIdentifier: "notificationSetting")
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
+}
+
+// MARK: - UITableViewDataSource
+extension NotificationsViewController: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 3
   }
@@ -31,6 +30,13 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
     }else {
       return 2
     }
+  }
+  
+  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    if section == 2 {
+      return "Mostrar ou ocultar as notificações em banner enquanto você não estiver utilizando o aplicativo."
+    }
+    return ""
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,11 +58,8 @@ class NotificationSettings: UIViewController, UITableViewDelegate, UITableViewDa
       
     }
   }
-  
-  func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    if section == 2 {
-      return "Mostrar ou ocultar as notificações em banner enquanto você não estiver utilizando o aplicativo."
-    }
-    return ""
-  }
+}
+
+// MARK: - UITableViewDelegate
+extension NotificationsViewController: UITableViewDelegate {
 }
