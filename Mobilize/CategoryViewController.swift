@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThemesCategory: UITableViewController {
+class CategoryViewController: UITableViewController {
   
   var categories = [String]()
   var categoriesEnglish = [String]()

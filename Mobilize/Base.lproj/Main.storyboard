@@ -673,10 +673,10 @@
             </objects>
             <point key="canvasLocation" x="-650" y="-625"/>
         </scene>
-        <!--Themes Category-->
+        <!--Category View Controller-->
         <scene sceneID="stn-vq-437">
             <objects>
-                <tableViewController storyboardIdentifier="sideMenu" id="I2o-eh-qUV" customClass="ThemesCategory" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sideMenu" id="I2o-eh-qUV" customClass="CategoryViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n2q-mT-rFP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

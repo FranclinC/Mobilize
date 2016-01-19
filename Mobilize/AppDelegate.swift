@@ -17,7 +17,6 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  var keys: NSDictionary?
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     Parse.enableLocalDatastore()
