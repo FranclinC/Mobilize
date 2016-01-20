@@ -289,15 +289,22 @@
 		49B2972B1BEC244500492550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49CCA7BA1C50025A00061542 /* xib Files */,
 				49CE036B1BD56216000F76D7 /* Info.plist */,
+				49CE03661BD56216000F76D7 /* Assets.xcassets */,
+				42224B1F1C03B00A0051255C /* Proposta */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49CCA7BA1C50025A00061542 /* xib Files */ = {
+			isa = PBXGroup;
+			children = (
 				493AF38F1BF3E248004BADE4 /* CategoryCell.xib */,
 				493AF3901BF3E248004BADE4 /* CustomCell.xib */,
-				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
-				49CE03661BD56216000F76D7 /* Assets.xcassets */,
 				65112E2D1BFA1DCD00350721 /* ProposalCell.xib */,
 				65112E311BFA371E00350721 /* CommentCountCell.xib */,
 				65112E331BFA382D00350721 /* CommentCell.xib */,
-				42224B1F1C03B00A0051255C /* Proposta */,
 				65112E351BFAC58900350721 /* NotificationCell.xib */,
 				65112E471BFFA3EA00350721 /* AgreeSupportView.xib */,
 				65C0B2DF1C0541510010ABED /* SettingsPicture.xib */,
@@ -306,7 +313,7 @@
 				65AEF0291C08CF680065E186 /* AccountCell.xib */,
 				652C139A1C0E03B70003FD92 /* NotificationSetting.xib */,
 			);
-			name = "Supporting Files";
+			name = "xib Files";
 			sourceTree = "<group>";
 		};
 		49CE03531BD56216000F76D7 = {
@@ -341,6 +348,7 @@
 				493AF3851BF3E129004BADE4 /* Propostas.swift */,
 				65112E431BFCEEA900350721 /* ProposalDetailed.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
+				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
