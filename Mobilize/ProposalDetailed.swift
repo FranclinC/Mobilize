@@ -374,7 +374,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
 //                })
                 //Didnt test yet with the function, thats why i commented above.
                 //To fully test, it needs implement a function in cloud code, increment, that do not exist yet.
-                self.incrementVoteAgree()
+                //self.incrementVoteAgree()
               
             }else if (self.state == .disagreed){ //On Disagreed and want to change to agree
                 //Must be the green color
@@ -392,8 +392,8 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! - 1)
                 self.state = .agreed
               
-                self.incrementVoteAgree()
-                self.decrementVoteDisagree()
+                //self.incrementVoteAgree()
+                //self.decrementVoteDisagree()
               
             }else { //Already on agreed
                 //Do nothing
@@ -470,7 +470,7 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                 cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
                 self.state = .disagreed
-                self.incrementVoteDisagree()
+                //self.incrementVoteDisagree()
             }else if (self.state == .agreed) { //Agreed and want to change to disagree
                 //Must be the green color
                 cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
@@ -486,8 +486,10 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
                 cell?.agreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
                 cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! - 1)
                 self.state = .disagreed
-                self.incrementVoteDisagree()
-                self.decrementVoteAgree()
+
+              
+                //self.incrementVoteDisagree()
+                //self.decrementVoteAgree()
             }else {
                 //Do nothing
             }
@@ -517,9 +519,9 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     }
   
   //MARK: - Cloude Code function calls
-  func incrementVoteAgree (){
+  func increment (){
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("incUpVote", withParameters: ["objectId" : self.proposalID], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("increment", withParameters: ["objectId" : self.proposalID, "class" : true], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
@@ -528,31 +530,9 @@ class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDele
     })
   }
   
-  func incrementVoteDisagree(){
+  func decrement (){
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("incDownVote", withParameters: ["objectId" : self.proposalID], block: { (object:AnyObject?, error:NSError?) -> Void in
-      if error != nil {
-        //No error, i just took away the print
-      }else {
-        //Treat the error, it is working, i just took away the print
-      }
-    })
-  }
-  
-  func decrementVoteAgree (){
-    //Call to a function cloud code
-    PFCloud.callFunctionInBackground("decUpVote", withParameters: ["objectId" : self.proposalID], block: { (object:AnyObject?, error:NSError?) -> Void in
-      if error != nil {
-        //No error, i just took away the print
-      }else {
-        //Treat the error, it is working, i just took away the print
-      }
-    })
-  }
-  
-  func decrementVoteDisagree(){
-    //Call to a function cloud code
-    PFCloud.callFunctionInBackground("decDownVote", withParameters: ["objectId" : self.proposalID], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("decrement", withParameters: ["objectId" : self.proposalID, "class" : true], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
