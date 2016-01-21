@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, SingletonDelegate {
+class ProposalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SingletonDelegate {
   
   @IBOutlet var tableView: UITableView!
   var proposals: [PFObject] = [PFObject]()
@@ -274,7 +274,7 @@ class Propostas: UIViewController, UITableViewDataSource, UITableViewDelegate, S
       
       
       
-      let vc = segue.destinationViewController as! ProposalDetailed
+      let vc = segue.destinationViewController as! ProposalDetailedViewController
       vc.proposal = valueToPass
       vc.proposalID = valueToPass.proposalId!
     }

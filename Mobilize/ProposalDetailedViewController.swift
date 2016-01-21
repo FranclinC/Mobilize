@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import CoreData
 
-class ProposalDetailed: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ProposalDetailedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
   
   //these flags are used to control the button
   
