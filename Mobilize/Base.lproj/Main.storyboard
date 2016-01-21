@@ -219,7 +219,7 @@
         <!--Projetos-->
         <scene sceneID="VvU-xU-c0t">
             <objects>
-                <viewController storyboardIdentifier="propostas" title="Projetos" id="ZSc-dY-9U4" customClass="Propostas" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propostas" title="Projetos" id="ZSc-dY-9U4" customClass="ProposalViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cas-9z-rlC"/>
                         <viewControllerLayoutGuide type="bottom" id="UhF-Tt-Dal"/>
@@ -287,7 +287,7 @@
         <!--Proposta-->
         <scene sceneID="G0f-2o-qpK">
             <objects>
-                <viewController storyboardIdentifier="propor" title="Proposta" id="GCA-Md-UTc" customClass="NewProposal" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propor" title="Proposta" id="GCA-Md-UTc" customClass="NewProposalViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fy-ya-Axa"/>
                         <viewControllerLayoutGuide type="bottom" id="oVM-Gs-vCN"/>
@@ -437,7 +437,7 @@
         <!--Proposta-->
         <scene sceneID="NRM-Fh-hu5">
             <objects>
-                <viewController storyboardIdentifier="propostaDetailed" id="gfs-FI-MhW" customClass="ProposalDetailed" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="propostaDetailed" id="gfs-FI-MhW" customClass="ProposalDetailedViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9KC-pw-Vah"/>
                         <viewControllerLayoutGuide type="bottom" id="2KG-Rh-oKH"/>

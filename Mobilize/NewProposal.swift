@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class NewProposal: UIViewController {
+class NewProposalViewController: UIViewController {
   @IBOutlet var proposalText: UITextView!
   @IBOutlet var toolBar: UIToolbar!
   @IBOutlet var educationButton: UIBarButtonItem!
@@ -218,7 +218,7 @@ class NewProposal: UIViewController {
 }
 
 // MARK - UITextViewDelegate
-extension NewProposal: UITextViewDelegate {
+extension NewProposalViewController: UITextViewDelegate {
   func textViewDidBeginEditing(textView: UITextView) {
     if textView.textColor == UIColor.lightGrayColor() {
       textView.text = nil

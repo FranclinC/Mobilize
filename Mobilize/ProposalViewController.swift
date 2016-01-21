@@ -9,8 +9,7 @@
 import UIKit
 import Parse
 
-
-class Propostas: UIViewController {
+class ProposalViewController: UIViewController {
   @IBOutlet var tableView: UITableView!
   @IBOutlet var segmentedControl: UISegmentedControl!
   @IBOutlet var themesButton: UIBarButtonItem!
@@ -103,7 +102,7 @@ class Propostas: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     if segue.identifier == "proposalDetailed" {
-      let vc = segue.destinationViewController as! ProposalDetailed
+      let vc = segue.destinationViewController as! ProposalDetailedViewController
       vc.proposal = valueToPass
       vc.proposalID = valueToPass.proposalId!
     }
@@ -111,7 +110,7 @@ class Propostas: UIViewController {
 }
 
 // MARK - UITableViewDataSource
-extension Propostas: UITableViewDataSource {
+extension ProposalViewController: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
@@ -196,7 +195,7 @@ extension Propostas: UITableViewDataSource {
 }
 
 // MARK - UITableViewDelegate
-extension Propostas: UITableViewDelegate {
+extension ProposalViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let indexPath = tableView.indexPathForSelectedRow
     let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as! CustomCell
@@ -207,6 +206,6 @@ extension Propostas: UITableViewDelegate {
 }
 
 // MARK - SingletonDelegate
-extension Propostas: SingletonDelegate {
+extension ProposalViewController: SingletonDelegate {
   
 }

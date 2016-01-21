@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ProposalDetailed: UIViewController {
+class ProposalDetailedViewController: UIViewController {
   @IBOutlet var commentTextField: UITextField!
   @IBOutlet var tableView: UITableView!
   @IBOutlet var toolBar: UIView!
@@ -202,7 +202,7 @@ class ProposalDetailed: UIViewController {
 }
 
 // MARK - UITableViewDataSource
-extension ProposalDetailed: UITableViewDataSource {
+extension ProposalDetailedViewController: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 3
   }
@@ -303,13 +303,13 @@ extension ProposalDetailed: UITableViewDataSource {
 }
 
 // MARK - UITableViewDelegate
-extension ProposalDetailed: UITableViewDelegate {
+extension ProposalDetailedViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return UITableViewAutomaticDimension
   }
 }
 
 // MARK - UITextFieldDelegate
-extension ProposalDetailed: UITextFieldDelegate {
+extension ProposalDetailedViewController: UITextFieldDelegate {
   
 }

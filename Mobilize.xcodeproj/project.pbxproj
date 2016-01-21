@@ -30,7 +30,7 @@
 		42224B251C03B10E0051255C /* comment_232.png in Resources */ = {isa = PBXBuildFile; fileRef = 42224B221C03B10E0051255C /* comment_232.png */; };
 		493AF3861BF3E129004BADE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3831BF3E129004BADE4 /* LoginViewController.swift */; };
 		493AF3871BF3E129004BADE4 /* NewProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3841BF3E129004BADE4 /* NewProposal.swift */; };
-		493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3851BF3E129004BADE4 /* Propostas.swift */; };
+		493AF3881BF3E129004BADE4 /* ProposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3851BF3E129004BADE4 /* ProposalViewController.swift */; };
 		493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */; };
 		493AF38D1BF3E20E004BADE4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF38A1BF3E20E004BADE4 /* CustomCell.swift */; };
 		493AF38E1BF3E20E004BADE4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF38B1BF3E20E004BADE4 /* CategoryViewController.swift */; };
@@ -73,7 +73,7 @@
 		65112E3A1BFB87E000350721 /* CommentsCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E391BFB87E000350721 /* CommentsCountCell.swift */; };
 		65112E3C1BFB886700350721 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E3B1BFB886700350721 /* CommentCell.swift */; };
 		65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E3D1BFB891000350721 /* NotificationCell.swift */; };
-		65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E431BFCEEA900350721 /* ProposalDetailed.swift */; };
+		65112E441BFCEEA900350721 /* ProposalDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65112E431BFCEEA900350721 /* ProposalDetailedViewController.swift */; };
 		65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65112E471BFFA3EA00350721 /* AgreeSupportView.xib */; };
 		652C139B1C0E03B70003FD92 /* NotificationSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C139A1C0E03B70003FD92 /* NotificationSetting.xib */; };
 		652C139F1C0E057A0003FD92 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */; };
@@ -115,7 +115,7 @@
 		42224B221C03B10E0051255C /* comment_232.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_232.png; sourceTree = "<group>"; };
 		493AF3831BF3E129004BADE4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		493AF3841BF3E129004BADE4 /* NewProposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProposal.swift; sourceTree = "<group>"; };
-		493AF3851BF3E129004BADE4 /* Propostas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propostas.swift; sourceTree = "<group>"; };
+		493AF3851BF3E129004BADE4 /* ProposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalViewController.swift; sourceTree = "<group>"; };
 		493AF3891BF3E20E004BADE4 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
 		493AF38A1BF3E20E004BADE4 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		493AF38B1BF3E20E004BADE4 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		65112E391BFB87E000350721 /* CommentsCountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsCountCell.swift; sourceTree = "<group>"; };
 		65112E3B1BFB886700350721 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		65112E3D1BFB891000350721 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
-		65112E431BFCEEA900350721 /* ProposalDetailed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailed.swift; sourceTree = "<group>"; };
+		65112E431BFCEEA900350721 /* ProposalDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailedViewController.swift; sourceTree = "<group>"; };
 		65112E471BFFA3EA00350721 /* AgreeSupportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreeSupportView.xib; sourceTree = "<group>"; };
 		652C139A1C0E03B70003FD92 /* NotificationSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationSetting.xib; sourceTree = "<group>"; };
 		652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -338,24 +338,24 @@
 		49CE035E1BD56216000F76D7 /* Mobilize */ = {
 			isa = PBXGroup;
 			children = (
+				49CF58B41BF28964000B0059 /* Controllers */,
 				49CF58B51BF2CDAD000B0059 /* Model */,
 				49B2972B1BEC244500492550 /* Supporting Files */,
-				49CF58B41BF28964000B0059 /* Controller */,
 				49A7CF2F1BF3AFC200BCA090 /* Utils */,
 				49CE035F1BD56216000F76D7 /* AppDelegate.swift */,
 				49CE03611BD56216000F76D7 /* MainViewController.swift */,
-				493AF3841BF3E129004BADE4 /* NewProposal.swift */,
-				493AF3851BF3E129004BADE4 /* Propostas.swift */,
-				65112E431BFCEEA900350721 /* ProposalDetailed.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
 		};
-		49CF58B41BF28964000B0059 /* Controller */ = {
+		49CF58B41BF28964000B0059 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				493AF3841BF3E129004BADE4 /* NewProposal.swift */,
+				493AF3851BF3E129004BADE4 /* ProposalViewController.swift */,
+				65112E431BFCEEA900350721 /* ProposalDetailedViewController.swift */,
 				493AF38B1BF3E20E004BADE4 /* CategoryViewController.swift */,
 				49A7CF371BF3B3AC00BCA090 /* SettingsViewController.swift */,
 				493AF3831BF3E129004BADE4 /* LoginViewController.swift */,
@@ -364,7 +364,7 @@
 				652C139E1C0E057A0003FD92 /* NotificationsViewController.swift */,
 				6507FDA41C10C61E00BBD759 /* NavigationController.swift */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		49CF58B51BF2CDAD000B0059 /* Model */ = {
@@ -504,7 +504,7 @@
 				6507FDC31C10E36400BBD759 /* MyLikes+CoreDataProperties.swift in Sources */,
 				65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */,
 				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
-				65112E441BFCEEA900350721 /* ProposalDetailed.swift in Sources */,
+				65112E441BFCEEA900350721 /* ProposalDetailedViewController.swift in Sources */,
 				65C0B2EA1C054E7B0010ABED /* SettingsGroup2.swift in Sources */,
 				652C139F1C0E057A0003FD92 /* NotificationsViewController.swift in Sources */,
 				49CE03601BD56216000F76D7 /* AppDelegate.swift in Sources */,
@@ -515,7 +515,7 @@
 				49A7CF3A1BF3B89F00BCA090 /* RegisterViewController.swift in Sources */,
 				65112E3C1BFB886700350721 /* CommentCell.swift in Sources */,
 				493AF38C1BF3E20E004BADE4 /* CategoryCellTableViewCell.swift in Sources */,
-				493AF3881BF3E129004BADE4 /* Propostas.swift in Sources */,
+				493AF3881BF3E129004BADE4 /* ProposalViewController.swift in Sources */,
 				6507FDC61C10E36400BBD759 /* ProposalAgreement.swift in Sources */,
 				6507FDA51C10C61E00BBD759 /* NavigationController.swift in Sources */,
 				65112E3E1BFB891000350721 /* NotificationCell.swift in Sources */,
