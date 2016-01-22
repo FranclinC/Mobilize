@@ -15,15 +15,13 @@ import Parse
 class LoginViewController: UIViewController {
   @IBOutlet var logoMobi: UIImageView!
   @IBOutlet var backgroundImage: UIImageView!
-  
   @IBOutlet var emailUser: UITextField!
   @IBOutlet var passwordUser: UITextField!
-  
   @IBOutlet var logarButton: UIButton!
   @IBOutlet var loginButton: UIButton!
   @IBOutlet var registerUser: UIButton!
   
-  var permissionsArray = ["email", "public_profile", "user_about_me"]
+  var permissionsArray = [Constants.EMAIL, Constants.PUBLIC_PROFILE, Constants.USER_ABOUT_ME]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -66,17 +64,17 @@ class LoginViewController: UIViewController {
       alert.show()
     }else {
       let query : PFQuery = PFUser.query()!
-      query.whereKey("email", equalTo: username!)
+      query.whereKey(Constants.EMAIL, equalTo: username!)
       
       query.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, erro: NSError?) -> Void in
         if objects?.count > 0 {
           let object = objects![0]
-          let userNameEmail = object["username"]
+          let userNameEmail = object[Constants.USERNAME]
           
           PFUser.logInWithUsernameInBackground(userNameEmail as! String, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
               print("USer details: \(user)")
-              if (user!["emailVerified"] as! Bool) == true {
+              if (user![Constants.EMAIL_VERIFIED] as! Bool) == true {
                 dispatch_async(dispatch_get_main_queue()){
                   NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
                   NSUserDefaults.standardUserDefaults().synchronize()
@@ -95,7 +93,7 @@ class LoginViewController: UIViewController {
           PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
               print("USer details: \(user)")
-              if (user!["emailVerified"] as! Bool) == true {
+              if (user![Constants.EMAIL_VERIFIED] as! Bool) == true {
                 dispatch_async(dispatch_get_main_queue()){
                   self.performSegueWithIdentifier("mainPage", sender: self)
                 }
@@ -164,27 +162,27 @@ class LoginViewController: UIViewController {
       }
       
       if(result != nil) {
-        let userId:String = result["id"] as! String
-        let userFirstName:String? = result["first_name"] as? String
-        let userLastName:String? = result["last_name"] as? String
-        let userEmail:String? = result["email"] as? String
+        let userId:String = result[Constants.USER_ID] as! String
+        let userFirstName:String? = result[Constants.FIRST_NAME] as? String
+        let userLastName:String? = result[Constants.LAST_NAME] as? String
+        let userEmail:String? = result[Constants.EMAIL] as? String
         print("\(userEmail)")
         
         let myUser:PFUser = PFUser.currentUser()!
         
         if(userFirstName != nil) {
-          myUser.setObject(userFirstName!, forKey: "first_name")
+          myUser.setObject(userFirstName!, forKey: Constants.FIRST_NAME)
         }
         
         if(userLastName != nil) {
-          myUser.setObject(userLastName!, forKey: "last_name")
+          myUser.setObject(userLastName!, forKey: Constants.LAST_NAME)
         }
         
         let completeName = userFirstName! + " " + userLastName!
-        myUser.setObject(completeName, forKey: "name")
+        myUser.setObject(completeName, forKey: Constants.NAME)
         
         if(userEmail != nil) {
-          myUser.setObject(userEmail!, forKey: "email")
+          myUser.setObject(userEmail!, forKey: Constants.EMAIL)
         }
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
@@ -194,7 +192,7 @@ class LoginViewController: UIViewController {
           
           if(profilePictureData != nil) {
             let profileFileObject = PFFile(data:profilePictureData!)
-            myUser.setObject(profileFileObject!, forKey: "profile_picture")
+            myUser.setObject(profileFileObject!, forKey: Constants.PROFILE_PICTURE)
           }
           
           myUser.saveInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in

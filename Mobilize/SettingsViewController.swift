@@ -43,8 +43,8 @@ class SettingsViewController: UIViewController {
   
   func loadUserStats() {
     let user = PFUser.currentUser()
-    let query = PFQuery(className: "Comment")
-    query.whereKey("UserWhoComment", equalTo: user!)
+    let query = PFQuery(className: Constants.COMMENT)
+    query.whereKey(Constants.USER_WHO_COMMENT, equalTo: user!)
     
     query.countObjectsInBackgroundWithBlock { (count: Int32,
       error: NSError?) -> Void in
@@ -55,8 +55,8 @@ class SettingsViewController: UIViewController {
     }
     
     //Find the proposals the user created
-    let query2 = PFQuery(className: "Proposal")
-    query2.whereKey("User", equalTo: user!)
+    let query2 = PFQuery(className: Constants.PROPOSAL)
+    query2.whereKey(Constants.USER, equalTo: user!)
     query2.findObjectsInBackgroundWithBlock { (objects: [PFObject]?,
       error: NSError?) -> Void in
       self.myProposals = objects?.count
@@ -84,11 +84,11 @@ extension SettingsViewController: UITableViewDataSource {
         forIndexPath: indexPath) as! SettingsPicture
       let user = PFUser.currentUser()
       
-      if user!["profile_picture"] == nil {
+      if user![Constants.PROFILE_PICTURE] == nil {
         cellUser.userPicture.image = UIImage(named: "perfil")
       }else {
         
-        let userImageFile = user!["profile_picture"] as! PFFile
+        let userImageFile = user![Constants.PROFILE_PICTURE] as! PFFile
         userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?,
           error: NSError?) -> Void in
           if error == nil {
@@ -100,7 +100,7 @@ extension SettingsViewController: UITableViewDataSource {
         }
         
       }
-      cellUser.userName.text = user!["name"] as? String
+      cellUser.userName.text = user![Constants.NAME] as? String
       
       let timeStamp = user?.createdAt
       let dateFormatter = NSDateFormatter()
@@ -114,14 +114,6 @@ extension SettingsViewController: UITableViewDataSource {
       
       cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
       cellGroup2.labelCell.text = "Ajustes da Conta"
-      
-//      if indexPath.row == 0 {
-//        cellGroup2.imageIcon.image = UIImage(named: "Config_Notification")
-//        cellGroup2.labelCell.text = "Notificações"
-//      }else {
-//        cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
-//        cellGroup2.labelCell.text = "Ajustes da Conta"
-//      }
       cellGroup2.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
       return cellGroup2
     }

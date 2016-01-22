@@ -61,9 +61,9 @@ class ProposalViewController: UIViewController {
   
   func loadProposals(maturation: String, filter: String){
     
-    let query = PFQuery(className:"Proposal")
+    let query = PFQuery(className: Constants.PROPOSAL)
     
-    query.includeKey("User")
+    query.includeKey(Constants.USER)
     //This is to get only the ones that are on stage one of maturation
     query.whereKey("Maturation", equalTo: maturation)
     query.whereKey("Category", equalTo: filter)
@@ -140,10 +140,10 @@ extension ProposalViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("proposalCell", forIndexPath: indexPath) as! CustomCell
-    let user : PFUser = (proposals[indexPath.row]["User"] as? PFUser)!
+    let user : PFUser = (proposals[indexPath.row][Constants.USER] as? PFUser)!
     
     //Downloading user photo in background
-    let userImageFile = user["profile_picture"] as! PFFile
+    let userImageFile = user[Constants.PROFILE_PICTURE] as! PFFile
     userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
       if error == nil {
         if let imageData = imageData {
@@ -153,7 +153,7 @@ extension ProposalViewController: UITableViewDataSource {
       }
     }
     
-    let fullName : String = (user["name"] as? String)!//(user["first_name"] as? String)! + " " + (user["last_name"] as? String)!
+    let fullName : String = (user[Constants.NAME] as? String)!//(user["first_name"] as? String)! + " " + (user["last_name"] as? String)!
     cell.nameUser.text = fullName
     
     cell.category2.image = nil
@@ -188,13 +188,13 @@ extension ProposalViewController: UITableViewDataSource {
       }
     }
     
-    cell.fullProposal = self.proposals[indexPath.row]["ProposalText"] as? String
-    cell.maturation = self.proposals[indexPath.row]["Maturation"] as? String
-    cell.textProposal.text = self.proposals[indexPath.row]["ShortProposal"] as? String
-    print("This is just a test \(self.proposals[indexPath.row]["UpVote"])")
-    cell.upVoteCount.text = String(self.proposals[indexPath.row]["UpVote"])
-    cell.againstVoteCount.text = String(self.proposals[indexPath.row]["DownVote"])
-    cell.time = self.proposals[indexPath.row]["createdAt"] as? String
+    cell.fullProposal = self.proposals[indexPath.row][Constants.PROPOSAL_TEXT] as? String
+    cell.maturation = self.proposals[indexPath.row][Constants.MATURATION] as? String
+    cell.textProposal.text = self.proposals[indexPath.row][Constants.SHORT_PROPOSAL] as? String
+    print("This is just a test \(self.proposals[indexPath.row][Constants.UPVOTE])")
+    cell.upVoteCount.text = String(self.proposals[indexPath.row][Constants.UPVOTE])
+    cell.againstVoteCount.text = String(self.proposals[indexPath.row][Constants.DOWNVOTE])
+    cell.time = self.proposals[indexPath.row][Constants.CREATED_AT] as? String
     cell.proposalId = self.proposals[indexPath.row].objectId! as String
     print("proposal id: \(cell.proposalId)")
     let timeStamp = self.proposals[indexPath.row].createdAt

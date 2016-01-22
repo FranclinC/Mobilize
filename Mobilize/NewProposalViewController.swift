@@ -162,15 +162,15 @@ class NewProposalViewController: UIViewController {
   
   func saveProposal() {
     self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
-    let proposal = PFObject(className: "Proposal")
+    let proposal = PFObject(className: Constants.PROPOSAL)
     let user = PFUser.currentUser()
-    proposal["User"] = user
-    proposal["ProposalText"] = proposalText.text
+    proposal[Constants.USER] = user
+    proposal[Constants.PROPOSAL_TEXT] = proposalText.text
     proposal["Category"] = self.categoriesName
-    proposal["Maturation"] = "BabyMob"
-    proposal["ShortProposal"] = proposalText.text //This should not be like that
-    proposal["UpVote"] = 0
-    proposal["DownVote"] = 0
+    proposal[Constants.MATURATION] = "BabyMob"
+    proposal[Constants.SHORT_PROPOSAL] = proposalText.text //This should not be like that
+    proposal[Constants.UPVOTE] = 0
+    proposal[Constants.DOWNVOTE] = 0
     
     proposal.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
       if success {

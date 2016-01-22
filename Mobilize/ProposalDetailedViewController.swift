@@ -121,13 +121,13 @@ class ProposalDetailedViewController: UIViewController {
     let comment = PFObject(className: Constants.COMMENT)
     let user = PFUser.currentUser()
 
-    comment[Constants.USERWHOCOMMENT] = user
+    comment[Constants.USER_WHO_COMMENT] = user
     comment[Constants.TEXT] = self.commentTextField.text
     let objProposal = PFObject(withoutDataWithClassName: Constants.PROPOSAL, objectId: self.proposal.proposalId)
     
     comment[Constants.PROPOSAL] = objProposal
     comment[Constants.STARS] = 0
-    print(comment[Constants.USERWHOCOMMENT])
+    print(comment[Constants.USER_WHO_COMMENT])
     print(comment[Constants.TEXT])
     print(comment[Constants.PROPOSAL])
     
@@ -326,7 +326,7 @@ class ProposalDetailedViewController: UIViewController {
   //MARK: - Cloude Code function calls
   func increment(option: Bool) {
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("inc", withParameters: ["objectId" : self.proposalID, "option": option], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("inc", withParameters: [Constants.OBJECTID : self.proposalID, "option": option], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
@@ -337,7 +337,7 @@ class ProposalDetailedViewController: UIViewController {
   
   func decrement(option: Bool) {
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("dec", withParameters: ["objectId" : self.proposalID, "option" : option], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("dec", withParameters: [Constants.OBJECTID : self.proposalID, "option" : option], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
@@ -362,8 +362,8 @@ class ProposalDetailedViewController: UIViewController {
         
         entity.setValue(false, forKey: "agreeFlag")
         entity.setValue(false, forKey: "disagreeFlag")
-        entity.setValue(proposalID, forKey: "proposal")
-        entity.setValue(PFUser.currentUser()?.objectId, forKey: "user")
+        entity.setValue(proposalID, forKey: Constants.PROPOSAL)
+        entity.setValue(PFUser.currentUser()?.objectId, forKey: Constants.USER)
         
         //Save our entire entity
         do {
@@ -466,7 +466,7 @@ extension ProposalDetailedViewController: UITableViewDataSource {
       print("Let's get the comments")
       let cell = tableView.dequeueReusableCellWithIdentifier("commentCell", forIndexPath: indexPath) as! CommentCell
       print("Get the user")
-      let user : PFUser = (comments[indexPath.row]["UserWhoComment"] as? PFUser)!
+      let user : PFUser = (comments[indexPath.row][Constants.USER_WHO_COMMENT] as? PFUser)!
       print("Got the user")
       //Downloading user photo in background
       
@@ -474,7 +474,7 @@ extension ProposalDetailedViewController: UITableViewDataSource {
       
       
       user.fetchIfNeededInBackgroundWithBlock({ (object: PFObject? , error: NSError?) -> Void in
-        let userImageFile = user["profile_picture"] as! PFFile
+        let userImageFile = user[Constants.PROFILE_PICTURE] as! PFFile
         print("Download Image, franclin testando")
         userImageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
           if error == nil {
@@ -485,12 +485,11 @@ extension ProposalDetailedViewController: UITableViewDataSource {
           }
         }
         
-        cell.userName.text = (user["name"] as? String)
+        cell.userName.text = (user[Constants.NAME] as? String)
       })
       
-      
-      cell.commentText.text = (self.comments[indexPath.row]["text"] as? String)
-      cell.commentTime.text = (self.comments[indexPath.row]["createdAt"] as? String)
+      cell.commentText.text = (self.comments[indexPath.row][Constants.TEXT] as? String)
+      cell.commentTime.text = (self.comments[indexPath.row][Constants.CREATED_AT] as? String)
       
       //let starCount = self.comments[indexPath.row]["stars"] as! Int
       //cell.starCount.text = String(starCount)

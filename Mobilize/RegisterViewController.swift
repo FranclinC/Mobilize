@@ -86,10 +86,10 @@ class RegisterViewController: UIViewController {
       
       let userImage : PFFile = PFFile(data: image!)!
       
-      newUser.setObject(userImage, forKey: "profile_picture")
-      newUser.setObject(nameUser!, forKey: "first_name")
-      newUser.setObject(nameUser!, forKey: "last_name")
-      newUser.setObject(nameUser!, forKey: "name")
+      newUser.setObject(userImage, forKey: Constants.PROFILE_PICTURE)
+      newUser.setObject(nameUser!, forKey: Constants.FIRST_NAME)
+      newUser.setObject(nameUser!, forKey: Constants.LAST_NAME)
+      newUser.setObject(nameUser!, forKey: Constants.NAME)
       
       newUser.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
         if success {
