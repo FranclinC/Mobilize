@@ -184,6 +184,7 @@
             <connections>
                 <outlet property="agreeButton" destination="5KY-ch-m0L" id="7eK-c8-Kc9"/>
                 <outlet property="agreeCount" destination="e5B-KW-vx3" id="Cb6-b1-4TJ"/>
+                <outlet property="bigView" destination="PcF-ap-6KC" id="cU4-rV-BhX"/>
                 <outlet property="category1" destination="9ss-cg-2Nf" id="hIx-z7-Vbj"/>
                 <outlet property="category2" destination="TFK-dg-T1X" id="3f7-qd-Rwx"/>
                 <outlet property="dateTime" destination="uS3-q3-PVY" id="apY-GE-zIq"/>

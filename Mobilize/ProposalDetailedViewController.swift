@@ -65,6 +65,42 @@ class ProposalDetailedViewController: UIViewController {
     super.viewWillAppear(true)
   }
   
+  override func viewDidAppear(animated: Bool) {
+    
+    
+    var array = self.tableView.indexPathsForVisibleRows
+    
+    let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+    
+    //Corner radius for bigview on top side
+    let maskView = UIBezierPath(roundedRect: (cell?.bigView.bounds)!, byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.TopRight], cornerRadii: CGSizeMake(9.0, 9.0))
+    let mask = CAShapeLayer()
+    mask.path = maskView.CGPath
+    cell?.bigView.layer.mask = mask
+    
+    
+    //Corner radius for button on bottom side
+    let maskAgree = UIBezierPath(roundedRect: (cell?.agreeButton.bounds)!, byRoundingCorners: [UIRectCorner.BottomLeft] , cornerRadii: CGSizeMake(9.0, 9.0))
+    let maskA = CAShapeLayer()
+    maskA.path = maskAgree.CGPath
+    cell?.agreeButton.layer.mask = maskA
+    
+    let maskDisagree = UIBezierPath(roundedRect: (cell?.disagreeButton.bounds)!, byRoundingCorners: [UIRectCorner.BottomRight] , cornerRadii: CGSizeMake(9.0, 9.0))
+    let maskD = CAShapeLayer()
+    maskD.path = maskDisagree.CGPath
+    cell?.disagreeButton.layer.mask = maskD
+    
+    //Round corners for comment cell count
+    let commentCell : CommentsCountCell? = self.tableView.cellForRowAtIndexPath(array![1]) as? CommentsCountCell
+    
+    let maskComment = UIBezierPath(roundedRect: (commentCell?.viewCount.bounds)!, byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.TopRight], cornerRadii: CGSizeMake(9.0, 9.0))
+    let maskC = CAShapeLayer()
+    maskC.path = maskComment.CGPath
+    commentCell?.viewCount.layer.mask = maskC
+
+    
+  }
+  
   //MARK:  Comment Functions
   @IBAction func sendComment(sender: UIButton) {
     
@@ -172,8 +208,11 @@ class ProposalDetailedViewController: UIViewController {
     }
   }
   
-  func agree(sender: UIButton) {
-    let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
+  //Functions of the buttons of the proposal, agree and disagree
+  func agree(sender: UIButton){
+    
+    
+    //let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
     
     if sender.tag == 0 {
       var array = self.tableView.indexPathsForVisibleRows

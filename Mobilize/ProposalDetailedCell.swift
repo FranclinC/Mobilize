@@ -23,11 +23,13 @@ class ProposalDetailedCell: UITableViewCell {
     @IBOutlet var viewVote: UIView!
     @IBOutlet var agreeButton: UIButton!
     @IBOutlet var disagreeButton: UIButton!
+    @IBOutlet var bigView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.userPic.layer.cornerRadius = 6.0
         self.selectionStyle = UITableViewCellSelectionStyle.None
+      
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
