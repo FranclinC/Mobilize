@@ -28,6 +28,7 @@
 		42224B231C03B10E0051255C /* comment_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 42224B201C03B10E0051255C /* comment_58.png */; };
 		42224B241C03B10E0051255C /* comment_116.png in Resources */ = {isa = PBXBuildFile; fileRef = 42224B211C03B10E0051255C /* comment_116.png */; };
 		42224B251C03B10E0051255C /* comment_232.png in Resources */ = {isa = PBXBuildFile; fileRef = 42224B221C03B10E0051255C /* comment_232.png */; };
+		490222A81C52813F006CECF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490222A71C52813F006CECF7 /* Constants.swift */; };
 		493AF3861BF3E129004BADE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3831BF3E129004BADE4 /* LoginViewController.swift */; };
 		493AF3871BF3E129004BADE4 /* NewProposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3841BF3E129004BADE4 /* NewProposalViewController.swift */; };
 		493AF3881BF3E129004BADE4 /* ProposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AF3851BF3E129004BADE4 /* ProposalViewController.swift */; };
@@ -57,7 +58,6 @@
 		49CE03651BD56216000F76D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03631BD56216000F76D7 /* Main.storyboard */; };
 		49CE03671BD56216000F76D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03661BD56216000F76D7 /* Assets.xcassets */; };
 		49CE036A1BD56216000F76D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */; };
-		49CE038E1BD56400000F76D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49CE038D1BD56400000F76D7 /* README.md */; };
 		6507FDA51C10C61E00BBD759 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA41C10C61E00BBD759 /* NavigationController.swift */; };
 		6507FDA81C10CB2100BBD759 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA61C10CB2100BBD759 /* DataBase.xcdatamodeld */; };
 		6507FDAA1C10CFEF00BBD759 /* DataParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6507FDA91C10CFEF00BBD759 /* DataParameters.swift */; };
@@ -113,6 +113,7 @@
 		42224B201C03B10E0051255C /* comment_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_58.png; sourceTree = "<group>"; };
 		42224B211C03B10E0051255C /* comment_116.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_116.png; sourceTree = "<group>"; };
 		42224B221C03B10E0051255C /* comment_232.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_232.png; sourceTree = "<group>"; };
+		490222A71C52813F006CECF7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		493AF3831BF3E129004BADE4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		493AF3841BF3E129004BADE4 /* NewProposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProposalViewController.swift; sourceTree = "<group>"; };
 		493AF3851BF3E129004BADE4 /* ProposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +347,7 @@
 				49CE03611BD56216000F76D7 /* MainViewController.swift */,
 				49CE03631BD56216000F76D7 /* Main.storyboard */,
 				49CE03681BD56216000F76D7 /* LaunchScreen.storyboard */,
+				490222A71C52813F006CECF7 /* Constants.swift */,
 			);
 			path = Mobilize;
 			sourceTree = "<group>";
@@ -483,7 +485,6 @@
 				65112E2E1BFA1DCD00350721 /* ProposalCell.xib in Resources */,
 				65C0B2E01C0541510010ABED /* SettingsPicture.xib in Resources */,
 				65112E481BFFA3EA00350721 /* AgreeSupportView.xib in Resources */,
-				49CE038E1BD56400000F76D7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +503,7 @@
 				65AEF02C1C08D12C0065E186 /* AccountCell.swift in Sources */,
 				493AF3861BF3E129004BADE4 /* LoginViewController.swift in Sources */,
 				6507FDC31C10E36400BBD759 /* MyLikes+CoreDataProperties.swift in Sources */,
+				490222A81C52813F006CECF7 /* Constants.swift in Sources */,
 				65AEF02E1C08D2B40065E186 /* AccountViewController.swift in Sources */,
 				49CE03621BD56216000F76D7 /* MainViewController.swift in Sources */,
 				65112E441BFCEEA900350721 /* ProposalDetailedViewController.swift in Sources */,

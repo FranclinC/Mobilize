@@ -17,34 +17,29 @@ class ProposalDetailedViewController: UIViewController {
   @IBOutlet var toolBarHeightConstraint: NSLayoutConstraint!
   @IBOutlet var commentButton: UIButton!
   
-  var comments : [PFObject] = [PFObject]()
-  var tapGesture : UITapGestureRecognizer?
-  var constraintHeightToolbar : CGFloat?
-  var proposal : CustomCell = CustomCell()
-  var commentsCount : Int = 0
-  var proposalID : String!
-  var agreeClicked : Bool?
-  var proposalAgreement : ProposalAgreement?
-  var state : StateAgreement?
-  
-  //MARK: - CoreData
-  // create an instance of our managedObjectContext
+  var comments: [PFObject] = [PFObject]()
+  var tapGesture: UITapGestureRecognizer?
+  var constraintHeightToolbar: CGFloat?
+  var proposal: CustomCell = CustomCell()
+  var commentsCount: Int = 0
+  var proposalID: String!
+  var agreeClicked: Bool?
+  var proposalAgreement: ProposalAgreement?
+  var state: State?
   let moc = DataParameters().managedObjectContext
   let redColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
   let greenColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
   
-  enum StateAgreement {
-    case neutral
-    case agreed
-    case disagreed
+  enum State {
+    case Neutral
+    case Agree
+    case Disagree
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.commentTextField.delegate = self
     self.constraintHeightToolbar = self.toolBarHeightConstraint.constant
-    
     self.tableView.estimatedRowHeight = 44
     self.tableView.rowHeight = UITableViewAutomaticDimension
     
@@ -52,7 +47,6 @@ class ProposalDetailedViewController: UIViewController {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "KeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     
     //load the array with comments
-    print("Load array with data")
     self.loadComments()
     
     //Register nibs
@@ -66,10 +60,7 @@ class ProposalDetailedViewController: UIViewController {
   }
   
   override func viewDidAppear(animated: Bool) {
-    
-    
     var array = self.tableView.indexPathsForVisibleRows
-    
     let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
     
     //Corner radius for bigview on top side
@@ -77,7 +68,6 @@ class ProposalDetailedViewController: UIViewController {
     let mask = CAShapeLayer()
     mask.path = maskView.CGPath
     cell?.bigView.layer.mask = mask
-    
     
     //Corner radius for button on bottom side
     let maskAgree = UIBezierPath(roundedRect: (cell?.agreeButton.bounds)!, byRoundingCorners: [UIRectCorner.BottomLeft] , cornerRadii: CGSizeMake(9.0, 9.0))
@@ -97,13 +87,58 @@ class ProposalDetailedViewController: UIViewController {
     let maskC = CAShapeLayer()
     maskC.path = maskComment.CGPath
     commentCell?.viewCount.layer.mask = maskC
-
-    
   }
   
-  //MARK:  Comment Functions
-  @IBAction func sendComment(sender: UIButton) {
+  func loadComments() {
+    let query = PFQuery(className: Constants.COMMENT)
+    let innerQuery = PFQuery(className: Constants.PROPOSAL)
     
+    innerQuery.whereKey(Constants.OBJECTID, equalTo: self.proposal.proposalId!)
+    query.includeKey(Constants.USER)
+    query.includeKey(Constants.PROPOSAL)
+    query.whereKey(Constants.PROPOSAL, matchesQuery: innerQuery)
+    self.comments.removeAll()
+ 
+    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?,
+      error: NSError?) -> Void in
+      if error == nil {
+        self.commentsCount = (objects?.count)!
+        for object in objects! {
+          self.comments.append(object)
+        }
+      } else {
+        print("Couldn't retrieve any comment in loadComments()")
+      }
+      
+      self.tableView.reloadData()
+    }
+  }
+  
+  // MARK - @IBAction
+  @IBAction func saveComment(sender: AnyObject) {
+    let comment = PFObject(className: Constants.COMMENT)
+    let user = PFUser.currentUser()
+
+    comment[Constants.USERWHOCOMMENT] = user
+    comment[Constants.TEXT] = self.commentTextField.text
+    let objProposal = PFObject(withoutDataWithClassName: Constants.PROPOSAL, objectId: self.proposal.proposalId)
+    
+    comment[Constants.PROPOSAL] = objProposal
+    comment[Constants.STARS] = 0
+    print(comment[Constants.USERWHOCOMMENT])
+    print(comment[Constants.TEXT])
+    print(comment[Constants.PROPOSAL])
+    
+    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+      if success {
+        self.loadComments()
+      }else{
+        print("error after trying deu erro")
+      }
+    }
+  }
+  
+  @IBAction func sendComment(sender: UIButton) {
     self.commentTextField.text = ""
     self.commentTextField.endEditing(true)
   }
@@ -143,77 +178,7 @@ class ProposalDetailedViewController: UIViewController {
     self.commentTextField.resignFirstResponder()
   }
   
-  //MARK: - Retrieve Data from Parse
-  func loadComments() {
-    let query = PFQuery(className:"Comment")
-    
-    let innerQuery = PFQuery(className: "Proposal")
-    innerQuery.whereKey("objectId", equalTo: self.proposal.proposalId!)
-    
-    query.includeKey("User")
-    query.includeKey("Proposal")
-    //This is to get only the ones that are on stage one of maturation
-    print("proposta \(self.proposal.proposalId!)")
-    query.whereKey("Proposal", matchesQuery: innerQuery)
-    self.comments.removeAll()
-    print("Go get the comments")
-    query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-      if error == nil {
-        
-        //Now i get the array of objects
-        print(objects)
-        self.commentsCount = (objects?.count)!
-        for object in objects! {
-          self.comments.append(object)
-        }
-      }else {
-        print("Couldn't retrieve any comment")
-      }
-      
-      self.tableView.reloadData()
-    }
-  }
-  
-  
-  @IBAction func saveComment(sender: AnyObject) {
-    //self.categoriesName.insert("All", atIndex: 0) //All proposal must have an All flag, inthe position 0
-    let comment = PFObject(className: "Comment")
-    let user = PFUser.currentUser()
-    print("proposal id franclin: \(user)")
-    comment["UserWhoComment"] = user
-    comment["text"] = self.commentTextField.text
-    let objProposal = PFObject(withoutDataWithClassName: "Proposal", objectId: self.proposal.proposalId)
-    
-    
-    comment["Proposal"] = objProposal
-    comment["stars"] = 0
-    print(comment["UserWhoComment"])
-    print(comment["text"])
-    print(comment["Proposal"])
-    
-    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-      if success {
-        PFCloud.callFunctionInBackground("hello", withParameters: nil) { results, error in
-          if error != nil {
-            print("Deu erro no cloud code")
-          } else {
-            print("Deu certo o cloud code")
-          }
-        }
-        self.loadComments()
-        print("deu certo")
-      }else{
-        print("deu erro")
-      }
-    }
-  }
-  
-  //Functions of the buttons of the proposal, agree and disagree
-  func agree(sender: UIButton){
-    
-    
-    //let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
-    
+  func agree(sender: UIButton) {
     if sender.tag == 0 {
       var array = self.tableView.indexPathsForVisibleRows
       
@@ -232,15 +197,15 @@ class ProposalDetailedViewController: UIViewController {
         //activate the flag that can change the button
       }
       
-      if (self.state == .neutral){ //Neutral
+      if (self.state == .Neutral){ //Neutral
         //Must be the green color
         cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
         cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
         cell?.agreeCount.textColor = UIColor.whiteColor()
         cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
-        self.state = .agreed
-      }else if (self.state == .disagreed){ //On Disagreed and want to change to agree
+        self.state = .Agree
+      }else if (self.state == .Disagree){ //On Disagreed and want to change to agree
         //Must be the green color
         cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
         cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
@@ -254,7 +219,7 @@ class ProposalDetailedViewController: UIViewController {
         cell?.disagreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
         cell?.disagreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
         cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! - 1)
-        self.state = .agreed
+        self.state = .Agree
       }else { //Already on agreed
         //Do nothing
       }
@@ -301,16 +266,16 @@ class ProposalDetailedViewController: UIViewController {
         print("é falso")
       }
       
-      if (self.state == .neutral){ //Neutral
+      if (self.state == .Neutral){
         //Must be the green color
         cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
         cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
         cell?.disagreeCount.textColor = UIColor.whiteColor()
         cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
-        self.state = .disagreed
+        self.state = .Disagree
         //self.incrementVoteDisagree()
-      }else if (self.state == .agreed) { //Agreed and want to change to disagree
+      }else if (self.state == .Agree) {
         //Must be the green color
         cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
         cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
@@ -324,7 +289,7 @@ class ProposalDetailedViewController: UIViewController {
         cell?.agreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
         cell?.agreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
         cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! - 1)
-        self.state = .disagreed
+        self.state = .Disagree
       }else {
         //Do nothing
       }
@@ -352,7 +317,7 @@ class ProposalDetailedViewController: UIViewController {
   }
   
   //MARK: - Cloude Code function calls
-  func increment (){
+  func increment() {
     //Call to a function cloud code
     PFCloud.callFunctionInBackground("increment", withParameters: ["objectId" : self.proposalID, "class" : true], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
@@ -413,16 +378,16 @@ class ProposalDetailedViewController: UIViewController {
           cell.imageAgree.image = UIImage(named: "Proposta_Like.2")
           cell.agreeCount.textColor = UIColor.whiteColor()
           cell.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-          self.state = .agreed
+          self.state = .Agree
         }else if (fetchedFlags.first!.disagreeFlag){ //Disagree
           cell.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
           cell.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
           cell.disagreeCount.textColor = UIColor.whiteColor()
           cell.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-          self.state = .disagreed
+          self.state = .Disagree
         }else{ //Neutral
           //Do nothing here and maintain color
-          self.state = .neutral
+          self.state = .Neutral
         }
       }
     } catch {
