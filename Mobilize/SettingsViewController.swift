@@ -112,13 +112,16 @@ extension SettingsViewController: UITableViewDataSource {
       let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2",
         forIndexPath: indexPath) as! SettingsGroup2
       
-      if indexPath.row == 0 {
-        cellGroup2.imageIcon.image = UIImage(named: "Config_Notification")
-        cellGroup2.labelCell.text = "Notificações"
-      }else {
-        cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
-        cellGroup2.labelCell.text = "Ajustes da Conta"
-      }
+      cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
+      cellGroup2.labelCell.text = "Ajustes da Conta"
+      
+//      if indexPath.row == 0 {
+//        cellGroup2.imageIcon.image = UIImage(named: "Config_Notification")
+//        cellGroup2.labelCell.text = "Notificações"
+//      }else {
+//        cellGroup2.imageIcon.image = UIImage(named: "Config_Config")
+//        cellGroup2.labelCell.text = "Ajustes da Conta"
+//      }
       cellGroup2.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
       return cellGroup2
     }
@@ -129,7 +132,7 @@ extension SettingsViewController: UITableViewDataSource {
     if section == 0 {
       return 1
     }else{
-      return 2
+      return 1
     }
   }
 }

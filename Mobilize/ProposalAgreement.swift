@@ -58,3 +58,12 @@ class ProposalAgreement: NSManagedObject {
   }
   
 }
+
+extension ProposalAgreement {
+  
+  @NSManaged var proposal: String?
+  @NSManaged var user: String?
+  @NSManaged var agreeFlag: Bool
+  @NSManaged var disagreeFlag: Bool
+  
+}

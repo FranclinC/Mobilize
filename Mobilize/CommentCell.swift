@@ -13,8 +13,8 @@ class CommentCell: UITableViewCell {
     @IBOutlet var userName: UILabel!
     @IBOutlet var commentTime: UILabel!
     @IBOutlet var commentText: UILabel!
-    @IBOutlet var starImage: UIImageView!
-    @IBOutlet var starCount: UILabel!
+    //@IBOutlet var starImage: UIImageView!
+    //@IBOutlet var starCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

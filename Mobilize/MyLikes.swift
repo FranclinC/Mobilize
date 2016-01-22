@@ -12,3 +12,9 @@ import CoreData
 @objc(MyLikes)
 class MyLikes: NSManagedObject {
 }
+
+extension MyLikes {
+  @NSManaged var user: String?
+  @NSManaged var comment: String?
+  @NSManaged var flag: Bool
+}

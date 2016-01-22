@@ -205,6 +205,7 @@ class ProposalDetailedViewController: UIViewController {
         cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
         self.state = .Agree
+        self.increment(true)
       }else if (self.state == .Disagree){ //On Disagreed and want to change to agree
         //Must be the green color
         cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
@@ -220,6 +221,8 @@ class ProposalDetailedViewController: UIViewController {
         cell?.disagreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
         cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! - 1)
         self.state = .Agree
+        self.increment(true)
+        self.decrement(false)
       }else { //Already on agreed
         //Do nothing
       }
@@ -274,7 +277,7 @@ class ProposalDetailedViewController: UIViewController {
         cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
         self.state = .Disagree
-        //self.incrementVoteDisagree()
+        self.increment(false)
       }else if (self.state == .Agree) {
         //Must be the green color
         cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
@@ -290,6 +293,8 @@ class ProposalDetailedViewController: UIViewController {
         cell?.agreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
         cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! - 1)
         self.state = .Disagree
+        self.increment(false)
+        self.decrement(true)
       }else {
         //Do nothing
       }
@@ -317,9 +322,9 @@ class ProposalDetailedViewController: UIViewController {
   }
   
   //MARK: - Cloude Code function calls
-  func increment() {
+  func increment(option: Bool) {
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("increment", withParameters: ["objectId" : self.proposalID, "class" : true], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("inc", withParameters: ["objectId" : self.proposalID, "option": option], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
@@ -328,9 +333,9 @@ class ProposalDetailedViewController: UIViewController {
     })
   }
   
-  func decrement() {
+  func decrement(option: Bool) {
     //Call to a function cloud code
-    PFCloud.callFunctionInBackground("decrement", withParameters: ["objectId" : self.proposalID, "class" : true], block: { (object:AnyObject?, error:NSError?) -> Void in
+    PFCloud.callFunctionInBackground("dec", withParameters: ["objectId" : self.proposalID, "option" : option], block: { (object:AnyObject?, error:NSError?) -> Void in
       if error != nil {
         //No error, i just took away the print
       }else {
@@ -485,14 +490,14 @@ extension ProposalDetailedViewController: UITableViewDataSource {
       cell.commentText.text = (self.comments[indexPath.row]["text"] as? String)
       cell.commentTime.text = (self.comments[indexPath.row]["createdAt"] as? String)
       
-      let starCount = self.comments[indexPath.row]["stars"] as! Int
-      cell.starCount.text = String(starCount)
+      //let starCount = self.comments[indexPath.row]["stars"] as! Int
+      //cell.starCount.text = String(starCount)
       
-      if starCount > 0 {
+      /*if starCount > 0 {
         cell.starImage.image = UIImage(named: "Proposta_Fav.2") //Yellow one
       }else{
         cell.starImage.image = UIImage(named: "Proposta_Fav.1") //Grey one
-      }
+      }*/
       cell.userName.preferredMaxLayoutWidth = CGRectGetWidth(tableView.bounds)
       cell.commentText.numberOfLines = 0
       
