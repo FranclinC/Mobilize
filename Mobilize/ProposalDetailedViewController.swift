@@ -334,7 +334,7 @@ class ProposalDetailedViewController: UIViewController, UITableViewDataSource, U
   func agree(sender: UIButton){
     
     
-    let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
+    //let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
     
     
     if sender.tag == 0 {
