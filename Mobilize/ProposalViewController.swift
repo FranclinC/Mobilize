@@ -54,6 +54,11 @@ class ProposalViewController: UIViewController {
     super.viewWillDisappear(true)
   }
   
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(true)
+
+  }
+  
   func loadProposals(maturation: String, filter: String){
     
     let query = PFQuery(className:"Proposal")

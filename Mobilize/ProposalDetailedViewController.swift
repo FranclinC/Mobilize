@@ -60,6 +60,8 @@ class ProposalDetailedViewController: UIViewController {
   }
   
   override func viewDidAppear(animated: Bool) {
+    
+    
     var array = self.tableView.indexPathsForVisibleRows
     let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
     
