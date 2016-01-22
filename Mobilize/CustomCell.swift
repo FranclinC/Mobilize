@@ -22,7 +22,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet var againstVote: UIImageView!
     @IBOutlet var againstVoteCount: UILabel!
     @IBOutlet var comment: UIImageView!
-    @IBOutlet var commentCount: UILabel!
+    //@IBOutlet var commentCount: UILabel!
     
     var maturation : String!
     var fullProposal : String!
@@ -35,7 +35,7 @@ class CustomCell: UITableViewCell {
         self.userPicture.layer.cornerRadius = 6.0
         self.upVote.image = UIImage(named: "Feed_Like")
         self.againstVote.image = UIImage(named: "Feed_Dislike")
-        self.comment.image = UIImage(named: "Feed_Comment")
+        //self.comment.image = UIImage(named: "Feed_Comment")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
