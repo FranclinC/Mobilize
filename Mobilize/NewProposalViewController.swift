@@ -196,9 +196,10 @@ class NewProposalViewController: UIViewController {
     print(frame.height)
     self.view.layoutIfNeeded()
     UIView.animateWithDuration(0.5, animations: {
-      self.constraintToolBarHeight.constant = frame.height + self.toolBarView.frame.height
+      
       self.constraintToolBarBottom.constant = frame.height
-      self.view.layoutIfNeeded()
+      self.constraintToolBarHeight.constant = (frame.height + self.toolBarView.frame.height)
+      //self.view.layoutIfNeeded()
       }, completion: nil)
     
     if keyboardDismissSwipeGesture == nil {

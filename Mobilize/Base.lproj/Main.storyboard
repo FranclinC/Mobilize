@@ -379,7 +379,6 @@
                                     <constraint firstAttribute="bottom" secondItem="4yO-7c-HH8" secondAttribute="bottom" id="Hfc-B9-Ohc"/>
                                     <constraint firstAttribute="height" constant="44" id="TrW-bR-2RI"/>
                                     <constraint firstItem="4yO-7c-HH8" firstAttribute="leading" secondItem="WpG-dq-kBO" secondAttribute="leading" id="ZqM-gW-aCz"/>
-                                    <constraint firstItem="4yO-7c-HH8" firstAttribute="top" secondItem="WpG-dq-kBO" secondAttribute="top" id="eja-OZ-nqd"/>
                                     <constraint firstAttribute="trailing" secondItem="4yO-7c-HH8" secondAttribute="trailing" id="fvW-zH-2OB"/>
                                 </constraints>
                             </view>
@@ -414,7 +413,6 @@
                         <outlet property="backButtonNavigator" destination="he8-dZ-zcW" id="Z5b-w4-fXn"/>
                         <outlet property="constraintToolBarBottom" destination="Hfc-B9-Ohc" id="U6b-Ie-167"/>
                         <outlet property="constraintToolBarHeight" destination="TrW-bR-2RI" id="vnP-uy-r1g"/>
-                        <outlet property="constraintToolBarTop" destination="eja-OZ-nqd" id="yT4-dh-2CA"/>
                         <outlet property="cultureBtn" destination="m7u-9o-9Gj" id="5c0-4L-ba2"/>
                         <outlet property="cultureButton" destination="Yuq-DA-bus" id="xtc-Jp-1Fe"/>
                         <outlet property="educationBtn" destination="Uyj-vK-oFw" id="eVO-91-vMm"/>
