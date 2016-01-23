@@ -30,7 +30,7 @@ class ProposalViewController: UIViewController {
     self.tableView.estimatedRowHeight = 125
     
     //Load data from parse
-    self.loadProposals("BabyMob", filter: "All")
+    //self.loadProposals("BabyMob", filter: "All")
     
     //register nib
     self.tableView.registerNib(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "proposalCell")
@@ -56,7 +56,8 @@ class ProposalViewController: UIViewController {
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(true)
-
+    //Load data from parse
+    self.loadProposals("BabyMob", filter: "All")
   }
   
   func loadProposals(maturation: String, filter: String){
