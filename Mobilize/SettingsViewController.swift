@@ -141,10 +141,10 @@ extension SettingsViewController: UITableViewDelegate {
     if indexPath.section == 1 { //section should be 2, but small change to send to appstore
       if indexPath.row == 0 {
         print("Segue 1")
-        self.performSegueWithIdentifier("notificationSettings", sender: nil)
+        self.performSegueWithIdentifier("account", sender: nil)
       }else if indexPath.row == 1 {
         print("Segue 2")
-        self.performSegueWithIdentifier("account", sender: nil)
+        self.performSegueWithIdentifier("notificationSettings", sender: nil)
       }
     }
   }
