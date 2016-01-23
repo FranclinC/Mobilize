@@ -15,14 +15,11 @@ class ProposalAgreement: NSManagedObject {
   // Insert code here to add functionality to your managed object subclass
   
   func saveFlags (user: String, agree: Bool, disagree: Bool, proposal: String) {
-    //create an instance of our managedObjectContext
     let moc = DataParameters().managedObjectContext
-    
-    //set up our entity
     let entity = NSEntityDescription.insertNewObjectForEntityForName("ProposalAgreement", inManagedObjectContext: moc) as! ProposalAgreement
     
-    entity.setValue(user, forKey: "user")
-    entity.setValue(proposal, forKey: "proposal")
+    entity.setValue(user, forKey: Constants.USER)
+    entity.setValue(proposal, forKey: Constants.PROPOSAL)
     entity.setValue(agree, forKey: "agreeFlag")
     entity.setValue(disagree, forKey: "disagreeFlag")
     
