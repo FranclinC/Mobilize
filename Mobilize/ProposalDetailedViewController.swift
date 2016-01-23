@@ -118,25 +118,32 @@ class ProposalDetailedViewController: UIViewController {
   
   // MARK - @IBAction
   @IBAction func saveComment(sender: AnyObject) {
-    let comment = PFObject(className: Constants.COMMENT)
-    let user = PFUser.currentUser()
-
-    comment[Constants.USER_WHO_COMMENT] = user
-    comment[Constants.TEXT] = self.commentTextField.text
-    let objProposal = PFObject(withoutDataWithClassName: Constants.PROPOSAL, objectId: self.proposal.proposalId)
-    
-    comment[Constants.PROPOSAL] = objProposal
-    comment[Constants.STARS] = 0
-    print(comment[Constants.USER_WHO_COMMENT])
-    print(comment[Constants.TEXT])
-    print(comment[Constants.PROPOSAL])
-    
-    comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-      if success {
-        self.loadComments()
-      }else{
-        print("error after trying deu erro")
+    if Reachability.isConnectedToNetwork() {
+      let comment = PFObject(className: Constants.COMMENT)
+      let user = PFUser.currentUser()
+      
+      comment[Constants.USER_WHO_COMMENT] = user
+      comment[Constants.TEXT] = self.commentTextField.text
+      let objProposal = PFObject(withoutDataWithClassName: Constants.PROPOSAL, objectId: self.proposal.proposalId)
+      
+      comment[Constants.PROPOSAL] = objProposal
+      comment[Constants.STARS] = 0
+      print(comment[Constants.USER_WHO_COMMENT])
+      print(comment[Constants.TEXT])
+      print(comment[Constants.PROPOSAL])
+      
+      comment.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        if success {
+          self.loadComments()
+        }else{
+          print("error after trying deu erro")
+        }
       }
+    }else{
+      print("There is not connection")
+      let alert = UIAlertController(title: "Alerta!", message: "Por favor, conecte ao WIFI ou ative os dados do celular", preferredStyle: UIAlertControllerStyle.Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+      self.presentViewController(alert, animated: true, completion: nil)
     }
   }
   
@@ -181,146 +188,163 @@ class ProposalDetailedViewController: UIViewController {
   }
   
   func agree(sender: UIButton) {
-    if sender.tag == 0 {
-      var array = self.tableView.indexPathsForVisibleRows
-      
-      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
-      
-      let user : PFUser = PFUser.currentUser()!
-      print(user.objectId!)
-      print(self.proposalID)
-      
-      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
-      
-      if ((flags?[0].agreeFlag) != nil) {
-        print("ta verdadeiro")
-      }else {
-        print("é falso")
-        //activate the flag that can change the button
-      }
-      
-      if (self.state == .Neutral){ //Neutral
-        //Must be the green color
-        cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
-        cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
-        cell?.agreeCount.textColor = UIColor.whiteColor()
-        cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
-        self.state = .Agree
-        self.increment(true)
-      }else if (self.state == .Disagree){ //On Disagreed and want to change to agree
-        //Must be the green color
-        cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
-        cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
-        cell?.agreeCount.textColor = UIColor.whiteColor()
-        cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+    
+    if Reachability.isConnectedToNetwork() {
+      if sender.tag == 0 {
+        var array = self.tableView.indexPathsForVisibleRows
         
-        //Change the color of the disagree button grey color
-        cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.1")
-        cell?.disagreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
-        cell?.disagreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
-        cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! - 1)
-        self.state = .Agree
-        self.increment(true)
-        self.decrement(false)
-      }else { //Already on agreed
-        //Do nothing
+        let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+        
+        let user : PFUser = PFUser.currentUser()!
+        print(user.objectId!)
+        print(self.proposalID)
+        
+        let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+        
+        if ((flags?[0].agreeFlag) != nil) {
+          print("ta verdadeiro")
+        }else {
+          print("é falso")
+          //activate the flag that can change the button
+        }
+        
+        if (self.state == .Neutral){ //Neutral
+          //Must be the green color
+          cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
+          cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
+          cell?.agreeCount.textColor = UIColor.whiteColor()
+          cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+          cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+          self.state = .Agree
+          self.increment(true)
+        }else if (self.state == .Disagree){ //On Disagreed and want to change to agree
+          //Must be the green color
+          cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 95/255, green: 170/255, blue: 89/255, alpha: 1)
+          cell?.imageAgree.image = UIImage(named: "Proposta_Like.2")
+          cell?.agreeCount.textColor = UIColor.whiteColor()
+          cell?.agreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+          cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! + 1)
+          
+          //Change the color of the disagree button grey color
+          cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+          cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.1")
+          cell?.disagreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
+          cell?.disagreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
+          cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! - 1)
+          self.state = .Agree
+          self.increment(true)
+          self.decrement(false)
+        }else { //Already on agreed
+          //Do nothing
+        }
+        
+        let moc = DataParameters().managedObjectContext
+        let fetch = NSFetchRequest(entityName: "ProposalAgreement")
+        let predicate = NSPredicate(format: "proposal == %@ AND user == %@", proposalID, PFUser.currentUser()!.objectId!)
+        fetch.predicate = predicate
+        
+        do {
+          let fetchedResults = try moc.executeFetchRequest(fetch) as! [ProposalAgreement]
+          fetchedResults.first?.agreeFlag = true
+          fetchedResults.first?.disagreeFlag = false
+        } catch {
+          fatalError("Failure to fetch context: \(error)")
+        }
+        
+        //Save our entire entity
+        do {
+          try moc.save()
+        }catch {
+          fatalError("Failure to save context: \(error)")
+        }
+        
       }
-      
-      let moc = DataParameters().managedObjectContext
-      let fetch = NSFetchRequest(entityName: "ProposalAgreement")
-      let predicate = NSPredicate(format: "proposal == %@ AND user == %@", proposalID, PFUser.currentUser()!.objectId!)
-      fetch.predicate = predicate
-      
-      do {
-        let fetchedResults = try moc.executeFetchRequest(fetch) as! [ProposalAgreement]
-        fetchedResults.first?.agreeFlag = true
-        fetchedResults.first?.disagreeFlag = false
-      } catch {
-        fatalError("Failure to fetch context: \(error)")
-      }
-      
-      //Save our entire entity
-      do {
-        try moc.save()
-      }catch {
-        fatalError("Failure to save context: \(error)")
-      }
-      
+    }else {
+      print("There is not connection")
+      let alert = UIAlertController(title: "Alerta!", message: "Por favor, conecte ao WIFI ou ative os dados do celular", preferredStyle: UIAlertControllerStyle.Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+      self.presentViewController(alert, animated: true, completion: nil)
     }
   }
   
   func disagree(sender: UIButton) {
-    if sender.tag == 0 {
-      print("Discordo")
-      
-      var array = self.tableView.indexPathsForVisibleRows
-      let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
-      let user : PFUser = PFUser.currentUser()!
-      
-      print(user.objectId!)
-      print(self.proposalID)
-      
-      let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
-      
-      if ((flags?[0].agreeFlag) != nil) {
-        print("ta verdadeiro")
-      }else {
-        print("é falso")
-      }
-      
-      if (self.state == .Neutral){
-        //Must be the green color
-        cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
-        cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
-        cell?.disagreeCount.textColor = UIColor.whiteColor()
-        cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
-        self.state = .Disagree
-        self.increment(false)
-      }else if (self.state == .Agree) {
-        //Must be the green color
-        cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
-        cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
-        cell?.disagreeCount.textColor = UIColor.whiteColor()
-        cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
+    if Reachability.isConnectedToNetwork() {
+      if sender.tag == 0 {
+        print("Discordo")
         
-        //Change the color of the agree button
-        cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        cell?.imageAgree.image = UIImage(named: "Proposta_Like.1")
-        cell?.agreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
-        cell?.agreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
-        cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! - 1)
-        self.state = .Disagree
-        self.increment(false)
-        self.decrement(true)
-      }else {
-        //Do nothing
+        var array = self.tableView.indexPathsForVisibleRows
+        let cell : ProposalDetailedCell? = self.tableView.cellForRowAtIndexPath(array![0]) as? ProposalDetailedCell
+        let user : PFUser = PFUser.currentUser()!
+        
+        print(user.objectId!)
+        print(self.proposalID)
+        
+        let flags : [ProposalAgreement]? = (self.proposalAgreement?.fetch(user.objectId!, proposal: self.proposalID))
+        
+        if ((flags?[0].agreeFlag) != nil) {
+          print("ta verdadeiro")
+        }else {
+          print("é falso")
+        }
+        
+        if (self.state == .Neutral){
+          //Must be the green color
+          cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
+          cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
+          cell?.disagreeCount.textColor = UIColor.whiteColor()
+          cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+          cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
+          self.state = .Disagree
+          self.increment(false)
+        }else if (self.state == .Agree) {
+          //Must be the green color
+          cell?.disagreeButton.backgroundColor = UIColor(colorLiteralRed: 196/255, green: 67/255, blue: 58/255, alpha: 1)
+          cell?.imageDisagree.image = UIImage(named: "Proposta_Dislike.2")
+          cell?.disagreeCount.textColor = UIColor.whiteColor()
+          cell?.disagreeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+          cell?.disagreeCount.text = String(Int((cell?.disagreeCount.text)!)! + 1)
+          
+          //Change the color of the agree button
+          cell?.agreeButton.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+          cell?.imageAgree.image = UIImage(named: "Proposta_Like.1")
+          cell?.agreeCount.textColor = UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1)
+          cell?.agreeButton.setTitleColor(UIColor(colorLiteralRed: 143/255, green: 143/255, blue: 143/255, alpha: 1), forState: UIControlState.Normal)
+          cell?.agreeCount.text = String(Int((cell?.agreeCount.text)!)! - 1)
+          self.state = .Disagree
+          self.increment(false)
+          self.decrement(true)
+        }else {
+          //Do nothing
+        }
+        
+        let moc = DataParameters().managedObjectContext
+        let fetch = NSFetchRequest(entityName: "ProposalAgreement")
+        let predicate = NSPredicate(format: "proposal == %@ AND user == %@", proposalID, PFUser.currentUser()!.objectId!)
+        fetch.predicate = predicate
+        
+        do {
+          let fetchedResults = try moc.executeFetchRequest(fetch) as! [ProposalAgreement]
+          fetchedResults.first?.agreeFlag = false
+          fetchedResults.first?.disagreeFlag = true
+        } catch {
+          fatalError("Failure to fetch context: \(error)")
+        }
+        
+        //Save our entire entity
+        do {
+          try moc.save()
+        }catch {
+          fatalError("Failure to save context: \(error)")
+        }
       }
-      
-      let moc = DataParameters().managedObjectContext
-      let fetch = NSFetchRequest(entityName: "ProposalAgreement")
-      let predicate = NSPredicate(format: "proposal == %@ AND user == %@", proposalID, PFUser.currentUser()!.objectId!)
-      fetch.predicate = predicate
-      
-      do {
-        let fetchedResults = try moc.executeFetchRequest(fetch) as! [ProposalAgreement]
-        fetchedResults.first?.agreeFlag = false
-        fetchedResults.first?.disagreeFlag = true
-      } catch {
-        fatalError("Failure to fetch context: \(error)")
-      }
-      
-      //Save our entire entity
-      do {
-        try moc.save()
-      }catch {
-        fatalError("Failure to save context: \(error)")
-      }
+    }else {
+      print("There is not connection")
+      let alert = UIAlertController(title: "Alerta!", message: "Por favor, conecte ao WIFI ou ative os dados do celular", preferredStyle: UIAlertControllerStyle.Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+      self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    
   }
   
   //MARK: - Cloude Code function calls
