@@ -150,14 +150,25 @@ class NewProposalViewController: UIViewController {
   }
   
   @IBAction func save(sender: AnyObject) {
-    if (self.categoriesName.count == 0){
-      let alert = UIAlertController(title: "Alerta!", message: "Você deve adcionar uma categoria para poder prôpor!", preferredStyle: UIAlertControllerStyle.Alert)
+    if Reachability.isConnectedToNetwork() {
+      print("There is connection")
+      if (self.categoriesName.count == 0){
+        let alert = UIAlertController(title: "Alerta!", message: "Você deve adcionar uma categoria para poder prôpor!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+      }else{
+        print("Saving data....")
+        self.saveProposal()
+      }
+    }else{
+      print("There is not connection")
+      let alert = UIAlertController(title: "Alerta!", message: "Por favor, conecte ao WIFI ou ative os dados do celular", preferredStyle: UIAlertControllerStyle.Alert)
       alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
       self.presentViewController(alert, animated: true, completion: nil)
-    }else{
-      print("Saving data....")
-      self.saveProposal()
     }
+    
+    
+    
   }
   
   func saveProposal() {
