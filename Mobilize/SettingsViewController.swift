@@ -106,7 +106,7 @@ extension SettingsViewController: UITableViewDataSource {
       let dateFormatter = NSDateFormatter()
       dateFormatter.dateFormat = "MMM/YY"//"dd/mm/YY hh:mm"
       let dateString = dateFormatter.stringFromDate(timeStamp!)
-      cellUser.contributionLabel.text = "Contribui desde " + dateString
+      cellUser.contributionLabel.text = "Contribuidor desde " + dateString
       return cellUser
     }else {
       let cellGroup2 = tableView.dequeueReusableCellWithIdentifier("settingsGroup2",

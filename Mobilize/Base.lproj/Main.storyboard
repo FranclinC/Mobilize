@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W7s-Np-7rj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W7s-Np-7rj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="-1554" y="-625"/>
         </scene>
-        <!--Sign Up-->
+        <!--Cadastrar-->
         <scene sceneID="T3g-Sn-C9f">
             <objects>
-                <viewController storyboardIdentifier="register" title="Sign Up" id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" title="Cadastrar" id="mPc-At-YJP" customClass="RegisterViewController" customModule="Mobilize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zM9-aL-wc2"/>
                         <viewControllerLayoutGuide type="bottom" id="303-dS-93W"/>
@@ -141,7 +141,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Vho-97-t8f"/>
                                     <constraint firstAttribute="width" constant="70" id="v0N-Og-HSu"/>
                                 </constraints>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Cadastrar"/>
                                 <connections>
                                     <action selector="SignUp:" destination="mPc-At-YJP" eventType="touchUpInside" id="h9Y-c8-G1p"/>
                                 </connections>
@@ -732,7 +732,7 @@
         <image name="wave_login" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C4L-u1-t4V"/>
+        <segue reference="2br-EA-3pG"/>
         <segue reference="9CY-ao-IVr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>
