@@ -29,6 +29,8 @@ class ProposalViewController: UIViewController {
     SharedValues.filter = self
     maturation = "BabyMob"
     
+    //self.loading.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension
     self.tableView.estimatedRowHeight = 125
     
@@ -60,7 +62,7 @@ class ProposalViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(true)
     //Load data from parse
-    self.loading.startAnimating()
+    
     self.loadProposals("BabyMob", filter: "All")
   }
   
@@ -69,7 +71,8 @@ class ProposalViewController: UIViewController {
   
   
   func loadProposals(maturation: String, filter: String){
-    
+    self.view.bringSubviewToFront(self.loading)
+    self.loading.startAnimating()
     let query = PFQuery(className: Constants.PROPOSAL)
     
     query.includeKey(Constants.USER)
@@ -88,10 +91,14 @@ class ProposalViewController: UIViewController {
           self.proposals.append(object)
         }
       }else {
-        print("Couldn't retrieve any object")
+        self.loading.stopAnimating()
+        let alert = UIAlertController(title: "Alerta!", message: "Algo estranho aconteceu! Por favor, verifique se está conectado a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
       }
       
       self.tableView.reloadData()
+      self.loading.stopAnimating()
       
       
     }
@@ -147,7 +154,7 @@ extension ProposalViewController: UITableViewDataSource {
   
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    self.loading.stopAnimating()
+    
     let cell = tableView.dequeueReusableCellWithIdentifier("proposalCell", forIndexPath: indexPath) as! CustomCell
     let user : PFUser = (proposals[indexPath.row][Constants.USER] as? PFUser)!
     
