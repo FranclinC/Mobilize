@@ -17,6 +17,9 @@ class ProposalViewController: UIViewController {
   @IBOutlet var themesButton: UIBarButtonItem!
   @IBOutlet var newProposal: UIBarButtonItem!
   
+  
+  @IBOutlet var loading: UIActivityIndicatorView!
+  
   var proposals: [PFObject] = [PFObject]()
   var maturation : String?
   var valueToPass : CustomCell!
@@ -57,8 +60,13 @@ class ProposalViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(true)
     //Load data from parse
+    self.loading.startAnimating()
     self.loadProposals("BabyMob", filter: "All")
   }
+  
+
+  
+  
   
   func loadProposals(maturation: String, filter: String){
     
@@ -139,7 +147,7 @@ extension ProposalViewController: UITableViewDataSource {
   
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
+    self.loading.stopAnimating()
     let cell = tableView.dequeueReusableCellWithIdentifier("proposalCell", forIndexPath: indexPath) as! CustomCell
     let user : PFUser = (proposals[indexPath.row][Constants.USER] as? PFUser)!
     

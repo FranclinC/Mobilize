@@ -228,6 +228,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dkQ-o1-2CH">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="0.1529411765" green="0.29411764709999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-sh-V4s">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -241,7 +245,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="CcS-sh-V4s" secondAttribute="trailing" constant="-20" id="HE5-HE-Vgc"/>
                             <constraint firstItem="CcS-sh-V4s" firstAttribute="leading" secondItem="L13-hR-2ga" secondAttribute="leadingMargin" constant="-20" id="LhC-7W-Yy0"/>
+                            <constraint firstItem="dkQ-o1-2CH" firstAttribute="centerY" secondItem="L13-hR-2ga" secondAttribute="centerY" id="Ol1-fc-oWv"/>
                             <constraint firstItem="CcS-sh-V4s" firstAttribute="top" secondItem="L13-hR-2ga" secondAttribute="topMargin" id="Q5s-9g-TIZ"/>
+                            <constraint firstItem="dkQ-o1-2CH" firstAttribute="centerX" secondItem="L13-hR-2ga" secondAttribute="centerX" id="YaC-vd-0zv"/>
                             <constraint firstItem="UhF-Tt-Dal" firstAttribute="top" secondItem="CcS-sh-V4s" secondAttribute="bottom" id="l99-pw-6c0"/>
                         </constraints>
                     </view>
@@ -273,6 +279,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="loading" destination="dkQ-o1-2CH" id="sat-7y-AGA"/>
                         <outlet property="newProposal" destination="dgw-UN-arC" id="0ei-1z-cN5"/>
                         <outlet property="segmentedControl" destination="5oJ-vJ-7Wj" id="weM-Dc-VQI"/>
                         <outlet property="tableView" destination="CcS-sh-V4s" id="R13-Sn-55U"/>
@@ -500,6 +507,7 @@
                         <outlet property="commentTextField" destination="ofX-1f-3TO" id="XQU-SU-GsG"/>
                         <outlet property="tableView" destination="oam-ui-shu" id="Pnx-sS-txH"/>
                         <outlet property="toolBar" destination="ZWI-yS-TE9" id="OdQ-bO-ZUF"/>
+                        <outlet property="toolBarBottomConstraint" destination="OcJ-yB-UGV" id="37U-Up-WJl"/>
                         <outlet property="toolBarHeightConstraint" destination="W3O-l1-tH3" id="fgR-iN-gFx"/>
                     </connections>
                 </viewController>

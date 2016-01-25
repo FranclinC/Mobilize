@@ -20,6 +20,7 @@ class ProposalDetailedViewController: UIViewController {
   var comments: [PFObject] = [PFObject]()
   var tapGesture: UITapGestureRecognizer?
   var constraintHeightToolbar: CGFloat?
+    @IBOutlet var toolBarBottomConstraint: NSLayoutConstraint!
   var proposal: CustomCell = CustomCell()
   var commentsCount: Int = 0
   var proposalID: String!
@@ -159,7 +160,8 @@ class ProposalDetailedViewController: UIViewController {
     print(frame.height)
     self.view.layoutIfNeeded()
     UIView.animateWithDuration(0.5, animations: {
-      self.toolBarHeightConstraint.constant = frame.height + self.toolBar.frame.height
+      //self.toolBarBottomConstraint.constant = frame.height
+      self.toolBarHeightConstraint.constant = (frame.height + self.toolBar.frame.height)
       self.view.layoutIfNeeded()
       }, completion: nil)
     
