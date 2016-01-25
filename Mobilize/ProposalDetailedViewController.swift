@@ -16,6 +16,7 @@ class ProposalDetailedViewController: UIViewController {
   @IBOutlet var toolBar: UIView!
   @IBOutlet var toolBarHeightConstraint: NSLayoutConstraint!
   @IBOutlet var commentButton: UIButton!
+  @IBOutlet var toolBarBottomConstraint: NSLayoutConstraint!
   
   var comments: [PFObject] = [PFObject]()
   var tapGesture: UITapGestureRecognizer?
@@ -159,8 +160,9 @@ class ProposalDetailedViewController: UIViewController {
     print(frame.height)
     self.view.layoutIfNeeded()
     UIView.animateWithDuration(0.5, animations: {
-      self.toolBarHeightConstraint.constant = frame.height + self.toolBar.frame.height
-      self.view.layoutIfNeeded()
+      //self.toolBarBottomConstraint.constant = frame.height
+      self.toolBarHeightConstraint.constant = (frame.height + self.toolBar.frame.height)
+      //self.view.layoutIfNeeded()
       }, completion: nil)
     
     if tapGesture == nil {
