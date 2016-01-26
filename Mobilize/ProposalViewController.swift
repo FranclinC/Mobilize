@@ -62,7 +62,7 @@ class ProposalViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(true)
     //Load data from parse
-    
+    self.segmentedControl.selectedSegmentIndex = 0 //Just because it was loading BabyMob on Mob maturation
     self.loadProposals("BabyMob", filter: "All")
   }
   
