@@ -162,7 +162,7 @@ class ProposalDetailedViewController: UIViewController {
     UIView.animateWithDuration(0.5, animations: {
       //self.toolBarBottomConstraint.constant = frame.height
       self.toolBarHeightConstraint.constant = (frame.height + self.toolBar.frame.height)
-      //self.view.layoutIfNeeded()
+      self.view.layoutIfNeeded()
       }, completion: nil)
     
     if tapGesture == nil {

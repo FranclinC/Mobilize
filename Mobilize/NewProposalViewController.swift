@@ -199,7 +199,7 @@ class NewProposalViewController: UIViewController {
       
       self.constraintToolBarBottom.constant = frame.height
       self.constraintToolBarHeight.constant = (frame.height + self.toolBarView.frame.height)
-      //self.view.layoutIfNeeded()
+      self.view.layoutIfNeeded()
       }, completion: nil)
     
     if keyboardDismissSwipeGesture == nil {
