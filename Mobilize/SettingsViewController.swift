@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.loadUserStats()
+    //self.loadUserStats()
     self.tableView.estimatedRowHeight = 44
     self.tableView.rowHeight = UITableViewAutomaticDimension
     
