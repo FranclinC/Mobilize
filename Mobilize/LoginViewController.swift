@@ -88,6 +88,8 @@ class LoginViewController: UIViewController {
                 self.presentViewController(alertController, animated: true, completion: nil)
               }
             }
+
+            
           })
         }else {
           PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user: PFUser?, error: NSError?) -> Void in
@@ -106,6 +108,14 @@ class LoginViewController: UIViewController {
                 self.passwordUser.text = ""
                 self.emailUser.text = ""
               }
+            }
+            
+            if error != nil {
+              let alert = UIAlertController(title: "Alerta", message: "Email ou senha devem não foram encontrados. Por favor verifique se estão corretos!", preferredStyle: UIAlertControllerStyle.Alert)
+              alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+              self.presentViewController(alert, animated: true, completion: nil)
+              self.passwordUser.text = ""
+              self.emailUser.text = ""
             }
           })
         }
