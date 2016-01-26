@@ -15,16 +15,12 @@ class RegisterViewController: UIViewController {
   @IBOutlet var userEmail: UITextField!
   @IBOutlet var userPassword: UITextField!
   @IBOutlet var signUpButton: UIButton!
+  var keyboardVisible : Bool!
+  var standardKeyboard : Bool!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    NSNotificationCenter.defaultCenter().addObserver(self,
-      selector: Selector("keyboardWillShow:"),
-      name: UIKeyboardWillShowNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self,
-      selector: Selector("keyboardWillHide:"),
-      name: UIKeyboardWillHideNotification, object: nil)
     
     let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self,
       action: "dismissKeyboard")
@@ -35,16 +31,54 @@ class RegisterViewController: UIViewController {
     self.userPassword.returnKeyType = UIReturnKeyType.Send
   }
   
+  
+  
   func keyboardWillShow (notification: NSNotification){
-    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-      self.view.frame.origin.y -= keyboardSize.height
+
+    if (self.keyboardVisible!){
+      return //just ignore
     }
+    
+    let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    print(frame.height)
+    self.view.layoutIfNeeded()
+    UIView.animateWithDuration(0.5, animations: {
+      self.view.frame.origin.y -= frame.height
+      self.keyboardVisible = true
+      
+      //self.view.layoutIfNeeded()
+      }, completion: nil)
+    
+    
+    
+    
   }
   
+
+  
   func keyboardWillHide (notification: NSNotification) {
-    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-      self.view.frame.origin.y += keyboardSize.height
+
+    if (!self.keyboardVisible!){
+      return //just ignore
     }
+
+    
+    let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    print(frame.height)
+    self.view.layoutIfNeeded()
+    UIView.animateWithDuration(0.5, animations: {
+      self.view.frame.origin.y += frame.height
+      self.keyboardVisible = false
+      
+      //self.view.layoutIfNeeded()
+      }, completion: nil)
+  }
+  
+  
+  
+  
+  func keyboardDidChange (notification: NSNotification){
+    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -53,12 +87,24 @@ class RegisterViewController: UIViewController {
     self.navigationController?.navigationBar.translucent = false
     self.navigationController?.navigationBar.backItem?.title = ""
     self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+    self.keyboardVisible = false
+    
+    //No Autocorrect, to correct the bug on the password textfield
+    self.user_username.autocorrectionType = UITextAutocorrectionType.No
+    self.userEmail.autocorrectionType = UITextAutocorrectionType.No
+    self.userName.autocorrectionType = UITextAutocorrectionType.No
+    self.userPassword.autocorrectionType = UITextAutocorrectionType.No
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil) //UIKeyboardWillShowNotification
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+    
   }
   
   override func viewWillDisappear(animated: Bool) {
     super.viewWillDisappear(animated)
     self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
     self.navigationController?.navigationBar.tintColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
+    NSNotificationCenter.defaultCenter().removeObserver(self)
   }
   
   @IBAction func SignUp(sender: AnyObject) {
