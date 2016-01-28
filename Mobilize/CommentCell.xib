@@ -54,6 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jt1-hS-Vt2" firstAttribute="top" secondItem="BlB-sh-eLp" secondAttribute="top" constant="8" id="3Pk-Br-243"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jt1-hS-Vt2" secondAttribute="bottom" constant="8" id="LwX-Cf-gKh"/>
                             <constraint firstItem="xe9-dk-3g9" firstAttribute="leading" secondItem="Jt1-hS-Vt2" secondAttribute="trailing" constant="3" id="N8T-MM-ndS"/>
                             <constraint firstItem="agc-HP-vVT" firstAttribute="leading" secondItem="xe9-dk-3g9" secondAttribute="trailing" constant="8" id="RNF-h9-Gpc"/>
                             <constraint firstItem="6ex-ZB-A17" firstAttribute="top" secondItem="agc-HP-vVT" secondAttribute="bottom" constant="4" id="SdZ-oa-RXf"/>
