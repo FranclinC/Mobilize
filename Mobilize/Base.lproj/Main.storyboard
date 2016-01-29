@@ -34,9 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_login" translatesAutoresizingMaskIntoConstraints="NO" id="kpB-Qz-czR">
-                                <rect key="frame" x="-30" y="553" width="660" height="55"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAb-tA-fce">
                                 <rect key="frame" x="189" y="402" width="222" height="30"/>
                                 <state key="normal" title="Não é cadastrado? Cadastre-se!">
@@ -70,13 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="leading" secondItem="E2y-jY-TWH" secondAttribute="leadingMargin" id="1hU-he-y33"/>
-                            <constraint firstItem="kpB-Qz-czR" firstAttribute="leading" secondItem="E2y-jY-TWH" secondAttribute="leadingMargin" constant="-50" id="7QH-R8-kgC"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="top" secondItem="vxJ-2s-y59" secondAttribute="bottom" constant="10" id="GUE-FD-L93"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="JoR-Nw-dDD"/>
                             <constraint firstItem="IAb-tA-fce" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="Jy0-Nd-d1v"/>
-                            <constraint firstItem="kpB-Qz-czR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IAb-tA-fce" secondAttribute="bottom" constant="10" id="LuM-CB-vxh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kpB-Qz-czR" secondAttribute="trailing" constant="-50" id="NHF-aw-shg"/>
-                            <constraint firstItem="kpB-Qz-czR" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="OQr-6E-Mya"/>
                             <constraint firstItem="KKx-Ar-987" firstAttribute="top" secondItem="YvV-pK-Txg" secondAttribute="bottom" constant="30" id="Zyo-9E-aB7"/>
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="top" secondItem="KKx-Ar-987" secondAttribute="bottom" constant="20" id="a47-Mq-kuc"/>
                             <constraint firstItem="w9I-rX-d43" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="a4o-6x-qX2"/>
@@ -84,7 +77,6 @@
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="centerX" secondItem="E2y-jY-TWH" secondAttribute="centerX" id="dbx-I4-ron"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="leading" secondItem="E2y-jY-TWH" secondAttribute="leadingMargin" id="fwA-rx-LIm"/>
                             <constraint firstItem="4VK-jY-SJW" firstAttribute="trailing" secondItem="E2y-jY-TWH" secondAttribute="trailingMargin" id="kKp-6r-szH"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="kpB-Qz-czR" secondAttribute="bottom" constant="-8" id="nGM-aI-PZx"/>
                             <constraint firstItem="vxJ-2s-y59" firstAttribute="trailing" secondItem="E2y-jY-TWH" secondAttribute="trailingMargin" id="ssi-qT-ycE"/>
                             <constraint firstItem="IAb-tA-fce" firstAttribute="top" secondItem="w9I-rX-d43" secondAttribute="bottom" constant="10" id="tN1-wF-FgY"/>
                             <constraint firstItem="w9I-rX-d43" firstAttribute="top" secondItem="4VK-jY-SJW" secondAttribute="bottom" constant="20" id="xqQ-eC-10z"/>
@@ -92,7 +84,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yy5-bO-U81"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="kpB-Qz-czR" id="8fc-4T-h5n"/>
                         <outlet property="emailUser" destination="vxJ-2s-y59" id="uDF-1Y-Oer"/>
                         <outlet property="loginButton" destination="w9I-rX-d43" id="0IQ-tF-vkD"/>
                         <outlet property="logoMobi" destination="KKx-Ar-987" id="Ff5-i6-UmS"/>
@@ -706,10 +697,9 @@
         <image name="saude1" width="62" height="63"/>
         <image name="seguranca1" width="62" height="63"/>
         <image name="temas" width="24" height="24"/>
-        <image name="wave_login" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2br-EA-3pG"/>
+        <segue reference="C4L-u1-t4V"/>
         <segue reference="9CY-ao-IVr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.15294117647058825" green="0.29411764705882354" blue="0.56862745098039214" alpha="0.88" colorSpace="calibratedRGB"/>

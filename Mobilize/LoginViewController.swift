@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     self.passwordUser.returnKeyType = UIReturnKeyType.Go
     self.passwordUser.secureTextEntry = true
     self.view.backgroundColor = UIColor(red: 70/255.0, green: 97/255.0, blue: 157/255.0, alpha: 1.0)
-    backgroundImage.image = UIImage(named: "wave")
+    //backgroundImage.image = UIImage(named: "wave")
   }
   
   override func viewWillAppear(animated: Bool) {
